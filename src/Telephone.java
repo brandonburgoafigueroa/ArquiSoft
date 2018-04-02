@@ -23,6 +23,7 @@ public class Telephone
    {
       System.out.println(output);
    }
+   
 
    /**
       Loops reading user input and passes the input to the
@@ -40,7 +41,7 @@ public class Telephone
          if (input.equalsIgnoreCase("H"))
             c.hangup();
          else if (input.equalsIgnoreCase("Q"))
-            more = false;
+            more = false; 
          else if (input.length() == 1
             && "1234567890#".indexOf(input) >= 0)
             c.dial(input);
