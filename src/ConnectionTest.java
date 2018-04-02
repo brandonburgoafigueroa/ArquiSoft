@@ -1,6 +1,4 @@
-/*package test;
-import main.*;
-*/
+
 import static org.junit.Assert.*;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
