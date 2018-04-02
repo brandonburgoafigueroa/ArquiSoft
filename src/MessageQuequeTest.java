@@ -7,40 +7,40 @@ import junit.framework.Assert;
 public class MessageQuequeTest {
 
 	@Test
-	public void AñadoALaColaUnMensajeYEliminoElPrimeroDeLaColaDeberiaDevolverElMismoMensaje() {
-		Message message=new Message("Hola que tal?");
+	public void AddToTheTailAMessageAndEliminateTheFirstOfTheTailShouldReturnTheSameMessage() {
+		Message message=new Message("Hello, How are you?");
 		MessageQueue messagequeue=new MessageQueue();
 		messagequeue.add(message);
 		Assert.assertEquals(messagequeue.remove(), message);
 	}
 	@Test
-	public void AñadoALaColaDosMensajesYEliminoElPrimeroDeLaColaDeberiaDevolverElPrimerMensajeQueEnvio() {
-		Message firstMessage=new Message("Hola que tal?");
+	public void IAddTheTailTwoMessagesAndEliminateTheFirstOfTheTailShouldReturnTheFirstMessageISent(){
+		Message firstMessage=new Message("Hello");
 		MessageQueue messagequeue=new MessageQueue();
 		messagequeue.add(firstMessage);
-		Message secondMessage=new Message("Como estas?");
+		Message secondMessage=new Message(", How are you?");
 		messagequeue.add(secondMessage);
 		Assert.assertEquals(messagequeue.remove(), firstMessage);
 	}
 	@Test
-	public void AñadoALaColaUnMensajeYEliminoTamañoDeLaColaDeberiaDevolver2() {
-		Message message=new Message("Hola que tal?");
+	public void AddTailAMessageAndEliminateTailSizeShouldReturn2(){
+		Message message=new Message("Hello, How are you?");
 		MessageQueue messagequeue=new MessageQueue();
 		messagequeue.add(message);
-		message=new Message("Hola que tal?");
+		message=new Message("Hello, How are you?");
 		messagequeue.add(message);
 		Assert.assertEquals(messagequeue.size(), 2);
 	}
 	@Test
-	public void AñadoALaColaUnMensajeYObtengoElPrimeroDeLaColaDeberiaDevolverElMensajeAñadido() {
-		Message message=new Message("Hola que tal?");
+	public void IAddATailAMessageAndIGetTheFirstOfTheTailIShouldReturnTheAddedMessage(){
+		Message message=new Message("Hello, How are you?");
 		MessageQueue messagequeue=new MessageQueue();
 		messagequeue.add(message);
 		Assert.assertEquals(messagequeue.peek(), message);
 
 	}
 	@Test
-	public void NoAñadoNadaALaColaYObtengoElPrimeroEnLaColaDeberiaDevolverNull() {
+	public void IDoNotAddAnythingToTheTailAndIGetTheFirstInTheTailIShouldReturnNull(){
 		MessageQueue messagequeue=new MessageQueue();
 		Assert.assertEquals(messagequeue.peek(), null);
 

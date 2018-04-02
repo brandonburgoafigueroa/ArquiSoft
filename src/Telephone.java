@@ -1,3 +1,4 @@
+import java.util.List;
 import java.util.Scanner;
 
 /**
@@ -24,6 +25,10 @@ public class Telephone
       System.out.println(output);
    }
    
+   public String speakT(String output)
+   {
+	   return output;
+   }
 
    /**
       Loops reading user input and passes the input to the
@@ -49,6 +54,5 @@ public class Telephone
             c.record(input);
       }
    }
-
    private Scanner scanner;
 }

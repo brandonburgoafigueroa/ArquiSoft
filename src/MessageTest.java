@@ -7,14 +7,14 @@ import junit.framework.Assert;
 public class MessageTest {
 
 	@Test
-	public void EscribirMensajeYPidoTextoDeberiaDevolverElMismoQueEscribi() {
-		Message message=new Message("Hola que tal, como estas?");
-		Assert.assertEquals(message.getText(), "Hola que tal, como estas?");
+	public void WriteMessageAndIRequestTextShouldReturnTheSameIWrote() {
+		Message message=new Message("Hello, How are you?");
+		Assert.assertEquals(message.getText(), "Hello, How are you?");
 	}
 	
 	@Test
-	public void EscribirMensajeYPidoTextoNoDeberiaDevolverVacio() {
-		Message message=new Message("Hola que tal, como estas?");
+	public void WriteMessageAndIRequestTextShouldNotReturnEmpty() {
+		Message message=new Message("Hello, How are you?");
 		Assert.assertNotSame(message.getText(), "");
 	}
 }
