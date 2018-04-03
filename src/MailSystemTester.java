@@ -1,3 +1,6 @@
+import org.omg.PortableInterceptor.SYSTEM_EXCEPTION;
+
+import javax.swing.*;
 import java.util.Scanner;
 
 /**
@@ -11,8 +14,14 @@ public class MailSystemTester
       MailSystem system = new MailSystem(MAILBOX_COUNT);
       Scanner console = new Scanner(System.in);
       Telephone p = new Telephone(console);
-      Connection c = new Connection(system, p);
+       Connection c = new Connection(system, p);
+       UIObserver frame = new UIObserver(c);
+       frame.pack();
+       frame.setVisible(true);
+       frame.setSize(400,400);
+
       p.run(c);
+
    }
 
    private static final int MAILBOX_COUNT = 20;

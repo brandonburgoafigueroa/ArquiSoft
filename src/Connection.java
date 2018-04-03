@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.List;
+
 /**
    Connects a phone to the mail system. The purpose of this
    class is to keep track of the state of a connection, since
@@ -11,7 +14,7 @@ public class Connection
 	private String accumulatedKeys;
 	private Telephone phone;
 	private int state;
-
+    private List<IObservable> observables=new ArrayList<IObservable>();
 	private static final int DISCONNECTED = 0;
 	private static final int CONNECTED = 1;
 	private static final int RECORDING = 2;
@@ -43,6 +46,17 @@ public class Connection
       resetConnection();
    }
 
+   public void AddObservable(IObservable observable)
+   {
+      observables.add(observable);
+   }
+
+   public void UpdateObservables(String message)
+   {
+      for (IObservable observer:observables) {
+       observer.Update(message);
+      }
+   }
    /**
       Respond to the user's pressing a key on the phone touchpad
       @param key the phone key pressed by the user
@@ -104,7 +118,9 @@ public class Connection
    {
       if (state == RECORDING)
          currentMailbox.addMessage(new Message(currentRecording));
+         UpdateObservables(currentRecording);
       resetConnection();
+
    }
 
    /**
@@ -247,6 +263,7 @@ public class Connection
          state = MAILBOX_MENU;
          phone.speak(MAILBOX_MENU_TEXT);
       }
+
    }
 }
 
