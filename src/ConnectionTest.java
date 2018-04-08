@@ -1,11 +1,9 @@
 
-import static org.junit.Assert.*;
-import static org.mockito.Mockito.mock;
-import static org.mockito.Mockito.verify;
-import static org.mockito.Mockito.when;
-
 import org.junit.Before;
 import org.junit.Test;
+
+import static org.junit.Assert.assertTrue;
+import static org.mockito.Mockito.*;
 
 public class ConnectionTest {
     MailSystem mockedMailsystem;
@@ -26,7 +24,7 @@ public class ConnectionTest {
 
 	@Test
 	public void shouldShowInitialMessage() {
-		verify(mockedTelephone).speak("Enter mailbox number followed by #");
+		verify(mockedTelephone).Update("Enter mailbox number followed by #");
 	}
 	
 	@Test
@@ -39,7 +37,7 @@ public class ConnectionTest {
 		connection.dial("#");
 
 		assertTrue(connection.isRecording());
-		verify(mockedTelephone).speak(chosenMailbox.getGreeting());
+		verify(mockedTelephone).Update(chosenMailbox.getGreeting());
 	}
 	
 	@Test

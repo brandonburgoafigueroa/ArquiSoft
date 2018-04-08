@@ -1,11 +1,10 @@
-import java.util.List;
 import java.util.Scanner;
 
 /**
    A telephone that takes simulated keystrokes and voice input
    from the user and simulates spoken text.
 */
-public class Telephone
+public class Telephone implements IObservable
 {
    /**
       Construct phone object.
@@ -18,11 +17,11 @@ public class Telephone
 
    /**
       Speak a message to System.out.
-      @param output the text that will be "spoken"
+      @param message the text that will be "spoken"
    */
-   public void speak(String output)
+   public void Update(String message)
    {
-      System.out.println(output);
+      System.out.println(message);
    }
    
    public String speakT(String output)
@@ -55,4 +54,6 @@ public class Telephone
       }
    }
    private Scanner scanner;
+
+
 }

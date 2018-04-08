@@ -132,7 +132,7 @@ public class Connection
       currentRecording = "";
       accumulatedKeys = "";
       state = CONNECTED;
-      phone.speak(INITIAL_PROMPT);
+      phone.Update(INITIAL_PROMPT);
    }
 
    /**
@@ -147,10 +147,10 @@ public class Connection
          if (currentMailbox != null)
          {
             state = RECORDING;
-            phone.speak(currentMailbox.getGreeting());
+            phone.Update(currentMailbox.getGreeting());
          }
          else
-            phone.speak("Incorrect mailbox number. Try again!");
+            phone.Update("Incorrect mailbox number. Try again!");
          accumulatedKeys = "";
       }
       else
@@ -168,10 +168,10 @@ public class Connection
          if (currentMailbox.checkPasscode(accumulatedKeys))
          {
             state = MAILBOX_MENU;
-            phone.speak(MAILBOX_MENU_TEXT);
+            phone.Update(MAILBOX_MENU_TEXT);
          }
          else
-            phone.speak("Incorrect passcode. Try again!");
+            phone.Update("Incorrect passcode. Try again!");
          accumulatedKeys = "";
       }
       else
@@ -188,7 +188,7 @@ public class Connection
       {
          currentMailbox.setPasscode(accumulatedKeys);
          state = MAILBOX_MENU;
-         phone.speak(MAILBOX_MENU_TEXT);
+         phone.Update(MAILBOX_MENU_TEXT);
          accumulatedKeys = "";
       }
       else
@@ -206,7 +206,7 @@ public class Connection
          currentMailbox.setGreeting(currentRecording);
          currentRecording = "";
          state = MAILBOX_MENU;
-         phone.speak(MAILBOX_MENU_TEXT);
+         phone.Update(MAILBOX_MENU_TEXT);
       }
    }
 
@@ -219,17 +219,17 @@ public class Connection
       if (key.equals("1"))
       {
          state = MESSAGE_MENU;
-         phone.speak(MESSAGE_MENU_TEXT);
+         phone.Update(MESSAGE_MENU_TEXT);
       }
       else if (key.equals("2"))
       {
          state = CHANGE_PASSCODE;
-         phone.speak("Enter new passcode followed by the # key");
+         phone.Update("Enter new passcode followed by the # key");
       }
       else if (key.equals("3"))
       {
          state = CHANGE_GREETING;
-         phone.speak("Record your greeting, then press the # key");
+         phone.Update("Record your greeting, then press the # key");
       }
    }
 
@@ -246,22 +246,22 @@ public class Connection
          if (m == null) output += "No messages." + "\n";
          else output += m.getText() + "\n";
          output += MESSAGE_MENU_TEXT;
-         phone.speak(output);
+         phone.Update(output);
       }
       else if (key.equals("2"))
       {
          currentMailbox.saveCurrentMessage();
-         phone.speak(MESSAGE_MENU_TEXT);
+         phone.Update(MESSAGE_MENU_TEXT);
       }
       else if (key.equals("3"))
       {
          currentMailbox.removeCurrentMessage();
-         phone.speak(MESSAGE_MENU_TEXT);
+         phone.Update(MESSAGE_MENU_TEXT);
       }
       else if (key.equals("4"))
       {
          state = MAILBOX_MENU;
-         phone.speak(MAILBOX_MENU_TEXT);
+         phone.Update(MAILBOX_MENU_TEXT);
       }
 
    }
