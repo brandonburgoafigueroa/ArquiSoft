@@ -386,7 +386,7 @@
       <updated>1522770118420</updated>
       <workItem from="1522770124707" duration="6059000" />
       <workItem from="1523159869607" duration="681000" />
-      <workItem from="1523212929508" duration="920000" />
+      <workItem from="1523212929508" duration="930000" />
     </task>
     <task id="LOCAL-00001" summary="Modificando speak por update en telephone">
       <created>1523213745161</created>
@@ -402,7 +402,14 @@
       <option name="project" value="LOCAL" />
       <updated>1523213822469</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Modificando speak por update en telephone">
+      <created>1523213862542</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1523213862542</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -414,7 +421,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7660000" />
+    <option name="totallyTimeSpent" value="7670000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
