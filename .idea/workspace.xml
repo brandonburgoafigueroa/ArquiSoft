@@ -6,13 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="7692b031-0669-4e25-83c0-2768805490be" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/bin/Connection.class" afterPath="$PROJECT_DIR$/bin/Connection.class" />
-      <change beforePath="$PROJECT_DIR$/bin/MailSystemTester.class" afterPath="$PROJECT_DIR$/bin/MailSystemTester.class" />
-      <change beforePath="$PROJECT_DIR$/bin/Telephone.class" afterPath="$PROJECT_DIR$/bin/Telephone.class" />
-      <change beforePath="$PROJECT_DIR$/src/Connection.java" afterPath="$PROJECT_DIR$/src/Connection.java" />
-      <change beforePath="$PROJECT_DIR$/src/MailSystemTester.java" afterPath="$PROJECT_DIR$/src/MailSystemTester.java" />
-      <change beforePath="$PROJECT_DIR$/src/Telephone.java" afterPath="$PROJECT_DIR$/src/Telephone.java" />
-      <change beforePath="$PROJECT_DIR$/src/UIObserver.java" afterPath="$PROJECT_DIR$/src/UIObserver.java" />
     </list>
     <ignored path="$PROJECT_DIR$/bin/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -393,7 +386,7 @@
       <updated>1522770118420</updated>
       <workItem from="1522770124707" duration="6059000" />
       <workItem from="1523159869607" duration="681000" />
-      <workItem from="1523212929508" duration="5785000" />
+      <workItem from="1523212929508" duration="6612000" />
     </task>
     <task id="LOCAL-00001" summary="Modificando speak por update en telephone">
       <created>1523213745161</created>
@@ -437,7 +430,14 @@
       <option name="project" value="LOCAL" />
       <updated>1523215575842</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Saludo a todos los agregados funcionando">
+      <created>1523227904473</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1523227904473</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -449,7 +449,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12525000" />
+    <option name="totallyTimeSpent" value="13352000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -464,7 +464,7 @@
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32847896" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32362458" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32686085" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -472,7 +472,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32761312" sideWeight="0.50292826" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32847896" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3381877" sideWeight="0.49707174" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34318554" sideWeight="0.49707174" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32847896" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -502,7 +502,8 @@
     <MESSAGE value="Modificando speak por update en telephone" />
     <MESSAGE value="Imprimiendo mensajes de consola en la interfaz" />
     <MESSAGE value="Text area en uiobserver" />
-    <option name="LAST_COMMIT_MESSAGE" value="Text area en uiobserver" />
+    <MESSAGE value="Saludo a todos los agregados funcionando" />
+    <option name="LAST_COMMIT_MESSAGE" value="Saludo a todos los agregados funcionando" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
