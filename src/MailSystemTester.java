@@ -10,10 +10,13 @@ public class MailSystemTester
    {
       MailSystem system = new MailSystem(MAILBOX_COUNT);
       Scanner console = new Scanner(System.in);
-      Telephone p = new Telephone(console);
-      Connection c = new Connection(system, p);
-      UIObserver frame = new UIObserver(c);
-      p.run(c);
+      Connection c = new Connection(system);
+      Telephone p = new Telephone(console, c);
+      UIObserver FirstUI = new UIObserver(c);
+      UIObserver SecondUI = new UIObserver(c);
+       c.StartConnection();
+      p.run();
+
 
    }
 

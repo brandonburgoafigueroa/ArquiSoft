@@ -45,10 +45,22 @@ public class Connection
       phone = p;
       resetConnection();
    }
+   public Connection(MailSystem s)
+   {
+       system = s;
+       //resetConnection();
+
+   }
+
+   public void StartConnection()
+   {
+       resetConnection();
+   }
 
    public void AddObservable(IObservable observable)
    {
       observables.add(observable);
+
    }
 
    public void UpdateObservables(String message)
@@ -133,7 +145,7 @@ public class Connection
       currentRecording = "";
       accumulatedKeys = "";
       state = CONNECTED;
-      phone.Update(INITIAL_PROMPT);
+      //phone.Update(INITIAL_PROMPT);
       UpdateObservables(INITIAL_PROMPT);
    }
 
@@ -149,11 +161,11 @@ public class Connection
          if (currentMailbox != null)
          {
             state = RECORDING;
-            phone.Update(currentMailbox.getGreeting());
+            //phone.Update(currentMailbox.getGreeting());
             UpdateObservables(currentMailbox.getGreeting());
          }
          else {
-            phone.Update("Incorrect mailbox number. Try again!");
+            //phone.Update("Incorrect mailbox number. Try again!");
             UpdateObservables("Incorrect mailbox number. Try again!");
          }
          accumulatedKeys = "";
@@ -173,11 +185,11 @@ public class Connection
          if (currentMailbox.checkPasscode(accumulatedKeys))
          {
             state = MAILBOX_MENU;
-            phone.Update(MAILBOX_MENU_TEXT);
+            //phone.Update(MAILBOX_MENU_TEXT);
             UpdateObservables(MAILBOX_MENU_TEXT);
          }
          else {
-            phone.Update("Incorrect passcode. Try again!");
+            //phone.Update("Incorrect passcode. Try again!");
             UpdateObservables("Incorrect passcode. Try again!");
          }
          accumulatedKeys = "";
@@ -196,7 +208,7 @@ public class Connection
       {
          currentMailbox.setPasscode(accumulatedKeys);
          state = MAILBOX_MENU;
-         phone.Update(MAILBOX_MENU_TEXT);
+         //phone.Update(MAILBOX_MENU_TEXT);
          UpdateObservables(MAILBOX_MENU_TEXT);
          accumulatedKeys = "";
       }
@@ -215,7 +227,7 @@ public class Connection
          currentMailbox.setGreeting(currentRecording);
          currentRecording = "";
          state = MAILBOX_MENU;
-         phone.Update(MAILBOX_MENU_TEXT);
+         //phone.Update(MAILBOX_MENU_TEXT);
          UpdateObservables(MAILBOX_MENU_TEXT);
       }
    }
@@ -229,19 +241,19 @@ public class Connection
       if (key.equals("1"))
       {
          state = MESSAGE_MENU;
-         phone.Update(MESSAGE_MENU_TEXT);
+         //phone.Update(MESSAGE_MENU_TEXT);
          UpdateObservables(MESSAGE_MENU_TEXT);
       }
       else if (key.equals("2"))
       {
          state = CHANGE_PASSCODE;
-         phone.Update("Enter new passcode followed by the # key");
+         //phone.Update("Enter new passcode followed by the # key");
          UpdateObservables("Enter new passcode followed by the # key");
       }
       else if (key.equals("3"))
       {
          state = CHANGE_GREETING;
-         phone.Update("Record your greeting, then press the # key");
+         //phone.Update("Record your greeting, then press the # key");
          UpdateObservables("Record your greeting, then press the # key");
       }
    }
@@ -259,25 +271,25 @@ public class Connection
          if (m == null) output += "No messages." + "\n";
          else output += m.getText() + "\n";
          output += MESSAGE_MENU_TEXT;
-         phone.Update(output);
+         //phone.Update(output);
          UpdateObservables(output);
       }
       else if (key.equals("2"))
       {
          currentMailbox.saveCurrentMessage();
-         phone.Update(MESSAGE_MENU_TEXT);
+         //phone.Update(MESSAGE_MENU_TEXT);
          UpdateObservables(MESSAGE_MENU_TEXT);
       }
       else if (key.equals("3"))
       {
          currentMailbox.removeCurrentMessage();
-         phone.Update(MESSAGE_MENU_TEXT);
+         //phone.Update(MESSAGE_MENU_TEXT);
          UpdateObservables(MESSAGE_MENU_TEXT);
       }
       else if (key.equals("4"))
       {
          state = MAILBOX_MENU;
-         phone.Update(MAILBOX_MENU_TEXT);
+         //phone.Update(MAILBOX_MENU_TEXT);
          UpdateObservables(MAILBOX_MENU_TEXT);
       }
 

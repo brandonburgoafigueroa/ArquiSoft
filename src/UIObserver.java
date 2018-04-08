@@ -23,6 +23,4 @@ public class UIObserver extends JFrame implements IObservable {
     public void Update(String message) {
         TextArea.setText(message);
     }
-
-
 }
