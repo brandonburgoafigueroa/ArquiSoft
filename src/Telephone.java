@@ -16,6 +16,10 @@ public class Telephone implements IObservable
       this.connection=connection;
       this.connection.AddObservable(this);
    }
+   public void SetConnection(Connection connection)
+   {
+      this.connection=connection;
+   }
    public Telephone(Scanner aScanner)
    {
       scanner = aScanner;
@@ -58,6 +62,7 @@ public class Telephone implements IObservable
             connection.record(input);
       }
    }
+
    public void run(Connection connection)
    {
       boolean more = true;

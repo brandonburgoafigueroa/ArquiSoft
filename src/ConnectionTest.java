@@ -15,6 +15,7 @@ public class ConnectionTest {
 	    mockedMailsystem = mock(MailSystem.class);
 	    mockedTelephone = mock(Telephone.class);
 	    connection = new Connection(mockedMailsystem, mockedTelephone);
+	    connection.AddObservable(mockedTelephone);
 	}
 
 	@Test
@@ -24,7 +25,8 @@ public class ConnectionTest {
 
 	@Test
 	public void shouldShowInitialMessage() {
-		verify(mockedTelephone).Update("Enter mailbox number followed by #");
+        connection.StartConnection();
+		verify(mockedTelephone, times(1)).Update("Enter mailbox number followed by #");
 	}
 	
 	@Test
@@ -37,7 +39,7 @@ public class ConnectionTest {
 		connection.dial("#");
 
 		assertTrue(connection.isRecording());
-		verify(mockedTelephone).Update(chosenMailbox.getGreeting());
+		verify(mockedTelephone).Update("Hola, como estas?");
 	}
 	
 	@Test

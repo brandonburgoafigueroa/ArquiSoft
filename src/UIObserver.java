@@ -35,6 +35,25 @@ public class UIObserver extends JFrame implements IObservable {
         });
     }
 
+    @Override
+    public void Update(String message) {
+        Output.setText(message);
+    }
+
+    public void Run(String input)
+    {
+        if (input == null) return;
+        if (input.equalsIgnoreCase("H"))
+            connection.hangup();
+        else if (input.equalsIgnoreCase("Q"))
+            ;
+        else if (input.length() == 1
+                && "1234567890#".indexOf(input) >= 0)
+            connection.dial(input);
+        else
+            connection.record(input);
+    }
+
     private void SendCommand(String text) {
         CleanInput(text);
         Run(text);
@@ -45,22 +64,5 @@ public class UIObserver extends JFrame implements IObservable {
             Input.setText("");
     }
 
-    @Override
-    public void Update(String message) {
-       Output.setText(message);
-    }
 
-    public void Run(String input)
-    {
-            if (input == null) return;
-            if (input.equalsIgnoreCase("H"))
-                connection.hangup();
-            else if (input.equalsIgnoreCase("Q"))
-                ;
-            else if (input.length() == 1
-                    && "1234567890#".indexOf(input) >= 0)
-                connection.dial(input);
-            else
-                connection.record(input);
-    }
 }

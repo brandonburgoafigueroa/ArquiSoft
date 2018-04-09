@@ -48,6 +48,7 @@ public class Connection
    public Connection(MailSystem s)
    {
        system = s;
+
        //resetConnection();
 
    }
