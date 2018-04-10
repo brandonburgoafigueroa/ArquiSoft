@@ -39,12 +39,7 @@ public class Connection
       @param s a MailSystem object
       @param p a Telephone object
    */
-   public Connection(MailSystem s, Telephone p)
-   {
-      system = s;
-      phone = p;
-      resetConnection();
-   }
+
    public Connection(MailSystem s)
    {
        system = s;
@@ -53,7 +48,7 @@ public class Connection
 
    }
 
-   public void StartConnection()
+   public void startConnection()
    {
        resetConnection();
    }
@@ -131,7 +126,7 @@ public class Connection
    {
       if (state == RECORDING) {
          currentMailbox.addMessage(new Message(currentRecording));
-         //UpdateObservables(currentRecording);
+        
       }
       resetConnection();
 
@@ -294,6 +289,20 @@ public class Connection
          UpdateObservables(MAILBOX_MENU_TEXT);
       }
 
+   }
+   public boolean executeCommand(String input)
+   {
+      if (input == null) return true;
+      if (input.equalsIgnoreCase("H"))
+         hangup();
+      else if (input.equalsIgnoreCase("Q"))
+         return false;
+      else if (input.length() == 1
+              && "1234567890#".indexOf(input) >= 0)
+         dial(input);
+      else
+         record(input);
+      return true;
    }
 }
 

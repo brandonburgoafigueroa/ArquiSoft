@@ -16,14 +16,6 @@ public class Telephone implements IObservable
       this.connection=connection;
       this.connection.AddObservable(this);
    }
-   public void SetConnection(Connection connection)
-   {
-      this.connection=connection;
-   }
-   public Telephone(Scanner aScanner)
-   {
-      scanner = aScanner;
-   }
    /**
       Speak a message to System.out.
       @param message the text that will be "spoken"
@@ -50,37 +42,11 @@ public class Telephone implements IObservable
       while (more)
       {
          String input = scanner.nextLine();
-         if (input == null) return;
-         if (input.equalsIgnoreCase("H"))
-            connection.hangup();
-         else if (input.equalsIgnoreCase("Q"))
-            more = false; 
-         else if (input.length() == 1
-            && "1234567890#".indexOf(input) >= 0)
-            connection.dial(input);
-         else
-            connection.record(input);
+         more=connection.executeCommand(input);
       }
+      System.exit(0);
    }
 
-   public void run(Connection connection)
-   {
-      boolean more = true;
-      while (more)
-      {
-         String input = scanner.nextLine();
-         if (input == null) return;
-         if (input.equalsIgnoreCase("H"))
-            connection.hangup();
-         else if (input.equalsIgnoreCase("Q"))
-            more = false;
-         else if (input.length() == 1
-                 && "1234567890#".indexOf(input) >= 0)
-            connection.dial(input);
-         else
-            connection.record(input);
-      }
-   }
    private Scanner scanner;
    private Connection connection;
 

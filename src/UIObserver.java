@@ -12,11 +12,12 @@ public class UIObserver extends JFrame implements IObservable {
 
     public UIObserver(Connection connection)
     {
-        setContentPane(panel);
+
         Output.setEditable(false);
         pack();
         setSize(400,400);
         setVisible(true);
+        setContentPane(panel);
         this.connection=connection;
         connection.AddObservable(this);
 
@@ -42,16 +43,12 @@ public class UIObserver extends JFrame implements IObservable {
 
     public void Run(String input)
     {
-        if (input == null) return;
-        if (input.equalsIgnoreCase("H"))
-            connection.hangup();
-        else if (input.equalsIgnoreCase("Q"))
-            ;
-        else if (input.length() == 1
-                && "1234567890#".indexOf(input) >= 0)
-            connection.dial(input);
-        else
-            connection.record(input);
+        boolean connectionContinue;
+        connectionContinue=connection.executeCommand(input);
+        if (connectionContinue==false)
+        {
+            this.hide();
+        }
     }
 
     private void SendCommand(String text) {

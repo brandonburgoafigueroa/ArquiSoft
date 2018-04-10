@@ -14,7 +14,7 @@ public class MailSystemTester
       Telephone p = new Telephone(console, c);
       UIObserver FirstUI = new UIObserver(c);
       UIObserver SecondUI = new UIObserver(c);
-      c.StartConnection();
+      c.startConnection();
       p.run();
    }
 
