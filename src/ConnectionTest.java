@@ -19,32 +19,32 @@ public class ConnectionTest {
 	}
 
 	@Test
-	public void shouldBeInConnectedStatus() {
+	public void theConnectionWasStarted() {
 		connection.startConnection();
 	    assertTrue(connection.isConnected());
 	}
 
 	@Test
-	public void shouldShowInitialMessage() {
+	public void shouldShowInitialMessageWhenTheApplicationWasStarted() {
 
         verify(mockedTelephone, times(1)).Update(ENTER_MAILBOX_MESSAGE);
 	}
 	
 	@Test
-	public void shouldChooseValidMailBox() {
+	public void shouldChooseValidMailBoxWhenSelectTheMailBoxAndSelectNumeral() {
 		connection.dial(idMailBox);
 		connection.dial("#");
 		assertTrue(connection.isRecording());
 		verify(mockedTelephone).Update(HI_MESSAGE);
 	}
 	@Test
-    public void whenIStartConnectionShoudlBeReturnTrue()
+    public void whenStartConnectionShouldBeReturnTrue()
     {
         connection.startConnection();
         Assert.assertEquals(connection.isConnected(), true);
     }
 	@Test
-	public void shouldGetIntoMailBoxMenu() {
+	public void shouldGetIntoMailBoxMenuWhenSelectTheMailBox() {
 
 		connection.dial(idMailBox);
 		connection.dial("#");
@@ -55,7 +55,7 @@ public class ConnectionTest {
 	}
 	
 	@Test
-	public void shouldGetIntoMessageMenu() {
+	public void shouldGetIntoMessageMenuWhenSelectTheMailBox() {
 
 		String mailBoxMenuOption = "1";
 		connection.dial(idMailBox);
@@ -69,7 +69,7 @@ public class ConnectionTest {
 	}
 	
 	@Test
-	public void shouldGetIntoChangePassCodeMenu() {
+	public void shouldGetIntoChangePassCodeMenuWhenSelectMenuOption2() {
 
 		String mailBoxMenuOption = "2";
 		connection.dial(idMailBox);
@@ -82,7 +82,7 @@ public class ConnectionTest {
 	}
 
 	@Test
-	public void shouldChangePassCodeFrom1To2() {
+	public void shouldChangePassCodeFrom1To2AfterSelectTheMailBox() {
 
 		String newKeyMailBox = "2";
 		String mailBoxMenuOption = "2";
@@ -145,7 +145,7 @@ public class ConnectionTest {
 	}
 	
 	@Test
-	public void shouldGetIntoChangeGreetingMenu() {
+	public void shouldGetIntoChangeGreetingMenuAfterSelectMenuOption3() {
 
 		String mailBoxMenuOption = "3";
 		connection.dial(idMailBox);
