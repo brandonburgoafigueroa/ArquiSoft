@@ -24,11 +24,11 @@ public class MailBoxTest {
 	}
 	@Test
 	public void verifyCorrectGreeting() {
-		;
 		assertEquals(WELCOME_MESSAGE,mailBox.getGreeting());
 	}
 	@Test
 	public void verifySetGreeting() {
+		String HI_MESSAGE_SHORT = "hello!";
 		mailBox.setGreeting(HI_MESSAGE_SHORT);
 		assertEquals(HI_MESSAGE_SHORT,mailBox.getGreeting());
 	}
@@ -98,7 +98,6 @@ public class MailBoxTest {
 
 	private Mailbox mailBox;
 	private String HI_MESSAGE_LONG="hello, how are you?";
-	private String HI_MESSAGE_SHORT="hello!";
 	private String PASS_CODE ="passsword";
 	private String WELCOME_MESSAGE="welcome!";
 	private String FIRST_MESSAGE="are you okay?";

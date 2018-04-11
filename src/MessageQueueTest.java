@@ -5,14 +5,14 @@ import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 
-public class MessageQuequeTest {
-	private String FIRST_HELLO_MESSAGE="Hello, How are you?";
-	private String SECOND_HELLO_MESSAGE=", How are you";
+public class MessageQueueTest {
 	private Message firstMessage;
-	Message secondMessage;
+	private Message secondMessage;
 	@Before
 	public void Init(){
+		String FIRST_HELLO_MESSAGE = "Hello, How are you?";
 		firstMessage =new Message(FIRST_HELLO_MESSAGE);
+		String SECOND_HELLO_MESSAGE = ", How are you";
 		secondMessage=new Message(SECOND_HELLO_MESSAGE);
 	}
 

@@ -9,13 +9,13 @@ import java.util.Scanner;
 import static org.junit.Assert.assertEquals;
 
 public class TelephoneTest {
-	String ENTER_MAILBOX_MESSAGE = "Enter mailbox number followed by #";
 	@Test
 	public void EnterAChainInPhoneAndPrintTheChainShouldReturnMeSame() {
 		Scanner scanner=new Scanner(System.in);
 		Connection connection=new Connection(new MailSystem(20));
 		Telephone telephone=new Telephone(scanner, connection);
-		String output=ENTER_MAILBOX_MESSAGE;
+		String ENTER_MAILBOX_MESSAGE = "Enter mailbox number followed by #";
+		String output= ENTER_MAILBOX_MESSAGE;
 		assertEquals(telephone.speakT(output), ENTER_MAILBOX_MESSAGE);
 		
 	}

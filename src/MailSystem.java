@@ -1,20 +1,11 @@
 import java.util.ArrayList;
 
-/**
-   A system of voice mail boxes.
-*/
 public class MailSystem
 {
-   /**
-      Constructs a mail system with a given number of mailboxes
-      @param mailboxCount the number of mailboxes
-   */
-   public MailSystem(int mailboxCount)
+
+   MailSystem(int mailboxCount)
    {
-      mailboxes = new ArrayList<Mailbox>();
-
-      // Initialize mail boxes.
-
+      mailboxes = new ArrayList();
       for (int i = 0; i < mailboxCount; i++)
       {
          String passcode = "" + (i + 1);
@@ -24,11 +15,6 @@ public class MailSystem
       }
    }
 
-   /**
-      Locate a mailbox.
-      @param ext the extension number
-      @return the mailbox or null if not found
-   */
    public Mailbox findMailbox(String ext)
    {
       int i = Integer.parseInt(ext);

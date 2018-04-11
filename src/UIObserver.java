@@ -4,9 +4,80 @@ import java.awt.event.ActionListener;
 
 public class UIObserver extends JFrame implements IObservable {
 
+
+    UIObserver(Connection connection)
+    {
+        pack();
+        setConnection(connection);
+        setAttributesToComponentsOfUI();
+        setActionsToButtons();
+    }
+
+    public void Update(String message) {
+        Output.setText(message);
+    }
+
+    private void Run(String input)
+    {
+        boolean connectionContinue;
+        connectionContinue=connection.executeCommand(input);
+        if (!connectionContinue)
+        {
+            this.hide();
+        }
+    }
+    private void setConnection(Connection connection) {
+        connection.addObservable(this);
+        this.connection=connection;
+    }
+
+    private void setAttributesToComponentsOfUI() {
+        Output.setEditable(false);
+        setSize(400,700);
+        setContentPane(panel);
+        pressed.setEditable(false);
+        pressed.setSize(10,10);
+    }
+
+    private void setActionsToButtons() {
+        ActionListener listener = returnActionOfButton();
+        button1.addActionListener(listener);
+        button3.addActionListener(listener);
+        button2.addActionListener(listener);
+        button4.addActionListener(listener);
+        button5.addActionListener(listener);
+        button6.addActionListener(listener);
+        button7.addActionListener(listener);
+        button8.addActionListener(listener);
+        button9.addActionListener(listener);
+        button0.addActionListener(listener);
+        buttonB.addActionListener(listener);
+    }
+
+    private ActionListener returnActionOfButton() {
+        ActionListener listener = new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                JButton buttonClicked=(JButton) e.getSource();
+                Run(buttonClicked.getText());
+                pressed.setText(pressed.getText()+" "+buttonClicked.getText());
+            }
+        };
+
+        buttonH.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                String text=Input.getText();
+                Input.setText("");
+                pressed.setText("");
+                Run(text);
+                Run("H");
+            }
+        });
+        return listener;
+    }
+
     private JPanel panel;
     private JTextArea Input;
-    Connection connection;
+    private Connection connection;
     private JTextArea Output;
     private JButton button1;
     private JButton button8;
@@ -21,61 +92,5 @@ public class UIObserver extends JFrame implements IObservable {
     private JButton button0;
     private JButton buttonB;
     private JTextArea pressed;
-
-    public UIObserver(Connection connection)
-    {
-        pack();
-        Output.setEditable(false);
-        setSize(400,700);
-        setContentPane(panel);
-        this.connection=connection;
-        connection.addObservable(this);
-        pressed.setEditable(false);
-        pressed.setSize(10,10);
-        ActionListener listener = new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                JButton buttonClicked=(JButton) e.getSource();
-                Run(buttonClicked.getText());
-                pressed.setText(pressed.getText()+" "+buttonClicked.getText());
-            }
-        };
-        button1.addActionListener(listener);
-        button3.addActionListener(listener);
-        button2.addActionListener(listener);
-        button4.addActionListener(listener);
-        button5.addActionListener(listener);
-        button6.addActionListener(listener);
-        button7.addActionListener(listener);
-        button8.addActionListener(listener);
-        button9.addActionListener(listener);
-        button0.addActionListener(listener);
-        buttonB.addActionListener(listener);
-        buttonH.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                String text=Input.getText();
-                Input.setText("");
-                pressed.setText("");
-                Run(text);
-                Run("H");
-            }
-        });
-    }
-
-    @Override
-    public void Update(String message) {
-        Output.setText(message);
-    }
-
-    public void Run(String input)
-    {
-        boolean connectionContinue;
-        connectionContinue=connection.executeCommand(input);
-        if (connectionContinue==false)
-        {
-            this.hide();
-        }
-    }
 
 }
