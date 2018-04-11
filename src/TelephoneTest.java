@@ -1,40 +1,44 @@
-import junit.framework.Assert;
+
+
 import org.junit.Test;
 
 import java.io.ByteArrayInputStream;
 import java.io.InputStream;
 import java.util.Scanner;
 
+import static org.junit.Assert.assertEquals;
+
 public class TelephoneTest {
+	String ENTER_MAILBOX_MESSAGE = "Enter mailbox number followed by #";
 	@Test
 	public void EnterAChainInPhoneAndPrintTheChainShouldReturnMeSame() {
 		Scanner scanner=new Scanner(System.in);
 		Connection connection=new Connection(new MailSystem(20));
 		Telephone telephone=new Telephone(scanner, connection);
-		String output="Enter mailbox number followeb by #";
-		Assert.assertEquals(telephone.speakT(output), "Enter mailbox number followeb by #");
+		String output=ENTER_MAILBOX_MESSAGE;
+		assertEquals(telephone.speakT(output), ENTER_MAILBOX_MESSAGE);
 		
 	}
 	@Test
-	public void IncomeLetterHAndICheckThattheConnectionIsEstablishedShouldReturnTrue() {
+	public void IncomeLetterHAndICheckThatTheConnectionIsEstablishedShouldReturnTrue() {
 		Scanner scanner=GetScannerWithThisString("H");
 		MailSystem mailSystem=new MailSystem(20);
 		Connection connection=new Connection(mailSystem);
 		Telephone telephone=new Telephone(scanner, connection);
 		connection.startConnection();
 		telephone.run();
-		Assert.assertEquals(connection.isConnected(), true);
+		assertEquals(connection.isConnected(), true);
 	}
 
 	@Test
-	public void IncomeLetterQAndICheckThattheConnectionIsEstablishedShouldReturnTrue() {
+	public void IncomeLetterQAndICheckThatTheConnectionIsEstablishedShouldReturnTrue() {
 		Scanner scanner=GetScannerWithThisString("Q");
 		MailSystem mailSystem=new MailSystem(20);
 		Connection connection=new Connection(mailSystem);
 		Telephone telephone=new Telephone(scanner, connection);
 		connection.startConnection();
 		telephone.run();
-		Assert.assertEquals(true, connection.isConnected());
+		assertEquals(true, connection.isConnected());
 	}
 	
 	@Test
@@ -44,7 +48,7 @@ public class TelephoneTest {
 		Connection connection=new Connection(mailSystem);
 		Telephone telephone=new Telephone(scanner, connection);
 		telephone.run();
-		Assert.assertEquals(connection.isRecording(), false);
+		assertEquals(connection.isRecording(), false);
 	}
 	
 	@Test
@@ -55,16 +59,14 @@ public class TelephoneTest {
 		Connection connection=new Connection(mailSystem);
 		Telephone telephone=new Telephone(scanner, connection);
 		telephone.run();
-		Assert.assertEquals(connection.isRecording(), false);
+		assertEquals(connection.isRecording(), false);
 	}
 	
-	public Scanner GetScannerWithThisString(String texto) {
+	private Scanner GetScannerWithThisString(String texto) {
 		texto=texto+" \nQ";
-		InputStream a=new ByteArrayInputStream(texto.getBytes());
-		System.setIn(a);
-		a=new ByteArrayInputStream("Q".getBytes());
-		Scanner scanner = new Scanner(System.in);
-		return scanner;
+		InputStream inputStream=new ByteArrayInputStream(texto.getBytes());
+		System.setIn(inputStream);
+		return new Scanner(System.in);
 	}
 
 }

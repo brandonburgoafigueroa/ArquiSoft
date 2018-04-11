@@ -1,52 +1,53 @@
-import static org.junit.Assert.*;
 
 
 import org.junit.Before;
 import org.junit.Test;
+
+import static org.junit.Assert.assertEquals;
 public class MailBoxTest {
-	private Mailbox mailBox;
 
 	@Before
 	public void init() {
-		mailBox = new Mailbox("password","welcome!");
+
+		mailBox = new Mailbox(PASS_CODE,WELCOME_MESSAGE);
 		
 	}
 	@Test
 	public void verifyCorrectPasscode() {
 		
-		assertEquals(true,mailBox.checkPasscode("password"));
+		assertEquals(true,mailBox.checkPasscode(PASS_CODE));
 	}
 	@Test
 	public void verifySetCorrectPasscode() {
-		mailBox.setPasscode("contrasena");
-		assertEquals(true,mailBox.checkPasscode("contrasena"));
+		mailBox.setPasscode(PASS_CODE);
+		assertEquals(true,mailBox.checkPasscode(PASS_CODE));
 	}
 	@Test
 	public void verifyCorrectGreeting() {
 		;
-		assertEquals("welcome!",mailBox.getGreeting());
+		assertEquals(WELCOME_MESSAGE,mailBox.getGreeting());
 	}
 	@Test
 	public void verifySetGreeting() {
-		mailBox.setGreeting("hello!");
-		assertEquals("hello!",mailBox.getGreeting());
+		mailBox.setGreeting(HI_MESSAGE_SHORT);
+		assertEquals(HI_MESSAGE_SHORT,mailBox.getGreeting());
 	}
 	@Test
 	public void isCorrectTheCurrentNewMessage() {
-		Message message = new Message("hello, how are you?");
+		Message message = new Message(HI_MESSAGE_LONG);
 		mailBox.addMessage(message);
 		assertEquals(message,mailBox.getCurrentMessage());
 	}
 	@Test
 	public void isCorrectTheCurrentKeptMessage() {
-		Message message = new Message("hello, how are you?");
+		Message message = new Message(HI_MESSAGE_LONG);
 		mailBox.addMessage(message);
 		mailBox.saveCurrentMessage();
 		assertEquals(message,mailBox.getCurrentMessage());
 	}
 	@Test
 	public void isEmptyQueueNewMessages() {
-		Message message = new Message("hello, how are you?");
+		Message message = new Message(HI_MESSAGE_LONG);
 		mailBox.addMessage(message);
 		mailBox.removeCurrentMessage();
 		assertEquals(null,mailBox.getCurrentMessage());
@@ -54,43 +55,52 @@ public class MailBoxTest {
 	
 	@Test
 	public void isCorrectTheCurrentMessageWithMultipleNewMessages() {
-		Message message = new Message("hello, how are you?");
+
+		Message message = new Message(HI_MESSAGE_LONG);
 		mailBox.addMessage(message);
-		Message message2 = new Message("are you okay?");
+		Message message2 = new Message(FIRST_MESSAGE);
 		mailBox.addMessage(message2);
-		Message message3 = new Message("can you answer me?");
+		Message message3 = new Message(SECOND_MESSAGE);
 		mailBox.addMessage(message3);
 		assertEquals(message,mailBox.getCurrentMessage());
 	}
 	@Test
 	public void wasCorrectNewMessageRemovedSuccesfull() {
-		Message message = new Message("hello, how are you?");
+		Message message = new Message(HI_MESSAGE_LONG);
 		mailBox.addMessage(message);
-		Message message2 = new Message("are you okay?");
+		Message message2 = new Message(FIRST_MESSAGE);
 		mailBox.addMessage(message2);
-		Message message3 = new Message("can you answer me?");
+		Message message3 = new Message(SECOND_MESSAGE);
 		mailBox.addMessage(message3);
 		mailBox.removeCurrentMessage();
 		assertEquals(message2,mailBox.removeCurrentMessage());
 	}
 	@Test
 	public void wasRemovedTheOnlyNewMessageSuccesfull() {
-		Message message = new Message("hello, how are you?");
+		Message message = new Message(HI_MESSAGE_LONG);
 		mailBox.addMessage(message);
 		mailBox.removeCurrentMessage();
 		assertEquals(null,mailBox.removeCurrentMessage());
 	}
 	@Test
 	public void isEmptyMessageQueueWithMultipleNewMessages() {
-		Message message = new Message("hello, how are you?");
+		Message message = new Message(HI_MESSAGE_LONG);
 		mailBox.addMessage(message);
-		Message message2 = new Message("are you okay?");
+		Message message2 = new Message(FIRST_MESSAGE);
 		mailBox.addMessage(message2);
-		Message message3 = new Message("can you answer me?");
+		Message message3 = new Message(SECOND_MESSAGE);
 		mailBox.addMessage(message3);
 		mailBox.removeCurrentMessage();
 		mailBox.removeCurrentMessage();
 		mailBox.removeCurrentMessage();
 		assertEquals(null,mailBox.getCurrentMessage());
 	}
+
+	private Mailbox mailBox;
+	private String HI_MESSAGE_LONG="hello, how are you?";
+	private String HI_MESSAGE_SHORT="hello!";
+	private String PASS_CODE ="passsword";
+	private String WELCOME_MESSAGE="welcome!";
+	private String FIRST_MESSAGE="are you okay?";
+	private String SECOND_MESSAGE="can you answer me?";
 }

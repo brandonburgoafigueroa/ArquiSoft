@@ -13,7 +13,9 @@ public class MailSystemTester
       Connection c = new Connection(system);
       Telephone p = new Telephone(console, c);
       UIObserver FirstUI = new UIObserver(c);
+      FirstUI.setVisible(true);
       UIObserver SecondUI = new UIObserver(c);
+      SecondUI.setVisible(true);
       c.startConnection();
       p.run();
    }

@@ -14,7 +14,7 @@ public class Telephone implements IObservable
    {
       scanner = aScanner;
       this.connection=connection;
-      this.connection.AddObservable(this);
+      this.connection.addObservable(this);
    }
    /**
       Speak a message to System.out.
@@ -39,12 +39,10 @@ public class Telephone implements IObservable
    public void run()
    {
       boolean more = true;
-      while (more)
-      {
+      while (more) {
          String input = scanner.nextLine();
-         more=connection.executeCommand(input);
+         more = connection.executeCommand(input);
       }
-      System.exit(0);
    }
 
    private Scanner scanner;

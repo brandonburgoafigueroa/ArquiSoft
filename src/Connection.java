@@ -12,10 +12,8 @@ public class Connection
 	private Mailbox currentMailbox;
 	private String currentRecording;
 	private String accumulatedKeys;
-	private Telephone phone;
 	private int state;
     private List<IObservable> observables=new ArrayList<IObservable>();
-	private static final int DISCONNECTED = 0;
 	private static final int CONNECTED = 1;
 	private static final int RECORDING = 2;
 	private static final int MAILBOX_MENU = 3;
@@ -34,18 +32,10 @@ public class Connection
 	      + "Enter 2 to save the current message\n"
 	      + "Enter 3 to delete the current message\n"
 	      + "Enter 4 to return to the main menu";
-   /**
-      Construct a Connection object.
-      @param s a MailSystem object
-      @param p a Telephone object
-   */
 
    public Connection(MailSystem s)
    {
        system = s;
-
-       //resetConnection();
-
    }
 
    public void startConnection()
@@ -53,13 +43,13 @@ public class Connection
        resetConnection();
    }
 
-   public void AddObservable(IObservable observable)
+   public void addObservable(IObservable observable)
    {
       observables.add(observable);
 
    }
 
-   public void UpdateObservables(String message)
+   public void updateObservables(String message)
    {
       for (IObservable observer:observables) {
        observer.Update(message);
@@ -141,8 +131,8 @@ public class Connection
       currentRecording = "";
       accumulatedKeys = "";
       state = CONNECTED;
-      //phone.Update(INITIAL_PROMPT);
-      UpdateObservables(INITIAL_PROMPT);
+
+      updateObservables(INITIAL_PROMPT);
    }
 
    /**
@@ -157,12 +147,12 @@ public class Connection
          if (currentMailbox != null)
          {
             state = RECORDING;
-            //phone.Update(currentMailbox.getGreeting());
-            UpdateObservables(currentMailbox.getGreeting());
+
+            updateObservables(currentMailbox.getGreeting());
          }
          else {
-            //phone.Update("Incorrect mailbox number. Try again!");
-            UpdateObservables("Incorrect mailbox number. Try again!");
+
+            updateObservables("Incorrect mailbox number. Try again!");
          }
          accumulatedKeys = "";
       }
@@ -181,12 +171,12 @@ public class Connection
          if (currentMailbox.checkPasscode(accumulatedKeys))
          {
             state = MAILBOX_MENU;
-            //phone.Update(MAILBOX_MENU_TEXT);
-            UpdateObservables(MAILBOX_MENU_TEXT);
+
+            updateObservables(MAILBOX_MENU_TEXT);
          }
          else {
-            //phone.Update("Incorrect passcode. Try again!");
-            UpdateObservables("Incorrect passcode. Try again!");
+
+            updateObservables("Incorrect passcode. Try again!");
          }
          accumulatedKeys = "";
       }
@@ -204,8 +194,8 @@ public class Connection
       {
          currentMailbox.setPasscode(accumulatedKeys);
          state = MAILBOX_MENU;
-         //phone.Update(MAILBOX_MENU_TEXT);
-         UpdateObservables(MAILBOX_MENU_TEXT);
+
+         updateObservables(MAILBOX_MENU_TEXT);
          accumulatedKeys = "";
       }
       else
@@ -223,8 +213,8 @@ public class Connection
          currentMailbox.setGreeting(currentRecording);
          currentRecording = "";
          state = MAILBOX_MENU;
-         //phone.Update(MAILBOX_MENU_TEXT);
-         UpdateObservables(MAILBOX_MENU_TEXT);
+
+         updateObservables(MAILBOX_MENU_TEXT);
       }
    }
 
@@ -237,20 +227,20 @@ public class Connection
       if (key.equals("1"))
       {
          state = MESSAGE_MENU;
-         //phone.Update(MESSAGE_MENU_TEXT);
-         UpdateObservables(MESSAGE_MENU_TEXT);
+
+         updateObservables(MESSAGE_MENU_TEXT);
       }
       else if (key.equals("2"))
       {
          state = CHANGE_PASSCODE;
-         //phone.Update("Enter new passcode followed by the # key");
-         UpdateObservables("Enter new passcode followed by the # key");
+
+         updateObservables("Enter new passcode followed by the # key");
       }
       else if (key.equals("3"))
       {
          state = CHANGE_GREETING;
-         //phone.Update("Record your greeting, then press the # key");
-         UpdateObservables("Record your greeting, then press the # key");
+
+         updateObservables("Record your greeting, then press the # key");
       }
    }
 
@@ -267,26 +257,26 @@ public class Connection
          if (m == null) output += "No messages." + "\n";
          else output += m.getText() + "\n";
          output += MESSAGE_MENU_TEXT;
-         //phone.Update(output);
-         UpdateObservables(output);
+
+         updateObservables(output);
       }
       else if (key.equals("2"))
       {
          currentMailbox.saveCurrentMessage();
-         //phone.Update(MESSAGE_MENU_TEXT);
-         UpdateObservables(MESSAGE_MENU_TEXT);
+
+         updateObservables(MESSAGE_MENU_TEXT);
       }
       else if (key.equals("3"))
       {
          currentMailbox.removeCurrentMessage();
-         //phone.Update(MESSAGE_MENU_TEXT);
-         UpdateObservables(MESSAGE_MENU_TEXT);
+
+         updateObservables(MESSAGE_MENU_TEXT);
       }
       else if (key.equals("4"))
       {
          state = MAILBOX_MENU;
-         //phone.Update(MAILBOX_MENU_TEXT);
-         UpdateObservables(MAILBOX_MENU_TEXT);
+
+         updateObservables(MAILBOX_MENU_TEXT);
       }
 
    }
