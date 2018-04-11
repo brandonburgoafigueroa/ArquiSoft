@@ -13,40 +13,40 @@ public class MailBoxTest {
 		
 	}
 	@Test
-	public void verifyCorrectPasscode() {
+	public void verifyIfMailBoxHasTheCorrectPasscodeIntroduced() {
 		
 		assertEquals(true,mailBox.checkPasscode(PASS_CODE));
 	}
 	@Test
-	public void verifySetCorrectPasscode() {
+	public void verifyIfMailBoxHasTheCorrectPasswordAfterSetPasscode() {
 		mailBox.setPasscode(PASS_CODE);
 		assertEquals(true,mailBox.checkPasscode(PASS_CODE));
 	}
 	@Test
-	public void verifyCorrectGreeting() {
+	public void verifyIfTheMailboxHasCorrectGreetingIntroduced() {
 		assertEquals(WELCOME_MESSAGE,mailBox.getGreeting());
 	}
 	@Test
-	public void verifySetGreeting() {
+	public void verifyIfMailboxHasTheCorrectGreetingAfterSetGreeting() {
 		String HI_MESSAGE_SHORT = "hello!";
 		mailBox.setGreeting(HI_MESSAGE_SHORT);
 		assertEquals(HI_MESSAGE_SHORT,mailBox.getGreeting());
 	}
 	@Test
-	public void isCorrectTheCurrentNewMessage() {
+	public void verifyIfTheMailBoxHasTheCorrectNewMessage() {
 		Message message = new Message(HI_MESSAGE_LONG);
 		mailBox.addMessage(message);
 		assertEquals(message,mailBox.getCurrentMessage());
 	}
 	@Test
-	public void isCorrectTheCurrentKeptMessage() {
+	public void verifyIfTheMailBoxHasTheCurrentKeptMessage() {
 		Message message = new Message(HI_MESSAGE_LONG);
 		mailBox.addMessage(message);
 		mailBox.saveCurrentMessage();
 		assertEquals(message,mailBox.getCurrentMessage());
 	}
 	@Test
-	public void isEmptyQueueNewMessages() {
+	public void verifyIfTheMailBoxIsEmptyAfterAddRemoveMessage() {
 		Message message = new Message(HI_MESSAGE_LONG);
 		mailBox.addMessage(message);
 		mailBox.removeCurrentMessage();
@@ -54,7 +54,7 @@ public class MailBoxTest {
 	}
 	
 	@Test
-	public void isCorrectTheCurrentMessageWithMultipleNewMessages() {
+	public void verifyIfTheMailBoxHasTheCurrentMessageAfterAddMultipleMessages() {
 
 		Message message = new Message(HI_MESSAGE_LONG);
 		mailBox.addMessage(message);
@@ -65,7 +65,7 @@ public class MailBoxTest {
 		assertEquals(message,mailBox.getCurrentMessage());
 	}
 	@Test
-	public void wasCorrectNewMessageRemovedSuccesfull() {
+	public void verifyIfTheMailBoxHasTheCurrentMessageAfterAddMultipleMessagesAndRemoveAMessage() {
 		Message message = new Message(HI_MESSAGE_LONG);
 		mailBox.addMessage(message);
 		Message message2 = new Message(FIRST_MESSAGE);
@@ -76,14 +76,14 @@ public class MailBoxTest {
 		assertEquals(message2,mailBox.removeCurrentMessage());
 	}
 	@Test
-	public void wasRemovedTheOnlyNewMessageSuccesfull() {
+	public void verifyIfTheCurrentMessageIsEmptyAfterAddRemoveAMessage() {
 		Message message = new Message(HI_MESSAGE_LONG);
 		mailBox.addMessage(message);
 		mailBox.removeCurrentMessage();
 		assertEquals(null,mailBox.removeCurrentMessage());
 	}
 	@Test
-	public void isEmptyMessageQueueWithMultipleNewMessages() {
+	public void verifyIfTheQueueMessagesIsEmptyMessageAfterAddRemoveMultipleNewMessages() {
 		Message message = new Message(HI_MESSAGE_LONG);
 		mailBox.addMessage(message);
 		Message message2 = new Message(FIRST_MESSAGE);
