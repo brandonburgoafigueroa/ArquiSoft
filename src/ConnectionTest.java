@@ -32,8 +32,7 @@ public class ConnectionTest {
 	
 	@Test
 	public void shouldChooseValidMailBoxWhenSelectTheMailBoxAndSelectNumeral() {
-		connection.dial(idMailBox);
-		connection.dial("#");
+		dialMailBox(idMailBox);
 		assertTrue(connection.isRecording());
 		verify(mockedTelephone).Update(HI_MESSAGE);
 	}
@@ -46,147 +45,146 @@ public class ConnectionTest {
 	@Test
 	public void shouldGetIntoMailBoxMenuWhenSelectTheMailBox() {
 
-		connection.dial(idMailBox);
-		connection.dial("#");
-		connection.dial(keyMailBox);
-		connection.dial("#");
-
+		dialMailBox(idMailBox);
+		dialMailBoxMenu();
 		assertTrue(connection.isMailBoxMenu());
 	}
-	
+
+
 	@Test
 	public void shouldGetIntoMessageMenuWhenSelectTheMailBox() {
 
 		String mailBoxMenuOption = "1";
-		connection.dial(idMailBox);
-		connection.dial("#");
-		connection.dial(keyMailBox);
-		connection.dial("#");
-		connection.dial(mailBoxMenuOption);
-		connection.dial("#");
+		dialMailBox(idMailBox);
+		dialMailBoxMenu();
+		listenMessages();
 
 		assertTrue(connection.isMessageMenu());
 	}
-	
 	@Test
 	public void shouldGetIntoChangePassCodeMenuWhenSelectMenuOption2() {
 
-		String mailBoxMenuOption = "2";
-		connection.dial(idMailBox);
-		connection.dial("#");
-		connection.dial(keyMailBox);
-		connection.dial("#");
-		connection.dial(mailBoxMenuOption);
-
+		String changePasscode = "2";
+		dialMailBox(idMailBox);
+		selectOptionOfMailBoxMenu(changePasscode);
 		assertTrue(connection.isChangePassCode());
+	}
+	@Test
+	public void shouldGetIntoChangeGreetingMenuAfterSelectMenuOption3() {
+
+		String changeGreeting = "3";
+		dialMailBox(idMailBox);
+		selectOptionOfMailBoxMenu(changeGreeting);
+
+		assertTrue(connection.isChangeGreeting());
 	}
 
 	@Test
 	public void shouldChangePassCodeFrom1To2AfterSelectTheMailBox() {
-
 		String newKeyMailBox = "2";
-		String mailBoxMenuOption = "2";
-		String hangDown = "h";
-		connection.dial(idMailBox);
-		connection.dial("#");
-		connection.dial(keyMailBox);
-		connection.dial("#");
-		connection.dial(mailBoxMenuOption);
-		
-		connection.dial(newKeyMailBox);
-		connection.dial("#");
-		connection.dial(hangDown);
-		
-		connection.dial(idMailBox);
-		connection.dial("#");
-		connection.dial(newKeyMailBox);
-		connection.dial("#");
-		
+		dialMailBox(idMailBox);
+		dialMailBoxMenu();
+		changePasscode(newKeyMailBox);
+		dialMailBox(idMailBox);
+		dialMailBox(newKeyMailBox);
+
 		assertTrue(connection.isMessageMenu());
 	}
-	
+
+
 	@Test
 	public void whenISendAMessageToAccountOneAndSeeTheLastMessageIShouldReturnTheMessageISend() {
 
 		String mailBoxMenuOption = "1";
-		connection.dial(idMailBox);
-		connection.dial("#");
-		connection.dial(keyMailBox);
-		connection.dial("#");
-		connection.dial(mailBoxMenuOption);	
-		connection.dial(mailBoxMenuOption);	
+		dialMailBox(idMailBox);
+		selectOptionOfMailBoxMenu(mailBoxMenuOption);
 		verify(mockedTelephone).Update(HI_MESSAGE);
 	}
-    
-	
+
+
+
 	@Test
 	public void whenIDeleteTheLastMessageIShouldReturnTheStartMessage() {
 
-		String mailBoxMenuOption = "3";
-		connection.dial(idMailBox);
-		connection.dial("#");
-		connection.dial(keyMailBox);
-		connection.dial("#");
-		connection.dial("1");	
-		connection.dial(mailBoxMenuOption);	
+		String deleteCurrentMessage = "3";
+		dialMailBox(idMailBox);
+		dialMailBoxMenu();
+		selectOptionOfListenMessagesMenu(deleteCurrentMessage);
 		verify(mockedTelephone).Update(ENTER_MAILBOX_MESSAGE);
 	}
 	@Test
 	public void whenIEnterTheMessageMenuAndSelectTheOptionExitShouldReturnTheStartMessage() {
 
-		String mailBoxMenuOption = "4";
-		connection.dial(idMailBox);
-		connection.dial("#");
-		connection.dial(keyMailBox);
-		connection.dial("#");
-		connection.dial("1");	
-		connection.dial(mailBoxMenuOption);	
+		String returnMainMenu = "4";
+		dialMailBox(idMailBox);
+		dialMailBoxMenu();
+		selectOptionOfListenMessagesMenu(returnMainMenu);
 		verify(mockedTelephone).Update(ENTER_MAILBOX_MESSAGE);
 	}
-	
-	@Test
-	public void shouldGetIntoChangeGreetingMenuAfterSelectMenuOption3() {
 
-		String mailBoxMenuOption = "3";
-		connection.dial(idMailBox);
-		connection.dial("#");
-		connection.dial(keyMailBox);
-		connection.dial("#");
-		connection.dial(mailBoxMenuOption);
-
-		assertTrue(connection.isChangeGreeting());
+	private void selectOptionOfListenMessagesMenu(String option) {
+		connection.dial("1");
+		connection.dial(option);
 	}
+
+
 	
 	@Test
 	public void shouldChangeGreetingFromStockOneToNewOne() {
 		String optionForChangeGreeting = "3";
 		String newGreeting="Hola, como estas?";
-		connection.dial(idMailBox);
-		connection.dial("#");
-		connection.dial(keyMailBox);
-		connection.dial("#");
-		connection.dial(optionForChangeGreeting);
-
-		connection.dial(newGreeting);
-		connection.dial("#");
-		connection.dial("h");
-
-		connection.dial(idMailBox);
-		connection.dial("#");
-
+		dialMailBox(idMailBox);
+		dialMailBoxMenu();
+		changeGreeting(optionForChangeGreeting, newGreeting);
+		dialMailBox(idMailBox);
 		verify(mockedTelephone).Update(newGreeting);
 	}
-	
+
+
 	@Test
 	public void whenIEnterANumberOfMailThatDoesNotExistIShouldReturnTheIncorrectLoginMessage()
 	{
 		when(mockedMailsystem.findMailbox(idMailBox)).thenReturn(null);
-		connection.dial(idMailBox);
-		connection.dial("#");
+		dialMailBox(idMailBox);
         String INCORRECT_MAILBOX_NUMBER_MESSAGE = "Incorrect mailbox number. Try again!";
         verify(mockedTelephone).Update(INCORRECT_MAILBOX_NUMBER_MESSAGE);
 	}
 
+	private void selectOptionOfMailBoxMenu(String mailBoxMenuOption) {
+		dialMailBoxMenu();
+		connection.dial(mailBoxMenuOption);
+	}
+
+	private void changePasscode(String newKeyMailBox) {
+
+		String mailBoxMenuOption = "2";
+		String hangDown = "h";
+		connection.dial(mailBoxMenuOption);
+		connection.dial(newKeyMailBox);
+		connection.dial("#");
+		connection.dial(hangDown);
+	}
+	private void changeGreeting(String optionForChangeGreeting, String newGreeting) {
+		connection.dial(optionForChangeGreeting);
+		connection.dial(newGreeting);
+		connection.dial("#");
+		connection.dial("h");
+	}
+
+	private void dialMailBox(String idMailBox) {
+		connection.dial(idMailBox);
+		connection.dial("#");
+	}
+
+	private void listenMessages() {
+		connection.dial("1");
+		connection.dial("#");
+	}
+
+	private void dialMailBoxMenu() {
+		connection.dial(keyMailBox);
+		connection.dial("#");
+	}
     private MailSystem mockedMailsystem;
     private Telephone mockedTelephone;
     private Connection connection;
