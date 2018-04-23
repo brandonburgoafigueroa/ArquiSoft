@@ -8,7 +8,7 @@ public class Telephone implements IObservable
       this.connection=connection;
       this.connection.addObservable(this);
    }
-   public void Update(String message)
+   public void update(String message)
    {
       System.out.println(message);
    }

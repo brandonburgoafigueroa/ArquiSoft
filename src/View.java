@@ -1,3 +1,3 @@
 public interface IObservable {
-    void Update(String message);
+    void update(String message);
 }

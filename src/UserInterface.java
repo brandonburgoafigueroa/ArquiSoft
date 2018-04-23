@@ -13,7 +13,7 @@ public class UIObserver extends JFrame implements IObservable {
         setActionsToButtons();
     }
 
-    public void Update(String message) {
+    public void update(String message) {
         Output.setText(message);
     }
 
