@@ -1,9 +1,11 @@
+package controller;
+
 import java.util.ArrayList;
 
 public class MailSystem
 {
 
-   MailSystem(int mailboxCount)
+   public MailSystem(int mailboxCount)
    {
       mailboxes = new ArrayList();
       for (int i = 0; i < mailboxCount; i++)

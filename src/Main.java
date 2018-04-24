@@ -1,20 +1,25 @@
+import controller.Connection;
+import controller.MailSystem;
+import view.Console;
+import view.UserInterface;
+
 import java.util.Scanner;
 
 /**
    This program tests the mail system. A single phone
    communicates with the program through System.in/System.out.
 */
-public class MailSystemTester
+public class Main
 {
    public static void main(String[] args)
    {
       MailSystem system = new MailSystem(MAILBOX_COUNT);
       Scanner console = new Scanner(System.in);
       Connection c = new Connection(system);
-      Telephone p = new Telephone(console, c);
-      UIObserver FirstUI = new UIObserver(c);
+      Console p = new Console(console, c);
+      UserInterface FirstUI = new UserInterface(c);
       FirstUI.setVisible(true);
-      UIObserver SecondUI = new UIObserver(c);
+      UserInterface SecondUI = new UserInterface(c);
       SecondUI.setVisible(true);
       c.startConnection();
       p.run();

@@ -1,8 +1,10 @@
+package controller;
+
 import java.util.ArrayList;
 
 public class MessageQueue
 {
-   MessageQueue()
+   public MessageQueue()
    {
       queue = new ArrayList();
    }

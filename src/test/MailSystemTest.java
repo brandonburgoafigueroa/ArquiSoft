@@ -1,12 +1,12 @@
+package test;
 
-
+import controller.MailSystem;
+import org.junit.Assert;
 import org.junit.Test;
-
-import static org.junit.Assert.assertEquals;
 public class MailSystemTest {
 	@Test
 	public void verifyIfTheMailSystemIsEmpty() {
 		MailSystem mailSystem = new MailSystem(0);
-		assertEquals(null, mailSystem.findMailbox("0"));
+		Assert.assertEquals(null, mailSystem.findMailbox("0"));
 	}
 }

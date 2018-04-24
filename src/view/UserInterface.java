@@ -1,11 +1,14 @@
+package view;
+
+import controller.Connection;
+
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-
 public class UserInterface extends JFrame implements View {
 
 
-    UserInterface(Connection connection)
+    public UserInterface(Connection connection)
     {
         pack();
         setConnection(connection);

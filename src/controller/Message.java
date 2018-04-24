@@ -1,7 +1,8 @@
+package controller;
 
 public class Message
 {
-   Message(String messageText)
+   public Message(String messageText)
    {
       text = messageText;
    }

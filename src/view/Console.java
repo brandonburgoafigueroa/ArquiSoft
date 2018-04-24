@@ -1,8 +1,12 @@
+package view;
+
+import controller.Connection;
+
 import java.util.Scanner;
 
 public class Console implements View
 {
-   Console(Scanner aScanner, Connection connection)
+   public Console(Scanner aScanner, Connection connection)
    {
       scanner = aScanner;
       this.connection=connection;

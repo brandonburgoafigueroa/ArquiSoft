@@ -1,10 +1,10 @@
+package test;
 
-
+import controller.Message;
+import controller.MessageQueue;
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
-
-import static org.junit.Assert.assertEquals;
-
 public class MessageQueueTest {
 	private Message firstMessage;
 	private Message secondMessage;
@@ -21,34 +21,34 @@ public class MessageQueueTest {
 
 		MessageQueue messagequeue=new MessageQueue();
 		messagequeue.add(firstMessage);
-		assertEquals(messagequeue.remove(), firstMessage);
+		Assert.assertEquals(messagequeue.remove(), firstMessage);
 	}
 	@Test
 	public void IAddTheTailTwoMessagesAndEliminateTheFirstOfTheTailShouldReturnTheFirstMessageISent(){
 		MessageQueue messagequeue=new MessageQueue();
 		messagequeue.add(firstMessage);
 		messagequeue.add(secondMessage);
-		assertEquals(messagequeue.remove(), firstMessage);
+		Assert.assertEquals(messagequeue.remove(), firstMessage);
 	}
 	@Test
 	public void AddTailAMessageAndEliminateTailSizeShouldReturn2(){
 		MessageQueue messagequeue=new MessageQueue();
 		messagequeue.add(firstMessage);
 		messagequeue.add(firstMessage);
-		assertEquals(messagequeue.size(), 2);
+		Assert.assertEquals(messagequeue.size(), 2);
 	}
 	@Test
 	public void IAddATailAMessageAndIGetTheFirstOfTheTailIShouldReturnTheAddedMessage(){
 
 		MessageQueue messagequeue=new MessageQueue();
 		messagequeue.add(firstMessage);
-		assertEquals(messagequeue.peek(), firstMessage);
+		Assert.assertEquals(messagequeue.peek(), firstMessage);
 
 	}
 	@Test
 	public void IDoNotAddAnythingToTheTailAndIGetTheFirstInTheTailIShouldReturnNull(){
 		MessageQueue messagequeue=new MessageQueue();
-		assertEquals(messagequeue.peek(), null);
+		Assert.assertEquals(messagequeue.peek(), null);
 
 	}
 }

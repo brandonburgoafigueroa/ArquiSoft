@@ -1,3 +1,5 @@
+package controller;
+
 import view.View;
 
 import java.util.ArrayList;
@@ -6,7 +8,7 @@ import java.util.List;
 
 public class Connection
 {
-   Connection(MailSystem s)
+   public Connection(MailSystem s)
    {
        system = s;
        observables=new ArrayList();

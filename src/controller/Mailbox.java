@@ -1,8 +1,9 @@
+package controller;
 
 public class Mailbox
 {
 
-   Mailbox(String aPasscode, String aGreeting)
+   public Mailbox(String aPasscode, String aGreeting)
    {
       passcode = aPasscode;
       greeting = aGreeting;

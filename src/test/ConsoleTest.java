@@ -1,11 +1,14 @@
+package test;
 
-
+import org.junit.Assert;
 import org.junit.Test;
 
 import java.io.ByteArrayInputStream;
 import java.io.InputStream;
 import java.util.Scanner;
-
+import controller.MailSystem;
+import controller.Connection;
+import view.Console;
 import static org.junit.Assert.assertEquals;
 
 public class ConsoleTest {
@@ -16,7 +19,7 @@ public class ConsoleTest {
 		Console telephone=new Console(scanner, connection);
 		String ENTER_MAILBOX_MESSAGE = "Enter mailbox number followed by #";
 		String output= ENTER_MAILBOX_MESSAGE;
-		assertEquals(telephone.speakT(output), ENTER_MAILBOX_MESSAGE);
+		Assert.assertEquals(telephone.speakT(output), ENTER_MAILBOX_MESSAGE);
 		
 	}
 	@Test
@@ -27,7 +30,7 @@ public class ConsoleTest {
 		Console telephone=new Console(scanner, connection);
 		connection.startConnection();
 		telephone.run();
-		assertEquals(connection.isConnected(), true);
+		Assert.assertEquals(connection.isConnected(), true);
 	}
 
 	@Test
@@ -38,7 +41,7 @@ public class ConsoleTest {
 		Console telephone=new Console(scanner, connection);
 		connection.startConnection();
 		telephone.run();
-		assertEquals(true, connection.isConnected());
+		Assert.assertEquals(true, connection.isConnected());
 	}
 	
 	@Test
@@ -48,7 +51,7 @@ public class ConsoleTest {
 		Connection connection=new Connection(mailSystem);
 		Console telephone=new Console(scanner, connection);
 		telephone.run();
-		assertEquals(connection.isRecording(), false);
+		Assert.assertEquals(connection.isRecording(), false);
 	}
 	
 	@Test
@@ -59,7 +62,7 @@ public class ConsoleTest {
 		Connection connection=new Connection(mailSystem);
 		Console telephone=new Console(scanner, connection);
 		telephone.run();
-		assertEquals(connection.isRecording(), false);
+		Assert.assertEquals(connection.isRecording(), false);
 	}
 	
 	private Scanner GetScannerWithThisString(String texto) {
