@@ -1,3 +1,5 @@
+import view.View;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -18,7 +20,7 @@ public class Connection
        updateObservables(INITIAL_PROMPT);
    }
 
-   public void addObservable(IObservable observable)
+   public void addObservable(View observable)
    {
       observables.add(observable);
 
@@ -26,8 +28,8 @@ public class Connection
 
    private void updateObservables(String message)
    {
-      for (IObservable observer:observables) {
-       observer.Update(message);
+      for (View observer:observables) {
+       observer.update(message);
       }
    }
 
@@ -232,7 +234,7 @@ public class Connection
     private String currentRecording;
     private String accumulatedKeys;
     private int state;
-    private List<IObservable> observables;
+    private List<View> observables;
     private static final int CONNECTED = 1;
     private static final int RECORDING = 2;
     private static final int MAILBOX_MENU = 3;

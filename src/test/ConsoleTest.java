@@ -8,12 +8,12 @@ import java.util.Scanner;
 
 import static org.junit.Assert.assertEquals;
 
-public class TelephoneTest {
+public class ConsoleTest {
 	@Test
 	public void EnterAChainInPhoneAndPrintTheChainShouldReturnMeSame() {
 		Scanner scanner=new Scanner(System.in);
 		Connection connection=new Connection(new MailSystem(20));
-		Telephone telephone=new Telephone(scanner, connection);
+		Console telephone=new Console(scanner, connection);
 		String ENTER_MAILBOX_MESSAGE = "Enter mailbox number followed by #";
 		String output= ENTER_MAILBOX_MESSAGE;
 		assertEquals(telephone.speakT(output), ENTER_MAILBOX_MESSAGE);
@@ -24,7 +24,7 @@ public class TelephoneTest {
 		Scanner scanner=GetScannerWithThisString("H");
 		MailSystem mailSystem=new MailSystem(20);
 		Connection connection=new Connection(mailSystem);
-		Telephone telephone=new Telephone(scanner, connection);
+		Console telephone=new Console(scanner, connection);
 		connection.startConnection();
 		telephone.run();
 		assertEquals(connection.isConnected(), true);
@@ -35,7 +35,7 @@ public class TelephoneTest {
 		Scanner scanner=GetScannerWithThisString("Q");
 		MailSystem mailSystem=new MailSystem(20);
 		Connection connection=new Connection(mailSystem);
-		Telephone telephone=new Telephone(scanner, connection);
+		Console telephone=new Console(scanner, connection);
 		connection.startConnection();
 		telephone.run();
 		assertEquals(true, connection.isConnected());
@@ -46,7 +46,7 @@ public class TelephoneTest {
 		Scanner scanner=GetScannerWithThisString("Hola");
 		MailSystem mailSystem=new MailSystem(20);
 		Connection connection=new Connection(mailSystem);
-		Telephone telephone=new Telephone(scanner, connection);
+		Console telephone=new Console(scanner, connection);
 		telephone.run();
 		assertEquals(connection.isRecording(), false);
 	}
@@ -57,7 +57,7 @@ public class TelephoneTest {
 
 		MailSystem mailSystem=new MailSystem(20);
 		Connection connection=new Connection(mailSystem);
-		Telephone telephone=new Telephone(scanner, connection);
+		Console telephone=new Console(scanner, connection);
 		telephone.run();
 		assertEquals(connection.isRecording(), false);
 	}

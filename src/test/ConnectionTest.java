@@ -1,4 +1,3 @@
-import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -10,7 +9,7 @@ public class ConnectionTest {
     @Before
 	public void init() {
 	    mockedMailsystem = mock(MailSystem.class);
-	    mockedTelephone = mock(Telephone.class);
+	    mockedTelephone = mock(Console.class);
 	    connection = new Connection(mockedMailsystem);
 	    connection.addObservable(mockedTelephone);
 		connection.startConnection();
@@ -27,21 +26,15 @@ public class ConnectionTest {
 	@Test
 	public void shouldShowInitialMessageWhenTheApplicationWasStarted() {
 
-        verify(mockedTelephone, times(1)).Update(ENTER_MAILBOX_MESSAGE);
+        verify(mockedTelephone, times(1)).update(ENTER_MAILBOX_MESSAGE);
 	}
 	
 	@Test
 	public void shouldChooseValidMailBoxWhenSelectTheMailBoxAndSelectNumeral() {
 		dialMailBox(idMailBox);
 		assertTrue(connection.isRecording());
-		verify(mockedTelephone).Update(HI_MESSAGE);
+		verify(mockedTelephone).update(HI_MESSAGE);
 	}
-	@Test
-    public void whenStartConnectionShouldBeReturnTrue()
-    {
-        connection.startConnection();
-        Assert.assertEquals(connection.isConnected(), true);
-    }
 	@Test
 	public void shouldGetIntoMailBoxMenuWhenSelectTheMailBox() {
 
@@ -98,7 +91,7 @@ public class ConnectionTest {
 		String mailBoxMenuOption = "1";
 		dialMailBox(idMailBox);
 		selectOptionOfMailBoxMenu(mailBoxMenuOption);
-		verify(mockedTelephone).Update(HI_MESSAGE);
+		verify(mockedTelephone).update(HI_MESSAGE);
 	}
 
 
@@ -110,7 +103,7 @@ public class ConnectionTest {
 		dialMailBox(idMailBox);
 		dialMailBoxMenu();
 		selectOptionOfListenMessagesMenu(deleteCurrentMessage);
-		verify(mockedTelephone).Update(ENTER_MAILBOX_MESSAGE);
+		verify(mockedTelephone).update(ENTER_MAILBOX_MESSAGE);
 	}
 	@Test
 	public void whenIEnterTheMessageMenuAndSelectTheOptionExitShouldReturnTheStartMessage() {
@@ -119,7 +112,7 @@ public class ConnectionTest {
 		dialMailBox(idMailBox);
 		dialMailBoxMenu();
 		selectOptionOfListenMessagesMenu(returnMainMenu);
-		verify(mockedTelephone).Update(ENTER_MAILBOX_MESSAGE);
+		verify(mockedTelephone).update(ENTER_MAILBOX_MESSAGE);
 	}
 
 	private void selectOptionOfListenMessagesMenu(String option) {
@@ -137,7 +130,7 @@ public class ConnectionTest {
 		dialMailBoxMenu();
 		changeGreeting(optionForChangeGreeting, newGreeting);
 		dialMailBox(idMailBox);
-		verify(mockedTelephone).Update(newGreeting);
+		verify(mockedTelephone).update(newGreeting);
 	}
 
 
@@ -147,7 +140,7 @@ public class ConnectionTest {
 		when(mockedMailsystem.findMailbox(idMailBox)).thenReturn(null);
 		dialMailBox(idMailBox);
         String INCORRECT_MAILBOX_NUMBER_MESSAGE = "Incorrect mailbox number. Try again!";
-        verify(mockedTelephone).Update(INCORRECT_MAILBOX_NUMBER_MESSAGE);
+        verify(mockedTelephone).update(INCORRECT_MAILBOX_NUMBER_MESSAGE);
 	}
 
 	private void selectOptionOfMailBoxMenu(String mailBoxMenuOption) {
@@ -186,7 +179,7 @@ public class ConnectionTest {
 		connection.dial("#");
 	}
     private MailSystem mockedMailsystem;
-    private Telephone mockedTelephone;
+    private Console mockedTelephone;
     private Connection connection;
     private String ENTER_MAILBOX_MESSAGE = "Enter mailbox number followed by #";
     private String idMailBox = "1";
