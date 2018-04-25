@@ -6,13 +6,12 @@ import view.View;
 public class Connection
 {
 
-/*seccion de variables agregadas*/
-State state =new State();
-    IState messageMenu=new MessageMenu();
+
+    State state =new State();
     MailBoxMenu mailBoxMenu=new MailBoxMenu();
     Connect connect=new Connect();
     IState status;
-/* end */
+
    public Connection(MailSystem s)
    {
        system = s;
@@ -63,7 +62,6 @@ State state =new State();
       else{
           state.getStatus().start(key, currentMailbox, state, observers);
       }
-
    }
 
 
