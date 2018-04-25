@@ -1,6 +1,6 @@
 package controller;
 
-public class Connect {
+public class State {
     private int state;
     private static final int CONNECTED = 1;
     private static final int RECORDING = 2;
@@ -8,9 +8,25 @@ public class Connect {
     private static final int MESSAGE_MENU = 4;
     private static final int CHANGE_PASSCODE = 5;
     private static final int CHANGE_GREETING = 6;
-    public Connect()
+    public State()
     {
 
+    }
+    public void setMailBoxMenu()
+    {
+        state=MAILBOX_MENU;
+    }
+    public void setMessageMenu()
+    {
+        state=MESSAGE_MENU;
+    }
+    public void setChangePassCode()
+    {
+        state=CHANGE_PASSCODE;
+    }
+    public void setChangeGreeting()
+    {
+        state=CHANGE_GREETING;
     }
     public void changeToConnected(int CONNECTED)
     {

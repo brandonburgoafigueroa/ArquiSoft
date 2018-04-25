@@ -10,7 +10,7 @@ public class Connection
 {
 
 /*seccion de variables agregadas*/
-Connect connect=new Connect();
+State state =new State();
 /* end */
    public Connection(MailSystem s)
    {
@@ -22,15 +22,13 @@ Connect connect=new Connect();
    {
        currentRecording = "";
        accumulatedKeys = "";
-       connect.changeToConnected(CONNECTED);
-       //state = CONNECTED;
+       state.changeToConnected(CONNECTED);
        updateObservables(INITIAL_PROMPT);
    }
 
    public void addObservable(View observable)
    {
       observables.add(observable);
-
    }
 
    private void updateObservables(String message)
@@ -55,15 +53,16 @@ Connect connect=new Connect();
 
     private void hangup()
     {
-        if (state == RECORDING) {
+        if (state.IsRecording()) {
             currentMailbox.addMessage(new Message(currentRecording));
-
         }
         startConnection();
     }
    public void dial(String key)
    {
-      if (connect.IsConnected())
+       MessageMenu messageMenu=new MessageMenu();
+       MailBoxMenu mailBoxMenu=new MailBoxMenu();
+      if (isConnected())
          connect(key);
       else if (isRecording())
          login(key);
@@ -72,9 +71,10 @@ Connect connect=new Connect();
       else if (isChangeGreeting())
          changeGreeting(key);
       else if (isMailBoxMenu())
-         mailboxMenu(key);
+         mailBoxMenu.mailboxMenu(key, state, observables);
       else if (isMessageMenu())
-         messageMenu(key);
+        messageMenu.messageMenu(currentMailbox, key,state, observables );
+          //messageMenu(key);
    }
 
     private void connect(String key)
@@ -84,8 +84,7 @@ Connect connect=new Connect();
             currentMailbox = system.findMailbox(accumulatedKeys);
             if (currentMailbox != null)
             {
-                connect.changeToConnected(RECORDING);
-                //state = RECORDING;
+                state.changeToConnected(RECORDING);
 
                 updateObservables(currentMailbox.getGreeting());
             }
@@ -104,8 +103,7 @@ Connect connect=new Connect();
         {
             if (currentMailbox.checkPasscode(accumulatedKeys))
             {
-                connect.changeToConnected(MAILBOX_MENU);
-                //state = MAILBOX_MENU;
+                state.changeToConnected(MAILBOX_MENU);
 
                 updateObservables(MAILBOX_MENU_TEXT);
             }
@@ -122,8 +120,7 @@ Connect connect=new Connect();
         if (itIsANumeralCharacter(key))
         {
             currentMailbox.setPasscode(accumulatedKeys);
-            connect.changeToConnected(MAILBOX_MENU);
-            //state = MAILBOX_MENU;
+            state.changeToConnected(MAILBOX_MENU);
             updateObservables(MAILBOX_MENU_TEXT);
             accumulatedKeys = "";
         }
@@ -136,8 +133,7 @@ Connect connect=new Connect();
         {
             currentMailbox.setGreeting(currentRecording);
             currentRecording = "";
-            connect.changeToConnected(MAILBOX_MENU);
-            //state = MAILBOX_MENU;
+            state.changeToConnected(MAILBOX_MENU);
             updateObservables(MAILBOX_MENU_TEXT);
         }
     }
@@ -146,84 +142,43 @@ Connect connect=new Connect();
     {
         switch (key) {
             case "1":
-                connect.changeToConnected(MESSAGE_MENU);
-                //state = MESSAGE_MENU;
-
+                state.changeToConnected(MESSAGE_MENU);
                 updateObservables(MESSAGE_MENU_TEXT);
                 break;
             case "2":
-                connect.changeToConnected(CHANGE_PASSCODE);
-                //state = CHANGE_PASSCODE;
-
+                state.changeToConnected(CHANGE_PASSCODE);
                 updateObservables(ENTER_NEW_PASSCODE_MESSAGE);
                 break;
             case "3":
-                connect.changeToConnected(CHANGE_GREETING);
-                //state = CHANGE_GREETING;
-
-
+                state.changeToConnected(CHANGE_GREETING);
                 updateObservables(ENTER_NEW_GREETING_MESSAGE);
                 break;
         }
     }
-
-    private void messageMenu(String key)
-    {
-        switch (key) {
-            case "1":
-                String output = "";
-                Message m = currentMailbox.getCurrentMessage();
-                if (m == null) {
-                    output += EMPTY_MAILBOX_MESSAGE + "\n";
-                }
-                else output += m.getText() + "\n";
-                output += MESSAGE_MENU_TEXT;
-                updateObservables(output);
-                break;
-            case "2":
-                currentMailbox.saveCurrentMessage();
-                updateObservables(MESSAGE_MENU_TEXT);
-                break;
-            case "3":
-                currentMailbox.removeCurrentMessage();
-                updateObservables(MESSAGE_MENU_TEXT);
-                break;
-            case "4":
-                connect.changeToConnected(MAILBOX_MENU);
-                //state = MAILBOX_MENU;
-                updateObservables(MAILBOX_MENU_TEXT);
-                break;
-        }
-
-    }
     public boolean isConnected() {
-	   //return state==CONNECTED;
-        return connect.IsConnected();
+        return state.IsConnected();
    }
 
    public boolean isRecording() {
-       return connect.IsRecording();
-	   //return state==RECORDING;
+       return state.IsRecording();
    }
 
    public boolean isChangePassCode() {
-       return connect.IsChangePassCode();
-	   //return state == CHANGE_PASSCODE;
+       return state.IsChangePassCode();
    }
 
    public boolean isChangeGreeting() {
-       return connect.IsChangeGreeting();
-	   //return state == CHANGE_GREETING;
+       return state.IsChangeGreeting();
    }
 
    public boolean isMailBoxMenu() {
-       return connect.IsMailBoxMenu();
-	   //return state == MAILBOX_MENU;
+       return state.IsMailBoxMenu();
+
    }
 
    public boolean isMessageMenu() {
-       return connect.IsMessageMenu();
-	   //return state == MESSAGE_MENU;
+       return state.IsMessageMenu();
+
    }
 
    private void record(String voice)
@@ -253,7 +208,6 @@ Connect connect=new Connect();
     private Mailbox currentMailbox;
     private String currentRecording;
     private String accumulatedKeys;
-    private int state;
     private List<View> observables;
     private static final int CONNECTED = 1;
     private static final int RECORDING = 2;
