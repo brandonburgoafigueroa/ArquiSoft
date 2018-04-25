@@ -1,8 +1,8 @@
 package controller;
 
-public class ChangeGreeting {
+public class ChangeGreeting implements IState{
     String currentRecording="";
-    public void changeGreeting(String key, Mailbox currentMailbox, State state, Observers observers)
+    public void start(String key, Mailbox currentMailbox, State state, Observers observers)
     {
         if (itIsANumeralCharacter(key))
         {
@@ -12,6 +12,7 @@ public class ChangeGreeting {
             observers.updateObservables(MAILBOX_MENU_TEXT);
         }
     }
+
     private boolean itIsANumeralCharacter(String key) {
         return key.equals("#");
     }

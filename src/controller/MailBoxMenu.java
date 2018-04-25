@@ -1,8 +1,8 @@
 package controller;
 
-public class MailBoxMenu {
+public class MailBoxMenu implements IState{
 
-    public void mailboxMenu(String key, State state, Observers observers)
+    public void start(String key, Mailbox mailbox, State state, Observers observers)
     {
         switch (key) {
             case "1":

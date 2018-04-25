@@ -1,9 +1,8 @@
 package controller;
 
-public class MessageMenu
-{
+public class MessageMenu implements IState{
     public MessageMenu(){}
-    public void messageMenu(Mailbox currentMailbox, String key, State state, Observers observers)
+    public void start(String key,Mailbox currentMailbox, State state, Observers observers)
     {
         switch (key) {
             case "1":
@@ -31,7 +30,6 @@ public class MessageMenu
         }
 
     }
-
 
     private String EMPTY_MAILBOX_MESSAGE = "No messages.";
     private static final String MAILBOX_MENU_TEXT =

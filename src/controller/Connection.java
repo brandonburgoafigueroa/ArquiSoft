@@ -8,12 +8,13 @@ public class Connection
 
 /*seccion de variables agregadas*/
 State state =new State();
-    MessageMenu messageMenu=new MessageMenu();
-    MailBoxMenu mailBoxMenu=new MailBoxMenu();
-    ChangeGreeting changeGreeting=new ChangeGreeting();
-    ChangePasscode changePasscode=new ChangePasscode();
-    Login login=new Login();
+    IState messageMenu=new MessageMenu();
+    IState mailBoxMenu=new MailBoxMenu();
+    IState changeGreeting=new ChangeGreeting();
+    IState changePasscode=new ChangePasscode();
+    IState login=new Login();
     Connect connect=new Connect();
+    IState status;
 /* end */
    public Connection(MailSystem s)
    {
@@ -55,19 +56,19 @@ State state =new State();
     }
    public void dial(String key)
    {
-      if (isConnected())
-          currentMailbox=connect.connect(key,system, state, observers);
-      else if (isRecording())
-          login.login(key, currentMailbox, state, observers);
-      else if (isChangePassCode())
-         changePasscode.changePasscode(key, currentMailbox, state, observers);
-      else if (isChangeGreeting())
-         changeGreeting.changeGreeting(key, currentMailbox, state, observers);
-      else if (isMailBoxMenu())
-         mailBoxMenu.mailboxMenu(key, state, observers);
+      if (isConnected()) {
+          currentMailbox = connect.connect(key, system, state, observers);
+
+      }
       else if (isMessageMenu())
-        messageMenu.messageMenu(currentMailbox, key,state, observers);
+        messageMenu.start(key, currentMailbox,state, observers);
+      else
+      {
+          state.getStatus().start(key, currentMailbox, state, observers);
+      }
+
    }
+
 
     public boolean isConnected() {
         return state.IsConnected();

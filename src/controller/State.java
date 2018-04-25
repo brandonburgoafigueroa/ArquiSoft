@@ -2,6 +2,7 @@ package controller;
 
 public class State {
     private int state;
+    IState status;
     private static final int CONNECTED = 1;
     private static final int RECORDING = 2;
     private static final int MAILBOX_MENU = 3;
@@ -15,25 +16,28 @@ public class State {
     public void setMailBoxMenu()
     {
         state=MAILBOX_MENU;
+        status=new MailBoxMenu();
     }
     public void setMessageMenu()
     {
         state=MESSAGE_MENU;
+        status=new MessageMenu();
+
     }
     public void setChangePassCode()
     {
         state=CHANGE_PASSCODE;
+        status=new ChangePasscode();
     }
     public void setChangeGreeting()
     {
         state=CHANGE_GREETING;
+        status=new ChangeGreeting();
+
     }
     public void setRecording() {
         state=RECORDING;
-    }
-    public void changeToConnected(int CONNECTED)
-    {
-        state=CONNECTED;
+        status=new Login();
     }
     public boolean IsConnected(){
         return state==CONNECTED;
@@ -45,7 +49,9 @@ public class State {
     public boolean IsRecording() {
         return state==RECORDING;
     }
-
+    public IState getStatus(){
+        return status;
+    }
     public boolean IsChangePassCode() {
         return state==CHANGE_PASSCODE;
     }

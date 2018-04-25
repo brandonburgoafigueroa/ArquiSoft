@@ -1,9 +1,9 @@
 package controller;
 
-public class Login {
+public class Login implements IState{
 
     String accumulatedKeys="";
-    public void login(String key, Mailbox currentMailbox, State state, Observers observers)
+    public void start(String key, Mailbox currentMailbox, State state, Observers observers)
     {
         if (itIsANumeralCharacter(key))
         {
@@ -20,6 +20,8 @@ public class Login {
         else
             accumulatedKeys += key;
     }
+
+
     private boolean itIsANumeralCharacter(String key) {
         return key.equals("#");
     }

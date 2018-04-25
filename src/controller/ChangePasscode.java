@@ -1,8 +1,8 @@
 package controller;
 
-public class ChangePasscode {
+public class ChangePasscode implements IState{
     String accumulatedKeys="";
-    public void changePasscode(String key,Mailbox currentMailbox, State state,Observers observers)
+    public void start(String key,Mailbox currentMailbox, State state,Observers observers)
     {
         if (itIsANumeralCharacter(key))
         {
@@ -14,6 +14,8 @@ public class ChangePasscode {
         else
             accumulatedKeys += key;
     }
+
+
     private boolean itIsANumeralCharacter(String key) {
         return key.equals("#");
     }

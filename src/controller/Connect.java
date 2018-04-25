@@ -1,6 +1,6 @@
 package controller;
 
-public class Connect {
+public class Connect{
     Mailbox currentMailbox;
     String accumulatedKeys="";
     public Mailbox connect(String key, MailSystem system, State state, Observers observers)
