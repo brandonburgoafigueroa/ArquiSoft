@@ -28,12 +28,18 @@ public class State {
     {
         state=CHANGE_GREETING;
     }
+    public void setRecording() {
+        state=RECORDING;
+    }
     public void changeToConnected(int CONNECTED)
     {
         state=CONNECTED;
     }
     public boolean IsConnected(){
         return state==CONNECTED;
+    }
+    public void setConnected() {
+        state=CONNECTED;
     }
 
     public boolean IsRecording() {
@@ -55,4 +61,7 @@ public class State {
     public boolean IsMessageMenu() {
         return state==MESSAGE_MENU;
     }
+
+
+
 }

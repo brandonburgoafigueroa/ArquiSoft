@@ -16,7 +16,7 @@ public class ConnectionTest {
 	    mockedMailsystem = mock(MailSystem.class);
 	    mockedTelephone = mock(Console.class);
 	    connection = new Connection(mockedMailsystem);
-	    connection.addObservable(mockedTelephone);
+	    connection.addObserver(mockedTelephone);
 		connection.startConnection();
         Mailbox chosenMailbox = new Mailbox(idMailBox, HI_MESSAGE);
         when(mockedMailsystem.findMailbox(idMailBox)).thenReturn(chosenMailbox);
@@ -73,7 +73,6 @@ public class ConnectionTest {
 		String changeGreeting = "3";
 		dialMailBox(idMailBox);
 		selectOptionOfMailBoxMenu(changeGreeting);
-
 		assertTrue(connection.isChangeGreeting());
 	}
 

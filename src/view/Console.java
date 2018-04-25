@@ -10,7 +10,7 @@ public class Console implements View
    {
       scanner = aScanner;
       this.connection=connection;
-      this.connection.addObservable(this);
+      this.connection.addObserver(this);
    }
    public void update(String message)
    {

@@ -1,33 +1,21 @@
 package controller;
 
-import view.View;
-
-import java.util.List;
-
 public class MailBoxMenu {
-    private List<View> observables;
-    private void updateObservables(String message)
-    {
 
-        for (View observer:observables) {
-            observer.update(message);
-        }
-    }
-    public void mailboxMenu(String key, State state, List<View> observables)
+    public void mailboxMenu(String key, State state, Observers observers)
     {
-        this.observables=observables;
         switch (key) {
             case "1":
                 state.setMessageMenu();
-                updateObservables(MESSAGE_MENU_TEXT);
+                observers.updateObservables(MESSAGE_MENU_TEXT);
                 break;
             case "2":
                 state.setChangePassCode();
-                updateObservables(ENTER_NEW_PASSCODE_MESSAGE);
+                observers.updateObservables(ENTER_NEW_PASSCODE_MESSAGE);
                 break;
             case "3":
                 state.setChangeGreeting();
-                updateObservables(ENTER_NEW_GREETING_MESSAGE);
+                observers.updateObservables(ENTER_NEW_GREETING_MESSAGE);
                 break;
         }
     }

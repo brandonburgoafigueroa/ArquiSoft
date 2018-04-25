@@ -1,23 +1,10 @@
 package controller;
 
-import view.View;
-
-import java.util.List;
-
 public class MessageMenu
 {
-    private List<View> observables;
-    private void updateObservables(String message)
-    {
-
-        for (View observer:observables) {
-            observer.update(message);
-        }
-    }
     public MessageMenu(){}
-    public void messageMenu(Mailbox currentMailbox, String key, State state, List<View> observables)
+    public void messageMenu(Mailbox currentMailbox, String key, State state, Observers observers)
     {
-        this.observables=observables;
         switch (key) {
             case "1":
                 String output = "";
@@ -27,19 +14,19 @@ public class MessageMenu
                 }
                 else output += m.getText() + "\n";
                 output += MESSAGE_MENU_TEXT;
-                updateObservables(output);
+                observers.updateObservables(output);
                 break;
             case "2":
                 currentMailbox.saveCurrentMessage();
-                updateObservables(MESSAGE_MENU_TEXT);
+                observers.updateObservables(MESSAGE_MENU_TEXT);
                 break;
             case "3":
                 currentMailbox.removeCurrentMessage();
-                updateObservables(MESSAGE_MENU_TEXT);
+                observers.updateObservables(MESSAGE_MENU_TEXT);
                 break;
             case "4":
                 state.setMailBoxMenu();
-                updateObservables(MAILBOX_MENU_TEXT);
+                observers.updateObservables(MAILBOX_MENU_TEXT);
                 break;
         }
 
