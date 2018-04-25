@@ -2,6 +2,9 @@ package controller;
 
 public class Message
 {
+
+   private String text;
+
    public Message(String messageText)
    {
       text = messageText;
@@ -10,5 +13,5 @@ public class Message
    {
       return text;
    }
-   private String text;
+
 }

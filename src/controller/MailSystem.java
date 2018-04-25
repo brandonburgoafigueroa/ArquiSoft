@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 public class MailSystem
 {
+   private ArrayList<Mailbox> mailboxes;
 
    public MailSystem(int mailboxCount)
    {
@@ -25,5 +26,5 @@ public class MailSystem
       else return null;
    }
 
-   private ArrayList<Mailbox> mailboxes;
+
 }

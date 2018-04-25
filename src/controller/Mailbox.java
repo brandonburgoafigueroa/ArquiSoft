@@ -3,6 +3,10 @@ package controller;
 public class Mailbox
 {
 
+   private MessageQueue newMessages;
+   private MessageQueue keptMessages;
+   private String greeting;
+   private String passcode;
    public Mailbox(String aPasscode, String aGreeting)
    {
       passcode = aPasscode;
@@ -60,8 +64,4 @@ public class Mailbox
    }
 
 
-   private MessageQueue newMessages;
-   private MessageQueue keptMessages;
-   private String greeting;
-   private String passcode;
 }

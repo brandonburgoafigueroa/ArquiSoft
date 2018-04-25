@@ -39,32 +39,32 @@ public class State {
         state=RECORDING;
         status=new Login();
     }
-    public boolean IsConnected(){
+    public boolean isConnected(){
         return state==CONNECTED;
     }
     public void setConnected() {
         state=CONNECTED;
     }
 
-    public boolean IsRecording() {
+    public boolean isRecording() {
         return state==RECORDING;
     }
     public IState getStatus(){
         return status;
     }
-    public boolean IsChangePassCode() {
+    public boolean isChangePassCode() {
         return state==CHANGE_PASSCODE;
     }
 
-    public boolean IsChangeGreeting() {
+    public boolean isChangeGreeting() {
         return state==CHANGE_GREETING;
     }
 
-    public boolean IsMailBoxMenu() {
+    public boolean isMailBoxMenu() {
         return state==MAILBOX_MENU;
     }
 
-    public boolean IsMessageMenu() {
+    public boolean isMessageMenu() {
         return state==MESSAGE_MENU;
     }
 

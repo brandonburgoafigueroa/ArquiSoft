@@ -6,6 +6,12 @@ import view.View;
 public class Connection
 {
 
+    private MailSystem system;
+    private Mailbox currentMailbox;
+    private String currentRecording;
+    private Observers observers;
+    private static final String INITIAL_PROMPT =
+            "Enter mailbox number followed by #";
 
     State state =new State();
     MailBoxMenu mailBoxMenu=new MailBoxMenu();
@@ -45,7 +51,7 @@ public class Connection
 
     private void hangup()
     {
-        if (state.IsRecording()) {
+        if (state.isRecording()) {
             currentMailbox.addMessage(new Message(currentRecording));
         }
         startConnection();
@@ -66,28 +72,28 @@ public class Connection
 
 
     public boolean isConnected() {
-        return state.IsConnected();
+        return state.isConnected();
    }
 
    public boolean isRecording() {
-       return state.IsRecording();
+       return state.isRecording();
    }
 
    public boolean isChangePassCode() {
-       return state.IsChangePassCode();
+       return state.isChangePassCode();
    }
 
    public boolean isChangeGreeting() {
-       return state.IsChangeGreeting();
+       return state.isChangeGreeting();
    }
 
    public boolean isMailBoxMenu() {
-       return state.IsMailBoxMenu();
+       return state.isMailBoxMenu();
 
    }
 
    public boolean isMessageMenu() {
-       return state.IsMessageMenu();
+       return state.isMessageMenu();
 
    }
 
@@ -109,12 +115,6 @@ public class Connection
     private boolean isInputHangUpCommand(String input) {
         return input.equalsIgnoreCase("H");
     }
-    private MailSystem system;
-    private Mailbox currentMailbox;
-    private String currentRecording;
-    private Observers observers;
-    private static final String INITIAL_PROMPT =
-            "Enter mailbox number followed by #";
 
 
 }

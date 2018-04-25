@@ -3,6 +3,7 @@ package controller;
 public class Connect{
     Mailbox currentMailbox;
     String accumulatedKeys="";
+    private String INCORRECT_MAILBOX_MESSAGE = "Incorrect mailbox number. Try again!";
     public Mailbox connect(String key, MailSystem system, State state, Observers observers)
     {
         if (itIsANumeralCharacter(key))
@@ -26,5 +27,5 @@ public class Connect{
         return key.equals("#");
     }
 
-    private String INCORRECT_MAILBOX_MESSAGE = "Incorrect mailbox number. Try again!";
+
 }

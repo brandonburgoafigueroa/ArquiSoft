@@ -1,7 +1,12 @@
 package controller;
 
 public class Login implements IState{
+    private String INCORRECT_PASSCODE_MESSAGE = "Incorrect passcode. Try again!";
 
+    private static final String MAILBOX_MENU_TEXT =
+            "Enter 1 to listen to your messages\n"
+                    + "Enter 2 to change your passcode\n"
+                    + "Enter 3 to change your greeting";
     String accumulatedKeys="";
     public void start(String key, Mailbox currentMailbox, State state, Observers observers)
     {
@@ -26,11 +31,6 @@ public class Login implements IState{
         return key.equals("#");
     }
 
-    private String INCORRECT_PASSCODE_MESSAGE = "Incorrect passcode. Try again!";
 
-    private static final String MAILBOX_MENU_TEXT =
-            "Enter 1 to listen to your messages\n"
-                    + "Enter 2 to change your passcode\n"
-                    + "Enter 3 to change your greeting";
 
 }

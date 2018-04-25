@@ -1,6 +1,18 @@
 package controller;
 
 public class MessageMenu implements IState{
+
+    private String EMPTY_MAILBOX_MESSAGE = "No messages.";
+    private static final String MAILBOX_MENU_TEXT =
+            "Enter 1 to listen to your messages\n"
+                    + "Enter 2 to change your passcode\n"
+                    + "Enter 3 to change your greeting";
+    private static final String MESSAGE_MENU_TEXT =
+            "Enter 1 to listen to the current message\n"
+                    + "Enter 2 to save the current message\n"
+                    + "Enter 3 to delete the current message\n"
+                    + "Enter 4 to return to the main menu";
+
     public MessageMenu(){}
     public void start(String key,Mailbox currentMailbox, State state, Observers observers)
     {
@@ -31,14 +43,5 @@ public class MessageMenu implements IState{
 
     }
 
-    private String EMPTY_MAILBOX_MESSAGE = "No messages.";
-    private static final String MAILBOX_MENU_TEXT =
-            "Enter 1 to listen to your messages\n"
-                    + "Enter 2 to change your passcode\n"
-                    + "Enter 3 to change your greeting";
-    private static final String MESSAGE_MENU_TEXT =
-            "Enter 1 to listen to the current message\n"
-                    + "Enter 2 to save the current message\n"
-                    + "Enter 3 to delete the current message\n"
-                    + "Enter 4 to return to the main menu";
+
 }
