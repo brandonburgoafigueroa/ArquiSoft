@@ -9,6 +9,7 @@ public class Connection
 /*seccion de variables agregadas*/
 State state =new State();
     IState messageMenu=new MessageMenu();
+    MailBoxMenu mailBoxMenu=new MailBoxMenu();
     Connect connect=new Connect();
     IState status;
 /* end */
@@ -56,10 +57,10 @@ State state =new State();
           currentMailbox = connect.connect(key, system, state, observers);
 
       }
-      else if (isMessageMenu())
-        messageMenu.start(key, currentMailbox,state, observers);
-      else
-      {
+      else if(isMailBoxMenu()) {
+          mailBoxMenu.start(key,state, observers);
+   }
+      else{
           state.getStatus().start(key, currentMailbox, state, observers);
       }
 

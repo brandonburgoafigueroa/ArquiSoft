@@ -16,7 +16,7 @@ public class State {
     public void setMailBoxMenu()
     {
         state=MAILBOX_MENU;
-        status=new MailBoxMenu();
+        //status=new MailBoxMenu();
     }
     public void setMessageMenu()
     {
