@@ -8,6 +8,10 @@ import java.util.List;
 
 public class Connection
 {
+
+/*seccion de variables agregadas*/
+Connect connect=new Connect();
+/* end */
    public Connection(MailSystem s)
    {
        system = s;
@@ -18,7 +22,8 @@ public class Connection
    {
        currentRecording = "";
        accumulatedKeys = "";
-       state = CONNECTED;
+       connect.changeToConnected(CONNECTED);
+       //state = CONNECTED;
        updateObservables(INITIAL_PROMPT);
    }
 
@@ -55,11 +60,10 @@ public class Connection
 
         }
         startConnection();
-
     }
    public void dial(String key)
    {
-      if (isConnected())
+      if (connect.IsConnected())
          connect(key);
       else if (isRecording())
          login(key);
@@ -80,7 +84,8 @@ public class Connection
             currentMailbox = system.findMailbox(accumulatedKeys);
             if (currentMailbox != null)
             {
-                state = RECORDING;
+                connect.changeToConnected(RECORDING);
+                //state = RECORDING;
 
                 updateObservables(currentMailbox.getGreeting());
             }
@@ -99,7 +104,8 @@ public class Connection
         {
             if (currentMailbox.checkPasscode(accumulatedKeys))
             {
-                state = MAILBOX_MENU;
+                connect.changeToConnected(MAILBOX_MENU);
+                //state = MAILBOX_MENU;
 
                 updateObservables(MAILBOX_MENU_TEXT);
             }
@@ -116,7 +122,8 @@ public class Connection
         if (itIsANumeralCharacter(key))
         {
             currentMailbox.setPasscode(accumulatedKeys);
-            state = MAILBOX_MENU;
+            connect.changeToConnected(MAILBOX_MENU);
+            //state = MAILBOX_MENU;
             updateObservables(MAILBOX_MENU_TEXT);
             accumulatedKeys = "";
         }
@@ -129,7 +136,8 @@ public class Connection
         {
             currentMailbox.setGreeting(currentRecording);
             currentRecording = "";
-            state = MAILBOX_MENU;
+            connect.changeToConnected(MAILBOX_MENU);
+            //state = MAILBOX_MENU;
             updateObservables(MAILBOX_MENU_TEXT);
         }
     }
@@ -138,17 +146,20 @@ public class Connection
     {
         switch (key) {
             case "1":
-                state = MESSAGE_MENU;
+                connect.changeToConnected(MESSAGE_MENU);
+                //state = MESSAGE_MENU;
 
                 updateObservables(MESSAGE_MENU_TEXT);
                 break;
             case "2":
-                state = CHANGE_PASSCODE;
+                connect.changeToConnected(CHANGE_PASSCODE);
+                //state = CHANGE_PASSCODE;
 
                 updateObservables(ENTER_NEW_PASSCODE_MESSAGE);
                 break;
             case "3":
-                state = CHANGE_GREETING;
+                connect.changeToConnected(CHANGE_GREETING);
+                //state = CHANGE_GREETING;
 
 
                 updateObservables(ENTER_NEW_GREETING_MESSAGE);
@@ -178,39 +189,46 @@ public class Connection
                 updateObservables(MESSAGE_MENU_TEXT);
                 break;
             case "4":
-                state = MAILBOX_MENU;
+                connect.changeToConnected(MAILBOX_MENU);
+                //state = MAILBOX_MENU;
                 updateObservables(MAILBOX_MENU_TEXT);
                 break;
         }
 
     }
     public boolean isConnected() {
-	   return state==CONNECTED;
+	   //return state==CONNECTED;
+        return connect.IsConnected();
    }
 
    public boolean isRecording() {
-	   return state==RECORDING;
+       return connect.IsRecording();
+	   //return state==RECORDING;
    }
 
    public boolean isChangePassCode() {
-	   return state == CHANGE_PASSCODE;
+       return connect.IsChangePassCode();
+	   //return state == CHANGE_PASSCODE;
    }
 
    public boolean isChangeGreeting() {
-	   return state == CHANGE_GREETING;
+       return connect.IsChangeGreeting();
+	   //return state == CHANGE_GREETING;
    }
 
    public boolean isMailBoxMenu() {
-	   return state == MAILBOX_MENU;
+       return connect.IsMailBoxMenu();
+	   //return state == MAILBOX_MENU;
    }
 
    public boolean isMessageMenu() {
-	   return state == MESSAGE_MENU;
+       return connect.IsMessageMenu();
+	   //return state == MESSAGE_MENU;
    }
 
    private void record(String voice)
    {
-      if (state == RECORDING || state == CHANGE_GREETING)
+      if (isRecording() || isChangeGreeting())
          currentRecording += voice;
    }
 
@@ -261,13 +279,6 @@ public class Connection
                     + "Enter 4 to return to the main menu";
 
 }
-
-
-
-
-
-
-
 
 
 
