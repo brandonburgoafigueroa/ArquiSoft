@@ -9,10 +9,6 @@ public class Connection
 /*seccion de variables agregadas*/
 State state =new State();
     IState messageMenu=new MessageMenu();
-    IState mailBoxMenu=new MailBoxMenu();
-    IState changeGreeting=new ChangeGreeting();
-    IState changePasscode=new ChangePasscode();
-    IState login=new Login();
     Connect connect=new Connect();
     IState status;
 /* end */
