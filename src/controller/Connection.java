@@ -8,8 +8,10 @@ import java.util.List;
 
 public class Connection
 {
+    public IState status;
    public Connection(MailSystem s)
    {
+       status=new Connect();
        system = s;
        observables=new ArrayList();
    }
@@ -19,6 +21,8 @@ public class Connection
        currentRecording = "";
        accumulatedKeys = "";
        state = CONNECTED;
+       currentMailbox=null;
+       status=new Connect();
        updateObservables(INITIAL_PROMPT);
    }
 
@@ -28,7 +32,7 @@ public class Connection
 
    }
 
-   private void updateObservables(String message)
+   public void updateObservables(String message)
    {
       for (View observer:observables) {
        observer.update(message);
@@ -59,10 +63,13 @@ public class Connection
     }
    public void dial(String key)
    {
-      if (isConnected())
-         connect(key);
+      if (isConnected()) {
+          status.start(key, this);
+      }
       else if (isRecording())
-         login(key);
+      {
+          status.start(key, this);
+      }
       else if (isChangePassCode())
          changePasscode(key);
       else if (isChangeGreeting())
@@ -73,25 +80,6 @@ public class Connection
          messageMenu(key);
    }
 
-    private void connect(String key)
-    {
-        if (itIsANumeralCharacter(key))
-        {
-            currentMailbox = system.findMailbox(accumulatedKeys);
-            if (currentMailbox != null)
-            {
-                state = RECORDING;
-
-                updateObservables(currentMailbox.getGreeting());
-            }
-            else {
-                updateObservables(INCORRECT_MAILBOX_MESSAGE);
-            }
-            accumulatedKeys = "";
-        }
-        else
-            accumulatedKeys += key;
-    }
 
     private void login(String key)
     {
@@ -235,14 +223,14 @@ public class Connection
     private Mailbox currentMailbox;
     private String currentRecording;
     private String accumulatedKeys;
-    private int state;
+    public int state;
     private List<View> observables;
-    private static final int CONNECTED = 1;
-    private static final int RECORDING = 2;
-    private static final int MAILBOX_MENU = 3;
-    private static final int MESSAGE_MENU = 4;
-    private static final int CHANGE_PASSCODE = 5;
-    private static final int CHANGE_GREETING = 6;
+    public static final int CONNECTED = 1;
+    public static final int RECORDING = 2;
+    public static final int MAILBOX_MENU = 3;
+    public static final int MESSAGE_MENU = 4;
+    public static final int CHANGE_PASSCODE = 5;
+    public static final int CHANGE_GREETING = 6;
     private String ENTER_NEW_GREETING_MESSAGE = "Record your greeting, then press the # key";
     private String INCORRECT_PASSCODE_MESSAGE = "Incorrect passcode. Try again!";
     private String ENTER_NEW_PASSCODE_MESSAGE = "Enter new passcode followed by the # key";
@@ -260,6 +248,17 @@ public class Connection
                     + "Enter 3 to delete the current message\n"
                     + "Enter 4 to return to the main menu";
 
+    public Mailbox getCurrentMailbox() {
+        return currentMailbox;
+    }
+
+    public MailSystem getMailboxSystem() {
+        return system;
+    }
+
+    public void setMailbox(Mailbox mailbox) {
+        this.currentMailbox = mailbox;
+    }
 }
 
 

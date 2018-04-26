@@ -1,4 +1,5 @@
-package PACKAGE_NAME;
+package controller;
 
 public interface IState {
+    void start(String key, Connection connection);
 }
