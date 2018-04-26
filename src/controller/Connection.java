@@ -63,23 +63,15 @@ public class Connection
     }
    public void dial(String key)
    {
-      if (isConnected()) {
-          status.start(key, this);
-      }
-      else if (isRecording())
+
+
+      if (isChangeGreeting())
+         changeGreeting(key);
+      else
       {
           status.start(key, this);
       }
-      else if (isChangePassCode())
-         //changePasscode(key);
-          status.start(key, this);
-      else if (isChangeGreeting())
-         changeGreeting(key);
-      else if (isMailBoxMenu())
-         //mailboxMenu(key);
-          status.start(key, this);
-      else if (isMessageMenu())
-         messageMenu(key);
+
    }
 
 

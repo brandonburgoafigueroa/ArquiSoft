@@ -7,7 +7,7 @@ public class MailboxMenu implements IState {
         switch (key) {
             case "1":
                 connection.state = connection.MESSAGE_MENU;
-
+                connection.status=new MessageMenu();
                 connection.updateObservables(MESSAGE_MENU_TEXT);
                 break;
             case "2":
