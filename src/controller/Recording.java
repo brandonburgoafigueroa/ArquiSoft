@@ -36,11 +36,6 @@ public class Recording implements IState{
         connection.resetConnection();
     }
 
-    private boolean itIsANumeralCharacter(String key) {
-        return key.equals("#");
-    }
-
-
     private boolean isNumericalCommand(String input) {
         return input.length() == 1
                 && "1234567890#".contains(input);

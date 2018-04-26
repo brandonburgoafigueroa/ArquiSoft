@@ -18,9 +18,6 @@ public class Connection
 
    public void resetConnection()
    {
-       currentRecording = "";
-       accumulatedKeys = "";
-       state = CONNECTED;
        currentMailbox=null;
        status=new Connect();
        updateObservables(INITIAL_PROMPT);
@@ -83,15 +80,6 @@ public class Connection
 	   return status instanceof MessageMenu;
    }
 
-    private boolean itIsANumeralCharacter(String key) {
-        return key.equals("#");
-    }
-
-
-    private boolean isNumericalCommand(String input) {
-        return input.length() == 1
-                && "1234567890#".contains(input);
-    }
 
     private boolean isQuitCommand(String input) {
         return input.equalsIgnoreCase("Q");
@@ -102,9 +90,6 @@ public class Connection
     }
     private MailSystem system;
     private Mailbox currentMailbox;
-    private String currentRecording;
-    private String accumulatedKeys;
-    public int state;
     private List<View> observables;
     public static final int CONNECTED = 1;
     public static final int RECORDING = 2;
@@ -112,23 +97,8 @@ public class Connection
     public static final int MESSAGE_MENU = 4;
     public static final int CHANGE_PASSCODE = 5;
     public static final int CHANGE_GREETING = 6;
-    private String ENTER_NEW_GREETING_MESSAGE = "Record your greeting, then press the # key";
-    private String INCORRECT_PASSCODE_MESSAGE = "Incorrect passcode. Try again!";
-    private String ENTER_NEW_PASSCODE_MESSAGE = "Enter new passcode followed by the # key";
-    private String EMPTY_MAILBOX_MESSAGE = "No messages.";
-    private String INCORRECT_MAILBOX_MESSAGE = "Incorrect mailbox number. Try again!";
     private static final String INITIAL_PROMPT =
             "Enter mailbox number followed by #";
-    private static final String MAILBOX_MENU_TEXT =
-            "Enter 1 to listen to your messages\n"
-                    + "Enter 2 to change your passcode\n"
-                    + "Enter 3 to change your greeting";
-    private static final String MESSAGE_MENU_TEXT =
-            "Enter 1 to listen to the current message\n"
-                    + "Enter 2 to save the current message\n"
-                    + "Enter 3 to delete the current message\n"
-                    + "Enter 4 to return to the main menu";
-
     public Mailbox getCurrentMailbox() {
         return currentMailbox;
     }
