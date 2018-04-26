@@ -45,6 +45,7 @@ public class Connection
         {
             dial(input);
         }
+        
         else if (isInputHangUpCommand(input))
             hangup();
         else if (isQuitCommand(input))
@@ -69,22 +70,7 @@ public class Connection
           status.start(key, this);
    }
 
-
-
-    private void changeGreeting(String key)
-    {
-        if (itIsANumeralCharacter(key))
-        {
-            currentMailbox.setGreeting(currentRecording);
-            currentRecording = "";
-            state = MAILBOX_MENU;
-            updateObservables(MAILBOX_MENU_TEXT);
-        }
-    }
-
-
-
-    public boolean isConnected() {
+   public boolean isConnected() {
 	   return state==CONNECTED;
    }
 
