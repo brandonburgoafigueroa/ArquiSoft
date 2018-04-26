@@ -41,7 +41,11 @@ public class Connection
 
     public boolean executeCommand(String input)
     {
-        if (isInputHangUpCommand(input))
+        if (status instanceof ChangeGreating)
+        {
+            dial(input);
+        }
+        else if (isInputHangUpCommand(input))
             hangup();
         else if (isQuitCommand(input))
             return false;
@@ -56,22 +60,13 @@ public class Connection
     {
         if (state == RECORDING) {
             currentMailbox.addMessage(new Message(currentRecording));
-
         }
         startConnection();
 
     }
    public void dial(String key)
    {
-
-
-      if (isChangeGreeting())
-         changeGreeting(key);
-      else
-      {
           status.start(key, this);
-      }
-
    }
 
 

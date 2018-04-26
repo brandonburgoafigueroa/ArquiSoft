@@ -17,7 +17,7 @@ public class MailboxMenu implements IState {
                 break;
             case "3":
                 connection.state = connection.CHANGE_GREETING;
-
+                connection.status=new ChangeGreating();
 
                 connection.updateObservables(ENTER_NEW_GREETING_MESSAGE);
                 break;
