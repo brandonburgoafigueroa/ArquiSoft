@@ -45,7 +45,10 @@ public class Connection
         {
             dial(input);
         }
-        
+        if (status instanceof Recording)
+        {
+            dial(input);
+        }
         else if (isInputHangUpCommand(input))
             hangup();
         else if (isQuitCommand(input))

@@ -14,7 +14,7 @@ public class Connect implements IState {
             if (currentMailbox != null)
             {
                 connection.state = connection.RECORDING;
-                connection.status=new Login();
+                connection.status=new Recording();
                 connection.setMailbox(currentMailbox);
                connection.updateObservables(currentMailbox.getGreeting());
             }
