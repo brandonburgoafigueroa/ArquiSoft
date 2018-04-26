@@ -41,33 +41,18 @@ public class Connection
 
     public boolean executeCommand(String input)
     {
-        /*if (status instanceof ChangeGreating)
-        {
-            dial(input);
-        }
-        if (status instanceof Recording)
-        {
-            dial(input);
-        }*/
         if (isInputHangUpCommand(input))
             hangup();
         else if (isQuitCommand(input))
             return false;
         else
             dial(input);
-        /*else if (isNumericalCommand(input))
-            dial(input);
-        else{
-
-        }*/
         return true;
     }
 
     private void hangup()
     {
-
         status.hangup();
-
     }
    public void dial(String key)
    {
@@ -75,27 +60,27 @@ public class Connection
    }
 
    public boolean isConnected() {
-	   return state==CONNECTED;
+	   return status instanceof Connect;
    }
 
    public boolean isRecording() {
-	   return state==RECORDING;
+	   return status instanceof Recording;
    }
 
    public boolean isChangePassCode() {
-	   return state == CHANGE_PASSCODE;
+	   return status instanceof ChangePasscode;
    }
 
    public boolean isChangeGreeting() {
-	   return state == CHANGE_GREETING;
+	   return status instanceof ChangeGreating;
    }
 
    public boolean isMailBoxMenu() {
-	   return state == MAILBOX_MENU;
+	   return status instanceof MailboxMenu;
    }
 
    public boolean isMessageMenu() {
-	   return state == MESSAGE_MENU;
+	   return status instanceof MessageMenu;
    }
 
     private boolean itIsANumeralCharacter(String key) {
