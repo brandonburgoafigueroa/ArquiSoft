@@ -13,7 +13,7 @@ public class ChangePasscode implements IState {
         if (itIsANumeralCharacter(key))
         {
             currentMailbox.setPasscode(accumulatedKeys);
-            connection.status=new MailboxMenu();
+            connection.setStatus(new MailboxMenu());
             connection.updateObservables(MAILBOX_MENU_TEXT);
             accumulatedKeys = "";
         }

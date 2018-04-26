@@ -4,6 +4,10 @@ public class Connect implements IState {
     private Mailbox currentMailbox;
     private MailSystem system;
     private String accumulatedKeys="";
+    //private Connection connection;
+    /*public Connect(Connection connection) {
+        this.connection=connection;
+    }*/
 
     @Override
     public void start(String key, Connection connection) {
@@ -13,7 +17,7 @@ public class Connect implements IState {
             currentMailbox = system.findMailbox(accumulatedKeys);
             if (currentMailbox != null)
             {
-                connection.status=new Recording();
+                connection.setStatus(new Recording());
                 connection.setMailbox(currentMailbox);
                connection.updateObservables(currentMailbox.getGreeting());
             }

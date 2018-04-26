@@ -12,7 +12,7 @@ public class Login implements IState{
         {
             if (currentMailbox.checkPasscode(accumulatedKeys))
             {
-                connection.status=new MailboxMenu();
+                connection.setStatus(new MailboxMenu());
                 connection.updateObservables(MAILBOX_MENU_TEXT);
             }
             else {

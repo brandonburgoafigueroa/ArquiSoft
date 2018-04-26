@@ -13,7 +13,7 @@ public class ChangeGreating implements IState {
         {
             currentMailbox.setGreeting(currentRecording);
             currentRecording = "";
-            connection.status=new MailboxMenu();
+            connection.setStatus(new MailboxMenu());
             connection.updateObservables(MAILBOX_MENU_TEXT);
         }
         else

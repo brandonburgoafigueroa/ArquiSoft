@@ -9,15 +9,15 @@ public class MailboxMenu implements IState {
         this.connection=connection;
         switch (key) {
             case "1":
-                connection.status=new MessageMenu();
+                connection.setStatus(new MessageMenu());
                 connection.updateObservables(MESSAGE_MENU_TEXT);
                 break;
             case "2":
-                connection.status=new ChangePasscode();
+                connection.setStatus(new ChangePasscode());
                 connection.updateObservables(ENTER_NEW_PASSCODE_MESSAGE);
                 break;
             case "3":
-                connection.status=new ChangeGreating();
+                connection.setStatus(new ChangeGreating());
 
                 connection.updateObservables(ENTER_NEW_GREETING_MESSAGE);
                 break;

@@ -24,7 +24,7 @@ public class Recording implements IState{
         }
         if (isNumericalCommand(key))
         {
-            connection.status=new Login();
+            connection.setStatus(new Login());
             connection.executeCommand(key);
         }
 

@@ -8,7 +8,7 @@ import java.util.List;
 
 public class Connection
 {
-    public IState status;
+
    public Connection(MailSystem s)
    {
        status=new Connect();
@@ -88,28 +88,26 @@ public class Connection
     private boolean isInputHangUpCommand(String input) {
         return input.equalsIgnoreCase("H");
     }
-    private MailSystem system;
-    private Mailbox currentMailbox;
-    private List<View> observables;
-    public static final int CONNECTED = 1;
-    public static final int RECORDING = 2;
-    public static final int MAILBOX_MENU = 3;
-    public static final int MESSAGE_MENU = 4;
-    public static final int CHANGE_PASSCODE = 5;
-    public static final int CHANGE_GREETING = 6;
-    private static final String INITIAL_PROMPT =
-            "Enter mailbox number followed by #";
     public Mailbox getCurrentMailbox() {
         return currentMailbox;
     }
-
     public MailSystem getMailboxSystem() {
         return system;
     }
-
     public void setMailbox(Mailbox mailbox) {
         this.currentMailbox = mailbox;
     }
+    public void setStatus(IState state)
+    {
+        this.status=state;
+    }
+    private MailSystem system;
+    private Mailbox currentMailbox;
+    private List<View> observables;
+    private static final String INITIAL_PROMPT =
+            "Enter mailbox number followed by #";
+    private IState status;
+
 }
 
 
