@@ -41,37 +41,32 @@ public class Connection
 
     public boolean executeCommand(String input)
     {
-        if (status instanceof ChangeGreating)
+        /*if (status instanceof ChangeGreating)
         {
             dial(input);
         }
         if (status instanceof Recording)
         {
             dial(input);
-        }
-        else if (isInputHangUpCommand(input))
+        }*/
+        if (isInputHangUpCommand(input))
             hangup();
         else if (isQuitCommand(input))
             return false;
-        else if (isNumericalCommand(input))
+        else
+            dial(input);
+        /*else if (isNumericalCommand(input))
             dial(input);
         else{
 
-        }
+        }*/
         return true;
     }
 
     private void hangup()
     {
 
-        if (status instanceof Login)
-        {
-            status.hangup();
-        }
-        else
-        {
-            resetConnection();
-        }
+        status.hangup();
 
     }
    public void dial(String key)
