@@ -71,11 +71,13 @@ public class Connection
           status.start(key, this);
       }
       else if (isChangePassCode())
-         changePasscode(key);
+         //changePasscode(key);
+          status.start(key, this);
       else if (isChangeGreeting())
          changeGreeting(key);
       else if (isMailBoxMenu())
-         mailboxMenu(key);
+         //mailboxMenu(key);
+          status.start(key, this);
       else if (isMessageMenu())
          messageMenu(key);
    }

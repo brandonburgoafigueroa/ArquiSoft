@@ -14,7 +14,7 @@ public class Login implements IState{
             if (currentMailbox.checkPasscode(accumulatedKeys))
             {
                 connection.state = MAILBOX_MENU;
-
+                connection.status=new MailboxMenu();
                 connection.updateObservables(MAILBOX_MENU_TEXT);
             }
             else {
