@@ -2,9 +2,11 @@ package controller;
 
 public class MessageMenu implements IState{
     private Mailbox currentMailbox;
+    private Connection connection;
 
     @Override
     public void start(String key, Connection connection) {
+        this.connection=connection;
         this.currentMailbox=connection.getCurrentMailbox();
         switch (key) {
             case "1":
@@ -31,6 +33,12 @@ public class MessageMenu implements IState{
                 break;
         }
     }
+
+    @Override
+    public void hangup() {
+        connection.resetConnection();
+    }
+
     private String ENTER_NEW_GREETING_MESSAGE = "Record your greeting, then press the # key";
     private String INCORRECT_PASSCODE_MESSAGE = "Incorrect passcode. Try again!";
     private String ENTER_NEW_PASSCODE_MESSAGE = "Enter new passcode followed by the # key";

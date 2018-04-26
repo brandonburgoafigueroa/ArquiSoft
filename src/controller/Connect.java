@@ -26,6 +26,12 @@ public class Connect implements IState {
         else
             accumulatedKeys += key;
     }
+
+    @Override
+    public void hangup() {
+
+    }
+
     private boolean itIsANumeralCharacter(String key) {
         return key.equals("#");
     }

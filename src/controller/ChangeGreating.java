@@ -6,9 +6,11 @@ import static controller.Connection.MAILBOX_MENU;
 public class ChangeGreating implements IState {
     private Mailbox currentMailbox;
     private String currentRecording="";
+    private Connection connection;
 
     @Override
     public void start(String key, Connection connection) {
+        this.connection=connection;
         this.currentMailbox=connection.getCurrentMailbox();
         if (itIsANumeralCharacter(key))
         {
@@ -24,6 +26,12 @@ public class ChangeGreating implements IState {
         }
 
     }
+
+    @Override
+    public void hangup() {
+        connection.resetConnection();
+    }
+
     private boolean itIsANumeralCharacter(String key) {
         return key.equals("#");
     }

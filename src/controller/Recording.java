@@ -3,6 +3,8 @@ package controller;
 public class Recording implements IState{
     String message;
     IState last;
+    private Connection connection;
+
     public Recording(IState state)
     {
         last=state;
@@ -11,14 +13,14 @@ public class Recording implements IState{
     {}
     @Override
     public void start(String key, Connection connection) {
+        this.connection=connection;
         if (key.length()>1)
         {
             message=key;
         }
         if (key.equalsIgnoreCase("H"))
         {
-            connection.getCurrentMailbox().addMessage(new Message(message));
-            connection.resetConnection();
+            hangup();
         }
         if (isNumericalCommand(key))
         {
@@ -27,6 +29,13 @@ public class Recording implements IState{
         }
 
     }
+
+    @Override
+    public void hangup() {
+        connection.getCurrentMailbox().addMessage(new Message(message));
+        connection.resetConnection();
+    }
+
     private boolean itIsANumeralCharacter(String key) {
         return key.equals("#");
     }

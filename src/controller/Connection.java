@@ -63,7 +63,15 @@ public class Connection
 
     private void hangup()
     {
-        resetConnection();
+
+        if (status instanceof Login)
+        {
+            status.hangup();
+        }
+        else
+        {
+            resetConnection();
+        }
 
     }
    public void dial(String key)

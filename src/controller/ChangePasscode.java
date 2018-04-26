@@ -4,9 +4,11 @@ public class ChangePasscode implements IState {
 
     private Mailbox currentMailbox;
     private String accumulatedKeys="";
+    private Connection connection;
 
     @Override
     public void start(String key, Connection connection) {
+        this.connection=connection;
         this.currentMailbox=connection.getCurrentMailbox();
         if (itIsANumeralCharacter(key))
         {
@@ -19,6 +21,12 @@ public class ChangePasscode implements IState {
         else
             accumulatedKeys += key;
     }
+
+    @Override
+    public void hangup() {
+        connection.resetConnection();
+    }
+
     private boolean itIsANumeralCharacter(String key) {
         return key.equals("#");
     }
