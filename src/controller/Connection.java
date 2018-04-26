@@ -16,7 +16,7 @@ public class Connection
        observables=new ArrayList();
    }
 
-   public void startConnection()
+   public void resetConnection()
    {
        currentRecording = "";
        accumulatedKeys = "";
@@ -55,17 +55,15 @@ public class Connection
             return false;
         else if (isNumericalCommand(input))
             dial(input);
-        else
-            record(input);
+        else{
+
+        }
         return true;
     }
 
     private void hangup()
     {
-        if (state == RECORDING) {
-            currentMailbox.addMessage(new Message(currentRecording));
-        }
-        startConnection();
+        resetConnection();
 
     }
    public void dial(String key)
@@ -95,12 +93,6 @@ public class Connection
 
    public boolean isMessageMenu() {
 	   return state == MESSAGE_MENU;
-   }
-
-   private void record(String voice)
-   {
-      if (state == RECORDING || state == CHANGE_GREETING)
-         currentRecording += voice;
    }
 
     private boolean itIsANumeralCharacter(String key) {

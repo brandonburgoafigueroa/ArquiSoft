@@ -28,7 +28,7 @@ public class ConsoleTest {
 		MailSystem mailSystem=new MailSystem(20);
 		Connection connection=new Connection(mailSystem);
 		Console telephone=new Console(scanner, connection);
-		connection.startConnection();
+		connection.resetConnection();
 		telephone.run();
 		Assert.assertEquals(connection.isConnected(), true);
 	}
@@ -39,7 +39,7 @@ public class ConsoleTest {
 		MailSystem mailSystem=new MailSystem(20);
 		Connection connection=new Connection(mailSystem);
 		Console telephone=new Console(scanner, connection);
-		connection.startConnection();
+		connection.resetConnection();
 		telephone.run();
 		Assert.assertEquals(true, connection.isConnected());
 	}

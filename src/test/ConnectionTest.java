@@ -17,14 +17,14 @@ public class ConnectionTest {
 	    mockedTelephone = mock(Console.class);
 	    connection = new Connection(mockedMailsystem);
 	    connection.addObservable(mockedTelephone);
-		connection.startConnection();
+		connection.resetConnection();
         Mailbox chosenMailbox = new Mailbox(idMailBox, HI_MESSAGE);
         when(mockedMailsystem.findMailbox(idMailBox)).thenReturn(chosenMailbox);
 	}
 
 	@Test
 	public void theConnectionWasStarted() {
-		connection.startConnection();
+		connection.resetConnection();
 	    assertTrue(connection.isConnected());
 	}
 

@@ -18,7 +18,7 @@ public class Recording implements IState{
         if (key.equalsIgnoreCase("H"))
         {
             connection.getCurrentMailbox().addMessage(new Message(message));
-            connection.startConnection();
+            connection.resetConnection();
         }
         if (isNumericalCommand(key))
         {
