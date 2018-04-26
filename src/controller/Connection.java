@@ -75,36 +75,7 @@ public class Connection
    }
 
 
-    private void login(String key)
-    {
-        if (itIsANumeralCharacter(key))
-        {
-            if (currentMailbox.checkPasscode(accumulatedKeys))
-            {
-                state = MAILBOX_MENU;
 
-                updateObservables(MAILBOX_MENU_TEXT);
-            }
-            else {
-                updateObservables(INCORRECT_PASSCODE_MESSAGE);
-            }
-            accumulatedKeys = "";
-        }
-        else
-            accumulatedKeys += key;
-    }
-    private void changePasscode(String key)
-    {
-        if (itIsANumeralCharacter(key))
-        {
-            currentMailbox.setPasscode(accumulatedKeys);
-            state = MAILBOX_MENU;
-            updateObservables(MAILBOX_MENU_TEXT);
-            accumulatedKeys = "";
-        }
-        else
-            accumulatedKeys += key;
-    }
     private void changeGreeting(String key)
     {
         if (itIsANumeralCharacter(key))
@@ -116,56 +87,8 @@ public class Connection
         }
     }
 
-    private void mailboxMenu(String key)
-    {
-        switch (key) {
-            case "1":
-                state = MESSAGE_MENU;
-
-                updateObservables(MESSAGE_MENU_TEXT);
-                break;
-            case "2":
-                state = CHANGE_PASSCODE;
-
-                updateObservables(ENTER_NEW_PASSCODE_MESSAGE);
-                break;
-            case "3":
-                state = CHANGE_GREETING;
 
 
-                updateObservables(ENTER_NEW_GREETING_MESSAGE);
-                break;
-        }
-    }
-
-    private void messageMenu(String key)
-    {
-        switch (key) {
-            case "1":
-                String output = "";
-                Message m = currentMailbox.getCurrentMessage();
-                if (m == null) {
-                    output += EMPTY_MAILBOX_MESSAGE + "\n";
-                }
-                else output += m.getText() + "\n";
-                output += MESSAGE_MENU_TEXT;
-                updateObservables(output);
-                break;
-            case "2":
-                currentMailbox.saveCurrentMessage();
-                updateObservables(MESSAGE_MENU_TEXT);
-                break;
-            case "3":
-                currentMailbox.removeCurrentMessage();
-                updateObservables(MESSAGE_MENU_TEXT);
-                break;
-            case "4":
-                state = MAILBOX_MENU;
-                updateObservables(MAILBOX_MENU_TEXT);
-                break;
-        }
-
-    }
     public boolean isConnected() {
 	   return state==CONNECTED;
    }
