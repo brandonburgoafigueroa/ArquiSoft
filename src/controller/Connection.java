@@ -18,6 +18,14 @@ public class Connection
     Connect connect=new Connect();
     IState status;
 
+    public void setStatus(IState status)
+    {
+        this.status=status;
+    }
+    public Mailbox getCurrentMailbox()
+    {
+        return currentMailbox;
+    }
    public Connection(MailSystem s)
    {
        system = s;
