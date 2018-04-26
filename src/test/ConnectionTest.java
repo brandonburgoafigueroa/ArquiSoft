@@ -39,6 +39,7 @@ public class ConnectionTest {
 		dialMailBox(idMailBox);
 		assertTrue(connection.isRecording());
 		verify(mockedTelephone).update(HI_MESSAGE);
+
 	}
 	@Test
 	public void shouldGetIntoMailBoxMenuWhenSelectTheMailBox() {

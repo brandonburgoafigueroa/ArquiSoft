@@ -12,12 +12,19 @@ public class Connection
     private Observers observers;
     private static final String INITIAL_PROMPT =
             "Enter mailbox number followed by #";
-
-    State state =new State();
-    MailBoxMenu mailBoxMenu=new MailBoxMenu();
-    Connect connect=new Connect();
+    private boolean Recording;
     IState status;
-
+    public void setRecording(boolean recording)
+    {
+        this.Recording=recording;
+    }
+    public void setCurrentMailbox(Mailbox currentMailbox){
+        this.currentMailbox=currentMailbox;
+    }
+    public MailSystem getMailboxSystem()
+    {
+        return system;
+    }
     public void setStatus(IState status)
     {
         this.status=status;
@@ -25,6 +32,10 @@ public class Connection
     public Mailbox getCurrentMailbox()
     {
         return currentMailbox;
+    }
+    public void updateObservers(String text)
+    {
+        observers.updateObservables(text);
     }
    public Connection(MailSystem s)
    {
@@ -35,7 +46,7 @@ public class Connection
    public void startConnection()
    {
        currentRecording = "";
-       state.setConnected();
+       status=new Connect();
        observers.updateObservables(INITIAL_PROMPT);
    }
 
@@ -47,68 +58,55 @@ public class Connection
     public boolean executeCommand(String input)
     {
         if (isInputHangUpCommand(input))
-            hangup();
+            status.start(input, this);
         else if (isQuitCommand(input))
             return false;
         else if (isNumericalCommand(input))
-            dial(input);
+            status.start(input, this);
+            //dial(input);
         else
+            //status.start(input, this);
             record(input);
         return true;
     }
 
-    private void hangup()
-    {
-        if (state.isRecording()) {
-            currentMailbox.addMessage(new Message(currentRecording));
-        }
-        startConnection();
-    }
    public void dial(String key)
    {
-      if (isConnected()) {
-          currentMailbox = connect.connect(key, system, state, observers);
-
-      }
-      else if(isMailBoxMenu()) {
-          mailBoxMenu.start(key,state, observers);
-   }
-      else{
-          state.getStatus().start(key, currentMailbox, state, observers);
-      }
+       status.start(key, this);
    }
 
 
     public boolean isConnected() {
-        return state.isConnected();
+        return status instanceof Connect;
    }
 
    public boolean isRecording() {
-       return state.isRecording();
+       return Recording;
    }
 
    public boolean isChangePassCode() {
-       return state.isChangePassCode();
+       return status instanceof ChangePasscode;
    }
 
    public boolean isChangeGreeting() {
-       return state.isChangeGreeting();
+       return status instanceof ChangeGreeting;
    }
 
    public boolean isMailBoxMenu() {
-       return state.isMailBoxMenu();
+       return status instanceof MailBoxMenu;
 
    }
 
    public boolean isMessageMenu() {
-       return state.isMessageMenu();
+       return status instanceof MessageMenu;
 
    }
 
    private void record(String voice)
    {
-      if (isRecording() || isChangeGreeting())
-         currentRecording += voice;
+      if (isRecording() || isChangeGreeting()) {
+          currentRecording += voice;
+      }
    }
 
     private boolean isNumericalCommand(String input) {

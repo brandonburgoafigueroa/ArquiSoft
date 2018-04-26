@@ -1,27 +1,29 @@
 package controller;
 
-public class Connect{
+public class Connect implements IState{
     Mailbox currentMailbox;
     String accumulatedKeys="";
     private String INCORRECT_MAILBOX_MESSAGE = "Incorrect mailbox number. Try again!";
-    public Mailbox connect(String key, MailSystem system, State state, Observers observers)
+    public void start(String key, Connection connection)
     {
         if (itIsANumeralCharacter(key))
         {
-            currentMailbox = system.findMailbox(accumulatedKeys);
+            currentMailbox = connection.getMailboxSystem().findMailbox(accumulatedKeys);
             if (currentMailbox != null)
             {
-                state.setRecording();
-                observers.updateObservables(currentMailbox.getGreeting());
+                //state.setRecording();
+                connection.setStatus(new Recording());
+                connection.setRecording(true);
+                connection.updateObservers(currentMailbox.getGreeting());
+                connection.setCurrentMailbox(currentMailbox);
             }
             else {
-                observers.updateObservables(INCORRECT_MAILBOX_MESSAGE);
+                connection.updateObservers(INCORRECT_MAILBOX_MESSAGE);
             }
             accumulatedKeys = "";
         }
         else
             accumulatedKeys += key;
-        return currentMailbox;
     }
     private boolean itIsANumeralCharacter(String key) {
         return key.equals("#");
