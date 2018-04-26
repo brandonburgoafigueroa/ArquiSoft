@@ -10,7 +10,7 @@ public class MessageQueue
    }
    public Message remove()
    {
-      return queue.remove(0);
+      return queue.remove(queue.size()-1);
    }
    public void add(Message newMessage)
    {
@@ -23,7 +23,7 @@ public class MessageQueue
    public Message peek()
    {
       if (queue.size() == 0) return null;
-      else return queue.get(0);
+      else return queue.get(queue.size()-1);
    }
 
    private ArrayList<Message>queue;

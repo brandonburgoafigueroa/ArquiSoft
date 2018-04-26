@@ -11,7 +11,6 @@ public class Connection
 
    public Connection(MailSystem s)
    {
-       status=new Connect();
        system = s;
        observables=new ArrayList();
    }
@@ -19,7 +18,7 @@ public class Connection
    public void resetConnection()
    {
        currentMailbox=null;
-       status=new Connect();
+       status=new Connect(this);
        updateObservables(INITIAL_PROMPT);
    }
 
@@ -53,7 +52,7 @@ public class Connection
     }
    public void dial(String key)
    {
-          status.start(key, this);
+          status.start(key);
    }
 
    public boolean isConnected() {

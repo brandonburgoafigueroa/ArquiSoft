@@ -1,15 +1,14 @@
 package test;
 
+import controller.Connection;
+import controller.MailSystem;
 import org.junit.Assert;
 import org.junit.Test;
+import view.Console;
 
 import java.io.ByteArrayInputStream;
 import java.io.InputStream;
 import java.util.Scanner;
-import controller.MailSystem;
-import controller.Connection;
-import view.Console;
-import static org.junit.Assert.assertEquals;
 
 public class ConsoleTest {
 	@Test
@@ -50,6 +49,7 @@ public class ConsoleTest {
 		MailSystem mailSystem=new MailSystem(20);
 		Connection connection=new Connection(mailSystem);
 		Console telephone=new Console(scanner, connection);
+		connection.resetConnection();
 		telephone.run();
 		Assert.assertEquals(connection.isRecording(), false);
 	}
@@ -61,6 +61,7 @@ public class ConsoleTest {
 		MailSystem mailSystem=new MailSystem(20);
 		Connection connection=new Connection(mailSystem);
 		Console telephone=new Console(scanner, connection);
+		connection.resetConnection();
 		telephone.run();
 		Assert.assertEquals(connection.isRecording(), false);
 	}

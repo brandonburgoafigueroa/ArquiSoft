@@ -3,21 +3,22 @@ package controller;
 public class MailboxMenu implements IState {
 
     private Connection connection;
-
-    @Override
-    public void start(String key, Connection connection) {
+    MailboxMenu(Connection connection){
         this.connection=connection;
+    }
+    @Override
+    public void start(String key) {
         switch (key) {
             case "1":
-                connection.setStatus(new MessageMenu());
+                connection.setStatus(new MessageMenu(connection));
                 connection.updateObservables(MESSAGE_MENU_TEXT);
                 break;
             case "2":
-                connection.setStatus(new ChangePasscode());
+                connection.setStatus(new ChangePasscode(connection));
                 connection.updateObservables(ENTER_NEW_PASSCODE_MESSAGE);
                 break;
             case "3":
-                connection.setStatus(new ChangeGreating());
+                connection.setStatus(new ChangeGreating(connection));
 
                 connection.updateObservables(ENTER_NEW_GREETING_MESSAGE);
                 break;

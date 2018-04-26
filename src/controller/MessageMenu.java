@@ -3,10 +3,11 @@ package controller;
 public class MessageMenu implements IState{
     private Mailbox currentMailbox;
     private Connection connection;
-
-    @Override
-    public void start(String key, Connection connection) {
+    MessageMenu(Connection connection){
         this.connection=connection;
+    }
+    @Override
+    public void start(String key) {
         this.currentMailbox=connection.getCurrentMailbox();
         switch (key) {
             case "1":
@@ -28,7 +29,7 @@ public class MessageMenu implements IState{
                 connection.updateObservables(MESSAGE_MENU_TEXT);
                 break;
             case "4":
-                connection.setStatus(new MailboxMenu());
+                connection.setStatus(new MailboxMenu(connection));
                 connection.updateObservables(MAILBOX_MENU_TEXT);
                 break;
         }

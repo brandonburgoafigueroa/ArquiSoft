@@ -5,15 +5,13 @@ public class Recording implements IState{
     IState last;
     private Connection connection;
 
-    public Recording(IState state)
+    public Recording(IState state, Connection connection)
     {
         last=state;
-    }
-    public Recording()
-    {}
-    @Override
-    public void start(String key, Connection connection) {
         this.connection=connection;
+    }
+    @Override
+    public void start(String key) {
         if (key.length()>1)
         {
             message=key;
@@ -24,7 +22,7 @@ public class Recording implements IState{
         }
         if (isNumericalCommand(key))
         {
-            connection.setStatus(new Login());
+            connection.setStatus(new Login(connection));
             connection.executeCommand(key);
         }
 

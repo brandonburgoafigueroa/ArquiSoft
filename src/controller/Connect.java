@@ -4,20 +4,20 @@ public class Connect implements IState {
     private Mailbox currentMailbox;
     private MailSystem system;
     private String accumulatedKeys="";
-    //private Connection connection;
-    /*public Connect(Connection connection) {
+    private Connection connection;
+    Connect(Connection connection) {
         this.connection=connection;
-    }*/
+    }
 
     @Override
-    public void start(String key, Connection connection) {
+    public void start(String key) {
         this.system=connection.getMailboxSystem();
         if (itIsANumeralCharacter(key))
         {
             currentMailbox = system.findMailbox(accumulatedKeys);
             if (currentMailbox != null)
             {
-                connection.setStatus(new Recording());
+                connection.setStatus(new Recording(this, connection));
                 connection.setMailbox(currentMailbox);
                connection.updateObservables(currentMailbox.getGreeting());
             }
@@ -32,7 +32,7 @@ public class Connect implements IState {
 
     @Override
     public void hangup() {
-
+        connection.resetConnection();
     }
 
     private boolean itIsANumeralCharacter(String key) {

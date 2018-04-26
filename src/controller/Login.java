@@ -4,15 +4,17 @@ public class Login implements IState{
     private Mailbox currentMailbox;
     private String accumulatedKeys="";
     Connection connection;
-    @Override
-    public void start(String key, Connection connection) {
+    Login(Connection connection){
         this.connection=connection;
+    }
+    @Override
+    public void start(String key) {
         this.currentMailbox=connection.getCurrentMailbox();
         if (itIsANumeralCharacter(key))
         {
             if (currentMailbox.checkPasscode(accumulatedKeys))
             {
-                connection.setStatus(new MailboxMenu());
+                connection.setStatus(new MailboxMenu(connection));
                 connection.updateObservables(MAILBOX_MENU_TEXT);
             }
             else {

@@ -4,16 +4,18 @@ public class ChangeGreating implements IState {
     private Mailbox currentMailbox;
     private String currentRecording="";
     private Connection connection;
-
-    @Override
-    public void start(String key, Connection connection) {
+    ChangeGreating(Connection connection)
+    {
         this.connection=connection;
+    }
+    @Override
+    public void start(String key) {
         this.currentMailbox=connection.getCurrentMailbox();
         if (itIsANumeralCharacter(key))
         {
             currentMailbox.setGreeting(currentRecording);
             currentRecording = "";
-            connection.setStatus(new MailboxMenu());
+            connection.setStatus(new MailboxMenu(connection));
             connection.updateObservables(MAILBOX_MENU_TEXT);
         }
         else
