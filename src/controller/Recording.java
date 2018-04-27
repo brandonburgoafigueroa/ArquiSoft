@@ -3,16 +3,17 @@ package controller;
 public class Recording implements IState{
     String message;
     private Connection connection;
-
+    private Mailbox currentMailbox;
     public Recording(Connection connection)
     {
         this.connection=connection;
+        this.currentMailbox=connection.getCurrentMailbox();
     }
     @Override
     public void start(String command) {
         if (isAMessage(command))
         {
-            message= command;
+            addMessage(command);
         }
         if (isInputHangUpCommand(command))
         {
@@ -21,8 +22,16 @@ public class Recording implements IState{
         if (isNumericalCommand(command))
         {
             changeStateToLogin();
-            connection.executeCommand(command);
+            executeCommand(command);
         }
+    }
+
+    private void executeCommand(String command) {
+        connection.executeCommand(command);
+    }
+
+    private void addMessage(String command) {
+        message= command;
     }
 
     private boolean isAMessage(String key) {
@@ -39,11 +48,19 @@ public class Recording implements IState{
 
     @Override
     public void hangup() {
-        if (message!=null)
+        if (isNotTheMessageEmpty())
         {
-            connection.getCurrentMailbox().addMessage(new Message(message));
+            saveMessage();
         }
         connection.resetConnection();
+    }
+
+    private boolean isNotTheMessageEmpty() {
+        return message!=null;
+    }
+
+    private void saveMessage() {
+        currentMailbox.addMessage(new Message(message));
     }
 
     private boolean isNumericalCommand(String input) {

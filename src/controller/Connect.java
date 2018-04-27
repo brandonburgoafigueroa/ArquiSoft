@@ -24,9 +24,10 @@ public class Connect implements IState {
         setupMailbox();
         if (isAValidMailbox())
         {
-            changeToRecordingState();
             setCurrentMailboxToConnection();
             showGreetingMessage();
+            changeToRecordingState();
+
         }
         else {
             showIncorrectMailboxMessage();
