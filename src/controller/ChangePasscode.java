@@ -8,8 +8,11 @@ public class ChangePasscode implements IState {
     ChangePasscode(Connection connection)
     {
         this.connection=connection;
-        connection.updateObservables(ENTER_NEW_PASSCODE_MESSAGE);
+        showEnterNewPasscodeMessage(connection);
     }
+
+
+
     @Override
     public void start(String command) {
         this.currentMailbox=connection.getCurrentMailbox();
@@ -23,7 +26,9 @@ public class ChangePasscode implements IState {
         else
             accumulatedKeys += command;
     }
-
+    private void showEnterNewPasscodeMessage(Connection connection) {
+        connection.updateObservables(ENTER_NEW_PASSCODE_MESSAGE);
+    }
     @Override
     public void hangup() {
         connection.resetConnection();
