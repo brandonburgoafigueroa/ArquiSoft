@@ -8,9 +8,9 @@ public class Login implements IState{
         this.connection=connection;
     }
     @Override
-    public void start(String key) {
+    public void start(String command) {
         this.currentMailbox=connection.getCurrentMailbox();
-        if (itIsANumeralCharacter(key))
+        if (itIsANumeralCharacter(command))
         {
             if (currentMailbox.checkPasscode(accumulatedKeys))
             {
@@ -23,7 +23,7 @@ public class Login implements IState{
             accumulatedKeys = "";
         }
         else
-            accumulatedKeys += key;
+            accumulatedKeys += command;
     }
 
     @Override

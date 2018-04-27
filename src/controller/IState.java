@@ -1,6 +1,6 @@
 package controller;
 
 public interface IState {
-    void start(String key);
+    void start(String command);
     void hangup();
 }

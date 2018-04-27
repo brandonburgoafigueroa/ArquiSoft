@@ -7,8 +7,8 @@ public class MailboxMenu implements IState {
         this.connection=connection;
     }
     @Override
-    public void start(String key) {
-        switch (key) {
+    public void start(String command) {
+        switch (command) {
             case "1":
                 connection.setStatus(new MessageMenu(connection));
                 connection.updateObservables(MESSAGE_MENU_TEXT);

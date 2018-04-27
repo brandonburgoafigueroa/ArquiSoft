@@ -7,28 +7,63 @@ public class Connect implements IState {
     private Connection connection;
     Connect(Connection connection) {
         this.connection=connection;
+        this.system=connection.getMailboxSystem();
         connection.updateObservables(INITIAL_PROMPT);
     }
 
     @Override
-    public void start(String key) {
-        this.system=connection.getMailboxSystem();
-        if (itIsANumeralCharacter(key))
-        {
-            currentMailbox = system.findMailbox(accumulatedKeys);
-            if (currentMailbox != null)
-            {
-                connection.setStatus(new Recording(this, connection));
-                connection.setMailbox(currentMailbox);
-               connection.updateObservables(currentMailbox.getGreeting());
-            }
-            else {
-                connection.updateObservables(INCORRECT_MAILBOX_MESSAGE);
-            }
-            accumulatedKeys = "";
-        }
+    public void start(String command) {
+
+        if (itIsANumeralCharacter(command))
+            openMailbox();
         else
-            accumulatedKeys += key;
+            saveActualCommand(command);
+    }
+
+    private void openMailbox() {
+        setupMailbox();
+        if (isAValidMailbox())
+        {
+            changeToRecordingState();
+            setCurrentMailboxToConnection();
+            showGreetingMessage();
+        }
+        else {
+            showIncorrectMailboxMessage();
+            cleanAccumulatedKeys();
+        }
+    }
+
+    private void saveActualCommand(String command) {
+        accumulatedKeys += command;
+    }
+
+    private void cleanAccumulatedKeys() {
+        accumulatedKeys = "";
+    }
+
+    private void setupMailbox() {
+        currentMailbox = system.findMailbox(accumulatedKeys);
+    }
+
+    private void showIncorrectMailboxMessage() {
+        connection.updateObservables(INCORRECT_MAILBOX_MESSAGE);
+    }
+
+    private void showGreetingMessage() {
+        connection.updateObservables(currentMailbox.getGreeting());
+    }
+
+    private void setCurrentMailboxToConnection() {
+        connection.setMailbox(currentMailbox);
+    }
+
+    private void changeToRecordingState() {
+        connection.setStatus(new Recording(connection));
+    }
+
+    private boolean isAValidMailbox() {
+        return currentMailbox != null;
     }
 
     @Override

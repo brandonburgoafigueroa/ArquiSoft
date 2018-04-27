@@ -2,31 +2,40 @@ package controller;
 
 public class Recording implements IState{
     String message;
-    IState last;
     private Connection connection;
 
-    public Recording(IState state, Connection connection)
+    public Recording(Connection connection)
     {
-        last=state;
         this.connection=connection;
     }
     @Override
-    public void start(String key) {
-        if (key.length()>1)
+    public void start(String command) {
+        if (isAMessage(command))
         {
-            message=key;
+            message= command;
         }
-        if (key.equalsIgnoreCase("H"))
+        if (isInputHangUpCommand(command))
         {
             hangup();
         }
-        if (isNumericalCommand(key))
+        if (isNumericalCommand(command))
         {
-            connection.setStatus(new Login(connection));
-            connection.executeCommand(key);
+            changeStateToLogin();
+            connection.executeCommand(command);
         }
-
     }
+
+    private boolean isAMessage(String key) {
+        return key.length()>1;
+    }
+
+    private boolean isInputHangUpCommand(String input) {
+        return input.equalsIgnoreCase("H");
+    }
+    private void changeStateToLogin() {
+        connection.setStatus(new Login(connection));
+    }
+
 
     @Override
     public void hangup() {

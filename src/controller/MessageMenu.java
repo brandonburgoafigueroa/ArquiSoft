@@ -7,9 +7,9 @@ public class MessageMenu implements IState{
         this.connection=connection;
     }
     @Override
-    public void start(String key) {
+    public void start(String command) {
         this.currentMailbox=connection.getCurrentMailbox();
-        switch (key) {
+        switch (command) {
             case "1":
                 String output = "";
                 Message m = currentMailbox.getCurrentMessage();

@@ -9,9 +9,9 @@ public class ChangeGreating implements IState {
         this.connection=connection;
     }
     @Override
-    public void start(String key) {
+    public void start(String command) {
         this.currentMailbox=connection.getCurrentMailbox();
-        if (itIsANumeralCharacter(key))
+        if (itIsANumeralCharacter(command))
         {
             currentMailbox.setGreeting(currentRecording);
             currentRecording = "";
@@ -20,7 +20,7 @@ public class ChangeGreating implements IState {
         }
         else
         {
-            currentRecording=key;
+            currentRecording= command;
         }
 
     }
