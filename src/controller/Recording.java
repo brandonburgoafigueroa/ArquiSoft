@@ -30,7 +30,10 @@ public class Recording implements IState{
 
     @Override
     public void hangup() {
-        connection.getCurrentMailbox().addMessage(new Message(message));
+        if (message!=null)
+        {
+            connection.getCurrentMailbox().addMessage(new Message(message));
+        }
         connection.resetConnection();
     }
 
