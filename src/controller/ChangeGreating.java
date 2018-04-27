@@ -7,6 +7,7 @@ public class ChangeGreating implements IState {
     ChangeGreating(Connection connection)
     {
         this.connection=connection;
+        connection.updateObservables(ENTER_NEW_GREETING_MESSAGE);
     }
     @Override
     public void start(String command) {
@@ -37,4 +38,6 @@ public class ChangeGreating implements IState {
             "Enter 1 to listen to your messages\n"
                     + "Enter 2 to change your passcode\n"
                     + "Enter 3 to change your greeting";
+    private String ENTER_NEW_GREETING_MESSAGE = "Record your greeting, then press the # key";
+
 }

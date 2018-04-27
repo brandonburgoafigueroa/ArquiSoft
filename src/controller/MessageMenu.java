@@ -5,6 +5,7 @@ public class MessageMenu implements IState{
     private Connection connection;
     MessageMenu(Connection connection){
         this.connection=connection;
+        showMessageMenuOptions();
     }
     @Override
     public void start(String command) {
@@ -38,6 +39,9 @@ public class MessageMenu implements IState{
     @Override
     public void hangup() {
         connection.resetConnection();
+    }
+    private void showMessageMenuOptions() {
+        connection.updateObservables(MESSAGE_MENU_TEXT);
     }
 
     private String EMPTY_MAILBOX_MESSAGE = "No messages.";
