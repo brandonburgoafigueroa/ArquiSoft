@@ -19,7 +19,7 @@ public class Connection
    {
        currentMailbox=null;
        status=new Connect(this);
-       updateObservables(INITIAL_PROMPT);
+
    }
 
    public void addObservable(View observable)
@@ -103,8 +103,7 @@ public class Connection
     private MailSystem system;
     private Mailbox currentMailbox;
     private List<View> observables;
-    private static final String INITIAL_PROMPT =
-            "Enter mailbox number followed by #";
+
     private IState status;
 
 }

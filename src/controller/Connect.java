@@ -7,6 +7,7 @@ public class Connect implements IState {
     private Connection connection;
     Connect(Connection connection) {
         this.connection=connection;
+        connection.updateObservables(INITIAL_PROMPT);
     }
 
     @Override
@@ -39,4 +40,6 @@ public class Connect implements IState {
         return key.equals("#");
     }
     private String INCORRECT_MAILBOX_MESSAGE = "Incorrect mailbox number. Try again!";
+    private static final String INITIAL_PROMPT =
+            "Enter mailbox number followed by #";
 }

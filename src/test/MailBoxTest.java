@@ -63,7 +63,7 @@ public class MailBoxTest {
 		mailBox.addMessage(message2);
 		Message message3 = new Message(SECOND_MESSAGE);
 		mailBox.addMessage(message3);
-		Assert.assertEquals(message,mailBox.getCurrentMessage());
+		Assert.assertEquals(message3,mailBox.getCurrentMessage());
 	}
 	@Test
 	public void verifyIfTheMailBoxHasTheCurrentMessageAfterAddMultipleMessagesAndRemoveAMessage() {
