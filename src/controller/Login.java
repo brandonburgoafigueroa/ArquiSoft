@@ -24,7 +24,6 @@ public class Login implements IState{
         if (isTheCorrectPasscodeOfCurrentMailbox())
         {
             changeToMailboxMenuState();
-            showMailboxMenuText();
         }
         else {
             showIncorrectPasscodeMessage();
@@ -44,9 +43,7 @@ public class Login implements IState{
         connection.updateObservables(INCORRECT_PASSCODE_MESSAGE);
     }
 
-    private void showMailboxMenuText() {
-        connection.updateObservables(MAILBOX_MENU_TEXT);
-    }
+
 
     private void changeToMailboxMenuState() {
         connection.setStatus(new MailboxMenu(connection));
@@ -65,8 +62,5 @@ public class Login implements IState{
         return key.equals("#");
     }
     private String INCORRECT_PASSCODE_MESSAGE = "Incorrect passcode. Try again!";
-    private static final String MAILBOX_MENU_TEXT =
-            "Enter 1 to listen to your messages\n"
-                    + "Enter 2 to change your passcode\n"
-                    + "Enter 3 to change your greeting";
+
 }
