@@ -8,24 +8,34 @@ public class ChangePasscode implements IState {
     ChangePasscode(Connection connection)
     {
         this.connection=connection;
+        this.currentMailbox=connection.getCurrentMailbox();
         showEnterNewPasscodeMessage(connection);
     }
-
-
-
     @Override
     public void start(String command) {
-        this.currentMailbox=connection.getCurrentMailbox();
         if (itIsANumeralCharacter(command))
         {
-            currentMailbox.setPasscode(accumulatedKeys);
-            connection.setStatus(new MailboxMenu(connection));
-            connection.updateObservables(MAILBOX_MENU_TEXT);
-            accumulatedKeys = "";
+            setNewPasscodeToCurrentMailbox();
+            changeToMailboxMenuState();
+            //accumulatedKeys = "";
         }
-        else
-            accumulatedKeys += command;
+        else {
+            saveCommand(command);
+        }
     }
+
+    private void setNewPasscodeToCurrentMailbox() {
+        currentMailbox.setPasscode(accumulatedKeys);
+    }
+
+    private void saveCommand(String command) {
+        accumulatedKeys += command;
+    }
+
+    private void changeToMailboxMenuState() {
+        connection.setStatus(new MailboxMenu(connection));
+    }
+
     private void showEnterNewPasscodeMessage(Connection connection) {
         connection.updateObservables(ENTER_NEW_PASSCODE_MESSAGE);
     }

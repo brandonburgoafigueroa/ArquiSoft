@@ -7,23 +7,39 @@ public class ChangeGreating implements IState {
     ChangeGreating(Connection connection)
     {
         this.connection=connection;
+        this.currentMailbox=connection.getCurrentMailbox();
+        showNewGreetingMessage(connection);
+    }
+
+    private void showNewGreetingMessage(Connection connection) {
         connection.updateObservables(ENTER_NEW_GREETING_MESSAGE);
     }
+
     @Override
     public void start(String command) {
-        this.currentMailbox=connection.getCurrentMailbox();
+
         if (itIsANumeralCharacter(command))
         {
-            currentMailbox.setGreeting(currentRecording);
-            currentRecording = "";
-            connection.setStatus(new MailboxMenu(connection));
-            connection.updateObservables(MAILBOX_MENU_TEXT);
+            setNewGreeting();
+            changeToMailboxMenuState();
         }
         else
         {
-            currentRecording= command;
+            saveCommand(command);
         }
 
+    }
+
+    private void saveCommand(String command) {
+        currentRecording= command;
+    }
+
+    private void setNewGreeting() {
+        currentMailbox.setGreeting(currentRecording);
+    }
+
+    private void changeToMailboxMenuState() {
+        connection.setStatus(new MailboxMenu(connection));
     }
 
     @Override

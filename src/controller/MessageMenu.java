@@ -3,37 +3,59 @@ package controller;
 public class MessageMenu implements IState{
     private Mailbox currentMailbox;
     private Connection connection;
+
     MessageMenu(Connection connection){
         this.connection=connection;
+        this.currentMailbox=connection.getCurrentMailbox();
         showMessageMenuOptions();
     }
     @Override
     public void start(String command) {
-        this.currentMailbox=connection.getCurrentMailbox();
+
         switch (command) {
             case "1":
-                String output = "";
-                Message m = currentMailbox.getCurrentMessage();
-                if (m == null) {
-                    output += EMPTY_MAILBOX_MESSAGE + "\n";
-                }
-                else output += m.getText() + "\n";
-                output += MESSAGE_MENU_TEXT;
-                connection.updateObservables(output);
+                String MessageText = getTextOfLastMessage();
+                showMessageText(MessageText);
                 break;
             case "2":
-                currentMailbox.saveCurrentMessage();
-                connection.updateObservables(MESSAGE_MENU_TEXT);
+                saveCurrentMessage();
+                showMessageMenuOptions();
                 break;
             case "3":
-                currentMailbox.removeCurrentMessage();
-                connection.updateObservables(MESSAGE_MENU_TEXT);
+                removeCurrentMessage();
+                showMessageMenuOptions();
                 break;
             case "4":
-                connection.setStatus(new MailboxMenu(connection));
-                connection.updateObservables(MAILBOX_MENU_TEXT);
+                changeToMailboxMenuState();
                 break;
         }
+    }
+
+    private void changeToMailboxMenuState() {
+        connection.setStatus(new MailboxMenu(connection));
+    }
+
+    private void removeCurrentMessage() {
+        currentMailbox.removeCurrentMessage();
+    }
+
+    private void saveCurrentMessage() {
+        currentMailbox.saveCurrentMessage();
+    }
+
+    private void showMessageText(String messageText) {
+        connection.updateObservables(messageText);
+    }
+
+    private String getTextOfLastMessage() {
+        String output="";
+        Message m = currentMailbox.getCurrentMessage();
+        if (m == null) {
+            output += EMPTY_MAILBOX_MESSAGE + "\n";
+        }
+        else output += m.getText() + "\n";
+        output += MESSAGE_MENU_TEXT;
+        return output;
     }
 
     @Override
