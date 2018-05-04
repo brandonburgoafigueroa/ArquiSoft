@@ -1,7 +1,7 @@
 package controller;
 
 public class Login implements IState{
-    private final Observers observers;
+    private final IObservers observers;
     private Mailbox currentMailbox;
     private String accumulatedKeys="";
     Connection connection;

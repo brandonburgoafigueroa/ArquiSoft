@@ -2,7 +2,7 @@ package controller;
 
 public class MailboxMenu implements IState {
 
-    private final Observers observers;
+    private final IObservers observers;
     private Connection connection;
     MailboxMenu(Connection connection){
         this.connection=connection;

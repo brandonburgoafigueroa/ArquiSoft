@@ -1,7 +1,7 @@
 package controller;
 
 public class MessageMenu implements IState{
-    private final Observers observer;
+    private final IObservers observer;
     private Mailbox currentMailbox;
     private Connection connection;
 

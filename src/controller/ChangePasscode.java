@@ -2,7 +2,7 @@ package controller;
 
 public class ChangePasscode implements IState {
 
-    private final Observers observers;
+    private final IObservers observers;
     private Mailbox currentMailbox;
     private String accumulatedKeys="";
     private Connection connection;

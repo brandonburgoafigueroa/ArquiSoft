@@ -3,7 +3,7 @@ package controller;
 public class Connection
 {
 
-   public Connection(MailSystem s, Observers observers)
+   public Connection(MailSystem s, IObservers observers)
    {
        system = s;
        this.observers = observers;
@@ -16,7 +16,7 @@ public class Connection
 
    }
 
-    public Observers getObservers() {
+    public IObservers getObservers() {
         return observers;
     }
 
@@ -86,7 +86,7 @@ public class Connection
         this.status=state;
     }
     private MailSystem system;
-    private Observers observers;
+    private IObservers observers;
     private Mailbox currentMailbox;
     private IState status;
 

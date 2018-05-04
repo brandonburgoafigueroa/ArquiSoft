@@ -5,7 +5,7 @@ import view.View;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Observers {
+public class Observers implements IObservers {
 
     private List<View> observables;
 

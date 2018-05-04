@@ -1,4 +1,5 @@
 import controller.Connection;
+import controller.IObservers;
 import controller.MailSystem;
 import controller.Observers;
 import view.Console;
@@ -16,7 +17,7 @@ public class Main
    {
       MailSystem system = new MailSystem(MAILBOX_COUNT);
       Scanner consoleInput = new Scanner(System.in);
-      Observers observers=new Observers();
+      IObservers observers=new Observers();
 
       Connection c = new Connection(system, observers);
 
