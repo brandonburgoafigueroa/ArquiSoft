@@ -28,7 +28,7 @@ public class MessageQueueTest {
 		MessageQueue messagequeue=new MessageQueue();
 		messagequeue.add(firstMessage);
 		messagequeue.add(secondMessage);
-		Assert.assertEquals(messagequeue.remove(), firstMessage);
+		Assert.assertEquals(messagequeue.remove(), secondMessage);
 	}
 	@Test
 	public void AddTailAMessageAndEliminateTailSizeShouldReturn2(){

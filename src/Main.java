@@ -21,7 +21,7 @@ public class Main
       FirstUI.setVisible(true);
       UserInterface SecondUI = new UserInterface(c);
       SecondUI.setVisible(true);
-      c.startConnection();
+      c.resetConnection();
       p.run();
    }
 
