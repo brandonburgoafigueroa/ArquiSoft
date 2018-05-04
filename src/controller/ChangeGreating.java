@@ -1,6 +1,7 @@
 package controller;
 
 public class ChangeGreating implements IState {
+    private final Observers observers;
     private Mailbox currentMailbox;
     private String currentRecording="";
     private Connection connection;
@@ -8,11 +9,13 @@ public class ChangeGreating implements IState {
     {
         this.connection=connection;
         this.currentMailbox=connection.getCurrentMailbox();
+        this.observers=connection.getObservers();
         showNewGreetingMessage(connection);
+
     }
 
     private void showNewGreetingMessage(Connection connection) {
-        connection.updateObservables(ENTER_NEW_GREETING_MESSAGE);
+        observers.updateObservables(ENTER_NEW_GREETING_MESSAGE);
     }
 
     @Override

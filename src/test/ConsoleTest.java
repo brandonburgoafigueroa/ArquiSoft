@@ -15,7 +15,8 @@ public class ConsoleTest {
 	@Test
 	public void EnterAChainInPhoneAndPrintTheChainShouldReturnMeSame() {
 		Scanner scanner=new Scanner(System.in);
-		Connection connection=new Connection(new MailSystem(20), new Observers());
+		Observers observers=new Observers();
+		Connection connection=new Connection(new MailSystem(20),observers);
 		Console telephone=new Console(scanner, connection);
 		String ENTER_MAILBOX_MESSAGE = "Enter mailbox number followed by #";
 		String output= ENTER_MAILBOX_MESSAGE;

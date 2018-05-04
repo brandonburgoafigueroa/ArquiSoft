@@ -2,6 +2,7 @@ package controller;
 
 public class ChangePasscode implements IState {
 
+    private final Observers observers;
     private Mailbox currentMailbox;
     private String accumulatedKeys="";
     private Connection connection;
@@ -9,7 +10,9 @@ public class ChangePasscode implements IState {
     {
         this.connection=connection;
         this.currentMailbox=connection.getCurrentMailbox();
+        this.observers=connection.getObservers();
         showEnterNewPasscodeMessage(connection);
+
     }
     @Override
     public void start(String command) {
@@ -36,7 +39,7 @@ public class ChangePasscode implements IState {
     }
 
     private void showEnterNewPasscodeMessage(Connection connection) {
-        connection.updateObservables(ENTER_NEW_PASSCODE_MESSAGE);
+        observers.updateObservables(ENTER_NEW_PASSCODE_MESSAGE);
     }
     @Override
     public void hangup() {

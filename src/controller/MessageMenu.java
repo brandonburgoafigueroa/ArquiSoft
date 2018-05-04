@@ -1,12 +1,14 @@
 package controller;
 
 public class MessageMenu implements IState{
+    private final Observers observer;
     private Mailbox currentMailbox;
     private Connection connection;
 
     MessageMenu(Connection connection){
         this.connection=connection;
         this.currentMailbox=connection.getCurrentMailbox();
+        this.observer=connection.getObservers();
         showMessageMenuOptions();
     }
     @Override
@@ -44,7 +46,7 @@ public class MessageMenu implements IState{
     }
 
     private void showMessageText(String messageText) {
-        connection.updateObservables(messageText);
+        observer.updateObservables(messageText);
     }
 
     private String getTextOfLastMessage() {
@@ -63,7 +65,7 @@ public class MessageMenu implements IState{
         connection.resetConnection();
     }
     private void showMessageMenuOptions() {
-        connection.updateObservables(MESSAGE_MENU_TEXT);
+        observer.updateObservables(MESSAGE_MENU_TEXT);
     }
 
     private String EMPTY_MAILBOX_MESSAGE = "No messages.";

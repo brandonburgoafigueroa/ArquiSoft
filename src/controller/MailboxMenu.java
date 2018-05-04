@@ -2,9 +2,11 @@ package controller;
 
 public class MailboxMenu implements IState {
 
+    private final Observers observers;
     private Connection connection;
     MailboxMenu(Connection connection){
         this.connection=connection;
+        this.observers=connection.getObservers();
         showMailboxMenuOptions();
     }
     @Override
@@ -41,7 +43,7 @@ public class MailboxMenu implements IState {
         connection.resetConnection();
     }
     private void showMailboxMenuOptions() {
-        connection.updateObservables(MAILBOX_MENU_TEXT);
+        observers.updateObservables(MAILBOX_MENU_TEXT);
     }
     private static final String MAILBOX_MENU_TEXT =
             "Enter 1 to listen to your messages\n"

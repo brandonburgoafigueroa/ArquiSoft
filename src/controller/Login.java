@@ -1,12 +1,14 @@
 package controller;
 
 public class Login implements IState{
+    private final Observers observers;
     private Mailbox currentMailbox;
     private String accumulatedKeys="";
     Connection connection;
 
     Login(Connection connection){
         this.connection=connection;
+        this.observers=connection.getObservers();
         this.currentMailbox=connection.getCurrentMailbox();
     }
     @Override
@@ -40,7 +42,7 @@ public class Login implements IState{
     }
 
     private void showIncorrectPasscodeMessage() {
-        connection.updateObservables(INCORRECT_PASSCODE_MESSAGE);
+        observers.updateObservables(INCORRECT_PASSCODE_MESSAGE);
     }
 
 

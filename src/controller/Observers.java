@@ -2,18 +2,15 @@ package controller;
 
 import view.View;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Observers {
 
     private List<View> observables;
 
-    public Observers(List<View> observables) {
-        this.observables = observables;
-    }
-
     public Observers() {
-        
+        observables=new ArrayList<>();
     }
 
     public void addObservable(View observable)

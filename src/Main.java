@@ -16,12 +16,16 @@ public class Main
    {
       MailSystem system = new MailSystem(MAILBOX_COUNT);
       Scanner console = new Scanner(System.in);
-      Connection c = new Connection(system, new Observers());
+      Observers observers=new Observers();
+      Connection c = new Connection(system, observers);
       Console p = new Console(console, c);
       UserInterface FirstUI = new UserInterface(c);
       FirstUI.setVisible(true);
       UserInterface SecondUI = new UserInterface(c);
       SecondUI.setVisible(true);
+      observers.addObservable(FirstUI);
+      observers.addObservable(SecondUI);
+      observers.addObservable(p);
       c.resetConnection();
       p.run();
    }

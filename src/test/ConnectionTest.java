@@ -16,8 +16,10 @@ public class ConnectionTest {
 	public void init() {
 	    mockedMailsystem = mock(MailSystem.class);
 	    mockedTelephone = mock(Console.class);
-	    connection = new Connection(mockedMailsystem, new Observers());
-	    connection.addObservable(mockedTelephone);
+	    Observers observers=new Observers();
+	    observers.addObservable(mockedTelephone);
+	    connection = new Connection(mockedMailsystem, observers);
+	    //connection.addObservable(mockedTelephone);
 		connection.resetConnection();
         Mailbox chosenMailbox = new Mailbox(idMailBox, HI_MESSAGE);
         when(mockedMailsystem.findMailbox(idMailBox)).thenReturn(chosenMailbox);

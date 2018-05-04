@@ -1,6 +1,7 @@
 package controller;
 
 public class Connect implements IState {
+    private final Observers observers;
     private Mailbox currentMailbox;
     private MailSystem system;
     private String accumulatedKeys="";
@@ -8,7 +9,8 @@ public class Connect implements IState {
     Connect(Connection connection) {
         this.connection=connection;
         this.system=connection.getMailboxSystem();
-        connection.updateObservables(INITIAL_PROMPT);
+        this.observers=connection.getObservers();
+        observers.updateObservables(INITIAL_PROMPT);
     }
 
     @Override
@@ -48,11 +50,11 @@ public class Connect implements IState {
     }
 
     private void showIncorrectMailboxMessage() {
-        connection.updateObservables(INCORRECT_MAILBOX_MESSAGE);
+        observers.updateObservables(INCORRECT_MAILBOX_MESSAGE);
     }
 
     private void showGreetingMessage() {
-        connection.updateObservables(currentMailbox.getGreeting());
+        observers.updateObservables(currentMailbox.getGreeting());
     }
 
     private void setCurrentMailboxToConnection() {

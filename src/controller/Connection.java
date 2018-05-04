@@ -1,11 +1,5 @@
 package controller;
 
-import view.View;
-
-import java.util.ArrayList;
-import java.util.List;
-
-
 public class Connection
 {
 
@@ -13,7 +7,6 @@ public class Connection
    {
        system = s;
        this.observers = observers;
-       observables=new ArrayList();
    }
 
    public void resetConnection()
@@ -23,18 +16,9 @@ public class Connection
 
    }
 
-   public void addObservable(View observable)
-   {
-      observables.add(observable);
-
-   }
-
-   public void updateObservables(String message)
-   {
-      for (View observer:observables) {
-       observer.update(message);
-      }
-   }
+    public Observers getObservers() {
+        return observers;
+    }
 
     public boolean executeCommand(String input)
     {
@@ -104,8 +88,6 @@ public class Connection
     private MailSystem system;
     private Observers observers;
     private Mailbox currentMailbox;
-    private List<View> observables;
-
     private IState status;
 
 }

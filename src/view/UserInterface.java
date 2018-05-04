@@ -40,7 +40,7 @@ public class UserInterface extends JFrame implements View {
         }
     }
     private void setConnection(Connection connection) {
-        connection.addObservable(this);
+        //connection.addObservable(this);
         this.connection=connection;
     }
 
