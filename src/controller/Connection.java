@@ -9,9 +9,10 @@ import java.util.List;
 public class Connection
 {
 
-   public Connection(MailSystem s)
+   public Connection(MailSystem s, Observers observers)
    {
        system = s;
+       this.observers = observers;
        observables=new ArrayList();
    }
 
@@ -101,6 +102,7 @@ public class Connection
         this.status=state;
     }
     private MailSystem system;
+    private Observers observers;
     private Mailbox currentMailbox;
     private List<View> observables;
 

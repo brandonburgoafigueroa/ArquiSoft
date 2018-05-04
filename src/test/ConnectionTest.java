@@ -3,6 +3,7 @@ package test;
 import controller.Connection;
 import controller.MailSystem;
 import controller.Mailbox;
+import controller.Observers;
 import org.junit.Before;
 import org.junit.Test;
 import view.Console;
@@ -15,7 +16,7 @@ public class ConnectionTest {
 	public void init() {
 	    mockedMailsystem = mock(MailSystem.class);
 	    mockedTelephone = mock(Console.class);
-	    connection = new Connection(mockedMailsystem);
+	    connection = new Connection(mockedMailsystem, new Observers());
 	    connection.addObservable(mockedTelephone);
 		connection.resetConnection();
         Mailbox chosenMailbox = new Mailbox(idMailBox, HI_MESSAGE);

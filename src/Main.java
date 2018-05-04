@@ -1,5 +1,6 @@
 import controller.Connection;
 import controller.MailSystem;
+import controller.Observers;
 import view.Console;
 import view.UserInterface;
 
@@ -15,7 +16,7 @@ public class Main
    {
       MailSystem system = new MailSystem(MAILBOX_COUNT);
       Scanner console = new Scanner(System.in);
-      Connection c = new Connection(system);
+      Connection c = new Connection(system, new Observers());
       Console p = new Console(console, c);
       UserInterface FirstUI = new UserInterface(c);
       FirstUI.setVisible(true);
