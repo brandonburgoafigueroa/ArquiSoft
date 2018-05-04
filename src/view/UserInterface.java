@@ -14,6 +14,7 @@ public class UserInterface extends JFrame implements View {
         setConnection(connection);
         setAttributesToComponentsOfUI();
         setActionsToButtons();
+        setVisible(true);
     }
 
     public void update(String message) {

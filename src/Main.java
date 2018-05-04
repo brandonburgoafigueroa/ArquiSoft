@@ -15,19 +15,22 @@ public class Main
    public static void main(String[] args)
    {
       MailSystem system = new MailSystem(MAILBOX_COUNT);
-      Scanner console = new Scanner(System.in);
+      Scanner consoleInput = new Scanner(System.in);
       Observers observers=new Observers();
+
       Connection c = new Connection(system, observers);
-      Console p = new Console(console, c);
+
+      Console console = new Console(consoleInput, c);
+
       UserInterface FirstUI = new UserInterface(c);
-      FirstUI.setVisible(true);
+
       UserInterface SecondUI = new UserInterface(c);
-      SecondUI.setVisible(true);
+
       observers.addObservable(FirstUI);
       observers.addObservable(SecondUI);
-      observers.addObservable(p);
+      observers.addObservable(console);
       c.resetConnection();
-      p.run();
+      console.run();
    }
 
    private static final int MAILBOX_COUNT = 20;
