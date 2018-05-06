@@ -71,7 +71,7 @@ public class DBConfiguration {
     public void closeSelect(ResultSet rs) throws SQLException {
         rs.close();
         statement.close();
-        dbConnection.close();
+        //dbConnection.close();
     }
     public void close(){
         try{
