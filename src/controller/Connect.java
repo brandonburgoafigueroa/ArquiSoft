@@ -1,7 +1,6 @@
 package controller;
 
 public class Connect implements IState {
-    private final IObservers observers;
     private Mailbox currentMailbox;
     private MailSystem system;
     private String accumulatedKeys="";
@@ -9,12 +8,15 @@ public class Connect implements IState {
     Connect(Connection connection) {
         this.connection=connection;
         this.system=connection.getMailboxSystem();
-        this.observers=connection.getObservers();
-        observers.updateObservables(INITIAL_PROMPT);
+        showInitialPromptMessage();
+    }
+
+    private void showInitialPromptMessage() {
+        connection.updateObservers(INITIAL_PROMPT);
     }
 
     @Override
-    public void start(String command) {
+    public void dial(String command) {
 
         if (itIsANumeralCharacter(command))
             openMailbox();
@@ -50,11 +52,11 @@ public class Connect implements IState {
     }
 
     private void showIncorrectMailboxMessage() {
-        observers.updateObservables(INCORRECT_MAILBOX_MESSAGE);
+        connection.updateObservers(INCORRECT_MAILBOX_MESSAGE);
     }
 
     private void showGreetingMessage() {
-        observers.updateObservables(currentMailbox.getGreeting());
+        connection.updateObservers(currentMailbox.getGreeting());
     }
 
     private void setCurrentMailboxToConnection() {

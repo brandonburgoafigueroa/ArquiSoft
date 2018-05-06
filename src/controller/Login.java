@@ -1,18 +1,16 @@
 package controller;
 
 public class Login implements IState{
-    private final IObservers observers;
     private Mailbox currentMailbox;
     private String accumulatedKeys="";
     Connection connection;
 
     Login(Connection connection){
         this.connection=connection;
-        this.observers=connection.getObservers();
         this.currentMailbox=connection.getCurrentMailbox();
     }
     @Override
-    public void start(String command) {
+    public void dial(String command) {
         if (itIsANumeralCharacter(command))
         {
             openMailboxMenu();
@@ -42,7 +40,7 @@ public class Login implements IState{
     }
 
     private void showIncorrectPasscodeMessage() {
-        observers.updateObservables(INCORRECT_PASSCODE_MESSAGE);
+        connection.updateObservers(INCORRECT_PASSCODE_MESSAGE);
     }
 
 

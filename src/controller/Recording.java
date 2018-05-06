@@ -10,7 +10,7 @@ public class Recording implements IState{
         this.currentMailbox=connection.getCurrentMailbox();
     }
     @Override
-    public void start(String command) {
+    public void dial(String command) {
         if (isAMessage(command))
         {
             addMessage(command);

@@ -16,10 +16,6 @@ public class Connection
 
    }
 
-    public IObservers getObservers() {
-        return observers;
-    }
-
     public boolean executeCommand(String input)
     {
         if (isInputHangUpCommand(input))
@@ -37,9 +33,12 @@ public class Connection
     }
    public void dial(String key)
    {
-          status.start(key);
+          status.dial(key);
    }
-
+    public void updateObservers(String text)
+    {
+        observers.updateObservers(text);
+    }
    public boolean isConnected() {
 	   return status instanceof Connect;
    }

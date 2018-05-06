@@ -19,7 +19,7 @@ public class Observers implements IObservers {
 
     }
 
-    public void updateObservables(String message)
+    public void updateObservers(String message)
     {
         for (View observer:observables) {
             observer.update(message);
