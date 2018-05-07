@@ -21,6 +21,7 @@ public class Main
       Scanner consoleInput = new Scanner(System.in);
       IObservers observers=new Observers();
       IPersistence persistence=new DBContext();
+
       Connection c = new Connection(system, observers, persistence);
 
       Console console = new Console(consoleInput, c);
