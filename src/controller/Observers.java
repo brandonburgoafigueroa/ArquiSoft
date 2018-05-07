@@ -10,7 +10,7 @@ public class Observers implements IObservers {
     private List<View> observables;
 
     public Observers() {
-        observables=new ArrayList<>();
+        observables=new ArrayList<View>();
     }
 
     public void addObservable(View observable)
