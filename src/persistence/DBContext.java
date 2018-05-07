@@ -30,12 +30,13 @@ public class DBContext implements IPersistence {
                 String  name = rs.getString("transmitter");
                 int age  = rs.getInt("receiver");
                 String  address = rs.getString("message");
-                //Message message=new Message();
+                Message message=new Message(name, address);
                 System.out.println( "ID = " + id );
                 System.out.println( "TRANSMITTER = " + name );
                 System.out.println( "RECEIVER = " + age );
                 System.out.println( "MESSAGE = " + address );
                 System.out.println();
+                messages.add(message);
             }
             currentDBConfiguration.closeSelect(rs);
             return messages;
