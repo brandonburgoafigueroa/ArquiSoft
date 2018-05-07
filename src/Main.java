@@ -14,19 +14,9 @@ public class Main
 {
    public static void main(String[] args)
    {
-      String sql = "CREATE TABLE COMPANY " +
-              "(ID INT PRIMARY KEY     NOT NULL," +
-              " NAME           TEXT    NOT NULL, " +
-              " AGE            INT     NOT NULL, " +
-              " ADDRESS        CHAR(50), " +
-              " SALARY         REAL)";
-      DBContext con = new DBContext();
-      con.connect();
-      con.create(sql);
-      sql = "INSERT INTO COMPANY (ID,NAME,AGE,ADDRESS,SALARY) " +
-              "VALUES (1, 'Paul', 32, 'California', 20000.00 );";
-      con.insert(sql);
-
+      DBContext db = new DBContext();
+      db.sendMessage("pepe","juan","hola pepe como estas");
+      db.showAllMessages();
       MailSystem system = new MailSystem(MAILBOX_COUNT);
       Scanner console = new Scanner(System.in);
       Connection c = new Connection(system);

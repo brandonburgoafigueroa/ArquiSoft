@@ -9,8 +9,7 @@
     <bookmark url="file://$PROJECT_DIR$/src/controller/Connection.java" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7692b031-0669-4e25-83c0-2768805490be" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/VoiceMail_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/VoiceMail_jar.xml" afterDir="false" />
+    <list default="true" id="7692b031-0669-4e25-83c0-2768805490be" name="Default" comment="db configuration implementada">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/persistence/DBContext.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/persistence/DBContext.java" afterDir="false" />
@@ -46,8 +45,8 @@
       <file leaf-file-name="Connection.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/controller/Connection.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
+            <state relative-caret-position="-136">
+              <caret line="27" selection-start-line="27" selection-end-line="27" />
               <folding>
                 <element signature="e#839#840#0" expanded="true" />
                 <element signature="e#870#871#0" expanded="true" />
@@ -82,65 +81,32 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="DBConfiguration.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/persistence/DBConfiguration.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="22" column="33" lean-forward="true" selection-start-line="22" selection-start-column="33" selection-end-line="22" selection-end-column="33" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="DBContext.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/persistence/DBContext.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="51" column="33" lean-forward="true" selection-start-line="51" selection-start-column="33" selection-end-line="51" selection-end-column="33" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="JDBC.java" pinned="false" current-in-tab="false">
-        <entry file="jar://$PROJECT_DIR$/sqlite-jdbc-3.7.22.jar!/org/sqlite/JDBC.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="122">
-              <caret line="63" selection-start-line="63" selection-end-line="63" />
+            <state relative-caret-position="204">
+              <caret line="21" selection-start-line="21" selection-end-line="21" />
               <folding>
-                <element signature="e#1651#1652#0" expanded="true" />
-                <element signature="e#1725#1726#0" expanded="true" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Conn.java" pinned="false" current-in-tab="false">
-        <entry file="jar://$PROJECT_DIR$/sqlite-jdbc-3.7.22.jar!/org/sqlite/Conn.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="65" selection-start-line="65" selection-end-line="65" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SQLiteConfig.java" pinned="false" current-in-tab="false">
-        <entry file="jar://$PROJECT_DIR$/sqlite-jdbc-3.7.22.jar!/org/sqlite/SQLiteConfig.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="122">
-              <caret line="137" selection-start-line="137" selection-end-line="137" />
-              <folding>
-                <element signature="e#4088#4089#0" expanded="true" />
-                <element signature="e#7765#7766#0" expanded="true" />
-                <element signature="e#7806#7807#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Console.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/view/Console.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="27" column="18" selection-start-line="27" selection-start-column="18" selection-end-line="27" selection-end-column="18" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="287">
-              <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
+            <state relative-caret-position="124">
+              <caret line="18" selection-start-line="18" selection-end-line="18" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -231,8 +197,9 @@
         <option value="$PROJECT_DIR$/src/controller/MessageMenu.java" />
         <option value="$PROJECT_DIR$/src/controller/Recording.java" />
         <option value="$PROJECT_DIR$/src/controller/Connect.java" />
-        <option value="$PROJECT_DIR$/src/persistence/DBContext.java" />
         <option value="$PROJECT_DIR$/src/Main.java" />
+        <option value="$PROJECT_DIR$/src/persistence/DBContext.java" />
+        <option value="$PROJECT_DIR$/src/persistence/DBConfiguration.java" />
       </list>
     </option>
   </component>
@@ -258,7 +225,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -287,8 +253,9 @@
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -511,7 +478,9 @@
       <workItem from="1524780996570" duration="7062000" />
       <workItem from="1525449526316" duration="1083000" />
       <workItem from="1525451558630" duration="1786000" />
-      <workItem from="1525476346248" duration="4692000" />
+      <workItem from="1525476346248" duration="7192000" />
+      <workItem from="1525639075822" duration="223000" />
+      <workItem from="1525639907729" duration="8837000" />
     </task>
     <task id="LOCAL-00001" summary="Modificando speak por update en telephone">
       <created>1523213745161</created>
@@ -611,7 +580,28 @@
       <option name="project" value="LOCAL" />
       <updated>1525452154419</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="db arreglada con ejecucion de consultas y tabla">
+      <created>1525504819090</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1525504819090</updated>
+    </task>
+    <task id="LOCAL-00016" summary="db configuration implementada">
+      <created>1525645529059</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1525645529060</updated>
+    </task>
+    <task id="LOCAL-00017" summary="tablas anadidas a la bd e implementaciones">
+      <created>1525646063535</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1525646063535</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -647,7 +637,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="79877000" />
+    <option name="totallyTimeSpent" value="91437000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -664,7 +654,7 @@
     <layout>
       <window_info anchor="right" id="Palette" order="4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32200646" />
-      <window_info anchor="bottom" id="Messages" order="8" weight="0.32114467" />
+      <window_info anchor="bottom" id="Messages" order="8" visible="true" weight="0.32114467" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info id="Image Layers" order="5" />
       <window_info anchor="right" id="Capture Analysis" order="8" />
@@ -672,11 +662,11 @@
       <window_info anchor="right" id="Maven Projects" order="5" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.32847896" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49707174" visible="true" weight="0.28934819" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49707174" weight="0.28934819" />
       <window_info anchor="bottom" id="Terminal" order="10" weight="0.32847896" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="3" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26573938" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26573938" />
       <window_info anchor="right" id="Database" order="6" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
@@ -684,8 +674,8 @@
       <window_info anchor="right" id="Theme Preview" order="9" />
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3418124" />
-      <window_info anchor="right" id="Coverage" order="0" side_tool="true" weight="0.32980332" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="3" weight="0.25" />
+      <window_info anchor="right" id="Coverage" order="0" side_tool="true" weight="0.32980332" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" order="1" weight="0.4" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -710,7 +700,10 @@
     <MESSAGE value="Exit y execute command" />
     <MESSAGE value="refactor" />
     <MESSAGE value="Conexion con db implementado" />
-    <option name="LAST_COMMIT_MESSAGE" value="Conexion con db implementado" />
+    <MESSAGE value="db arreglada con ejecucion de consultas y tabla" />
+    <MESSAGE value="db configuration implementada" />
+    <MESSAGE value="tablas anadidas a la bd e implementaciones" />
+    <option name="LAST_COMMIT_MESSAGE" value="tablas anadidas a la bd e implementaciones" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -728,14 +721,8 @@
           <option name="timeStamp" value="45" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Main.java</url>
-          <line>23</line>
-          <properties />
-          <option name="timeStamp" value="47" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/persistence/DBContext.java</url>
-          <line>9</line>
+          <url>file://$PROJECT_DIR$/src/persistence/DBConfiguration.java</url>
+          <line>6</line>
           <properties />
           <option name="timeStamp" value="49" />
         </line-breakpoint>
@@ -749,13 +736,6 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/view/View.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="30" selection-start-line="1" selection-start-column="30" selection-end-line="1" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/view/UserInterface.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
@@ -1061,9 +1041,28 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://$PROJECT_DIR$/sqlite-jdbc-3.7.22.jar!/org/sqlite/SQLiteConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1666">
+          <caret line="137" selection-start-line="137" selection-end-line="137" />
+          <folding>
+            <element signature="e#4088#4089#0" expanded="true" />
+            <element signature="e#7765#7766#0" expanded="true" />
+            <element signature="e#7806#7807#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/sqlite-jdbc-3.7.22.jar!/org/sqlite/Conn.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="65" selection-start-line="65" selection-end-line="65" />
+        </state>
+      </provider>
+    </entry>
     <entry file="jar://$PROJECT_DIR$/sqlite-jdbc-3.7.22.jar!/org/sqlite/JDBC.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="122">
+        <state relative-caret-position="207">
           <caret line="63" selection-start-line="63" selection-end-line="63" />
           <folding>
             <element signature="e#1651#1652#0" expanded="true" />
@@ -1072,17 +1071,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/persistence/DBContext.java">
+    <entry file="file://$PROJECT_DIR$/src/view/Console.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="51" column="33" lean-forward="true" selection-start-line="51" selection-start-column="33" selection-end-line="51" selection-end-column="33" />
+        <state relative-caret-position="323">
+          <caret line="27" column="18" selection-start-line="27" selection-start-column="18" selection-end-line="27" selection-end-column="18" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/controller/Connection.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
+        <state relative-caret-position="-136">
+          <caret line="27" selection-start-line="27" selection-end-line="27" />
           <folding>
             <element signature="e#839#840#0" expanded="true" />
             <element signature="e#870#871#0" expanded="true" />
@@ -1116,39 +1115,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/view/Console.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="27" column="18" selection-start-line="27" selection-start-column="18" selection-end-line="27" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/sqlite-jdbc-3.7.22.jar!/org/sqlite/SQLiteConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="122">
-          <caret line="137" selection-start-line="137" selection-end-line="137" />
-          <folding>
-            <element signature="e#4088#4089#0" expanded="true" />
-            <element signature="e#7765#7766#0" expanded="true" />
-            <element signature="e#7806#7807#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/sqlite-jdbc-3.7.22.jar!/org/sqlite/Conn.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="65" selection-start-line="65" selection-end-line="65" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="287">
-          <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
+        <state relative-caret-position="124">
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/persistence/DBContext.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/persistence/DBConfiguration.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="22" column="33" lean-forward="true" selection-start-line="22" selection-start-column="33" selection-end-line="22" selection-end-column="33" />
         </state>
       </provider>
     </entry>
