@@ -1,6 +1,7 @@
 import controller.Connection;
+import controller.IObservers;
 import controller.MailSystem;
-import persistence.DBContext;
+import controller.Observers;
 import view.Console;
 import view.UserInterface;
 
@@ -14,19 +15,23 @@ public class Main
 {
    public static void main(String[] args)
    {
-      DBContext db = new DBContext();
-      db.sendMessage("pepe","juan","hola pepe como estas");
-      db.showAllMessages();
       MailSystem system = new MailSystem(MAILBOX_COUNT);
-      Scanner console = new Scanner(System.in);
-      Connection c = new Connection(system);
-      Console p = new Console(console, c);
+      Scanner consoleInput = new Scanner(System.in);
+      IObservers observers=new Observers();
+
+      Connection c = new Connection(system, observers);
+
+      Console console = new Console(consoleInput, c);
+
       UserInterface FirstUI = new UserInterface(c);
-      FirstUI.setVisible(true);
+
       UserInterface SecondUI = new UserInterface(c);
-      SecondUI.setVisible(true);
+
+      observers.addObservable(FirstUI);
+      observers.addObservable(SecondUI);
+      observers.addObservable(console);
       c.resetConnection();
-      p.run();
+      console.run();
    }
 
    private static final int MAILBOX_COUNT = 20;

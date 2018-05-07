@@ -4,19 +4,21 @@ public class ChangeGreating implements IState {
     private Mailbox currentMailbox;
     private String currentRecording="";
     private Connection connection;
+
     ChangeGreating(Connection connection)
     {
         this.connection=connection;
         this.currentMailbox=connection.getCurrentMailbox();
-        showNewGreetingMessage(connection);
+        showNewGreetingMessage();
+
     }
 
-    private void showNewGreetingMessage(Connection connection) {
-        connection.updateObservables(ENTER_NEW_GREETING_MESSAGE);
+    private void showNewGreetingMessage() {
+        connection.updateObservers(ENTER_NEW_GREETING_MESSAGE);
     }
 
     @Override
-    public void start(String command) {
+    public void dial(String command) {
 
         if (itIsANumeralCharacter(command))
         {

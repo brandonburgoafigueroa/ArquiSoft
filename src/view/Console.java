@@ -10,7 +10,6 @@ public class Console implements View
    {
       scanner = aScanner;
       this.connection=connection;
-      this.connection.addObservable(this);
    }
    public void update(String message)
    {
@@ -32,5 +31,4 @@ public class Console implements View
 
    private Scanner scanner;
    private Connection connection;
-
 }

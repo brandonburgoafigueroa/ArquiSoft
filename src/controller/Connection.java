@@ -1,18 +1,12 @@
 package controller;
 
-import view.View;
-
-import java.util.ArrayList;
-import java.util.List;
-
-
 public class Connection
 {
 
-   public Connection(MailSystem s)
+   public Connection(MailSystem s, IObservers observers)
    {
        system = s;
-       observables=new ArrayList();
+       this.observers = observers;
    }
 
    public void resetConnection()
@@ -20,19 +14,6 @@ public class Connection
        currentMailbox=null;
        status=new Connect(this);
 
-   }
-
-   public void addObservable(View observable)
-   {
-      observables.add(observable);
-
-   }
-
-   public void updateObservables(String message)
-   {
-      for (View observer:observables) {
-       observer.update(message);
-      }
    }
 
     public boolean executeCommand(String input)
@@ -52,9 +33,12 @@ public class Connection
     }
    public void dial(String key)
    {
-          status.start(key);
+          status.dial(key);
    }
-
+    public void updateObservers(String text)
+    {
+        observers.updateObservers(text);
+    }
    public boolean isConnected() {
 	   return status instanceof Connect;
    }
@@ -101,9 +85,8 @@ public class Connection
         this.status=state;
     }
     private MailSystem system;
+    private IObservers observers;
     private Mailbox currentMailbox;
-    private List<View> observables;
-
     private IState status;
 
 }
