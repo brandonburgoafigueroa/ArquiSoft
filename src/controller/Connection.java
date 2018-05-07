@@ -1,12 +1,15 @@
 package controller;
 
+import persistence.IPersistence;
+
 public class Connection
 {
 
-   public Connection(MailSystem s, IObservers observers)
+   public Connection(MailSystem s, IObservers observers, IPersistence persistence)
    {
        system = s;
        this.observers = observers;
+       this.persistence = persistence;
    }
 
    public void resetConnection()
@@ -86,6 +89,7 @@ public class Connection
     }
     private MailSystem system;
     private IObservers observers;
+    private IPersistence persistence;
     private Mailbox currentMailbox;
     private IState status;
 

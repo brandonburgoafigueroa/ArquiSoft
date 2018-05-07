@@ -1,9 +1,13 @@
 package persistence;
 
+import controller.Message;
+
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
-public class DBContext {
+public class DBContext implements IPersistence {
     private DBConfiguration currentDBConfiguration;
     private String query;
     public DBContext(){
@@ -15,8 +19,10 @@ public class DBContext {
                 "VALUES ('"+transmitter+"','"+receiver+"','"+message+"');";
         currentDBConfiguration.insert(query);
     }
-    public void showAllMessages() {
+    public List<Message> showAllMessages() {
+        List<Message> messages=new ArrayList<Message>();
         try{
+
             query = "SELECT * FROM Messages;";
             ResultSet rs = currentDBConfiguration.select(query);
             while ( rs.next() ) {
@@ -24,7 +30,7 @@ public class DBContext {
                 String  name = rs.getString("transmitter");
                 int age  = rs.getInt("receiver");
                 String  address = rs.getString("message");
-
+                //Message message=new Message();
                 System.out.println( "ID = " + id );
                 System.out.println( "TRANSMITTER = " + name );
                 System.out.println( "RECEIVER = " + age );
@@ -32,11 +38,14 @@ public class DBContext {
                 System.out.println();
             }
             currentDBConfiguration.closeSelect(rs);
+            return messages;
         }
         catch (SQLException ex){
             System.out.println("no se pudo obtener los datos"+ex);
+            return null;
         }
 
     }
+
 
 }

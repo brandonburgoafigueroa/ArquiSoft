@@ -2,6 +2,8 @@ import controller.Connection;
 import controller.IObservers;
 import controller.MailSystem;
 import controller.Observers;
+import persistence.DBContext;
+import persistence.IPersistence;
 import view.Console;
 import view.UserInterface;
 
@@ -18,8 +20,8 @@ public class Main
       MailSystem system = new MailSystem(MAILBOX_COUNT);
       Scanner consoleInput = new Scanner(System.in);
       IObservers observers=new Observers();
-
-      Connection c = new Connection(system, observers);
+      IPersistence persistence=new DBContext();
+      Connection c = new Connection(system, observers, persistence);
 
       Console console = new Console(consoleInput, c);
 

@@ -5,6 +5,7 @@ import controller.MailSystem;
 import controller.Observers;
 import org.junit.Assert;
 import org.junit.Test;
+import persistence.DBContext;
 import view.Console;
 
 import java.io.ByteArrayInputStream;
@@ -16,7 +17,7 @@ public class ConsoleTest {
 	public void EnterAChainInPhoneAndPrintTheChainShouldReturnMeSame() {
 		Scanner scanner=new Scanner(System.in);
 		Observers observers=new Observers();
-		Connection connection=new Connection(new MailSystem(20),observers);
+		Connection connection=new Connection(new MailSystem(20),observers, new DBContext());
 		Console telephone=new Console(scanner, connection);
 		String ENTER_MAILBOX_MESSAGE = "Enter mailbox number followed by #";
 		String output= ENTER_MAILBOX_MESSAGE;
@@ -27,7 +28,7 @@ public class ConsoleTest {
 	public void IncomeLetterHAndICheckThatTheConnectionIsEstablishedShouldReturnTrue() {
 		Scanner scanner=GetScannerWithThisString("H");
 		MailSystem mailSystem=new MailSystem(20);
-		Connection connection=new Connection(mailSystem, new Observers());
+		Connection connection=new Connection(mailSystem, new Observers(), new DBContext());
 		Console telephone=new Console(scanner, connection);
 		connection.resetConnection();
 		telephone.run();
@@ -38,7 +39,7 @@ public class ConsoleTest {
 	public void IncomeLetterQAndICheckThatTheConnectionIsEstablishedShouldReturnTrue() {
 		Scanner scanner=GetScannerWithThisString("Q");
 		MailSystem mailSystem=new MailSystem(20);
-		Connection connection=new Connection(mailSystem, new Observers());
+		Connection connection=new Connection(mailSystem, new Observers(), new DBContext());
 		Console telephone=new Console(scanner, connection);
 		connection.resetConnection();
 		telephone.run();
@@ -49,7 +50,7 @@ public class ConsoleTest {
 	public void EnterAStringAndCheckThatTheConnectionIsEstablishedShouldReturnTrue() {
 		Scanner scanner=GetScannerWithThisString("Hola");
 		MailSystem mailSystem=new MailSystem(20);
-		Connection connection=new Connection(mailSystem, new Observers());
+		Connection connection=new Connection(mailSystem, new Observers(), new DBContext());
 		Console telephone=new Console(scanner, connection);
 		connection.resetConnection();
 		telephone.run();
@@ -61,7 +62,7 @@ public class ConsoleTest {
 		Scanner scanner=GetScannerWithThisString("#");
 
 		MailSystem mailSystem=new MailSystem(20);
-		Connection connection=new Connection(mailSystem, new Observers());
+		Connection connection=new Connection(mailSystem, new Observers(), new DBContext());
 		Console telephone=new Console(scanner, connection);
 		connection.resetConnection();
 		telephone.run();

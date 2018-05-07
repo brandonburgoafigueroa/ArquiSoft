@@ -6,9 +6,11 @@ public class Message
    {
       text = messageText;
    }
+
    public String getText()
    {
       return text;
    }
    private String text;
+
 }
