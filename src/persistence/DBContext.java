@@ -2,6 +2,7 @@ package persistence;
 
 import controller.Mailbox;
 import controller.Message;
+import controller.MessageQueue;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -14,6 +15,19 @@ public class DBContext implements IPersistence {
     public DBContext(){
         currentDBConfiguration = new DBConfiguration();
         currentDBConfiguration.connect();
+    }
+
+    public void saveChanges(Mailbox mailbox, String idCurrentMailbox){
+        MessageQueue kept=mailbox.getKeptMessages();
+        int QuantityOfRecordsOnDB=findKeptMessagesOfMailBox(idCurrentMailbox).size();
+        for (int i=QuantityOfRecordsOnDB; i<kept.size(); i++)
+        {
+            Message message=kept.getMessageOf(i);
+            saveMessage(idCurrentMailbox, message);
+        }
+    }
+    public void saveMessage(String idMailbox, Message message){
+        query="INSERT INTO Message (idMailBox,message) VALUES ("+idMailbox+","+message.getText()+");";
     }
     public void sendMessage(String transmitter, String receiver, String message){
         query = "INSERT INTO Messages (transmitter,receiver,message) " +
@@ -63,6 +77,24 @@ public class DBContext implements IPersistence {
             }
             currentDBConfiguration.closeSelect(rs);
             return mailbox;
+        }
+        catch (SQLException ex){
+            System.out.println("no se pudo obtener el mailbox"+ex);
+            return null;
+        }
+
+    }
+    private List<Message> findKeptMessagesOfMailBox(String idMailBox) {
+        try{
+            query = "SELECT message  FROM Message WHERE idMailBox='"+idMailBox+"';";
+            ResultSet rs = currentDBConfiguration.select(query);
+            List<Message> kept=new ArrayList<>();
+            while ( rs.next() ) {
+                Message message = new Message(rs.getString("message"));
+                kept.add(message);
+            }
+            currentDBConfiguration.closeSelect(rs);
+            return kept;
         }
         catch (SQLException ex){
             System.out.println("no se pudo obtener el mailbox"+ex);

@@ -64,8 +64,13 @@ public class Mailbox
       else
          return false;
    }
+   public MessageQueue getKeptMessages()
+   {
+      return keptMessages;
+   }
    private MessageQueue newMessages;
    private MessageQueue keptMessages;
    private String greeting;
    private String passcode;
+
 }
