@@ -1,12 +1,14 @@
 package controller;
 
+import persistence.DBContext;
+
 import java.util.ArrayList;
 
 public class MailSystem
 {
    private ArrayList<Mailbox> mailboxes;
    private int idCurrentMailbox;
-   public MailSystem(int mailboxCount)
+   public MailSystem(int mailboxCount, DBContext dbContext)
    {
       mailboxes = new ArrayList();
       for (int i = 0; i < mailboxCount; i++)
@@ -16,6 +18,9 @@ public class MailSystem
                + ". \nPlease leave a message now.";
          mailboxes.add(new Mailbox(passcode, greeting));
       }
+      int Quantity=dbContext.getAlMailbox().size();
+      
+
    }
    public void setMailboxToPos(String pos,Mailbox mailbox)
    {
@@ -24,7 +29,6 @@ public class MailSystem
          mailboxes.set(i-1, mailbox);
       }
    }
-
    public boolean hasNewMessages(String pos){
       int i = Integer.parseInt(pos);
       return (mailboxes.get(i-1).hasNewMessages());

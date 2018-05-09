@@ -14,7 +14,7 @@ public class Main
 {
    public static void main(String[] args)
    {
-      MailSystem system = new MailSystem(MAILBOX_COUNT);
+      MailSystem system = new MailSystem(MAILBOX_COUNT, new DBContext());
       Scanner consoleInput = new Scanner(System.in);
       IObservers observers=new Observers();
       IPersistence persistence=new DBContext();

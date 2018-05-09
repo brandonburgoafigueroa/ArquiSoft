@@ -82,7 +82,7 @@ public class DBContext implements IPersistence {
         }
     }
     public List <Mailbox> getAlMailbox() {
-        List<Mailbox> mailboxes=null;
+        List<Mailbox> mailboxes=new ArrayList<>();
         Mailbox mailbox=null;
         try{
             query = "SELECT passcode, greeting FROM MailBox;";
