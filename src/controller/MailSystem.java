@@ -25,6 +25,10 @@ public class MailSystem
       }
    }
 
+   public boolean hasNewMessages(String pos){
+      int i = Integer.parseInt(pos);
+      return (mailboxes.get(i-1).hasNewMessages());
+   }
    public Mailbox findMailbox(String ext)
    {
       int i = Integer.parseInt(ext);
