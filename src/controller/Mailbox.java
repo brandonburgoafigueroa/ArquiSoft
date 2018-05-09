@@ -37,6 +37,10 @@ public class Mailbox
       if (m != null)
          keptMessages.add(m);
    }
+   public String getPasscode()
+   {
+      return passcode;
+   }
 
    public void setGreeting(String newGreeting)
    {

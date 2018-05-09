@@ -35,22 +35,38 @@ public class DBConfiguration {
         }
         catch(SQLException ex)
         {
-            System.out.println("No se pudo realizar la consulta: "+ex);
+            System.out.println("No se pudo realizar la consulta create: "+ex);
         }
 
     }
     public void insert(String query)  {
         try{
-            dbConnection.setAutoCommit(false);
+
+            dbConnection.setAutoCommit(true);
             statement = dbConnection.createStatement();
-            statement.executeUpdate(query);
+            statement.execute(query);
             statement.close();
-            dbConnection.commit();
+            //dbConnection.commit();
             //dbConnection.close();
         }
         catch(SQLException ex)
         {
-            System.out.println("No se pudo realizar la consulta: "+ex);
+            System.out.println("No se pudo realizar la consulta insert: "+ex);
+        }
+
+    }
+    public void update(String query)  {
+        try{
+            dbConnection.setAutoCommit(true);
+            statement = dbConnection.createStatement();
+            statement.executeUpdate(query);
+            statement.close();
+            //dbConnection.commit();
+            //dbConnection.close();
+        }
+        catch(SQLException ex)
+        {
+            System.out.println("No se pudo realizar la consulta update: "+ex);
         }
 
     }
@@ -63,7 +79,7 @@ public class DBConfiguration {
         }
         catch(SQLException ex)
         {
-            System.out.println("No se pudo realizar la consulta: "+ex);
+            System.out.println("No se pudo realizar la consulta select: "+ex);
             return null;
         }
 

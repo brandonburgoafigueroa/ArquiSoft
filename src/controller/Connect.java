@@ -10,7 +10,6 @@ public class Connect implements IState {
         this.system=connection.getMailboxSystem();
         showInitialPromptMessage();
     }
-
     private void showInitialPromptMessage() {
         connection.updateObservers(INITIAL_PROMPT);
     }
@@ -48,12 +47,7 @@ public class Connect implements IState {
     }
 
     private void setupMailbox() {
-        if(system.hasNewMessages(accumulatedKeys)==false){
-            Mailbox mail = connection.findMailBox(accumulatedKeys);
-            system.setMailboxToPos(accumulatedKeys,mail);
-        }
         currentMailbox = system.findMailbox(accumulatedKeys);
-
     }
 
     private void showIncorrectMailboxMessage() {

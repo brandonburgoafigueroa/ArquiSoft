@@ -5,7 +5,7 @@ import persistence.IPersistence;
 public class Connection
 {
 
-   public Connection(MailSystem s, IObservers observers, IPersistence persistence)
+   public Connection(MailSystem s, IObservers observers)
    {
        system = s;
        this.observers = observers;
@@ -18,9 +18,7 @@ public class Connection
        status=new Connect(this);
 
    }
-   public Mailbox findMailBox(String id){
-       return persistence.getMailBoxWithMessages(id);
-   }
+
     public boolean executeCommand(String input)
     {
         if (isInputHangUpCommand(input))
@@ -30,6 +28,9 @@ public class Connection
         else
             dial(input);
         return true;
+    }
+    public void saveChanges() {
+       system.saveChanges(currentMailbox);
     }
 
     private void hangup()
@@ -94,6 +95,7 @@ public class Connection
     private IPersistence persistence;
     private Mailbox currentMailbox;
     private IState status;
+
 
 }
 

@@ -61,6 +61,7 @@ public class Recording implements IState{
 
     private void saveMessage() {
         currentMailbox.addMessage(new Message(message));
+        connection.saveChanges();
     }
 
     private boolean isNumericalCommand(String input) {

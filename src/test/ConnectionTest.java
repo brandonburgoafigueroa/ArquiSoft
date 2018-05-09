@@ -6,7 +6,6 @@ import controller.Mailbox;
 import controller.Observers;
 import org.junit.Before;
 import org.junit.Test;
-import persistence.DBContext;
 import view.Console;
 
 import static org.junit.Assert.assertTrue;
@@ -19,7 +18,7 @@ public class ConnectionTest {
 	    mockedTelephone = mock(Console.class);
 	    Observers observers=new Observers();
 	    observers.addObservable(mockedTelephone);
-	    connection = new Connection(mockedMailsystem, observers, new DBContext());
+	    connection = new Connection(mockedMailsystem, observers);
 	    //connection.addObservable(mockedTelephone);
 		connection.resetConnection();
         Mailbox chosenMailbox = new Mailbox(idMailBox, HI_MESSAGE);

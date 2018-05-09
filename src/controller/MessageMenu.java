@@ -41,6 +41,7 @@ public class MessageMenu implements IState{
 
     private void saveCurrentMessage() {
         currentMailbox.saveCurrentMessage();
+        connection.saveChanges();
     }
 
     private void showMessageText(String messageText) {
