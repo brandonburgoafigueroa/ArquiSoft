@@ -18,7 +18,9 @@ public class Connection
        status=new Connect(this);
 
    }
-
+   public Mailbox findMailBox(String id){
+       return persistence.getMailBoxWithMessages(id);
+   }
     public boolean executeCommand(String input)
     {
         if (isInputHangUpCommand(input))
