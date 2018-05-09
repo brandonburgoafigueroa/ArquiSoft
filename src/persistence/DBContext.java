@@ -35,7 +35,7 @@ public class DBContext implements IPersistence {
     private Mailbox findMailBox(String idMailBox) {
         Mailbox mailbox=null;
         try{
-            query = "SELECT passcode, greeting FROM MailBox WHERE id='"+idMailBox+"';";
+            query = "SELECT passcode, greeting FROM MailBox WHERE id="+idMailBox+";";
             ResultSet rs = currentDBConfiguration.select(query);
 
             while ( rs.next() ) {
@@ -54,7 +54,7 @@ public class DBContext implements IPersistence {
     }
     private Mailbox findMessagesOfMailBox(String idMailBox, Mailbox mailbox) {
         try{
-            query = "SELECT message  FROM Message WHERE id='"+idMailBox+"';";
+            query = "SELECT message  FROM Message WHERE idMailBox='"+idMailBox+"';";
             ResultSet rs = currentDBConfiguration.select(query);
 
             while ( rs.next() ) {

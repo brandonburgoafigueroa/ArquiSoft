@@ -48,6 +48,8 @@ public class Connect implements IState {
     }
 
     private void setupMailbox() {
+        Mailbox mail = connection.findMailBox(accumulatedKeys);
+        system.setMailboxToPos(accumulatedKeys,mail);
         currentMailbox = system.findMailbox(accumulatedKeys);
     }
 

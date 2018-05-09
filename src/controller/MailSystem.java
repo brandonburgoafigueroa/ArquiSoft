@@ -17,6 +17,13 @@ public class MailSystem
          mailboxes.add(new Mailbox(passcode, greeting));
       }
    }
+   public void setMailboxToPos(String pos,Mailbox mailbox)
+   {
+      int i = Integer.parseInt(pos);
+      if(mailbox!=null) {
+         mailboxes.set(i-1, mailbox);
+      }
+   }
 
    public Mailbox findMailbox(String ext)
    {
