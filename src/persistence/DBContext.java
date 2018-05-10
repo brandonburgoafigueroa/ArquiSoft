@@ -116,22 +116,23 @@ public class DBContext implements IPersistence {
             return Integer.parseInt(total);
         } catch (SQLException ex) {
             System.out.println("no se pudo obtener el total de mensajes" + ex);
+            return 0;
         }
     }
 
     //sql
     //hacer un update a la info del mailbox con id=idMailbox
     private void saveChangesMailbox(int idMailbox, String passcode, String greeting)
-        {
-
+    {
+        query="UPDATE MailBox SET passcode='"+passcode+"', greeting = '"+greeting+"' WHERE id="+idMailbox+";";
     }
 
 
     //sql
     //Insert en mailbox
     public void addMailbox(Mailbox mailbox) {
-
-
+        query="INSERT INTO MailBox(passcode,greeting) VALUES('"+mailbox.getPasscode()+"','"+mailbox.getGreeting()+"');";
+        currentDBConfiguration.insert(query);
     }
     //sql
     //Devolver una lista con los mailbox con los greeting, passcode, keptMessages, newMessages cargados
@@ -144,6 +145,7 @@ public class DBContext implements IPersistence {
     //sql
     //eliminar ultimo mensaje de tipo Type
     private void deleteMessageOf(int idMailbox) {
+
 
     }
 }

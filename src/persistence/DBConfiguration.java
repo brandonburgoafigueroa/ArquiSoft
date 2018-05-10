@@ -70,6 +70,20 @@ public class DBConfiguration {
         }
 
     }
+    public void delete(String query){
+        try{
+            dbConnection.setAutoCommit(false);
+            statement = dbConnection.createStatement();
+            statement.executeUpdate(query);
+            dbConnection.commit();
+        }
+        catch(SQLException ex)
+        {
+            System.out.println("No se pudo realizar la consulta delete: "+ex);
+        }
+
+
+    }
     public ResultSet select(String query){
         try{
             dbConnection.setAutoCommit(false);
