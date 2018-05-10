@@ -8,7 +8,7 @@ import persistence.DBContext;
 public class MailSystemTest {
 	@Test
 	public void verifyIfTheMailSystemIsEmpty() {
-		MailSystem mailSystem = new MailSystem(0, new DBContext());
+		MailSystem mailSystem = new MailSystem(0, new DBContextTests());
 		Assert.assertEquals(null, mailSystem.findMailbox("0"));
 	}
 }

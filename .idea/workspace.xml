@@ -10,7 +10,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7692b031-0669-4e25-83c0-2768805490be" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/src/test/DBContextTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controller/ChangeGreating.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/ChangeGreating.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controller/ChangePasscode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/ChangePasscode.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controller/MailSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/MailSystem.java" afterDir="false" />
@@ -20,6 +22,7 @@
       <change beforePath="$PROJECT_DIR$/src/persistence/IPersistence.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/persistence/IPersistence.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/persistence/TypeOfMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/persistence/TypeOfMessage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/ConsoleTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/ConsoleTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/MailSystemTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/MailSystemTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test.db" beforeDir="false" afterPath="$PROJECT_DIR$/test.db" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/bin/" />
@@ -50,122 +53,22 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="MailSystem.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/controller/MailSystem.java">
+      <file leaf-file-name="IObservers.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/controller/IObservers.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="328">
-              <caret line="23" column="7" lean-forward="true" selection-start-line="23" selection-start-column="7" selection-end-line="23" selection-end-column="7" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1757#1758#0" expanded="true" />
-                <element signature="e#1818#1819#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="102">
+              <caret line="6" column="41" selection-start-line="6" selection-start-column="41" selection-end-line="6" selection-end-column="41" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="247">
-              <caret line="23" selection-start-line="23" selection-end-line="23" />
+            <state relative-caret-position="179">
+              <caret line="19" column="18" selection-start-line="19" selection-start-column="18" selection-end-line="19" selection-end-column="18" />
               <folding>
                 <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DBContext.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/persistence/DBContext.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="20" selection-start-line="20" selection-end-line="20" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TypeOfMessage.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/persistence/TypeOfMessage.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="5" selection-start-line="2" selection-start-column="5" selection-end-line="2" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DBConfiguration.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/persistence/DBConfiguration.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="175">
-              <caret line="77" selection-start-line="77" selection-end-line="77" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MessageQueue.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/controller/MessageQueue.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="23" selection-start-line="23" selection-end-line="23" />
-              <folding>
-                <element signature="e#174#175#0" expanded="true" />
-                <element signature="e#222#223#0" expanded="true" />
-                <element signature="e#268#269#0" expanded="true" />
-                <element signature="e#307#308#0" expanded="true" />
-                <element signature="e#443#444#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MailboxMenu.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/controller/MailboxMenu.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="30" column="48" lean-forward="true" selection-start-line="30" selection-start-column="48" selection-end-line="30" selection-end-column="48" />
-              <folding>
-                <element signature="e#637#638#0" expanded="true" />
-                <element signature="e#705#706#0" expanded="true" />
-                <element signature="e#823#824#0" expanded="true" />
-                <element signature="e#870#871#0" expanded="true" />
-                <element signature="e#935#936#0" expanded="true" />
-                <element signature="e#1066#1067#0" expanded="true" />
-                <element signature="e#1127#1128#0" expanded="true" />
-                <marker date="1525644787070" expanded="true" signature="271:588" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ConnectionTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/ConnectionTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="207">
-              <caret line="192" column="35" selection-start-line="192" selection-start-column="35" selection-end-line="192" selection-end-column="35" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ConsoleTest.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/test/ConsoleTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="83">
-              <caret line="19" column="79" selection-start-line="19" selection-start-column="79" selection-end-line="19" selection-end-column="79" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MessageMenu.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/controller/MessageMenu.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="38" column="46" lean-forward="true" selection-start-line="38" selection-start-column="46" selection-end-line="38" selection-end-column="46" />
-              <folding>
-                <marker date="1525904809948" expanded="true" signature="366:375" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -189,21 +92,23 @@
       <find>.speak</find>
       <find>.uPDATE</find>
       <find>phone</find>
-      <find>&quot;Hello, How are you?&quot;</find>
+      <find />
       <find>_</find>
       <find>&quot;hello!&quot;</find>
-      <find>&quot;Enter mailbox number followed by #&quot;</find>
+      <find />
       <find>status=</find>
-      <find>currentMailbox != null</find>
+      <find />
       <find>observers</find>
       <find>where</find>
       <find>public</find>
+      <find />
     </findStrings>
     <replaceStrings>
       <replace>HELLO_MESSAGE</replace>
       <replace>HI_MESSAGE_SHORT</replace>
       <replace>ENTER_MAILBOX_MESSAGE</replace>
       <replace>setStatus(</replace>
+      <replace />
     </replaceStrings>
     <dirStrings>
       <dir>C:\Users\brand\IdeaProjects\ArquiSoft\Tests</dir>
@@ -253,8 +158,6 @@
         <option value="$PROJECT_DIR$/src/controller/Connect.java" />
         <option value="$PROJECT_DIR$/src/controller/Connection.java" />
         <option value="$PROJECT_DIR$/src/persistence/DBConfiguration.java" />
-        <option value="$PROJECT_DIR$/src/Main.java" />
-        <option value="$PROJECT_DIR$/src/test/MailSystemTest.java" />
         <option value="$PROJECT_DIR$/src/controller/Mailbox.java" />
         <option value="$PROJECT_DIR$/src/controller/MessageMenu.java" />
         <option value="$PROJECT_DIR$/src/controller/ChangeGreating.java" />
@@ -262,7 +165,10 @@
         <option value="$PROJECT_DIR$/src/persistence/IPersistence.java" />
         <option value="$PROJECT_DIR$/src/persistence/DBContext.java" />
         <option value="$PROJECT_DIR$/src/controller/MailSystem.java" />
+        <option value="$PROJECT_DIR$/src/test/DBContextTests.java" />
         <option value="$PROJECT_DIR$/src/test/ConsoleTest.java" />
+        <option value="$PROJECT_DIR$/src/test/MailSystemTest.java" />
+        <option value="$PROJECT_DIR$/src/Main.java" />
       </list>
     </option>
   </component>
@@ -309,12 +215,6 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="controller" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="VoiceMail" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ArquiSoft" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -354,7 +254,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.All in VoiceMail (4)">
+  <component name="RunManager" selected="Application.Main">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="HEIGHT" value="0" />
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
@@ -514,8 +414,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.All in VoiceMail (4)" />
         <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.All in VoiceMail (4)" />
         <item itemvalue="JUnit.test in VoiceMail" />
         <item itemvalue="JUnit.ConnectionTest.shouldGetIntoChangeGreetingMenuAfterSelectMenuOption3" />
         <item itemvalue="JUnit.ConnectionTest.shouldGetIntoChangePassCodeMenuWhenSelectMenuOption2" />
@@ -649,15 +549,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="All_in_VoiceMail_(4) - 2018.05.09 at 18h 20m 06s.xml">
-      <configuration name="All in VoiceMail (4)" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="All_in_VoiceMail_(4) - 2018.05.09 at 18h 24m 36s.xml">
-      <configuration name="All in VoiceMail (4)" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="All_in_VoiceMail_(4) - 2018.05.09 at 18h 25m 08s.xml">
-      <configuration name="All in VoiceMail (4)" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="All_in_VoiceMail_(4) - 2018.05.09 at 18h 28m 38s.xml">
       <configuration name="All in VoiceMail (4)" configurationId="JUnit" />
     </history-entry>
@@ -677,6 +568,15 @@
       <configuration name="All in VoiceMail (4)" configurationId="JUnit" />
     </history-entry>
     <history-entry file="All_in_VoiceMail_(4) - 2018.05.09 at 20h 22m 00s.xml">
+      <configuration name="All in VoiceMail (4)" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_VoiceMail_(4) - 2018.05.09 at 20h 22m 26s.xml">
+      <configuration name="All in VoiceMail (4)" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_VoiceMail_(4) - 2018.05.09 at 20h 24m 20s.xml">
+      <configuration name="All in VoiceMail (4)" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_VoiceMail_(4) - 2018.05.09 at 20h 24m 59s.xml">
       <configuration name="All in VoiceMail (4)" configurationId="JUnit" />
     </history-entry>
   </component>
@@ -704,12 +604,12 @@
       <window_info anchor="right" id="Capture Analysis" order="8" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50292826" side_tool="true" weight="0.32761312" />
       <window_info anchor="right" id="Maven Projects" order="5" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49707174" visible="true" weight="0.29264477" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49707174" visible="true" weight="0.29264477" />
       <window_info anchor="bottom" id="Version Control" order="10" weight="0.32847896" />
       <window_info anchor="bottom" id="Terminal" order="11" weight="0.32847896" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="3" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19692533" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19692533" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
       <window_info id="UI Designer" order="4" />
@@ -750,7 +650,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/ConsoleTest.java</url>
-          <line>64</line>
+          <line>63</line>
           <properties />
           <option name="timeStamp" value="45" />
         </line-breakpoint>
@@ -782,13 +682,6 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$PROJECT_DIR$/mockito-all-1.10.19.jar!/org/mockito/internal/verification/Times.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="30" selection-start-line="30" selection-end-line="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$PROJECT_DIR$/mockito-all-1.10.19.jar!/org/mockito/internal/verification/VerificationModeFactory.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -875,20 +768,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/MailBoxTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="130">
-          <caret line="65" column="36" selection-start-line="65" selection-start-column="36" selection-end-line="65" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/MessageQueueTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="30" column="64" selection-start-line="30" selection-start-column="64" selection-end-line="30" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/lib/junit-4.12.jar!/org/junit/runner/JUnitCore.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="110">
@@ -939,20 +818,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/controller/IMailSystem.java" />
-    <entry file="file://$PROJECT_DIR$/src/test/MessageTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="14" column="16" selection-start-line="14" selection-start-column="16" selection-end-line="14" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/MailSystemTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="10" column="48" selection-start-line="10" selection-start-column="48" selection-end-line="10" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_151/src.zip!/java/util/ArrayList.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="134">
@@ -975,13 +840,6 @@
             <element signature="e#1204#1205#0" expanded="true" />
             <element signature="e#1272#1273#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller/IObservers.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="41" selection-start-line="6" selection-start-column="41" selection-end-line="6" selection-end-column="41" />
         </state>
       </provider>
     </entry>
@@ -1038,16 +896,6 @@
           <caret line="9" column="38" selection-start-line="9" selection-start-column="38" selection-end-line="9" selection-end-column="38" />
           <folding>
             <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller/Connection.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="233">
-          <caret line="33" selection-start-line="33" selection-end-line="33" />
-          <folding>
-            <element signature="e#626#627#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1151,16 +999,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="23" selection-start-line="23" selection-end-line="23" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/controller/MailboxMenu.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="510">
@@ -1178,17 +1016,84 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/controller/Connection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="33" selection-start-line="33" selection-end-line="33" />
+          <folding>
+            <element signature="e#626#627#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/ConnectionTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
+        <state relative-caret-position="2145">
           <caret line="192" column="35" selection-start-line="192" selection-start-column="35" selection-end-line="192" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/MailSystemTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="10" column="70" selection-start-line="10" selection-start-column="70" selection-end-line="10" selection-end-column="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/MailBoxTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-293">
+          <caret line="65" column="36" selection-start-line="65" selection-start-column="36" selection-end-line="65" selection-end-column="36" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/ConsoleTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="83">
-          <caret line="19" column="79" selection-start-line="19" selection-start-column="79" selection-end-line="19" selection-end-column="79" />
+        <state relative-caret-position="153">
+          <caret line="18" column="63" selection-start-line="18" selection-start-column="63" selection-end-line="18" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/MessageQueueTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-68">
+          <caret line="30" column="64" selection-start-line="30" selection-start-column="64" selection-end-line="30" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/MessageTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="14" column="16" selection-start-line="14" selection-start-column="16" selection-end-line="14" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/DBContextTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="166">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#385#386#0" expanded="true" />
+            <element signature="e#412#413#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controller/IObservers.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="41" selection-start-line="6" selection-start-column="41" selection-end-line="6" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="179">
+          <caret line="19" column="18" selection-start-line="19" selection-start-column="18" selection-end-line="19" selection-end-column="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

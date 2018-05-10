@@ -1,4 +1,7 @@
-import controller.*;
+import controller.Connection;
+import controller.IObservers;
+import controller.MailSystem;
+import controller.Observers;
 import persistence.DBContext;
 import persistence.IPersistence;
 import view.Console;
@@ -14,10 +17,10 @@ public class Main
 {
    public static void main(String[] args)
    {
-      MailSystem system = new MailSystem(MAILBOX_COUNT, new DBContext());
+      IPersistence context=new DBContext();
+      MailSystem system = new MailSystem(MAILBOX_COUNT,context);
       Scanner consoleInput = new Scanner(System.in);
       IObservers observers=new Observers();
-      IPersistence persistence=new DBContext();
 
       Connection c = new Connection(system, observers);
 
