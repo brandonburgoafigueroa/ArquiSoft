@@ -125,6 +125,7 @@ public class DBContext implements IPersistence {
     private void saveChangesMailbox(int idMailbox, String passcode, String greeting)
     {
         query="UPDATE MailBox SET passcode='"+passcode+"', greeting = '"+greeting+"' WHERE id="+idMailbox+";";
+        currentDBConfiguration.update(query);
     }
 
 
