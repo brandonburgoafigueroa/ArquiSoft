@@ -110,7 +110,7 @@ public class DBContext implements IPersistence {
             query = "SELECT COUNT(ME.state) FROM Message ME, MailBox MA  WHERE ME.idMailBox=MA.id AND MA.id=" + idMailbox + " AND ME.state='" + state + "';";
             ResultSet rs = currentDBConfiguration.select(query);
             while (rs.next()) {
-                total = rs.getString("COUNT(ME.state");
+                total = rs.getString("COUNT(ME.state)");
             }
             currentDBConfiguration.closeSelect(rs);
             return Integer.parseInt(total);
@@ -138,7 +138,20 @@ public class DBContext implements IPersistence {
     //Devolver una lista con los mailbox con los greeting, passcode, keptMessages, newMessages cargados
     public ArrayList<Mailbox> getAlMailbox()
     {
-
+       ArrayList<Mailbox> mailboxes = new ArrayList<>();
+        try {
+            query="SELECT MA.passcode, MA.greeting FROM MailBox MA, Message ME WHERE MA.id=ME.idMailBox ";
+            ResultSet rs = currentDBConfiguration.select(query);
+            while (rs.next()) {
+                String passcode = rs.getString("passcode");
+                String greeting = rs.getString("greeting");
+            }
+            currentDBConfiguration.closeSelect(rs);
+            return Integer.parseInt(total);
+        } catch (SQLException ex) {
+            System.out.println("no se pudo obtener el total de mensajes" + ex);
+            return 0;
+        }
         return null;
     }
 
