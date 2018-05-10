@@ -73,15 +73,19 @@ public class DBContext implements IPersistence {
     //sql
     //insert de un mensaje en la db con su type--- message.getText(), type=TypeOfMessage.Kept
     private void addMessage(int idCurrentMailbox, Message message, TypeOfMessage type) {
-        if (type==TypeOfMessage.New)
-        {
-
+        if (type==TypeOfMessage.New) {
+            insertMessageToMailBox(idCurrentMailbox, message, "New");
         }
-        if (type==TypeOfMessage.Kept)
-        {
-
+        if (type==TypeOfMessage.Kept) {
+            insertMessageToMailBox(idCurrentMailbox, message, "Kept");
         }
     }
+
+    private void insertMessageToMailBox(int idCurrentMailbox, Message message,String type) {
+        query = "INSERT INTO Message(idMailBox,message,state) VALUES(" + idCurrentMailbox + ",'" + message.getText() + "','" + type + "')";
+        currentDBConfiguration.insert(query);
+    }
+
     //sql
     //devolver la cantidad de mensajes que tiene un mailbox y un tipo
     //ej: devolver todos los mensajes del mailbox id=1 de type=TypeOfMessage.Kept
