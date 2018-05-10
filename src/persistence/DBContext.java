@@ -4,6 +4,8 @@ import controller.Mailbox;
 import controller.Message;
 import controller.MessageQueue;
 
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ArrayList;
 
 public class DBContext implements IPersistence {
@@ -89,21 +91,38 @@ public class DBContext implements IPersistence {
     //sql
     //devolver la cantidad de mensajes que tiene un mailbox y un tipo
     //ej: devolver todos los mensajes del mailbox id=1 de type=TypeOfMessage.Kept
-    private int getQuantityOfMessagesType(TypeOfMessage type, int idMailbox) {
+    private int getQuantityOfMessagesType(TypeOfMessage type, int idMailbox){
+
         if (type==TypeOfMessage.New)
         {
-
+            return getTotalMessagesOf(idMailbox,"New");
         }
         if (type==TypeOfMessage.Kept)
         {
-
+            return getTotalMessagesOf(idMailbox,"New");
         }
-       return 0;
+        return 0;
+    }
+
+    private int getTotalMessagesOf(int idMailbox,String state) {
+        String total = "0";
+        try {
+            query = "SELECT COUNT(ME.state) FROM Message ME, MailBox MA  WHERE ME.idMailBox=MA.id AND MA.id=" + idMailbox + " AND ME.state='" + state + "';";
+            ResultSet rs = currentDBConfiguration.select(query);
+            while (rs.next()) {
+                total = rs.getString("COUNT(ME.state");
+            }
+            currentDBConfiguration.closeSelect(rs);
+            return Integer.parseInt(total);
+        } catch (SQLException ex) {
+            System.out.println("no se pudo obtener el total de mensajes" + ex);
+        }
     }
 
     //sql
     //hacer un update a la info del mailbox con id=idMailbox
-    private void saveChangesMailbox(int idMailbox, String passcode, String greeting) {
+    private void saveChangesMailbox(int idMailbox, String passcode, String greeting)
+        {
 
     }
 
