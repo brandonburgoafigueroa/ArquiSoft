@@ -37,6 +37,7 @@ public class MessageMenu implements IState{
 
     private void removeCurrentMessage() {
         currentMailbox.removeCurrentMessage();
+        connection.saveChanges();
     }
 
     private void saveCurrentMessage() {

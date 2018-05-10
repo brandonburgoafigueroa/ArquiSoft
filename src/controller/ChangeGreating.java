@@ -28,16 +28,19 @@ public class ChangeGreating implements IState {
         else
         {
             saveCommand(command);
+
         }
 
     }
 
     private void saveCommand(String command) {
         currentRecording= command;
+
     }
 
     private void setNewGreeting() {
         currentMailbox.setGreeting(currentRecording);
+        connection.saveChanges();
     }
 
     private void changeToMailboxMenuState() {

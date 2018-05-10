@@ -26,6 +26,7 @@ public class ChangePasscode implements IState {
 
     private void setNewPasscodeToCurrentMailbox() {
         currentMailbox.setPasscode(accumulatedKeys);
+        connection.saveChanges();
     }
 
     private void saveCommand(String command) {

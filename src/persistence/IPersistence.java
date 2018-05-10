@@ -1,12 +1,11 @@
 package persistence;
 
 import controller.Mailbox;
-import controller.Message;
 
-import java.util.List;
+import java.util.ArrayList;
 
 public interface IPersistence {
-    void sendMessage(String transmitter, String receiver, String message);
-    Mailbox getMailBoxWithMessages(String idMailBox);
-    List<Message> showAllMessages();
+    void saveChanges(Mailbox mailbox, int idCurrentMailbox);
+    void addMailbox(Mailbox mailbox);
+    ArrayList<Mailbox> getAlMailbox();
 }

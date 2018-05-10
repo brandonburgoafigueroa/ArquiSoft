@@ -1,4 +1,6 @@
 package persistence;
 
-public class TypeOfMessage {
+enum TypeOfMessage
+{
+ Kept, New
 }
