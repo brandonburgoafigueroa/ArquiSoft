@@ -115,7 +115,7 @@ public class DBContext implements IPersistence {
             currentDBConfiguration.closeSelect(rs);
             return Integer.parseInt(total);
         } catch (SQLException ex) {
-            System.out.println("no se pudo obtener el total de mensajes" + ex);
+            System.out.println("no se pudo obtener el total de mensajes del id indicado" + ex);
             return 0;
         }
     }
@@ -132,6 +132,7 @@ public class DBContext implements IPersistence {
     //sql
     //Insert en mailbox
     public void addMailbox(Mailbox mailbox) {
+
         query="INSERT INTO MailBox(passcode,greeting) VALUES('"+mailbox.getPasscode()+"','"+mailbox.getGreeting()+"');";
         currentDBConfiguration.insert(query);
     }
@@ -139,23 +140,44 @@ public class DBContext implements IPersistence {
     //Devolver una lista con los mailbox con los greeting, passcode, keptMessages, newMessages cargados
     public ArrayList<Mailbox> getAlMailbox()
     {
+
        ArrayList<Mailbox> mailboxes = new ArrayList<>();
         try {
-            query="SELECT MA.passcode, MA.greeting FROM MailBox MA, Message ME WHERE MA.id=ME.idMailBox ";
+            query="SELECT * FROM MailBox;";
             ResultSet rs = currentDBConfiguration.select(query);
             while (rs.next()) {
+                Mailbox mailbox = null;
+                int ID = Integer.parseInt(rs.getString("id"));
                 String passcode = rs.getString("passcode");
                 String greeting = rs.getString("greeting");
+                mailbox = new Mailbox(passcode,greeting);
+                query="SELECT message, state FROM Message WHERE idMailBox="+ID;
+                ResultSet rs2 = currentDBConfiguration.select(query);
+                {
+                    while (rs2.next()) {
+                        Message m = null;
+                        String message = rs2.getString("message");
+                        String state = rs2.getString("state");
+                        m = new Message(message);
+                        if(state=="New")
+                        {
+                            mailbox.addMessage(m);
+                        }
+                        if(state=="Kept")
+                        {
+                            mailbox.addKeptMessage(m);
+                        }
+                    }
+                }
+                mailboxes.add(mailbox);
             }
             currentDBConfiguration.closeSelect(rs);
-            return Integer.parseInt(total);
+            return mailboxes;
         } catch (SQLException ex) {
             System.out.println("no se pudo obtener el total de mensajes" + ex);
-            return 0;
+            return null;
         }
-        return null;
     }
-
     //sql
     //eliminar ultimo mensaje de tipo Type
     private void deleteMessageOf(int idMailbox) {
