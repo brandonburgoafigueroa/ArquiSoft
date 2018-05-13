@@ -15,9 +15,45 @@ public class DBContext implements IPersistence {
     public DBContext(){
         currentDBConfiguration = new DBConfiguration();
         currentDBConfiguration.connect();
-
+        createTables();
     }
 
+    private void createTables(){
+        createMessageTableIfNotExist();
+        createMailBoxTableIfNotExist();
+    }
+    private void createMailBoxTableIfNotExist (){
+            query = "SELECT * FROM MailBox";
+            if (currentDBConfiguration.verifyIfTableExist(query)==null);
+            {
+                createMailBoxTable();
+            }
+    }
+    private void createMessageTableIfNotExist (){
+        query = "SELECT * FROM Message";
+        if (currentDBConfiguration.verifyIfTableExist(query)==null);
+        {
+            createMessageTable();
+        }
+    }
+    private void createMailBoxTable(){
+        query = "CREATE TABLE `MailBox` (\n" +
+                "\t`id`\tINTEGER PRIMARY KEY AUTOINCREMENT,\n" +
+                "\t`passcode`\tTEXT,\n" +
+                "\t`greeting`\tTEXT\n" +
+                ");";
+        currentDBConfiguration.create(query);
+    }
+    private void createMessageTable(){
+        query = "CREATE TABLE `Message` (\n" +
+                "\t`id`\tINTEGER PRIMARY KEY AUTOINCREMENT,\n" +
+                "\t`idMailBox`\tINTEGER,\n" +
+                "\t`message`\tTEXT,\n" +
+                "\t`state`\tINTEGER,\n" +
+                "\tFOREIGN KEY(`idMailBox`) REFERENCES `MailBox`(`id`)\n" +
+                ");";
+        currentDBConfiguration.create(query);
+    }
     //listo
     public void saveChanges(Mailbox mailbox, int idCurrentMailbox) {
         updateMailbox(mailbox, idCurrentMailbox);
@@ -99,7 +135,7 @@ public class DBContext implements IPersistence {
         }
         if (type==TypeOfMessage.Kept)
         {
-            return getTotalMessagesOf(idMailbox,"New");
+            return getTotalMessagesOf(idMailbox,"Kept");
         }
         return 0;
     }
