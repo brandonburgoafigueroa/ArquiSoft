@@ -7,6 +7,8 @@ import persistence.IPersistence;
 import view.Console;
 import view.UserInterface;
 
+import controller.*;
+import view.*;
 import java.util.Scanner;
 
 /**

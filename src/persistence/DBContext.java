@@ -3,7 +3,7 @@ package persistence;
 import controller.Mailbox;
 import controller.Message;
 import controller.MessageQueue;
-
+import controller.*;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -178,10 +178,27 @@ public class DBContext implements IPersistence {
             return null;
         }
     }
+    private int getLastNewMessage(int idMailBox){
+        String total = "0";
+        try {
+            query = "SELECT ME.id FROM Message ME, MailBox MA WHERE MA.id=ME.idMailBox AND ME.state='New' AND ME.idMailBox = "+idMailBox;
+            ResultSet rs = currentDBConfiguration.select(query);
+            while (rs.next()) {
+                total = rs.getString("id");
+            }
+            currentDBConfiguration.closeSelect(rs);
+            return Integer.parseInt(total);
+        } catch (SQLException ex) {
+            System.out.println("no se pudo obtener el ultimo mensaje del mailbox indicado" + ex);
+            return 0;
+        }
+    }
     //sql
     //eliminar ultimo mensaje de tipo Type
     private void deleteMessageOf(int idMailbox) {
 
-
+        int id = getLastNewMessage(idMailbox);
+        String query = "DELETE FROM Message WHERE id="+id;
+        currentDBConfiguration.delete(query);
     }
 }
