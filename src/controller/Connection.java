@@ -4,7 +4,11 @@ import persistence.IPersistence;
 
 public class Connection
 {
-
+    private MailSystem system;
+    private IObservers observers;
+    private IPersistence persistence;
+    private Mailbox currentMailbox;
+    private IState status;
    public Connection(MailSystem s, IObservers observers)
    {
        system = s;
@@ -90,11 +94,7 @@ public class Connection
     {
         this.status=state;
     }
-    private MailSystem system;
-    private IObservers observers;
-    private IPersistence persistence;
-    private Mailbox currentMailbox;
-    private IState status;
+
 
 
 }

@@ -2,6 +2,9 @@ package controller;
 
 public class Message
 {
+
+   private String from;
+   private String text;
    public Message(String messageText)
    {
       text = messageText;
@@ -20,6 +23,4 @@ public class Message
       return from;
    }
 
-   private String from;
-   private String text;
 }

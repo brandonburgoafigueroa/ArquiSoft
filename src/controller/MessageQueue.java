@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 public class MessageQueue
 {
+   private ArrayList<Message>queue;
    public MessageQueue()
    {
       queue = new ArrayList();
@@ -29,5 +30,5 @@ public class MessageQueue
       else return queue.get(queue.size()-1);
    }
 
-   private ArrayList<Message>queue;
+
 }
