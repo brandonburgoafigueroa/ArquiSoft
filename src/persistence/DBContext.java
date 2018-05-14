@@ -182,11 +182,11 @@ public class DBContext implements IPersistence {
                         String message = rs2.getString("message");
                         String state = rs2.getString("state");
                         m = new Message(message);
-                        if(state=="New")
+                        if(state.equals("New"))
                         {
                             mailbox.addMessage(m);
                         }
-                        if(state=="Kept")
+                        if(state.equals("Kept"))
                         {
                             mailbox.addKeptMessage(m);
                         }
