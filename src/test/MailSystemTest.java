@@ -3,12 +3,22 @@ package test;
 import controller.MailSystem;
 import org.junit.Assert;
 import org.junit.Test;
-import persistence.DBContext;
 
 public class MailSystemTest {
 	@Test
 	public void verifyIfTheMailSystemIsEmpty() {
-		MailSystem mailSystem = new MailSystem(0, new DBContextTests());
+		MailSystem mailSystem = new MailSystem(0, new DBContextTests(0));
 		Assert.assertEquals(null, mailSystem.findMailbox("0"));
 	}
+	@Test
+	public void verifyIfTheMailSystemIsNotEmpty(){
+		MailSystem mailSystem = new MailSystem(0, new DBContextTests(1));
+		Assert.assertNotEquals(null, mailSystem.findMailbox("1"));
+	}
+	@Test
+	public void setInitialMailSystemIfArrayIfDBProviderIsNotEmpty(){
+		MailSystem mailSystem = new MailSystem(20, new DBContextTests(0));
+		Assert.assertNotEquals(null, mailSystem.findMailbox("1"));
+	}
+
 }

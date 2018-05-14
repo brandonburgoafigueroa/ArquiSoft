@@ -6,6 +6,16 @@ import persistence.IPersistence;
 import java.util.ArrayList;
 
 public class DBContextTests implements IPersistence {
+    private final ArrayList<Mailbox> mailboxes;
+
+    public DBContextTests(int quantity)
+    {
+        mailboxes=new ArrayList<Mailbox>();
+        for(int i=0; i<quantity;i++)
+        {
+            mailboxes.add(new Mailbox("",""));
+        }
+    }
     @Override
     public void saveChanges(Mailbox mailbox, int idCurrentMailbox) {
 
@@ -18,6 +28,6 @@ public class DBContextTests implements IPersistence {
 
     @Override
     public ArrayList<Mailbox> getAlMailbox() {
-        return new ArrayList<>(20);
+        return mailboxes;
     }
 }
