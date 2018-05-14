@@ -2,13 +2,14 @@ package controller;
 
 public class MailboxMenu implements IState {
 
+
     private Connection connection;
     MailboxMenu(Connection connection){
         this.connection=connection;
         showMailboxMenuOptions();
     }
     @Override
-    public void start(String command) {
+    public void dial(String command) {
         switch (command) {
             case "1":
                 changeToMessageMenuState();
@@ -41,7 +42,7 @@ public class MailboxMenu implements IState {
         connection.resetConnection();
     }
     private void showMailboxMenuOptions() {
-        connection.updateObservables(MAILBOX_MENU_TEXT);
+        connection.updateObservers(MAILBOX_MENU_TEXT);
     }
     private static final String MAILBOX_MENU_TEXT =
             "Enter 1 to listen to your messages\n"

@@ -1,6 +1,6 @@
 package controller;
 
 public interface IState {
-    void start(String command);
+    void dial(String command);
     void hangup();
 }

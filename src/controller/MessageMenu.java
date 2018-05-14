@@ -10,7 +10,7 @@ public class MessageMenu implements IState{
         showMessageMenuOptions();
     }
     @Override
-    public void start(String command) {
+    public void dial(String command) {
 
         switch (command) {
             case "1":
@@ -37,14 +37,16 @@ public class MessageMenu implements IState{
 
     private void removeCurrentMessage() {
         currentMailbox.removeCurrentMessage();
+        connection.saveChanges();
     }
 
     private void saveCurrentMessage() {
         currentMailbox.saveCurrentMessage();
+        connection.saveChanges();
     }
 
     private void showMessageText(String messageText) {
-        connection.updateObservables(messageText);
+        connection.updateObservers(messageText);
     }
 
     private String getTextOfLastMessage() {
@@ -63,7 +65,7 @@ public class MessageMenu implements IState{
         connection.resetConnection();
     }
     private void showMessageMenuOptions() {
-        connection.updateObservables(MESSAGE_MENU_TEXT);
+        connection.updateObservers(MESSAGE_MENU_TEXT);
     }
 
     private String EMPTY_MAILBOX_MESSAGE = "No messages.";

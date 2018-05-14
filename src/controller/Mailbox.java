@@ -37,6 +37,10 @@ public class Mailbox
       if (m != null)
          keptMessages.add(m);
    }
+   public String getPasscode()
+   {
+      return passcode;
+   }
 
    public void setGreeting(String newGreeting)
    {
@@ -58,10 +62,24 @@ public class Mailbox
    {
       newMessages.add(aMessage);
    }
-
-
+   public void addKeptMessage(Message aMessage)
+   {
+      keptMessages.add(aMessage);
+   }
+   public boolean hasNewMessages(){
+      if(newMessages.size()>0)
+         return true;
+      else
+         return false;
+   }
+   public MessageQueue getKeptMessages()
+   {
+      return keptMessages;
+   }
+   public MessageQueue getNewMessages(){return newMessages;}
    private MessageQueue newMessages;
    private MessageQueue keptMessages;
    private String greeting;
    private String passcode;
+
 }

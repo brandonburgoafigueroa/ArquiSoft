@@ -9,10 +9,11 @@ public class ChangePasscode implements IState {
     {
         this.connection=connection;
         this.currentMailbox=connection.getCurrentMailbox();
-        showEnterNewPasscodeMessage(connection);
+        showEnterNewPasscodeMessage();
+
     }
     @Override
-    public void start(String command) {
+    public void dial(String command) {
         if (itIsANumeralCharacter(command))
         {
             setNewPasscodeToCurrentMailbox();
@@ -25,6 +26,7 @@ public class ChangePasscode implements IState {
 
     private void setNewPasscodeToCurrentMailbox() {
         currentMailbox.setPasscode(accumulatedKeys);
+        connection.saveChanges();
     }
 
     private void saveCommand(String command) {
@@ -35,8 +37,8 @@ public class ChangePasscode implements IState {
         connection.setStatus(new MailboxMenu(connection));
     }
 
-    private void showEnterNewPasscodeMessage(Connection connection) {
-        connection.updateObservables(ENTER_NEW_PASSCODE_MESSAGE);
+    private void showEnterNewPasscodeMessage() {
+        connection.updateObservers(ENTER_NEW_PASSCODE_MESSAGE);
     }
     @Override
     public void hangup() {

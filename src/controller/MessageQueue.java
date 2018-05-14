@@ -12,6 +12,9 @@ public class MessageQueue
    {
       return queue.remove(queue.size()-1);
    }
+   public Message getMessageOf(int position){
+      return queue.get(position);
+   }
    public void add(Message newMessage)
    {
       queue.add(newMessage);

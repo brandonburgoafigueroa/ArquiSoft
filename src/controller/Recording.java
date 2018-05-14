@@ -10,14 +10,10 @@ public class Recording implements IState{
         this.currentMailbox=connection.getCurrentMailbox();
     }
     @Override
-    public void start(String command) {
+    public void dial(String command) {
         if (isAMessage(command))
         {
             addMessage(command);
-        }
-        if (isInputHangUpCommand(command))
-        {
-            hangup();
         }
         if (isNumericalCommand(command))
         {
@@ -38,9 +34,6 @@ public class Recording implements IState{
         return key.length()>1;
     }
 
-    private boolean isInputHangUpCommand(String input) {
-        return input.equalsIgnoreCase("H");
-    }
     private void changeStateToLogin() {
         connection.setStatus(new Login(connection));
     }
@@ -61,6 +54,7 @@ public class Recording implements IState{
 
     private void saveMessage() {
         currentMailbox.addMessage(new Message(message));
+        connection.saveChanges();
     }
 
     private boolean isNumericalCommand(String input) {
