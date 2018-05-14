@@ -19,7 +19,7 @@ public class MailSystem
 
    private void setupMailSystem(int mailboxCount) {
       ArrayList<Mailbox> mailboxOfDB=dbContext.getAlMailbox();
-      int Quantity=0;//mailboxOfDB.size();
+      int Quantity=mailboxOfDB.size();
       if (Quantity==0)
       {
          setInitial(mailboxCount);

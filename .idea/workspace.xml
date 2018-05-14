@@ -24,15 +24,15 @@
     <option name="optimizeImportsOnTheFly" value="true" />
   </component>
   <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/VoiceMail$All_in_VoiceMail__1_.coverage" NAME="All in VoiceMail (1) Coverage Results" MODIFIED="1523327276889" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/VoiceMail$TelephoneTest_IncomeLetterHAndICheckThattheConnectionIsEstablishedShouldReturnTrue.coverage" NAME="TelephoneTest.IncomeLetterHAndICheckThattheConnectionIsEstablishedShouldReturnTrue Coverage Results" MODIFIED="1523327260220" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/VoiceMail$All_in_VoiceMail__3_.coverage" NAME="All in VoiceMail (3) Coverage Results" MODIFIED="1523417166358" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/VoiceMail$Main.coverage" NAME="Main Coverage Results" MODIFIED="1524782284866" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
-    <SUITE FILE_PATH="coverage/VoiceMail$TelephoneTest_IncomeLetterHAndICheckThattheConnectionIsEstablishedShouldReturnTrue.coverage" NAME="TelephoneTest.IncomeLetterHAndICheckThattheConnectionIsEstablishedShouldReturnTrue Coverage Results" MODIFIED="1523327260220" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/VoiceMail$All_in_VoiceMail__4_.ic" NAME="All in VoiceMail (4) Coverage Results" MODIFIED="1524430085703" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/VoiceMail$All_in_VoiceMail.coverage" NAME="All in VoiceMail Coverage Results" MODIFIED="1523415003664" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/VoiceMail$MailSystemTester.coverage" NAME="MailSystemTester Coverage Results" MODIFIED="1523306922284" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/VoiceMail$All_in_VoiceMail__4_.coverage" NAME="All in VoiceMail (4) Coverage Results" MODIFIED="1524782294002" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/VoiceMail$ConnectionTest_testeandoStartConnection.coverage" NAME="ConnectionTest.testeandoStartConnection Coverage Results" MODIFIED="1523319569027" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
-    <SUITE FILE_PATH="coverage/VoiceMail$All_in_VoiceMail.coverage" NAME="All in VoiceMail Coverage Results" MODIFIED="1523415003664" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
-    <SUITE FILE_PATH="coverage/VoiceMail$All_in_VoiceMail__1_.coverage" NAME="All in VoiceMail (1) Coverage Results" MODIFIED="1523327276889" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
-    <SUITE FILE_PATH="coverage/VoiceMail$MailSystemTester.coverage" NAME="MailSystemTester Coverage Results" MODIFIED="1523306922284" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/VoiceMail$All_in_VoiceMail__2_.coverage" NAME="All in VoiceMail (2) Coverage Results" MODIFIED="1523416499545" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
   <component name="CoverageOptionsProvider">
@@ -210,7 +210,7 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="697" />
@@ -684,25 +684,25 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/ConsoleTest.java</url>
+          <url />
           <line>63</line>
           <properties />
           <option name="timeStamp" value="45" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/controller/ChangePasscode.java</url>
+          <url />
           <line>40</line>
           <properties />
           <option name="timeStamp" value="48" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/ConnectionTest.java</url>
+          <url />
           <line>75</line>
           <properties />
           <option name="timeStamp" value="49" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/persistence/DBConfiguration.java</url>
+          <url />
           <line>44</line>
           <properties />
           <option name="timeStamp" value="55" />
