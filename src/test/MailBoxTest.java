@@ -2,6 +2,7 @@ package test;
 
 import controller.Mailbox;
 import controller.Message;
+import controller.MessageQueue;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -60,9 +61,23 @@ public class MailBoxTest {
 	}
 	@Test
 	public void verifyIfMailBoxHasNewMessages() {
-		Message message = new Message(HI_MESSAGE_LONG);
+		Message message = new Message("Pepe",HI_MESSAGE_LONG);
 		mailBox.addMessage(message);
 		Assert.assertNotEquals(null, mailBox.getNewMessages());
+	}
+	@Test
+	public void getFromMessageOfMailBox() {
+		Message message = new Message("Pepe",HI_MESSAGE_LONG);
+		mailBox.addMessage(message);
+		Assert.assertEquals("Pepe", message.getFrom());
+	}
+	@Test
+	public void addMessageToMessageQueueAndCompareIfWasAddedInTheCorrectPosition() {
+		Message message = new Message("Pepe",HI_MESSAGE_LONG);
+		MessageQueue messages = new MessageQueue();
+		messages.add(message);
+		mailBox.addMessage(message);
+		Assert.assertEquals(message.getText(),messages.getMessageOf(0).getText());
 	}
 	@Test
 	public void removeKeptMessagesOfMailBox() {
