@@ -53,7 +53,32 @@ public class MailBoxTest {
 		mailBox.removeCurrentMessage();
 		Assert.assertEquals(null,mailBox.getCurrentMessage());
 	}
-	
+	@Test
+	public void verifyIfTheGreetingIsCorrect() {
+		Mailbox mail = new Mailbox("1","hola");
+		Assert.assertEquals("1",mail.getPasscode());
+	}
+	@Test
+	public void verifyIfMailBoxHasNewMessages() {
+		Message message = new Message(HI_MESSAGE_LONG);
+		mailBox.addMessage(message);
+		Assert.assertNotEquals(null, mailBox.getNewMessages());
+	}
+	@Test
+	public void removeKeptMessagesOfMailBox() {
+		Message message = new Message(HI_MESSAGE_LONG);
+		mailBox.addKeptMessage(message);
+		mailBox.addKeptMessage(message);
+		mailBox.removeCurrentMessage();
+		Assert.assertNotEquals(null, mailBox.getNewMessages());
+	}
+	@Test
+	public void verifyIfMailBoxHasKeptMessages() {
+		Message message = new Message(HI_MESSAGE_LONG);
+		mailBox.addKeptMessage(message);
+		Assert.assertNotEquals(null, mailBox.getKeptMessages());
+	}
+
 	@Test
 	public void verifyIfTheMailBoxHasTheCurrentMessageAfterAddMultipleMessages() {
 

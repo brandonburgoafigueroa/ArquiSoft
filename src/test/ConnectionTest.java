@@ -8,6 +8,7 @@ import org.junit.Before;
 import org.junit.Test;
 import view.Console;
 
+import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 import static org.mockito.Mockito.*;
 public class ConnectionTest {
@@ -50,6 +51,15 @@ public class ConnectionTest {
 		dialMailBoxMenu();
 		assertTrue(connection.isMailBoxMenu());
 	}
+
+	@Test
+	public void dialToIncorrectMailBox() {
+		String mailBoxIncorrect="80";
+		dialMailBox(mailBoxIncorrect);
+		dialMailBoxMenu();
+		assertFalse(connection.isMailBoxMenu());
+	}
+
 
 
 	@Test
@@ -159,17 +169,19 @@ public class ConnectionTest {
 	private void changePasscode(String newKeyMailBox) {
 
 		String mailBoxMenuOption = "2";
-		String hangDown = "h";
+		String hangDown = "H";
 		connection.dial(mailBoxMenuOption);
 		connection.dial(newKeyMailBox);
 		connection.dial("#");
 		connection.dial(hangDown);
 	}
+
 	private void changeGreeting(String optionForChangeGreeting, String newGreeting) {
 		connection.dial(optionForChangeGreeting);
 		connection.dial(newGreeting);
 		connection.dial("#");
 		connection.dial("h");
+		//connection.executeCommand("h");
 	}
 
 	private void dialMailBox(String idMailBox) {

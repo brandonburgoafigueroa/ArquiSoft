@@ -66,17 +66,14 @@ public class Mailbox
    {
       keptMessages.add(aMessage);
    }
-   public boolean hasNewMessages(){
-      if(newMessages.size()>0)
-         return true;
-      else
-         return false;
-   }
+
    public MessageQueue getKeptMessages()
    {
       return keptMessages;
    }
-   public MessageQueue getNewMessages(){return newMessages;}
+   public MessageQueue getNewMessages(){
+      return newMessages;
+   }
    private MessageQueue newMessages;
    private MessageQueue keptMessages;
    private String greeting;
