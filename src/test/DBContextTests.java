@@ -18,6 +18,6 @@ public class DBContextTests implements IPersistence {
 
     @Override
     public ArrayList<Mailbox> getAlMailbox() {
-        return null;
+        return new ArrayList<>(20);
     }
 }
