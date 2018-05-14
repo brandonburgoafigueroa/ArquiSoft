@@ -97,19 +97,7 @@ public class DBConfiguration {
             return null;
         }
     }
-    public ResultSet verifyIfTableExist(String query){
-        try{
-            dbConnection.setAutoCommit(false);
-            statement = dbConnection.createStatement();
-            ResultSet rs = statement.executeQuery( query);
-            return rs;
-        }
-        catch(SQLException ex)
-        {
-            return null;
-        }
 
-    }
     public void closeSelect(ResultSet rs) throws SQLException {
         rs.close();
         statement.close();

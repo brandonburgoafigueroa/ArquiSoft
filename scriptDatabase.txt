@@ -1,4 +1,4 @@
-CREATE TABLE `MailBox` (
+CREATE TABLE IF NOT EXIST `MailBox` (
 	`id`	INTEGER PRIMARY KEY AUTOINCREMENT,
 	`passcode`	TEXT,
 	`greeting`	TEXT

@@ -22,30 +22,17 @@ public class DBContext implements IPersistence {
         createMessageTableIfNotExist();
         createMailBoxTableIfNotExist();
     }
-    private void createMailBoxTableIfNotExist (){
-            query = "SELECT * FROM MailBox";
-            if (currentDBConfiguration.verifyIfTableExist(query)==null);
-            {
-                createMailBoxTable();
-            }
-    }
-    private void createMessageTableIfNotExist (){
-        query = "SELECT * FROM Message";
-        if (currentDBConfiguration.verifyIfTableExist(query)==null);
-        {
-            createMessageTable();
-        }
-    }
-    private void createMailBoxTable(){
-        query = "CREATE TABLE `MailBox` (\n" +
+
+    private void createMailBoxTableIfNotExist(){
+        query = "CREATE TABLE IF NOT EXISTS `MailBox` (\n" +
                 "\t`id`\tINTEGER PRIMARY KEY AUTOINCREMENT,\n" +
                 "\t`passcode`\tTEXT,\n" +
                 "\t`greeting`\tTEXT\n" +
                 ");";
         currentDBConfiguration.create(query);
     }
-    private void createMessageTable(){
-        query = "CREATE TABLE `Message` (\n" +
+    private void createMessageTableIfNotExist(){
+        query = "CREATE TABLE IF NOT EXISTS `Message` (\n" +
                 "\t`id`\tINTEGER PRIMARY KEY AUTOINCREMENT,\n" +
                 "\t`idMailBox`\tINTEGER,\n" +
                 "\t`message`\tTEXT,\n" +
@@ -129,11 +116,11 @@ public class DBContext implements IPersistence {
     //ej: devolver todos los mensajes del mailbox id=1 de type=TypeOfMessage.Kept
     private int getQuantityOfMessagesType(TypeOfMessage type, int idMailbox){
 
-        if (type==TypeOfMessage.New)
+        if (type.equals(TypeOfMessage.New))
         {
             return getTotalMessagesOf(idMailbox,"New");
         }
-        if (type==TypeOfMessage.Kept)
+        if (type.equals(TypeOfMessage.Kept))
         {
             return getTotalMessagesOf(idMailbox,"Kept");
         }
