@@ -1,9 +1,6 @@
 package test;
 
-import controller.Connection;
-import controller.MailSystem;
-import controller.Mailbox;
-import controller.Observers;
+import controller.*;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -154,6 +151,58 @@ public class ConnectionTest {
 		dialHangup();
 		Assert.assertEquals(true, connection.isConnected());
 	}
+	@Test
+	public void IfIEnterToLoginStateAndPutTheIncorrectPasscodeShouldBeShowIncorrectPasscodeMessage()
+	{
+		dialMailBox(idMailBox);
+		dialIncorrectPasscode();
+		verify(mockedTelephone).update(INCORRECT_PASSCODE_MESSAGE);
+	}
+
+	private void dialIncorrectPasscode() {
+    	connection.executeCommand("3");
+		connection.executeCommand("#");
+	}
+
+	@Test
+	public void IfIEnterTheMessageMenuOf1AndPressSaveMessageTheSizeOfKeptMessagesShouldBeIncreasedByOne()
+	{
+		dialMailBox(idMailBox);
+		sendDefaultMessage();
+		dialHangup();
+		dialMailBox(idMailBox);
+		Mailbox mailbox=connection.getCurrentMailbox();
+		MessageQueue kept=mailbox.getKeptMessages();
+		int quantity=kept.size();
+		dialMailBoxMenu();
+		dialMessageMenu();
+		dialSecondOption();
+		Mailbox lastMailbox=connection.getCurrentMailbox();
+		MessageQueue lastKept=lastMailbox.getKeptMessages();
+		Assert.assertEquals(quantity+1,lastKept.size());
+	}
+	@Test
+	public void IfIEnterTheMessageMenuOf1AndPressShowMessageShouldBeShowEmptyMessages()
+	{
+		dialMailBox(idMailBox);
+		dialMailBox(idMailBox);
+		dialMessageMenu();
+		dialFirstOption();
+		String message = setMessageEmpty();
+		verify(mockedTelephone, times(2)).update(message);
+	}
+
+	private String setMessageEmpty() {
+		return EMPTY_MAILBOX_MESSAGE + "\n"+MESSAGE_MENU_TEXT;
+	}
+
+	private void dialFirstOption() {
+    	connection.executeCommand("1");
+	}
+
+	private void dialSecondOption() {
+    	connection.executeCommand("2");
+	}
 
 
 	@Test
@@ -161,7 +210,7 @@ public class ConnectionTest {
 	{
 		dialMailBox(idMailBox);
 		dialMailBoxMenu();
-		dialChangeGreetingOption();
+		dialThirdOption();
 		dialHangup();
 		Assert.assertEquals(true, connection.isConnected());
 	}
@@ -229,7 +278,7 @@ public class ConnectionTest {
 	private void dialChangePasscodeOption() {
 		connection.executeCommand("2");
 	}
-	private void dialChangeGreetingOption() {
+	private void dialThirdOption() {
 		connection.executeCommand("3");
 	}
 	private void selectOptionOfMailBoxMenu(String mailBoxMenuOption) {
@@ -240,6 +289,7 @@ public class ConnectionTest {
 	private void dialMessageMenu() {
 		connection.executeCommand(idMailBox);
 		connection.executeCommand("#");
+		dialFirstOption();
 	}
 	private void dialHangup() {
 		connection.executeCommand("h");
@@ -282,5 +332,12 @@ public class ConnectionTest {
     private String idMailBox = "1";
     private String keyMailBox = "1";
     private String HI_MESSAGE="Hola, como estas?";
+	private String EMPTY_MAILBOX_MESSAGE = "No messages.";
+	private static final String MESSAGE_MENU_TEXT =
+			"Enter 1 to listen to the current message\n"
+					+ "Enter 2 to save the current message\n"
+					+ "Enter 3 to delete the current message\n"
+					+ "Enter 4 to return to the main menu";
+	private String INCORRECT_PASSCODE_MESSAGE = "Incorrect passcode. Try again!";
 
 }
