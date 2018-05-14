@@ -15,10 +15,6 @@ public class Recording implements IState{
         {
             addMessage(command);
         }
-        if (isInputHangUpCommand(command))
-        {
-            hangup();
-        }
         if (isNumericalCommand(command))
         {
             changeStateToLogin();
@@ -38,9 +34,6 @@ public class Recording implements IState{
         return key.length()>1;
     }
 
-    private boolean isInputHangUpCommand(String input) {
-        return input.equalsIgnoreCase("H");
-    }
     private void changeStateToLogin() {
         connection.setStatus(new Login(connection));
     }
