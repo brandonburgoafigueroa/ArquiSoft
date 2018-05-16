@@ -1,8 +1,6 @@
 package persistence;
 
 import java.sql.*;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 public class DBConfiguration {
     String url = "prueba.db";
@@ -17,12 +15,8 @@ public class DBConfiguration {
         try {
             Class.forName("org.sqlite.JDBC");
             dbConnection = DriverManager.getConnection("jdbc:sqlite:test.db");
-            if (dbConnection != null){
-                System.out.println("Opened database successfully");
-            }
         } catch ( Exception e ) {
-            System.err.println( e.getClass().getName() + ": " + e.getMessage() );
-            //System.exit(0);
+            e.printStackTrace();
         }
 
     }
@@ -35,7 +29,7 @@ public class DBConfiguration {
         }
         catch(SQLException ex)
         {
-            System.out.println("No se pudo realizar la consulta create: "+ex);
+            ex.printStackTrace();
         }
 
     }
@@ -51,7 +45,7 @@ public class DBConfiguration {
         }
         catch(SQLException ex)
         {
-            System.out.println("No se pudo realizar la consulta insert: "+ex);
+           ex.printStackTrace();
         }
 
     }
@@ -66,7 +60,7 @@ public class DBConfiguration {
         }
         catch(SQLException ex)
         {
-            System.out.println("No se pudo realizar la consulta update: "+ex);
+            ex.printStackTrace();
         }
 
     }
@@ -79,7 +73,7 @@ public class DBConfiguration {
         }
         catch(SQLException ex)
         {
-            System.out.println("No se pudo realizar la consulta delete: "+ex);
+            ex.printStackTrace();
         }
 
 
@@ -93,7 +87,7 @@ public class DBConfiguration {
         }
         catch(SQLException ex)
         {
-            System.out.println("No se pudo realizar la consulta select: "+ex);
+           ex.printStackTrace();
             return null;
         }
     }
@@ -108,7 +102,7 @@ public class DBConfiguration {
             dbConnection.close();
         }
         catch(SQLException ex){
-            Logger.getLogger(DBConfiguration.class.getName()).log(Level.SEVERE,null,ex);
+            ex.printStackTrace();
         }
     }
 }
