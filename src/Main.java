@@ -1,3 +1,4 @@
+import api.VoiceMailService;
 import controller.Connection;
 import controller.IObservers;
 import controller.MailSystem;
@@ -7,8 +8,6 @@ import persistence.IPersistence;
 import view.Console;
 import view.UserInterface;
 
-import controller.*;
-import view.*;
 import java.util.Scanner;
 
 /**
@@ -19,6 +18,8 @@ public class Main
 {
    public static void main(String[] args)
    {
+      VoiceMailService v=new VoiceMailService();
+      v.currentMessage();
       IPersistence context=new DBContext();
       MailSystem system = new MailSystem(MAILBOX_COUNT,context);
       Scanner consoleInput = new Scanner(System.in);
