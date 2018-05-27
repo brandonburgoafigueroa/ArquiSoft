@@ -18,8 +18,7 @@ public class Main
 {
    public static void main(String[] args)
    {
-      VoiceMailService v=new VoiceMailService();
-      v.currentMessage();
+
       IPersistence context=new DBContext();
       MailSystem system = new MailSystem(MAILBOX_COUNT,context);
       Scanner consoleInput = new Scanner(System.in);
@@ -38,6 +37,12 @@ public class Main
       observers.addObservable(console);
       c.resetConnection();
       console.run();
+      VoiceMailService v=new VoiceMailService(c);
+      v.currentMessage();
+      v.executeCommand();
+      v.currentGreeting();
+
+
    }
 
    private static final int MAILBOX_COUNT = 20;
