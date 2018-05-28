@@ -18,7 +18,8 @@ public class UserInterface extends JFrame implements View {
     }
 
     public void showText(String message) {
-        Output.setText(message);
+        Information.setText(message);
+        Output.setText("");
     }
 
     @Override
@@ -113,5 +114,7 @@ public class UserInterface extends JFrame implements View {
     private JButton button0;
     private JButton buttonB;
     private JTextArea pressed;
+    private JLabel Information;
+    private JLabel Info;
 
 }
