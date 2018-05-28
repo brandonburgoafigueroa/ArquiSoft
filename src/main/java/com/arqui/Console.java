@@ -23,7 +23,7 @@ public class Console implements View
       boolean more = true;
       while (more) {
          String input = scanner.nextLine();
-         more = connection.executeCommand(input);
+         connection.executeCommand(input);
       }
    }
 

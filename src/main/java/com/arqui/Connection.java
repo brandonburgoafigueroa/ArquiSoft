@@ -20,7 +20,7 @@ public class Connection
     public boolean executeCommand(String input)
     {
         if (isInputHangUpCommand(input))
-            hangup();
+            return hangup();
         else if (isQuitCommand(input))
             return false;
         else
@@ -31,9 +31,10 @@ public class Connection
        system.saveChanges(currentMailbox);
     }
 
-    private void hangup()
+    private Boolean hangup()
     {
         status.hangup();
+        return true;
     }
    public void dial(String key)
    {

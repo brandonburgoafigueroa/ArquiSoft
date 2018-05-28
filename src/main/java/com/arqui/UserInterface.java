@@ -25,17 +25,12 @@ public class UserInterface extends JFrame implements View {
         String textarea=Input.getText();
         if (textarea=="")
         {
-            connectionContinue=connection.executeCommand(input);
+            connection.executeCommand(input);
         }
         else
         {
-            connectionContinue=connection.executeCommand(textarea);
-            connectionContinue=connection.executeCommand(input);
-        }
-
-        if (!connectionContinue)
-        {
-            this.hide();
+            connection.executeCommand(textarea);
+            connection.executeCommand(input);
         }
     }
     private void setConnection(Connection connection) {

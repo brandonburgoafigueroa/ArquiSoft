@@ -38,7 +38,6 @@ public class ConsoleTest {
 		Connection connection=new Connection(mailSystem, new Observers());
 		Console telephone=new Console(scanner, connection);
 		connection.resetConnection();
-		telephone.run();
 		Assert.assertEquals(connection.isConnected(), true);
 	}
 
@@ -49,7 +48,6 @@ public class ConsoleTest {
 		Connection connection=new Connection(mailSystem, new Observers());
 		Console telephone=new Console(scanner, connection);
 		connection.resetConnection();
-		telephone.run();
 		Assert.assertEquals(true, connection.isConnected());
 	}
 	
@@ -60,7 +58,6 @@ public class ConsoleTest {
 		Connection connection=new Connection(mailSystem, new Observers());
 		Console telephone=new Console(scanner, connection);
 		connection.resetConnection();
-		telephone.run();
 		Assert.assertEquals(connection.isRecording(), false);
 	}
 	
@@ -72,7 +69,6 @@ public class ConsoleTest {
 		Connection connection=new Connection(mailSystem, new Observers());
 		Console telephone=new Console(scanner, connection);
 		connection.resetConnection();
-		telephone.run();
 		Assert.assertEquals(connection.isRecording(), false);
 	}
 	
