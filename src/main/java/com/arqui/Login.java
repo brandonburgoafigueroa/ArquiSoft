@@ -1,13 +1,17 @@
 package com.arqui;
 
+import com.arqui.DisplayState.DisplayLogin;
+import com.arqui.DisplayState.IDisplay;
+
 public class Login implements IState{
     private Mailbox currentMailbox;
     private String accumulatedKeys="";
     Connection connection;
-
+    IDisplay display;
     Login(Connection connection){
         this.connection=connection;
         this.currentMailbox=connection.getCurrentMailbox();
+        display=new DisplayLogin();
     }
     public boolean dial(String command) {
         if (itIsANumeralCharacter(command))
@@ -43,7 +47,7 @@ public class Login implements IState{
     }
 
     private void showIncorrectPasscodeMessage() {
-        connection.ShowText(INCORRECT_PASSCODE_MESSAGE);
+        connection.ShowText(display.getError("Invalid_Passcode"));
     }
 
 
@@ -64,6 +68,5 @@ public class Login implements IState{
     private boolean itIsANumeralCharacter(String key) {
         return key.equals("#");
     }
-    private String INCORRECT_PASSCODE_MESSAGE = "Incorrect passcode. Try again!";
 
 }
