@@ -44,9 +44,11 @@ public class UserInterface extends JFrame implements View {
     }
 
     private void setAttributesToComponentsOfUI() {
+
+        setContentPane(panel);
         Output.setEditable(false);
         setSize(400,700);
-        setContentPane(panel);
+
         pressed.setEditable(false);
         pressed.setSize(10,10);
     }

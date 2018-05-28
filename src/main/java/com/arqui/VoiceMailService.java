@@ -24,26 +24,52 @@ public class VoiceMailService {
         return 4567; //return default port if heroku-port isn't set (i.e. on localhost)
     }
     public void currentMessage(){
-        String currentMessage = connection.getCurrentMailbox().getCurrentMessage().getText();
-        get("/currentMessage", (req, res) -> currentMessage);
+        get("/currentMessage", (req, res) ->
+                getCurrentMessage()
+        );
     }
-    public void executeCommand(){
-        get("/executeCommand", (req, res) ->{
+
+    private String getCurrentMessage() {
+        return connection.getCurrentMailbox().getCurrentMessage()==null?"No messages":connection.getCurrentMailbox().getCurrentMessage().getText();
+    }
+
+    public void executeCommandWithNumeral(){
+        get("/executeCommand/:id", (req, res) ->{
             String id = req.params(":id");
             Boolean state = connection.executeCommand(id);
             connection.executeCommand("#");
             return state;
         });
     }
+    public void executeOption(){
+        get("/executeOption/:id", (req, res) ->{
+            String id = req.params(":id");
+            Boolean state = connection.executeCommand(id);
+            return state;
+        });
+    }
+    public void saveMessage(){
+        get("/saveMessage/:message", (req, res) ->{
+            String message = req.params(":message");
+            Boolean state = connection.executeCommand(message);
+            state=connection.executeCommand("h");
+            return state;
+        });
+    }
     public void currentGreeting(){
-        String greeting = connection.getCurrentMailbox().getGreeting();
-        get("/currentGreeting", (req, res) -> greeting);
+        get("/currentGreeting", (req, res) -> connection.getCurrentMailbox().getGreeting());
+    }
+    public void ping(){
+        get("/ping", (req, res) -> true);
     }
 
     public void startAPIService(){
         currentMessage();
-        executeCommand();
+        executeCommandWithNumeral();
+        executeOption();
         currentGreeting();
+        saveMessage();
+        ping();
     }
 
 }

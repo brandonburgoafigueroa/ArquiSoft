@@ -12,15 +12,14 @@ public class Main
 {
    public static void main(String[] args)
    {
-      VoiceMailService vc = new VoiceMailService();
-      vc.hello();
+
       IPersistence context=new DBContext();
       MailSystem system = new MailSystem(MAILBOX_COUNT,context);
       Scanner consoleInput = new Scanner(System.in);
       IObservers observers=new Observers();
 
       Connection c = new Connection(system, observers);
-
+      VoiceMailService vc = new VoiceMailService(c);
       Console console = new Console(consoleInput, c);
 
       UserInterface FirstUI = new UserInterface(c);
@@ -30,6 +29,8 @@ public class Main
       observers.addObservable(SecondUI);
       observers.addObservable(console);
       c.resetConnection();
+      vc.startAPIService();
+
       console.run();
    }
 
