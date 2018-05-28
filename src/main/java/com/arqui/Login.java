@@ -9,24 +9,28 @@ public class Login implements IState{
         this.connection=connection;
         this.currentMailbox=connection.getCurrentMailbox();
     }
-    public void dial(String command) {
+    public boolean dial(String command) {
         if (itIsANumeralCharacter(command))
         {
-            openMailboxMenu();
+            return openMailboxMenu();
         }
         else {
             saveActualCommand(command);
+            return true;
         }
+
     }
 
-    private void openMailboxMenu() {
+    private boolean openMailboxMenu() {
         if (isTheCorrectPasscodeOfCurrentMailbox())
         {
             changeToMailboxMenuState();
+            return true;
         }
         else {
             showIncorrectPasscodeMessage();
             cleanAccumulatedKeys();
+            return false;
         }
     }
 
@@ -52,8 +56,9 @@ public class Login implements IState{
         return currentMailbox.checkPasscode(accumulatedKeys);
     }
 
-    public void hangup() {
+    public boolean hangup() {
         connection.resetConnection();
+        return true;
     }
 
     private boolean itIsANumeralCharacter(String key) {

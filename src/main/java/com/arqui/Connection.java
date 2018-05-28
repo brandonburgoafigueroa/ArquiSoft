@@ -24,8 +24,7 @@ public class Connection
         else if (isQuitCommand(input))
             return false;
         else
-            dial(input);
-        return true;
+            return dial(input);
     }
     public void saveChanges() {
        system.saveChanges(currentMailbox);
@@ -33,12 +32,11 @@ public class Connection
 
     private Boolean hangup()
     {
-        status.hangup();
-        return true;
+        return status.hangup();
     }
-   public void dial(String key)
+   public boolean dial(String key)
    {
-          status.dial(key);
+          return status.dial(key);
    }
     public void updateObservers(String text)
     {

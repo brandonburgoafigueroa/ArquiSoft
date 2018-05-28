@@ -14,26 +14,28 @@ public class Connect implements IState {
         connection.updateObservers(INITIAL_PROMPT);
     }
 
-    public void dial(String command) {
+    public boolean dial(String command) {
 
         if (itIsANumeralCharacter(command))
-            openMailbox();
+            return openMailbox();
         else
             saveActualCommand(command);
+        return true;
     }
 
-    private void openMailbox() {
+    private boolean openMailbox() {
         setupMailbox();
         if (isAValidMailbox())
         {
             setCurrentMailboxToConnection();
             showGreetingMessage();
             changeToRecordingState();
-
+            return true;
         }
         else {
             showIncorrectMailboxMessage();
             cleanAccumulatedKeys();
+            return false;
         }
     }
 
@@ -69,8 +71,9 @@ public class Connect implements IState {
         return currentMailbox != null;
     }
 
-    public void hangup() {
+    public boolean hangup() {
         connection.resetConnection();
+        return true;
     }
 
     private boolean itIsANumeralCharacter(String key) {

@@ -36,8 +36,8 @@ public class VoiceMailService {
     public void executeCommandWithNumeral(){
         get("/executeCommand/:id", (req, res) ->{
             String id = req.params(":id");
-            Boolean state = connection.executeCommand(id);
-            connection.executeCommand("#");
+            connection.executeCommand(id);
+            Boolean state =connection.executeCommand("#");
             return state;
         });
     }
@@ -51,8 +51,8 @@ public class VoiceMailService {
     public void saveMessage(){
         get("/saveMessage/:message", (req, res) ->{
             String message = req.params(":message");
-            Boolean state = connection.executeCommand(message);
-            state=connection.executeCommand("h");
+            connection.executeCommand(message);
+            Boolean state=connection.executeCommand("h");
             return state;
         });
     }

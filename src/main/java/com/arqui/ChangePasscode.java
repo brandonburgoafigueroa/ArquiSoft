@@ -12,7 +12,7 @@ public class ChangePasscode implements IState {
         showEnterNewPasscodeMessage();
 
     }
-    public void dial(String command) {
+    public boolean dial(String command) {
         if (itIsANumeralCharacter(command))
         {
             setNewPasscodeToCurrentMailbox();
@@ -21,6 +21,7 @@ public class ChangePasscode implements IState {
         else {
             saveCommand(command);
         }
+        return true;
     }
 
     private void setNewPasscodeToCurrentMailbox() {
@@ -39,8 +40,9 @@ public class ChangePasscode implements IState {
     private void showEnterNewPasscodeMessage() {
         connection.updateObservers(ENTER_NEW_PASSCODE_MESSAGE);
     }
-    public void hangup() {
+    public boolean hangup() {
         connection.resetConnection();
+        return true;
     }
 
     private boolean itIsANumeralCharacter(String key) {

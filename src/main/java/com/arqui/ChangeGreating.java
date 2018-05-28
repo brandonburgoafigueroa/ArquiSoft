@@ -17,7 +17,7 @@ public class ChangeGreating implements IState {
         connection.updateObservers(ENTER_NEW_GREETING_MESSAGE);
     }
 
-    public void dial(String command) {
+    public boolean dial(String command) {
 
         if (itIsANumeralCharacter(command))
         {
@@ -29,7 +29,7 @@ public class ChangeGreating implements IState {
             saveCommand(command);
 
         }
-
+        return true;
     }
 
     private void saveCommand(String command) {
@@ -46,8 +46,9 @@ public class ChangeGreating implements IState {
         connection.setStatus(new MailboxMenu(connection));
     }
 
-    public void hangup() {
+    public boolean hangup() {
         connection.resetConnection();
+        return true;
     }
 
     private boolean itIsANumeralCharacter(String key) {

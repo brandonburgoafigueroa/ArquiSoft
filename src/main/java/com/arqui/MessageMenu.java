@@ -9,7 +9,7 @@ public class MessageMenu implements IState{
         this.currentMailbox=connection.getCurrentMailbox();
         showMessageMenuOptions();
     }
-    public void dial(String command) {
+    public boolean dial(String command) {
 
         if ("1".equals(command)) {
             String MessageText = getTextOfLastMessage();
@@ -27,6 +27,7 @@ public class MessageMenu implements IState{
             changeToMailboxMenuState();
 
         }
+        return true;
     }
 
     private void changeToMailboxMenuState() {
@@ -57,8 +58,9 @@ public class MessageMenu implements IState{
         output += MESSAGE_MENU_TEXT;
         return output;
     }
-    public void hangup() {
+    public boolean hangup() {
         connection.resetConnection();
+        return true;
     }
     private void showMessageMenuOptions() {
         connection.updateObservers(MESSAGE_MENU_TEXT);

@@ -8,7 +8,7 @@ public class MailboxMenu implements IState {
         this.connection=connection;
         showMailboxMenuOptions();
     }
-    public void dial(String command) {
+    public boolean dial(String command) {
         if ("1".equals(command)) {
             changeToMessageMenuState();
 
@@ -20,6 +20,7 @@ public class MailboxMenu implements IState {
             changeToChangeGreetingState();
 
         }
+        return true;
     }
 
     private void changeToChangeGreetingState() {
@@ -35,8 +36,9 @@ public class MailboxMenu implements IState {
     }
 
 
-    public void hangup() {
+    public boolean hangup() {
         connection.resetConnection();
+        return true;
     }
     private void showMailboxMenuOptions() {
         connection.updateObservers(MAILBOX_MENU_TEXT);

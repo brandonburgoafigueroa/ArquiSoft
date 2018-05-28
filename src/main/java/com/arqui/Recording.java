@@ -9,7 +9,7 @@ public class Recording implements IState{
         this.connection=connection;
         this.currentMailbox=connection.getCurrentMailbox();
     }
-    public void dial(String command) {
+    public boolean dial(String command) {
         if (isAMessage(command))
         {
             addMessage(command);
@@ -19,6 +19,7 @@ public class Recording implements IState{
             changeStateToLogin();
             executeCommand(command);
         }
+        return true;
     }
 
     private void executeCommand(String command) {
@@ -38,12 +39,13 @@ public class Recording implements IState{
     }
 
 
-    public void hangup() {
+    public boolean hangup() {
         if (isNotTheMessageEmpty())
         {
             saveMessage();
         }
         connection.resetConnection();
+        return true;
     }
 
     private boolean isNotTheMessageEmpty() {
