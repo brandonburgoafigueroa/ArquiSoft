@@ -7,11 +7,12 @@ public class VoiceMailService {
     private Connection connection;
     public VoiceMailService(Connection connection){
         this.connection = connection;
+        port(getHerokuAssignedPort());
     }
     public VoiceMailService(){
+        port(getHerokuAssignedPort());
     }
     public void hello(){
-        port(getHerokuAssignedPort());
         String currentMessage = "hello";
         get("/hello", (req, res) -> currentMessage);
     }
