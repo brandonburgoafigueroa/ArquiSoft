@@ -14,7 +14,7 @@ public class ChangeGreating implements IState {
     }
 
     private void showNewGreetingMessage() {
-        connection.updateObservers(ENTER_NEW_GREETING_MESSAGE);
+        connection.ShowText(ENTER_NEW_GREETING_MESSAGE);
     }
 
     public boolean dial(String command) {

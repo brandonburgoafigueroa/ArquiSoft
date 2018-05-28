@@ -17,7 +17,7 @@ public class UserInterface extends JFrame implements View {
         setVisible(true);
     }
 
-    public void update(String message) {
+    public void showText(String message) {
         Output.setText(message);
     }
 

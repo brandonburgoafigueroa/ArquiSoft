@@ -15,7 +15,7 @@ public class Connect implements IState {
         showInitialPromptMessage();
     }
     private void showInitialPromptMessage() {
-        connection.updateObservers(display.getText("InitialPrompt"));
+        connection.ShowText(display.getText("InitialPrompt"));
     }
 
     public boolean dial(String command) {
@@ -56,11 +56,11 @@ public class Connect implements IState {
     }
 
     private void showIncorrectMailboxMessage() {
-        connection.updateObservers(display.getError("Invalid"));
+        connection.ShowText(display.getError("Invalid"));
     }
 
     private void showGreetingMessage() {
-        connection.updateObservers(currentMailbox.getGreeting());
+        connection.ShowText(currentMailbox.getGreeting());
     }
 
     private void setCurrentMailboxToConnection() {

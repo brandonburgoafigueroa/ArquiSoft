@@ -45,7 +45,7 @@ public class MessageMenu implements IState{
     }
 
     private void showMessageText(String messageText) {
-        connection.updateObservers(messageText);
+        connection.ShowText(messageText);
     }
 
     private String getTextOfLastMessage() {
@@ -63,7 +63,7 @@ public class MessageMenu implements IState{
         return true;
     }
     private void showMessageMenuOptions() {
-        connection.updateObservers(MESSAGE_MENU_TEXT);
+        connection.ShowText(MESSAGE_MENU_TEXT);
     }
 
     private String EMPTY_MAILBOX_MESSAGE = "No messages.";

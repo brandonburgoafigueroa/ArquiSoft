@@ -41,7 +41,7 @@ public class MailboxMenu implements IState {
         return true;
     }
     private void showMailboxMenuOptions() {
-        connection.updateObservers(MAILBOX_MENU_TEXT);
+        connection.ShowText(MAILBOX_MENU_TEXT);
     }
     private static final String MAILBOX_MENU_TEXT =
             "Enter 1 to listen to your messages\n"

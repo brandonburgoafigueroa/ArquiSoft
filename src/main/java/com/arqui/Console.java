@@ -12,7 +12,7 @@ public class Console implements View
       scanner = aScanner;
       this.connection=connection;
    }
-   public void update(String message)
+   public void showText(String message)
    {
       System.out.println(message);
    }

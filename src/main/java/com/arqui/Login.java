@@ -43,7 +43,7 @@ public class Login implements IState{
     }
 
     private void showIncorrectPasscodeMessage() {
-        connection.updateObservers(INCORRECT_PASSCODE_MESSAGE);
+        connection.ShowText(INCORRECT_PASSCODE_MESSAGE);
     }
 
 

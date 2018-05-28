@@ -17,10 +17,10 @@ public class Observers implements IObservers {
 
     }
 
-    public void updateObservers(String message)
+    public void showText(String message)
     {
         for (View observer:observables) {
-            observer.update(message);
+            observer.showText(message);
         }
     }
 }

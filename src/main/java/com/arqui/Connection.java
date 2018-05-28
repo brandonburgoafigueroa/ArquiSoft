@@ -38,9 +38,9 @@ public class Connection
    {
           return status.dial(key);
    }
-    public void updateObservers(String text)
+    public void ShowText(String text)
     {
-        observers.updateObservers(text);
+        observers.showText(text);
     }
    public boolean isConnected() {
 	   return status instanceof Connect;

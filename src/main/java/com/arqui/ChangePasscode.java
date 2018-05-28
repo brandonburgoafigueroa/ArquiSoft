@@ -38,7 +38,7 @@ public class ChangePasscode implements IState {
     }
 
     private void showEnterNewPasscodeMessage() {
-        connection.updateObservers(ENTER_NEW_PASSCODE_MESSAGE);
+        connection.ShowText(ENTER_NEW_PASSCODE_MESSAGE);
     }
     public boolean hangup() {
         connection.resetConnection();
