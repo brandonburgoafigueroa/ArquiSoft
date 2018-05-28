@@ -10,7 +10,7 @@ public class MailboxMenu implements IState {
     private IDisplay display;
     MailboxMenu(Connection connection){
         this.connection=connection;
-        display=new DisplayMailboxMenu();
+        this.connection.setDisplay(new DisplayMailboxMenu());
         showMailboxMenuOptions();
     }
     public boolean dial(String command) {
@@ -47,6 +47,6 @@ public class MailboxMenu implements IState {
     }
     private void showMailboxMenuOptions() {
 
-        connection.showOptions(display.getOptions());
+        connection.showOptions();
     }
 }

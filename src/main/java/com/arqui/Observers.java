@@ -27,7 +27,7 @@ public class Observers implements IObservers {
     }
 
     @Override
-    public void showOptions(ArrayList<String> options) {
+    public void showOptions() {
         for (View observer:observables) {
             observer.showOptions();
         }

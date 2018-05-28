@@ -101,8 +101,8 @@ public class Connection
     private Mailbox currentMailbox;
     private IState status;
     private IDisplay display;
-    public void showOptions(ArrayList<String> options) {
-        observers.showOptions(options);
+    public void showOptions() {
+        observers.showOptions();
     }
     public void showError(String errorName)
     {

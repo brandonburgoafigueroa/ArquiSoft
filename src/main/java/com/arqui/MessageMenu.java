@@ -10,7 +10,7 @@ public class MessageMenu implements IState{
     MessageMenu(Connection connection){
         this.connection=connection;
         this.currentMailbox=connection.getCurrentMailbox();
-        display=new DisplayMessageMenu();
+        this.connection.setDisplay(new DisplayMessageMenu());
         showMessageMenuOptions();
     }
     public boolean dial(String command) {
@@ -49,7 +49,7 @@ public class MessageMenu implements IState{
 
     private void showMessageText() {
 
-        connection.ShowText(getTextOfLastMessage());
+        connection.show(getTextOfLastMessage());
     }
 
     private String getTextOfLastMessage() {
@@ -67,7 +67,7 @@ public class MessageMenu implements IState{
         return true;
     }
     private void showMessageMenuOptions() {
-        connection.showOptions(display.getOptions());
+        connection.showOptions();
     }
 
 }
