@@ -18,7 +18,11 @@ public class Connection
    {
        currentMailbox=null;
        status=new Connect(this);
-
+   }
+   public void setDisplay(IDisplay display)
+   {
+        this.display=display;
+        observers.sendDisplay(this.display);
    }
 
     public boolean executeCommand(String input)
@@ -96,9 +100,17 @@ public class Connection
     private IPersistence persistence;
     private Mailbox currentMailbox;
     private IState status;
-
+    private IDisplay display;
     public void showOptions(ArrayList<String> options) {
         observers.showOptions(options);
+    }
+    public void showError(String errorName)
+    {
+        observers.showError(errorName);
+    }
+
+    public void show(String text) {
+        observers.show(text);
     }
 }
 

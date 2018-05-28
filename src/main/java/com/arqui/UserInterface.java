@@ -1,5 +1,7 @@
 package com.arqui;
 
+import com.arqui.DisplayState.IDisplay;
+
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -17,19 +19,38 @@ public class UserInterface extends JFrame implements View {
         setVisible(true);
     }
 
-    public void showText(String message) {
-        Information.setText(message);
+    public void showText(String text) {
+        String Text=display.getText(text);
+        Information.setText(Text);
         Output.setText("");
     }
 
     @Override
-    public void showOptions(ArrayList<String> options) {
+    public void showError(String errorName) {
+        String Text=display.getError(errorName);
+        Information.setText(Text);
+        Output.setText("");
+    }
+
+    @Override
+    public void showOptions() {
+        ArrayList<String> options=display.getOptions();
         String text="";
         for (String option:options)
         {
          text+=option+'\n';
         }
         Output.setText(text);
+    }
+
+    @Override
+    public void setDisplay(IDisplay display) {
+        this.display=display;
+    }
+
+    @Override
+    public void show(String text) {
+        Information.setText(text);
     }
 
     private void Run(String input)
@@ -116,5 +137,5 @@ public class UserInterface extends JFrame implements View {
     private JTextArea pressed;
     private JLabel Information;
     private JLabel Info;
-
+    private IDisplay display;
 }

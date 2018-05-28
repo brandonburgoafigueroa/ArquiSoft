@@ -1,5 +1,8 @@
 package com.arqui;
 
+import com.arqui.DisplayState.IDisplay;
+import com.sun.xml.internal.ws.policy.privateutil.PolicyUtils;
+
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -10,19 +13,36 @@ public class Console implements View
       scanner = aScanner;
       this.connection=connection;
    }
-   public void showText(String message)
+   public void show(String text)
    {
-      System.out.println(message);
+      System.out.println(text);
+   }
+   public void showText(String text)
+   {
+      String Text=display.getText(text);
+      System.out.println(Text);
    }
 
    @Override
-   public void showOptions(ArrayList<String> options) {
+   public void showError(String errorName) {
+      String Text=display.getError(errorName);
+      System.out.println(Text);
+   }
+
+   @Override
+   public void showOptions() {
       int i=1;
+      ArrayList<String> options=display.getOptions();
       for (String option:options)
       {
          System.out.println("Enter "+i+" to "+option);
          i++;
       }
+   }
+
+   @Override
+   public void setDisplay(IDisplay display) {
+      this.display=display;
    }
 
    public String speakT(String output)
@@ -40,4 +60,5 @@ public class Console implements View
 
    private Scanner scanner;
    private Connection connection;
+   private IDisplay display;
 }

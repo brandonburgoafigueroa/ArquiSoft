@@ -1,5 +1,8 @@
 package com.arqui;
 
+import com.arqui.DisplayState.DisplayConnect;
+import com.arqui.DisplayState.DisplayLogin;
+
 public class Recording implements IState{
     String message;
     private Connection connection;
@@ -8,6 +11,7 @@ public class Recording implements IState{
     {
         this.connection=connection;
         this.currentMailbox=connection.getCurrentMailbox();
+
     }
     public boolean dial(String command) {
         if (isAMessage(command))

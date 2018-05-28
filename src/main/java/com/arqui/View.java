@@ -1,8 +1,12 @@
 package com.arqui;
 
-import java.util.ArrayList;
+import com.arqui.DisplayState.IDisplay;
 
 public interface View {
     void showText(String message);
-    void showOptions(ArrayList<String> options);
+    void showError(String errorName);
+    void showOptions();
+    void setDisplay(IDisplay display);
+
+    void show(String text);
 }

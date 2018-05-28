@@ -7,11 +7,10 @@ public class Login implements IState{
     private Mailbox currentMailbox;
     private String accumulatedKeys="";
     Connection connection;
-    IDisplay display;
     Login(Connection connection){
         this.connection=connection;
         this.currentMailbox=connection.getCurrentMailbox();
-        display=new DisplayLogin();
+        this.connection.setDisplay(new DisplayLogin());
     }
     public boolean dial(String command) {
         if (itIsANumeralCharacter(command))
@@ -47,7 +46,7 @@ public class Login implements IState{
     }
 
     private void showIncorrectPasscodeMessage() {
-        connection.ShowText(display.getError("Invalid_Passcode"));
+        connection.showError("Invalid_Passcode");
     }
 
 
