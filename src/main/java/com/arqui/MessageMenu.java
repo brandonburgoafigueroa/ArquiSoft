@@ -1,20 +1,23 @@
 package com.arqui;
 
+import com.arqui.DisplayState.DisplayMessageMenu;
+import com.arqui.DisplayState.IDisplay;
+
 public class MessageMenu implements IState{
     private Mailbox currentMailbox;
     private Connection connection;
-
+    private IDisplay display;
     MessageMenu(Connection connection){
         this.connection=connection;
         this.currentMailbox=connection.getCurrentMailbox();
+        display=new DisplayMessageMenu();
         showMessageMenuOptions();
     }
     public boolean dial(String command) {
 
         if ("1".equals(command)) {
-            String MessageText = getTextOfLastMessage();
-            showMessageText(MessageText);
-
+            showMessageText();
+            showMessageMenuOptions();
         } else if ("2".equals(command)) {
             saveCurrentMessage();
             showMessageMenuOptions();
@@ -44,18 +47,19 @@ public class MessageMenu implements IState{
         connection.saveChanges();
     }
 
-    private void showMessageText(String messageText) {
-        connection.ShowText(messageText);
+    private void showMessageText() {
+
+        connection.ShowText(getTextOfLastMessage());
     }
 
     private String getTextOfLastMessage() {
         String output="";
         Message m = currentMailbox.getCurrentMessage();
         if (m == null) {
-            output += EMPTY_MAILBOX_MESSAGE + "\n";
+            output = display.getText("Empty");
         }
-        else output += m.getText() + "\n";
-        output += MESSAGE_MENU_TEXT;
+        else
+            output=m.getText();
         return output;
     }
     public boolean hangup() {
@@ -63,13 +67,7 @@ public class MessageMenu implements IState{
         return true;
     }
     private void showMessageMenuOptions() {
-        connection.ShowText(MESSAGE_MENU_TEXT);
+        connection.showOptions(display.getOptions());
     }
 
-    private String EMPTY_MAILBOX_MESSAGE = "No messages.";
-    private static final String MESSAGE_MENU_TEXT =
-            "Enter 1 to listen to the current message\n"
-                    + "Enter 2 to save the current message\n"
-                    + "Enter 3 to delete the current message\n"
-                    + "Enter 4 to return to the main menu";
 }
