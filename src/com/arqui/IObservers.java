@@ -1,6 +1,4 @@
-package controller;
-
-import view.View;
+package com.arqui;
 
 public interface IObservers {
     void addObservable(View observable);

@@ -1,14 +1,8 @@
-package test;
+package com.arqui;
 
-import controller.Connection;
-import controller.MailSystem;
-import controller.Mailbox;
-import controller.Observers;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
-import persistence.IPersistence;
-import view.Console;
 
 import java.io.ByteArrayInputStream;
 import java.io.InputStream;

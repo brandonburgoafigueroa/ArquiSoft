@@ -1,6 +1,6 @@
-package persistence;
+package com.arqui;
 
-import controller.Mailbox;
+import com.arqui.Mailbox;
 
 import java.util.ArrayList;
 

@@ -1,8 +1,4 @@
-package persistence;
-
-import controller.Mailbox;
-import controller.Message;
-import controller.MessageQueue;
+package com.arqui;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;

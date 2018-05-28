@@ -1,4 +1,4 @@
-package controller;
+package com.arqui;
 
 public class Login implements IState{
     private Mailbox currentMailbox;

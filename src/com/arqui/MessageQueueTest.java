@@ -1,7 +1,7 @@
-package test;
+package com.arqui;
 
-import controller.Message;
-import controller.MessageQueue;
+import com.arqui.Message;
+import com.arqui.MessageQueue;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;

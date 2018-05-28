@@ -1,6 +1,7 @@
-package persistence;
+package com.arqui;
 
 import java.sql.*;
+import java.sql.Connection;
 
 public class DBConfiguration {
     String url = "prueba.db";

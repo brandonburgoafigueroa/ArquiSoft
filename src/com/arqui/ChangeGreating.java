@@ -1,4 +1,4 @@
-package controller;
+package com.arqui;
 
 public class ChangeGreating implements IState {
     private Mailbox currentMailbox;

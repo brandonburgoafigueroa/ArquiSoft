@@ -1,4 +1,4 @@
-package controller;
+package com.arqui;
 
 public interface IState {
     void dial(String command);

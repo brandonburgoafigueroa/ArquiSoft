@@ -1,11 +1,11 @@
-package test;
+package com.arqui;
 
-import controller.MailSystem;
-import controller.Mailbox;
+import com.arqui.MailSystem;
+import com.arqui.Mailbox;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
-import persistence.IPersistence;
+import com.arqui.IPersistence;
 
 import java.util.ArrayList;
 

@@ -1,4 +1,4 @@
-package controller;
+package com.arqui;
 
 public class MessageMenu implements IState{
     private Mailbox currentMailbox;

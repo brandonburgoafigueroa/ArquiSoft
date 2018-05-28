@@ -1,4 +1,4 @@
-package controller;
+package com.arqui;
 
 public class Connect implements IState {
     private Mailbox currentMailbox;

@@ -1,6 +1,4 @@
-package view;
-
-import controller.Connection;
+package com.arqui;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;

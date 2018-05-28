@@ -1,6 +1,4 @@
-package view;
-
-import controller.Connection;
+package com.arqui;
 
 import java.util.Scanner;
 

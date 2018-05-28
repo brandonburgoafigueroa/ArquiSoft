@@ -1,6 +1,4 @@
-package controller;
-
-import persistence.IPersistence;
+package com.arqui;
 
 public class Connection
 {

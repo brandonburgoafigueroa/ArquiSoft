@@ -1,14 +1,5 @@
-import controller.Connection;
-import controller.IObservers;
-import controller.MailSystem;
-import controller.Observers;
-import persistence.DBContext;
-import persistence.IPersistence;
-import view.Console;
-import view.UserInterface;
+package com.arqui;
 
-import controller.*;
-import view.*;
 import java.util.Scanner;
 
 /**

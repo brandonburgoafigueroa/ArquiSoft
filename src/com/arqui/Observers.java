@@ -1,6 +1,4 @@
-package controller;
-
-import view.View;
+package com.arqui;
 
 import java.util.ArrayList;
 import java.util.List;
