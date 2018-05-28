@@ -40,6 +40,10 @@ public class VoiceMailService {
         get("/currentGreeting", (req, res) -> greeting);
     }
 
-    
+    public void startAPIService(){
+        currentMessage();
+        executeCommand();
+        currentGreeting();
+    }
 
 }
