@@ -23,4 +23,11 @@ public class Observers implements IObservers {
             observer.showText(message);
         }
     }
+
+    @Override
+    public void showOptions(ArrayList<String> options) {
+        for (View observer:observables) {
+            observer.showOptions(options);
+        }
+    }
 }

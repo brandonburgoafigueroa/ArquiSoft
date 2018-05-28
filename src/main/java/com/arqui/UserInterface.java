@@ -1,10 +1,10 @@
 package com.arqui;
 
-import com.arqui.DisplayState.IDisplay;
-
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
+
 public class UserInterface extends JFrame implements View {
 
 
@@ -22,8 +22,13 @@ public class UserInterface extends JFrame implements View {
     }
 
     @Override
-    public void showOptions(IDisplay display) {
-
+    public void showOptions(ArrayList<String> options) {
+        String text="";
+        for (String option:options)
+        {
+         text+=option+'\n';
+        }
+        Output.setText(text);
     }
 
     private void Run(String input)

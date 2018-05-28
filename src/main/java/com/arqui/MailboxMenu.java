@@ -1,11 +1,16 @@
 package com.arqui;
 
+import com.arqui.DisplayState.DisplayMailboxMenu;
+import com.arqui.DisplayState.IDisplay;
+
 public class MailboxMenu implements IState {
 
 
     private Connection connection;
+    private IDisplay display;
     MailboxMenu(Connection connection){
         this.connection=connection;
+        display=new DisplayMailboxMenu();
         showMailboxMenuOptions();
     }
     public boolean dial(String command) {
@@ -41,12 +46,7 @@ public class MailboxMenu implements IState {
         return true;
     }
     private void showMailboxMenuOptions() {
-        connection.ShowText(MAILBOX_MENU_TEXT);
+
+        connection.showOptions(display.getOptions());
     }
-    private static final String MAILBOX_MENU_TEXT =
-            "Enter 1 to listen to your messages\n"
-                    + "Enter 2 to change your passcode\n"
-                    + "Enter 3 to change your greeting";
-
-
 }

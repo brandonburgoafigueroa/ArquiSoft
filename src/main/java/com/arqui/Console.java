@@ -1,7 +1,5 @@
 package com.arqui;
 
-import com.arqui.DisplayState.IDisplay;
-
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -18,8 +16,7 @@ public class Console implements View
    }
 
    @Override
-   public void showOptions(IDisplay display) {
-      ArrayList<String> options=display.getOptions();
+   public void showOptions(ArrayList<String> options) {
       int i=1;
       for (String option:options)
       {

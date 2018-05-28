@@ -1,5 +1,9 @@
 package com.arqui;
 
+import com.arqui.DisplayState.IDisplay;
+
+import java.util.ArrayList;
+
 public class Connection
 {
 
@@ -93,7 +97,9 @@ public class Connection
     private Mailbox currentMailbox;
     private IState status;
 
-
+    public void showOptions(ArrayList<String> options) {
+        observers.showOptions(options);
+    }
 }
 
 
