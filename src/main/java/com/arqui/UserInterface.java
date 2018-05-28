@@ -1,5 +1,7 @@
 package com.arqui;
 
+import com.arqui.DisplayState.IDisplay;
+
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -17,6 +19,11 @@ public class UserInterface extends JFrame implements View {
 
     public void update(String message) {
         Output.setText(message);
+    }
+
+    @Override
+    public void showOptions(IDisplay display) {
+
     }
 
     private void Run(String input)

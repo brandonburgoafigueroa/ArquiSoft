@@ -14,7 +14,7 @@ public final class DisplayConnect implements IDisplay {
         Errors=new HashMap<>();
         Errors.put("Invalid", "Incorrect mailbox number. Try again!");
         Text=new HashMap<>();
-        Text.put("InitialPromt","Enter mailbox number followed by #");
+        Text.put("InitialPrompt","Enter mailbox number followed by #");
     }
 
     @Override

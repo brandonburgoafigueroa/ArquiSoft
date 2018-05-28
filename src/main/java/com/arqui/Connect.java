@@ -1,17 +1,21 @@
 package com.arqui;
 
+import com.arqui.DisplayState.DisplayConnect;
+
 public class Connect implements IState {
     private Mailbox currentMailbox;
     private MailSystem system;
     private String accumulatedKeys="";
     private Connection connection;
+    DisplayConnect display;
     Connect(Connection connection) {
         this.connection=connection;
         this.system=connection.getMailboxSystem();
+        display=new DisplayConnect();
         showInitialPromptMessage();
     }
     private void showInitialPromptMessage() {
-        connection.updateObservers(INITIAL_PROMPT);
+        connection.updateObservers(display.getText("InitialPrompt"));
     }
 
     public boolean dial(String command) {
@@ -52,7 +56,7 @@ public class Connect implements IState {
     }
 
     private void showIncorrectMailboxMessage() {
-        connection.updateObservers(INCORRECT_MAILBOX_MESSAGE);
+        connection.updateObservers(display.getError("Invalid"));
     }
 
     private void showGreetingMessage() {
@@ -79,7 +83,4 @@ public class Connect implements IState {
     private boolean itIsANumeralCharacter(String key) {
         return key.equals("#");
     }
-    private String INCORRECT_MAILBOX_MESSAGE = "Incorrect mailbox number. Try again!";
-    private static final String INITIAL_PROMPT =
-            "Enter mailbox number followed by #";
 }
