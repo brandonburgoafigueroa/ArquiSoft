@@ -30,7 +30,9 @@ public class VoiceMailService {
     public void executeCommand(){
         get("/executeCommand", (req, res) ->{
             String id = req.params(":id");
-            return connection.executeCommand(id);
+            Boolean state = connection.executeCommand(id);
+            connection.executeCommand("#");
+            return state;
         });
     }
     public void currentGreeting(){
@@ -38,5 +40,6 @@ public class VoiceMailService {
         get("/currentGreeting", (req, res) -> greeting);
     }
 
+    
 
 }
