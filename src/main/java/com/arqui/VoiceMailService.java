@@ -1,5 +1,8 @@
 package com.arqui;
 
+import static spark.Spark.get;
+import static spark.SparkBase.port;
+
 public class VoiceMailService {
     private Connection connection;
     public VoiceMailService(Connection connection){
@@ -7,7 +10,11 @@ public class VoiceMailService {
     }
     public VoiceMailService(){
     }
-
+    public void hello(){
+        port(getHerokuAssignedPort());
+        String currentMessage = "hello";
+        get("/hello", (req, res) -> currentMessage);
+    }
     static int getHerokuAssignedPort() {
         ProcessBuilder processBuilder = new ProcessBuilder();
         if (processBuilder.environment().get("PORT") != null) {
