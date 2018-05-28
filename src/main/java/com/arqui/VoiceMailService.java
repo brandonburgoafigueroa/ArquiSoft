@@ -26,7 +26,12 @@ public class VoiceMailService {
         String currentMessage = connection.getCurrentMailbox().getCurrentMessage().getText();
         get("/currentMessage", (req, res) -> currentMessage);
     }
-
+    public void executeCommand(){
+        get("/executeCommand", (req, res) ->{
+            String id = req.params(":id");
+            return connection.executeCommand(id);
+        });
+    }
 
 
 }
