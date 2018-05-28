@@ -2,7 +2,7 @@ package com.arqui;
 
 import java.util.Scanner;
 
-import static spark.Spark.*;
+
 
 /**
    This program tests the mail system. A single phone
@@ -12,6 +12,8 @@ public class Main
 {
    public static void main(String[] args)
    {
+      VoiceMailService vc = new VoiceMailService();
+      vc.hello();
       IPersistence context=new DBContext();
       MailSystem system = new MailSystem(MAILBOX_COUNT,context);
       Scanner consoleInput = new Scanner(System.in);
@@ -24,7 +26,6 @@ public class Main
       UserInterface FirstUI = new UserInterface(c);
 
       UserInterface SecondUI = new UserInterface(c);
-
       observers.addObservable(FirstUI);
       observers.addObservable(SecondUI);
       observers.addObservable(console);
