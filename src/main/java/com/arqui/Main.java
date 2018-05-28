@@ -2,6 +2,8 @@ package com.arqui;
 
 import java.util.Scanner;
 
+import static spark.Spark.*;
+
 /**
    This program tests the mail system. A single phone
    communicates with the program through System.in/System.out.
