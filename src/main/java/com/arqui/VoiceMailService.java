@@ -32,6 +32,10 @@ public class VoiceMailService {
             return connection.executeCommand(id);
         });
     }
+    public void currentGreeting(){
+        String greeting = connection.getCurrentMailbox().getGreeting();
+        get("/currentGreeting", (req, res) -> greeting);
+    }
 
 
 }
