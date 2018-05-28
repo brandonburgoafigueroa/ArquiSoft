@@ -13,17 +13,18 @@ public class Recording implements IState{
         if (isAMessage(command))
         {
             addMessage(command);
+            return true;
         }
         if (isNumericalCommand(command))
         {
             changeStateToLogin();
-            executeCommand(command);
+            return executeCommand(command);
         }
-        return true;
+return true;
     }
 
-    private void executeCommand(String command) {
-        connection.executeCommand(command);
+    private boolean executeCommand(String command) {
+        return connection.executeCommand(command);
     }
 
     private void addMessage(String command) {

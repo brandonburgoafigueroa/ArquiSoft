@@ -187,11 +187,16 @@ public class ConnectionTest {
 		dialMessageMenu();
 		dialFirstOption();
 		String message = setMessageEmpty();
+		String options=setOptionsText();
 		verify(mockedTelephone, times(2)).showText(message);
 	}
 
+	private String setOptionsText() {
+    	return MESSAGE_MENU_TEXT;
+	}
+
 	private String setMessageEmpty() {
-		return EMPTY_MAILBOX_MESSAGE + "\n"+MESSAGE_MENU_TEXT;
+		return EMPTY_MAILBOX_MESSAGE;
 	}
 
 	private void dialFirstOption() {
