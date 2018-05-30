@@ -1,4 +1,4 @@
-package com.arqui;
+package com.arqui.Repository;
 
 import java.sql.*;
 import java.sql.Connection;
@@ -10,7 +10,6 @@ public class DBConfiguration {
     public DBConfiguration() {
 
     }
-
     
     public void connect(){
 
