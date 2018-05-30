@@ -1,7 +1,7 @@
-package com.arqui;
+package com.arqui.View;
 
+import com.arqui.Connection;
 import com.arqui.DisplayState.IDisplay;
-import com.sun.xml.internal.ws.policy.privateutil.PolicyUtils;
 
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -13,6 +13,7 @@ public class Console implements View
       scanner = aScanner;
       this.connection=connection;
    }
+
    public void show(String text)
    {
       System.out.println(text);
