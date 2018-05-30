@@ -1,4 +1,7 @@
-package com.arqui;
+package com.arqui.Core;
+
+
+import com.arqui.IPersistence;
 
 import java.util.ArrayList;
 
