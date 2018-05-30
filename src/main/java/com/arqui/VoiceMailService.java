@@ -9,13 +9,7 @@ public class VoiceMailService {
         this.connection = connection;
         port(getHerokuAssignedPort());
     }
-    public VoiceMailService(){
-        port(getHerokuAssignedPort());
-    }
-    public void hello(){
-        String currentMessage = "hello";
-        get("/hello", (req, res) -> currentMessage);
-    }
+    
     static int getHerokuAssignedPort() {
         ProcessBuilder processBuilder = new ProcessBuilder();
         if (processBuilder.environment().get("PORT") != null) {
