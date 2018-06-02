@@ -9,7 +9,7 @@ public interface IPresenters {
     void showOptions();
     void sendDisplay(IDisplay display);
     void showError(String errorName);
-    void show(String text);
+    void setText(String text);
 
     //presentadores
     void addPresenter(IPresenter presenter);
@@ -18,4 +18,5 @@ public interface IPresenters {
     void showOptionsP();
     void showErrorP(String errorName);
     void showP(String text);
+    void show();
 }

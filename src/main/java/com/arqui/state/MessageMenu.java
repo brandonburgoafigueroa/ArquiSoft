@@ -50,7 +50,7 @@ public class MessageMenu implements IState {
 
     private void showMessageText() {
 
-        connection.show(getTextOfLastMessage());
+        connection.setText(getTextOfLastMessage());
     }
 
     private String getTextOfLastMessage() {

@@ -1,6 +1,7 @@
 package com.arqui;
 
 import com.arqui.Core.MailSystem;
+import com.arqui.Presenters.ConsolePresenter;
 import com.arqui.Views.Console;
 
 import java.util.Scanner;
@@ -24,7 +25,11 @@ public class Main
       Connection c = new Connection(system, observers);
       VoiceMailService vc = new VoiceMailService(c);
       Console console = new Console(consoleInput, c);
-
+//presenters
+      ConsolePresenter cp=new ConsolePresenter();
+      cp.addView(console);
+      observers.addPresenter(cp);
+//presenters
       UserInterface FirstUI = new UserInterface(c);
 
       UserInterface SecondUI = new UserInterface(c);

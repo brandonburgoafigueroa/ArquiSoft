@@ -17,6 +17,7 @@ public class Connect implements IState {
     }
     private void showInitialPromptMessage() {
         connection.ShowText("InitialPrompt");
+        connection.show();
     }
 
     public boolean dial(String command) {
@@ -61,7 +62,7 @@ public class Connect implements IState {
     }
 
     private void showGreetingMessage() {
-        connection.show(currentMailbox.getGreeting());
+        connection.setText(currentMailbox.getGreeting());
     }
 
     private void setCurrentMailboxToConnection() {

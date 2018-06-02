@@ -8,9 +8,10 @@ import java.util.List;
 public interface IPresenter {
    void addView(IView view);
    void setDisplay(IDisplay display);
-   void showText(String key);
-   void showError(String key);
-   void show(String text);
-   void showOptions();
+   void setText(String textName);
+   void setError(String errorName);
+   void setTextPlain(String text);
+   void setupOptions();
+   void show();
 
 }

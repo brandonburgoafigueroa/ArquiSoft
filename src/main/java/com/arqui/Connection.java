@@ -23,6 +23,7 @@ public class Connection
    {
         this.display=display;
         observers.sendDisplay(this.display);
+        observers.setDisplay(this.display);
    }
 
     public boolean executeCommand(String input)
@@ -46,10 +47,7 @@ public class Connection
    {
           return status.dial(key);
    }
-    public void ShowText(String text)
-    {
-        observers.showText(text);
-    }
+
    public boolean isConnected() {
 	   return status instanceof Connect;
    }
@@ -106,11 +104,18 @@ public class Connection
     }
     public void showError(String errorName)
     {
-        observers.showError(errorName);
+        observers.showErrorP(errorName);
     }
-
-    public void show(String text) {
-        observers.show(text);
+    public void ShowText(String text)
+    {
+        observers.showTextP(text);
+    }
+    public void setText(String text) {
+        observers.setText(text);
+    }
+    public void show()
+    {
+        observers.show();
     }
 }
 

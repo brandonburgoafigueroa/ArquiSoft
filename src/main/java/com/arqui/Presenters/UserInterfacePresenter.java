@@ -23,22 +23,27 @@ public class UserInterfacePresenter implements IPresenter {
     }
 
     @Override
-    public void showText(String key) {
+    public void setText(String key) {
 
     }
 
     @Override
-    public void showError(String key) {
+    public void setError(String key) {
 
     }
 
     @Override
-    public void show(String text) {
+    public void setTextPlain(String text) {
 
     }
 
     @Override
-    public void showOptions() {
+    public void setupOptions() {
+
+    }
+
+    @Override
+    public void show() {
 
     }
 }

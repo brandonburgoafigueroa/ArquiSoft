@@ -44,6 +44,8 @@ public class Console implements IView
       for (String option:Options) {
          System.out.println(option);
       }
+      Informations.clear();
+      Options.clear();
    }
 
    //end presenteres
