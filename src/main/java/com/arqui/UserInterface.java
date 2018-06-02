@@ -7,7 +7,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
 
-public class UserInterface extends JFrame implements View {
+public class UserInterface extends JFrame implements IView {
 
 
     public UserInterface(Connection connection)
@@ -52,7 +52,24 @@ public class UserInterface extends JFrame implements View {
     public void show(String text) {
         Information.setText(text);
     }
+//sector presenters
+    @Override
+    public void setInformation(String information) {
+        Information.setText(information);
+        Output.setText("");
+    }
 
+    @Override
+    public void setOption(String option) {
+
+    }
+
+    @Override
+    public void showView() {
+//debe mostrar los nuevos valores
+    }
+
+    //end presenters
     private void Run(String input)
     {
         boolean connectionContinue;
