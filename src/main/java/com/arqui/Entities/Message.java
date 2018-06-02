@@ -1,4 +1,4 @@
-package com.arqui;
+package com.arqui.Entities;
 
 public class Message
 {

@@ -1,7 +1,10 @@
-package com.arqui;
+package com.arqui.Core;
 
-import com.arqui.Core.MailSystem;
 import com.arqui.DisplayState.IDisplay;
+import com.arqui.IPersistence;
+import com.arqui.IPresenters;
+import com.arqui.IState;
+import com.arqui.Entities.Mailbox;
 import com.arqui.state.*;
 
 public class Connection

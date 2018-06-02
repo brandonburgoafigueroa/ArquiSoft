@@ -1,9 +1,11 @@
-package com.arqui;
+package com.arqui.state;
 
-import com.arqui.DisplayState.DisplayConnect;
-import com.arqui.DisplayState.DisplayLogin;
+import com.arqui.Core.Connection;
+import com.arqui.Entities.Mailbox;
+import com.arqui.Entities.Message;
+import com.arqui.IState;
 
-public class Recording implements IState{
+public class Recording implements IState {
     String message;
     private Connection connection;
     private Mailbox currentMailbox;

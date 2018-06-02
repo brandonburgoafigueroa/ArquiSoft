@@ -1,7 +1,10 @@
-package com.arqui;
+package com.arqui.state;
 
+import com.arqui.Core.Connection;
 import com.arqui.Core.MailSystem;
 import com.arqui.DisplayState.DisplayConnect;
+import com.arqui.IState;
+import com.arqui.Entities.Mailbox;
 
 public class Connect implements IState {
     private Mailbox currentMailbox;
@@ -9,7 +12,7 @@ public class Connect implements IState {
     private String accumulatedKeys="";
     private Connection connection;
     DisplayConnect display;
-    Connect(Connection connection) {
+    public Connect(Connection connection) {
         this.connection=connection;
         this.system=connection.getMailboxSystem();
         this.connection.setDisplay(new DisplayConnect());

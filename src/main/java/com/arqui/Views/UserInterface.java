@@ -1,7 +1,8 @@
-package com.arqui;
+package com.arqui.Views;
 
 import com.arqui.Core.Connection;
 import com.arqui.DisplayState.IDisplay;
+import com.arqui.IView;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;

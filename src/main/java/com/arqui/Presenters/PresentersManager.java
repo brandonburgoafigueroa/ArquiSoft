@@ -1,6 +1,7 @@
-package com.arqui;
+package com.arqui.Presenters;
 
 import com.arqui.DisplayState.IDisplay;
+import com.arqui.IPresenters;
 import com.arqui.Presenters.IPresenter;
 
 import java.util.ArrayList;

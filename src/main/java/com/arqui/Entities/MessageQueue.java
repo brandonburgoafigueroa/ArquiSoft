@@ -1,4 +1,6 @@
-package com.arqui;
+package com.arqui.Entities;
+
+import com.arqui.Entities.Message;
 
 import java.util.ArrayList;
 

@@ -1,10 +1,10 @@
 package com.arqui;
 
 import com.arqui.Core.MailSystem;
+import com.arqui.Entities.Mailbox;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
-import com.arqui.IPersistence;
 
 import java.util.ArrayList;
 

@@ -1,14 +1,17 @@
-package com.arqui;
+package com.arqui.state;
 
+import com.arqui.Core.Connection;
 import com.arqui.DisplayState.DisplayChangeGreeting;
 import com.arqui.DisplayState.DisplayMailboxMenu;
+import com.arqui.IState;
+import com.arqui.Entities.Mailbox;
 
 public class ChangeGreating implements IState {
     private Mailbox currentMailbox;
     private String currentRecording="";
     private Connection connection;
 
-    ChangeGreating(Connection connection)
+    public ChangeGreating(Connection connection)
     {
         this.connection=connection;
         this.currentMailbox=connection.getCurrentMailbox();

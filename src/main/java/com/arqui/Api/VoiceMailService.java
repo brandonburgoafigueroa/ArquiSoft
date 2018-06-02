@@ -1,4 +1,4 @@
-package com.arqui;
+package com.arqui.Api;
 
 import com.arqui.Core.Connection;
 

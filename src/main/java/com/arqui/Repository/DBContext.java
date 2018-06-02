@@ -1,7 +1,9 @@
-package com.arqui;
+package com.arqui.Repository;
 
-import com.arqui.Repository.DBConfiguration;
-import com.arqui.Repository.TypeOfMessage;
+import com.arqui.IPersistence;
+import com.arqui.Entities.Mailbox;
+import com.arqui.Entities.Message;
+import com.arqui.Entities.MessageQueue;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;

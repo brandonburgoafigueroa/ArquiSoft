@@ -1,8 +1,11 @@
-package com.arqui;
+package com.arqui.state;
 
+import com.arqui.Core.Connection;
 import com.arqui.DisplayState.DisplayLogin;
+import com.arqui.Entities.Mailbox;
+import com.arqui.IState;
 
-public class Login implements IState{
+public class Login implements IState {
     private Mailbox currentMailbox;
     private String accumulatedKeys="";
     Connection connection;

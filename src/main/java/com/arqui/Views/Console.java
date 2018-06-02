@@ -1,10 +1,9 @@
 package com.arqui.Views;
 
-import com.arqui.Connection;
+import com.arqui.Core.Connection;
 import com.arqui.DisplayState.IDisplay;
 import com.arqui.IView;
 
-import javax.xml.soap.Text;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;

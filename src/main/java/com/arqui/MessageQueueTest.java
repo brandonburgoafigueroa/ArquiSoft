@@ -1,7 +1,7 @@
 package com.arqui;
 
-import com.arqui.Message;
-import com.arqui.MessageQueue;
+import com.arqui.Entities.Message;
+import com.arqui.Entities.MessageQueue;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;

@@ -2,7 +2,7 @@ package com.arqui.Core;
 
 
 import com.arqui.IPersistence;
-import com.arqui.Mailbox;
+import com.arqui.Entities.Mailbox;
 
 import java.util.ArrayList;
 
