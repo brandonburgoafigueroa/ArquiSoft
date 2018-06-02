@@ -1,5 +1,6 @@
 package com.arqui.Presenters;
 
+import com.arqui.DisplayState.IDisplay;
 import com.arqui.IView;
 
 import java.util.ArrayList;
@@ -17,6 +18,11 @@ public ConsolePresenter()
     }
 
     @Override
+    public void setDisplay(IDisplay display) {
+
+    }
+
+    @Override
     public void showText(String key) {
 
     }
@@ -28,6 +34,11 @@ public ConsolePresenter()
 
     @Override
     public void show(String text) {
+
+    }
+
+    @Override
+    public void showOptions() {
 
     }
 }

@@ -4,12 +4,10 @@ import com.arqui.Core.MailSystem;
 import com.arqui.DisplayState.IDisplay;
 import com.arqui.state.MessageMenu;
 
-import java.util.ArrayList;
-
 public class Connection
 {
 
-   public Connection(MailSystem s, IObservers observers)
+   public Connection(MailSystem s, IPresenters observers)
    {
        system = s;
        this.observers = observers;
@@ -98,7 +96,7 @@ public class Connection
         this.status=state;
     }
     private MailSystem system;
-    private IObservers observers;
+    private IPresenters observers;
     private IPersistence persistence;
     private Mailbox currentMailbox;
     private IState status;

@@ -19,7 +19,7 @@ public class Main
       IPersistence context=new DBContext();
       MailSystem system = new MailSystem(MAILBOX_COUNT,context);
       Scanner consoleInput = new Scanner(System.in);
-      IObservers observers=new Observers();
+      IPresenters observers=new PresentersManager();
 
       Connection c = new Connection(system, observers);
       VoiceMailService vc = new VoiceMailService(c);
