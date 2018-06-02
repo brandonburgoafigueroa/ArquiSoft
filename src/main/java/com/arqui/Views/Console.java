@@ -1,7 +1,8 @@
-package com.arqui.View;
+package com.arqui.Views;
 
 import com.arqui.Connection;
 import com.arqui.DisplayState.IDisplay;
+import com.arqui.View;
 
 import java.util.ArrayList;
 import java.util.Scanner;

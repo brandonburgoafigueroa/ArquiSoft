@@ -1,12 +1,8 @@
 package com.arqui.state;
 
-import com.arqui.Connection;
+import com.arqui.*;
 import com.arqui.DisplayState.DisplayMessageMenu;
 import com.arqui.DisplayState.IDisplay;
-import com.arqui.Mailbox;
-import com.arqui.Message;
-import com.arqui.state.IState;
-import com.arqui.state.MailboxMenu;
 
 public class MessageMenu implements IState {
     private Mailbox currentMailbox;
@@ -61,7 +57,7 @@ public class MessageMenu implements IState {
         String output="";
         Message m = currentMailbox.getCurrentMessage();
         if (m == null) {
-            output = display.getText("Empty");
+            connection.ShowText("Empty");
         }
         else
             output=m.getText();

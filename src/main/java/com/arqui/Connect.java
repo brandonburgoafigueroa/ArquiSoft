@@ -1,5 +1,6 @@
 package com.arqui;
 
+import com.arqui.Core.MailSystem;
 import com.arqui.DisplayState.DisplayConnect;
 
 public class Connect implements IState {

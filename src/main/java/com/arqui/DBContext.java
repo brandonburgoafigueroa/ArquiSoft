@@ -1,5 +1,8 @@
 package com.arqui;
 
+import com.arqui.Repository.DBConfiguration;
+import com.arqui.Repository.TypeOfMessage;
+
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;

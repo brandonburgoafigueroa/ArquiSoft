@@ -1,7 +1,6 @@
 package com.arqui;
 
-import com.arqui.MailSystem;
-import com.arqui.Mailbox;
+import com.arqui.Core.MailSystem;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;

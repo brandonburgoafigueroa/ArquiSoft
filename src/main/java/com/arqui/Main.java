@@ -1,5 +1,8 @@
 package com.arqui;
 
+import com.arqui.Core.MailSystem;
+import com.arqui.Views.Console;
+
 import java.util.Scanner;
 
 

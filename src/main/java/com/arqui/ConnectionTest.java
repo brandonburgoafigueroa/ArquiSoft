@@ -1,5 +1,7 @@
 package com.arqui;
 
+import com.arqui.Core.MailSystem;
+import com.arqui.Views.Console;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -32,7 +34,7 @@ public class ConnectionTest {
 	public void shouldChooseValidMailBoxWhenSelectTheMailBoxAndSelectNumeral() {
 		dialMailBox(idMailBox);
 		assertTrue(connection.isRecording());
-		verify(mockedTelephone).showText(HI_MESSAGE);
+		verify(mockedTelephone).show(HI_MESSAGE);
 	}
 	@Test
 	public void shouldGetIntoMailBoxMenuWhenSelectTheMailBox() {
@@ -90,7 +92,7 @@ public class ConnectionTest {
 		String mailBoxMenuOption = "1";
 		dialMailBox(idMailBox);
 		selectOptionOfMailBoxMenu(mailBoxMenuOption);
-		verify(mockedTelephone).showText(ENTER_MAILBOX_MESSAGE);
+		verify(mockedTelephone).showText("InitialPrompt");
 
 	}
 
@@ -103,7 +105,7 @@ public class ConnectionTest {
 		dialMailBox(idMailBox);
 		dialMailBoxMenu();
 		selectOptionOfListenMessagesMenu(deleteCurrentMessage);
-		verify(mockedTelephone).showText(ENTER_MAILBOX_MESSAGE);
+		verify(mockedTelephone).showText("InitialPrompt");
 	}
 	@Test
 	public void whenIEnterTheMessageMenuAndSelectTheOptionExitShouldReturnTheStartMessage() {
@@ -112,7 +114,7 @@ public class ConnectionTest {
 		dialMailBox(idMailBox);
 		dialMailBoxMenu();
 		selectOptionOfListenMessagesMenu(returnMainMenu);
-		verify(mockedTelephone).showText(ENTER_MAILBOX_MESSAGE);
+		verify(mockedTelephone).showText("InitialPrompt");
 	}
 
 	private void selectOptionOfListenMessagesMenu(String option) {
@@ -130,7 +132,7 @@ public class ConnectionTest {
 		dialMailBoxMenu();
 		changeGreeting(optionForChangeGreeting, newGreeting);
 		dialMailBox(idMailBox);
-		verify(mockedTelephone, times(2)).showText(newGreeting);
+		verify(mockedTelephone, times(2)).show(newGreeting);
 	}
 	@Test
 	public void IfIEnterTheMailboxMenuOf1AndPressHShouldTheStateGoToConnect()
@@ -154,7 +156,7 @@ public class ConnectionTest {
 	{
 		dialMailBox(idMailBox);
 		dialIncorrectPasscode();
-		verify(mockedTelephone).showText(INCORRECT_PASSCODE_MESSAGE);
+		verify(mockedTelephone).showError("Invalid_Passcode");
 	}
 
 	private void dialIncorrectPasscode() {
@@ -188,7 +190,7 @@ public class ConnectionTest {
 		dialFirstOption();
 		String message = setMessageEmpty();
 		String options=setOptionsText();
-		verify(mockedTelephone, times(2)).showText(message);
+		verify(mockedTelephone, times(2)).showText("Empty");
 	}
 
 	private String setOptionsText() {
@@ -273,7 +275,7 @@ public class ConnectionTest {
 		when(mockedMailsystem.findMailbox(idMailBox)).thenReturn(null);
 		dialMailBox(idMailBox);
         String INCORRECT_MAILBOX_NUMBER_MESSAGE = "Incorrect mailbox number. Try again!";
-        verify(mockedTelephone).showText(INCORRECT_MAILBOX_NUMBER_MESSAGE);
+        verify(mockedTelephone).showError("Invalid");
 	}
 	private void dialKeyOne() {
 		connection.executeCommand("1");

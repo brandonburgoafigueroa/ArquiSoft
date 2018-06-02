@@ -1,14 +1,16 @@
 package com.arqui;
 
 import com.arqui.DisplayState.DisplayMailboxMenu;
+import com.arqui.DisplayState.DisplayMessageMenu;
 import com.arqui.DisplayState.IDisplay;
+import com.arqui.state.MessageMenu;
 
 public class MailboxMenu implements IState {
 
 
     private Connection connection;
     private IDisplay display;
-    MailboxMenu(Connection connection){
+    public MailboxMenu(Connection connection){
         this.connection=connection;
         this.connection.setDisplay(new DisplayMailboxMenu());
         showMailboxMenuOptions();
