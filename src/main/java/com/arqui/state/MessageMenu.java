@@ -61,7 +61,6 @@ public class MessageMenu implements IState {
         Message m = currentMailbox.getCurrentMessage();
         if (m == null) {
             connection.setInformation("Empty");
-            connection.show();
         }
         else {
             output = m.getText();

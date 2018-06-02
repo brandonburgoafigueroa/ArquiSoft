@@ -32,6 +32,8 @@ public class Console implements IView
 
    @Override
    public void setOption(String option) {
+      String Option="Enter "+Options.size()+1+" to "+option;
+
       Options.add(option);
    }
 

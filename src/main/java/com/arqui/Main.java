@@ -31,13 +31,16 @@ public class Main
       VoiceMailService vc = new VoiceMailService(c);
       Console console = new Console(consoleInput, c);
 //presenters
-      ConsolePresenter cp=new ConsolePresenter();
-      cp.addView(console);
-      observers.addPresenter(cp);
-//presenters
+
       UserInterface FirstUI = new UserInterface(c);
 
       UserInterface SecondUI = new UserInterface(c);
+
+      ConsolePresenter cp=new ConsolePresenter();
+      cp.addView(console);
+      cp.addView(FirstUI);
+      cp.addView(SecondUI);
+      observers.addPresenter(cp);
       c.resetConnection();
       vc.startAPIService();
 

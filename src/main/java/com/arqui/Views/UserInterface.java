@@ -7,12 +7,14 @@ import com.arqui.IView;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
+import java.util.List;
 
 public class UserInterface extends JFrame implements IView {
-
-
+private List<String> Informations;
     public UserInterface(Connection connection)
     {
+        Informations=new ArrayList<>();
         pack();
         setConnection(connection);
         setAttributesToComponentsOfUI();
@@ -28,18 +30,22 @@ public class UserInterface extends JFrame implements IView {
 //sector presenters
     @Override
     public void setInformation(String information) {
-        Information.setText(information);
-        Output.setText("");
+        Informations.add(information);
     }
 
     @Override
     public void setOption(String option) {
-
+        //Options.add(option);
     }
 
     @Override
     public void showView() {
-//debe mostrar los nuevos valores
+        Information.setText("");
+        for (String information:Informations) {
+            String text=Information.getText()+'\n'+information;
+            Information.setText(text);
+        }
+        Informations.clear();
     }
 
     //end presenters
