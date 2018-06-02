@@ -1,5 +1,8 @@
 package com.arqui;
 
+import com.arqui.DisplayState.DisplayChangeGreeting;
+import com.arqui.DisplayState.DisplayMailboxMenu;
+
 public class ChangeGreating implements IState {
     private Mailbox currentMailbox;
     private String currentRecording="";
@@ -9,12 +12,13 @@ public class ChangeGreating implements IState {
     {
         this.connection=connection;
         this.currentMailbox=connection.getCurrentMailbox();
+        this.connection.setDisplay(new DisplayChangeGreeting());
         showNewGreetingMessage();
 
     }
 
     private void showNewGreetingMessage() {
-        connection.setInformation(ENTER_NEW_GREETING_MESSAGE);
+        connection.setInformation("ChangeGreeting");
         connection.show();
     }
 
@@ -41,10 +45,13 @@ public class ChangeGreating implements IState {
     private void setNewGreeting() {
         currentMailbox.setGreeting(currentRecording);
         connection.saveChanges();
+
     }
 
     private void changeToMailboxMenuState() {
         connection.setStatus(new MailboxMenu(connection));
+        connection.setDisplay(new DisplayMailboxMenu());
+        connection.show();
     }
 
     public boolean hangup() {
@@ -55,6 +62,5 @@ public class ChangeGreating implements IState {
     private boolean itIsANumeralCharacter(String key) {
         return key.equals("#");
     }
-    private String ENTER_NEW_GREETING_MESSAGE = "Record your greeting, then press the # key";
 
 }

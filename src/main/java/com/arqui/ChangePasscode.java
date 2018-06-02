@@ -1,5 +1,8 @@
 package com.arqui;
 
+import com.arqui.DisplayState.DisplayChangeGreeting;
+import com.arqui.DisplayState.DisplayChangePasscode;
+
 public class ChangePasscode implements IState {
 
     private Mailbox currentMailbox;
@@ -9,6 +12,7 @@ public class ChangePasscode implements IState {
     {
         this.connection=connection;
         this.currentMailbox=connection.getCurrentMailbox();
+        this.connection.setDisplay(new DisplayChangePasscode());
         showEnterNewPasscodeMessage();
 
     }
@@ -38,7 +42,8 @@ public class ChangePasscode implements IState {
     }
 
     private void showEnterNewPasscodeMessage() {
-        connection.setInformation(ENTER_NEW_PASSCODE_MESSAGE);
+        connection.setInformation("ChangePasscode");
+        connection.show();
     }
     public boolean hangup() {
         connection.resetConnection();
@@ -49,6 +54,5 @@ public class ChangePasscode implements IState {
         return key.equals("#");
     }
 
-    private String ENTER_NEW_PASSCODE_MESSAGE = "Enter new passcode followed by the # key";
 
 }
