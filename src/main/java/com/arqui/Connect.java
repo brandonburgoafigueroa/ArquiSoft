@@ -59,10 +59,12 @@ public class Connect implements IState {
 
     private void showIncorrectMailboxMessage() {
         connection.setError("Invalid");
+        connection.show();
     }
 
     private void showGreetingMessage() {
         connection.setTextPlain(currentMailbox.getGreeting());
+        connection.show();
     }
 
     private void setCurrentMailboxToConnection() {
