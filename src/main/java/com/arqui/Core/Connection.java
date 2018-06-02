@@ -2,7 +2,7 @@ package com.arqui;
 
 import com.arqui.Core.MailSystem;
 import com.arqui.DisplayState.IDisplay;
-import com.arqui.state.MessageMenu;
+import com.arqui.state.*;
 
 public class Connection
 {

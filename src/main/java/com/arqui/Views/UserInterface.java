@@ -1,11 +1,11 @@
 package com.arqui;
 
+import com.arqui.Core.Connection;
 import com.arqui.DisplayState.IDisplay;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.util.ArrayList;
 
 public class UserInterface extends JFrame implements IView {
 

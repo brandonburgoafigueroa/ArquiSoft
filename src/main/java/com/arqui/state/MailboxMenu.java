@@ -1,9 +1,9 @@
 package com.arqui;
 
-import com.arqui.DisplayState.DisplayChangeGreeting;
-import com.arqui.DisplayState.DisplayChangePasscode;
 import com.arqui.DisplayState.DisplayMailboxMenu;
 import com.arqui.DisplayState.IDisplay;
+import com.arqui.state.ChangeGreating;
+import com.arqui.state.ChangePasscode;
 import com.arqui.state.MessageMenu;
 
 public class MailboxMenu implements IState {
