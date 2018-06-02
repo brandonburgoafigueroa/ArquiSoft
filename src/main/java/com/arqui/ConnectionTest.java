@@ -15,7 +15,7 @@ public class ConnectionTest {
 	    mockedMailsystem = mock(MailSystem.class);
 	    mockedTelephone = mock(Console.class);
 	    PresentersManager presentersManager =new PresentersManager();
-	    presentersManager.addObservable(mockedTelephone);
+	    //presentersManager.addObservable(mockedTelephone);
 	    connection = new Connection(mockedMailsystem, presentersManager);
 	    //connection.addObservable(mockedTelephone);
 		connection.resetConnection();
@@ -92,7 +92,7 @@ public class ConnectionTest {
 		String mailBoxMenuOption = "1";
 		dialMailBox(idMailBox);
 		selectOptionOfMailBoxMenu(mailBoxMenuOption);
-		verify(mockedTelephone).showText("InitialPrompt");
+		verify(mockedTelephone).setInformation("InitialPrompt");
 
 	}
 
@@ -105,7 +105,7 @@ public class ConnectionTest {
 		dialMailBox(idMailBox);
 		dialMailBoxMenu();
 		selectOptionOfListenMessagesMenu(deleteCurrentMessage);
-		verify(mockedTelephone).showText("InitialPrompt");
+		verify(mockedTelephone).setInformation("InitialPrompt");
 	}
 	@Test
 	public void whenIEnterTheMessageMenuAndSelectTheOptionExitShouldReturnTheStartMessage() {
@@ -114,7 +114,7 @@ public class ConnectionTest {
 		dialMailBox(idMailBox);
 		dialMailBoxMenu();
 		selectOptionOfListenMessagesMenu(returnMainMenu);
-		verify(mockedTelephone).showText("InitialPrompt");
+		verify(mockedTelephone).setInformation("InitialPrompt");
 	}
 
 	private void selectOptionOfListenMessagesMenu(String option) {
@@ -156,7 +156,7 @@ public class ConnectionTest {
 	{
 		dialMailBox(idMailBox);
 		dialIncorrectPasscode();
-		verify(mockedTelephone).showError("Invalid_Passcode");
+		verify(mockedTelephone).setInformation("Invalid_Passcode");
 	}
 
 	private void dialIncorrectPasscode() {
@@ -190,7 +190,7 @@ public class ConnectionTest {
 		dialFirstOption();
 		String message = setMessageEmpty();
 		String options=setOptionsText();
-		verify(mockedTelephone, times(2)).showText("Empty");
+		verify(mockedTelephone, times(2)).setInformation("Empty");
 	}
 
 	private String setOptionsText() {
@@ -275,7 +275,7 @@ public class ConnectionTest {
 		when(mockedMailsystem.findMailbox(idMailBox)).thenReturn(null);
 		dialMailBox(idMailBox);
         String INCORRECT_MAILBOX_NUMBER_MESSAGE = "Incorrect mailbox number. Try again!";
-        verify(mockedTelephone).showError("Invalid");
+        verify(mockedTelephone).setInformation("Invalid");
 	}
 	private void dialKeyOne() {
 		connection.executeCommand("1");

@@ -19,39 +19,11 @@ public class UserInterface extends JFrame implements IView {
         setVisible(true);
     }
 
-    public void showText(String text) {
-        String Text=display.getText(text);
-        Information.setText(Text);
-        Output.setText("");
-    }
-
-    @Override
-    public void showError(String errorName) {
-        String Text=display.getError(errorName);
-        Information.setText(Text);
-        Output.setText("");
-    }
-
-    @Override
-    public void showOptions() {
-        ArrayList<String> options=display.getOptions();
-        String text="";
-        for (String option:options)
-        {
-         text+=option+'\n';
-        }
-        Output.setText(text);
-    }
-
     @Override
     public void setDisplay(IDisplay display) {
         this.display=display;
     }
 
-    @Override
-    public void show(String text) {
-        Information.setText(text);
-    }
 //sector presenters
     @Override
     public void setInformation(String information) {

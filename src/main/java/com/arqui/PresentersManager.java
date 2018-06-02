@@ -8,26 +8,13 @@ import java.util.List;
 
 public class PresentersManager implements IPresenters {
 
-    private List<IView> observables;
     private List<IPresenter> presenters;
 
     public PresentersManager() {
-        observables=new ArrayList<IView>();
         presenters=new ArrayList<>();
     }
 
-    public void addObservable(IView observable)
-    {
-        observables.add(observable);
 
-    }
-
-    public void showText(String message)
-    {
-        for (IView observer:observables) {
-            observer.showText(message);
-        }
-    }
 //presenters
     @Override
     public void addPresenter(IPresenter presenter) {

@@ -49,28 +49,6 @@ public class Console implements IView
    }
 
    //end presenteres
-   public void showText(String text)
-   {
-      String Text=display.getText(text);
-      System.out.println(Text);
-   }
-
-   @Override
-   public void showError(String errorName) {
-      String Text=display.getError(errorName);
-      System.out.println(Text);
-   }
-
-   @Override
-   public void showOptions() {
-      int i=1;
-      ArrayList<String> options=display.getOptions();
-      for (String option:options)
-      {
-         System.out.println("Enter "+i+" to "+option);
-         i++;
-      }
-   }
 
    @Override
    public void setDisplay(IDisplay display) {
