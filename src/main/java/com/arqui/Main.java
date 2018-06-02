@@ -33,9 +33,6 @@ public class Main
       UserInterface FirstUI = new UserInterface(c);
 
       UserInterface SecondUI = new UserInterface(c);
-      observers.addObservable(FirstUI);
-      observers.addObservable(SecondUI);
-      observers.addObservable(console);
       c.resetConnection();
       vc.startAPIService();
 

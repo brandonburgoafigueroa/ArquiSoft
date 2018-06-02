@@ -22,7 +22,7 @@ public class Connection
    public void setDisplay(IDisplay display)
    {
         this.display=display;
-        observers.sendDisplay(this.display);
+        observers.setDisplay(this.display);
         observers.setDisplay(this.display);
    }
 
@@ -99,23 +99,23 @@ public class Connection
     private Mailbox currentMailbox;
     private IState status;
     private IDisplay display;
-    public void showOptions() {
-        observers.showOptions();
+    public void setOptions() {
+        observers.setOptions();
     }
-    public void showError(String errorName)
+    public void setError(String errorName)
     {
-        observers.showErrorP(errorName);
+        observers.setError(errorName);
     }
-    public void ShowText(String text)
+    public void setInformation(String text)
     {
-        observers.showTextP(text);
+        observers.setInformation(text);
     }
-    public void setText(String text) {
-        observers.setText(text);
+    public void setTextPlain(String text) {
+        observers.setTextPlain(text);
     }
     public void show()
     {
-        observers.show();
+        observers.showView();
     }
 }
 

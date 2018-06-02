@@ -50,14 +50,14 @@ public class MessageMenu implements IState {
 
     private void showMessageText() {
 
-        connection.setText(getTextOfLastMessage());
+        connection.setTextPlain(getTextOfLastMessage());
     }
 
     private String getTextOfLastMessage() {
         String output="";
         Message m = currentMailbox.getCurrentMessage();
         if (m == null) {
-            connection.ShowText("Empty");
+            connection.setInformation("Empty");
         }
         else
             output=m.getText();
@@ -68,7 +68,7 @@ public class MessageMenu implements IState {
         return true;
     }
     private void showMessageMenuOptions() {
-        connection.showOptions();
+        connection.setOptions();
     }
 
 }

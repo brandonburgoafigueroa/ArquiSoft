@@ -1,7 +1,6 @@
 package com.arqui;
 
 import com.arqui.DisplayState.DisplayMailboxMenu;
-import com.arqui.DisplayState.DisplayMessageMenu;
 import com.arqui.DisplayState.IDisplay;
 import com.arqui.state.MessageMenu;
 
@@ -49,6 +48,6 @@ public class MailboxMenu implements IState {
     }
     private void showMailboxMenuOptions() {
 
-        connection.showOptions();
+        connection.setOptions();
     }
 }

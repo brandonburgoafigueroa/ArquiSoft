@@ -28,34 +28,6 @@ public class PresentersManager implements IPresenters {
             observer.showText(message);
         }
     }
-
-    @Override
-    public void showOptions() {
-        for (IView observer:observables) {
-            observer.showOptions();
-        }
-    }
-
-    @Override
-    public void sendDisplay(IDisplay display) {
-        for (IView observer:observables) {
-            observer.setDisplay(display);
-        }
-    }
-
-    @Override
-    public void showError(String errorName) {
-        for (IView observer:observables) {
-            observer.showError(errorName);
-        }
-    }
-
-    @Override
-    public void setText(String text) {
-        for (IView observer:observables) {
-            observer.show(text);
-        }
-    }
 //presenters
     @Override
     public void addPresenter(IPresenter presenter) {
@@ -70,35 +42,35 @@ public class PresentersManager implements IPresenters {
     }
 
     @Override
-    public void showTextP(String textName) {
+    public void setInformation(String textName) {
         for (IPresenter presenter:presenters) {
             presenter.setText(textName);
         }
     }
 
     @Override
-    public void showOptionsP() {
+    public void setOptions() {
         for (IPresenter presenter:presenters) {
             presenter.setupOptions();
         }
     }
 
     @Override
-    public void showErrorP(String errorName) {
+    public void setError(String errorName) {
         for (IPresenter presenter:presenters) {
             presenter.setError(errorName);
         }
     }
 
     @Override
-    public void showP(String text) {
+    public void setTextPlain(String text) {
         for (IPresenter presenter:presenters) {
             presenter.setTextPlain(text);
         }
     }
 
     @Override
-    public void show() {
+    public void showView() {
         for (IPresenter presenter:presenters) {
             presenter.show();
         }

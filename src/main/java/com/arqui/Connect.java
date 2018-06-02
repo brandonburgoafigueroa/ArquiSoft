@@ -16,7 +16,7 @@ public class Connect implements IState {
         showInitialPromptMessage();
     }
     private void showInitialPromptMessage() {
-        connection.ShowText("InitialPrompt");
+        connection.setInformation("InitialPrompt");
         connection.show();
     }
 
@@ -58,11 +58,11 @@ public class Connect implements IState {
     }
 
     private void showIncorrectMailboxMessage() {
-        connection.showError("Invalid");
+        connection.setError("Invalid");
     }
 
     private void showGreetingMessage() {
-        connection.setText(currentMailbox.getGreeting());
+        connection.setTextPlain(currentMailbox.getGreeting());
     }
 
     private void setCurrentMailboxToConnection() {

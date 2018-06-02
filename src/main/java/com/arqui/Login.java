@@ -1,7 +1,6 @@
 package com.arqui;
 
 import com.arqui.DisplayState.DisplayLogin;
-import com.arqui.DisplayState.IDisplay;
 
 public class Login implements IState{
     private Mailbox currentMailbox;
@@ -46,7 +45,7 @@ public class Login implements IState{
     }
 
     private void showIncorrectPasscodeMessage() {
-        connection.showError("Invalid_Passcode");
+        connection.setError("Invalid_Passcode");
     }
 
 
