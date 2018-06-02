@@ -15,6 +15,7 @@ public class ChangeGreating implements IState {
 
     private void showNewGreetingMessage() {
         connection.setInformation(ENTER_NEW_GREETING_MESSAGE);
+        connection.show();
     }
 
     public boolean dial(String command) {

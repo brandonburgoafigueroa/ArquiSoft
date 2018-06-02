@@ -58,9 +58,11 @@ public class MessageMenu implements IState {
         Message m = currentMailbox.getCurrentMessage();
         if (m == null) {
             connection.setInformation("Empty");
+            connection.show();
         }
-        else
-            output=m.getText();
+        else {
+            output = m.getText();
+        }
         return output;
     }
     public boolean hangup() {
@@ -69,6 +71,7 @@ public class MessageMenu implements IState {
     }
     private void showMessageMenuOptions() {
         connection.setOptions();
+        connection.show();
     }
 
 }

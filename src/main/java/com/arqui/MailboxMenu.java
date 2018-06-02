@@ -49,5 +49,6 @@ public class MailboxMenu implements IState {
     private void showMailboxMenuOptions() {
 
         connection.setOptions();
+        connection.show();
     }
 }

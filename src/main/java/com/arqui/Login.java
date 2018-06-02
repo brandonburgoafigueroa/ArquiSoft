@@ -46,6 +46,7 @@ public class Login implements IState{
 
     private void showIncorrectPasscodeMessage() {
         connection.setError("Invalid_Passcode");
+        connection.show();
     }
 
 
