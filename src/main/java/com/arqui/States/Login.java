@@ -1,7 +1,6 @@
 package com.arqui.States;
 
 import com.arqui.Interfaces.IConnection;
-import com.arqui.ModelViews.DisplayLogin;
 import com.arqui.Models.Mailbox;
 import com.arqui.Interfaces.IState;
 import com.arqui.ResponseRequest.LoginResponseError;
@@ -13,7 +12,6 @@ public class Login implements IState {
     Login(IConnection connection){
         this.connection=connection;
         this.currentMailbox=connection.getCurrentMailbox();
-        this.connection.setDisplay(new DisplayLogin());
     }
     public boolean dial(String command) {
         if (itIsANumeralCharacter(command))

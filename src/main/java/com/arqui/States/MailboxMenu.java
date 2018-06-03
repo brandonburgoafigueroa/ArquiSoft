@@ -1,9 +1,9 @@
 package com.arqui.States;
 
 import com.arqui.Interfaces.IConnection;
-import com.arqui.ModelViews.DisplayMailboxMenu;
 import com.arqui.Interfaces.IDisplay;
 import com.arqui.Interfaces.IState;
+import com.arqui.ModelViews.MailboxMenuModelView;
 
 public class MailboxMenu implements IState {
 
@@ -12,7 +12,6 @@ public class MailboxMenu implements IState {
     private IDisplay display;
     public MailboxMenu(IConnection connection){
         this.connection=connection;
-        this.connection.setDisplay(new DisplayMailboxMenu());
         showMailboxMenuOptions();
     }
     public boolean dial(String command) {
@@ -48,8 +47,6 @@ public class MailboxMenu implements IState {
         return true;
     }
     private void showMailboxMenuOptions() {
-
-        connection.setOptions();
-        connection.show();
+        connection.setModelView(new MailboxMenuModelView());
     }
 }
