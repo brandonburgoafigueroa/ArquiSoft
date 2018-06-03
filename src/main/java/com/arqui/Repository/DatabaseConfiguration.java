@@ -3,11 +3,11 @@ package com.arqui.Repository;
 import java.sql.*;
 import java.sql.Connection;
 
-public class OnDataBaseConfiguration {
+public class DatabaseConfiguration {
     String url = "prueba.db";
     Connection dbConnection;
     Statement statement = null;
-    public OnDataBaseConfiguration() {
+    public DatabaseConfiguration() {
 
     }
     

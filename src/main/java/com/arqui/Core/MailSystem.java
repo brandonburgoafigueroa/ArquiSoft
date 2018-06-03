@@ -4,7 +4,7 @@ package com.arqui.Core;
 import com.arqui.Interfaces.IPersistence;
 import com.arqui.Models.Mailbox;
 import com.arqui.Interfaces.IMailSystem;
-import com.arqui.Repository.OnDataBase;
+import com.arqui.Repository.Database;
 import com.arqui.Repository.OnMemory;
 
 import java.util.ArrayList;
@@ -72,13 +72,13 @@ public class MailSystem implements IMailSystem
 
    @Override
    public void changePersistence() {
-         if (dbContext instanceof OnDataBase)
+         if (dbContext instanceof Database)
          {
             dbContext=new OnMemory();
          }
          if (dbContext instanceof OnMemory)
          {
-            dbContext=new OnDataBase();
+            dbContext=new Database();
          }
    }
 

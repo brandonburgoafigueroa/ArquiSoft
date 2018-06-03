@@ -16,7 +16,7 @@ public class DisplayPersistenceType implements IDisplay {
         Errors=new HashMap<>();
         Text=new HashMap<>();
         Text.put("OnMemory", "En Memoria");
-        Text.put("OnDataBase", "En Base de datos");
+        Text.put("Database", "En Base de datos");
     }
 
     @Override

@@ -9,7 +9,7 @@ import com.arqui.Interfaces.IPersistence;
 import com.arqui.Interfaces.IPresenters;
 import com.arqui.Presenters.Presenter;
 import com.arqui.Presenters.PresentersManager;
-import com.arqui.Repository.OnDataBase;
+import com.arqui.Repository.Database;
 import com.arqui.Repository.OnMemory;
 import com.arqui.Views.Console;
 import com.arqui.Views.UserInterface;
@@ -27,7 +27,7 @@ public class Main
    public static void main(String[] args)
    {
 
-      IPersistence context=new OnDataBase();
+      IPersistence context=new Database();
       IPersistence memory=new OnMemory();
       IMailSystem system = new MailSystem(MAILBOX_COUNT,context);
       Scanner consoleInput = new Scanner(System.in);
