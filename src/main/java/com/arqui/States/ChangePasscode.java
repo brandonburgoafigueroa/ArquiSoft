@@ -1,9 +1,9 @@
-package com.arqui.state;
+package com.arqui;
 
 import com.arqui.Interfaces.IConnection;
 import com.arqui.DisplayState.DisplayChangePasscode;
 import com.arqui.Interfaces.IState;
-import com.arqui.Entities.Mailbox;
+import com.arqui.Models.Mailbox;
 
 public class ChangePasscode implements IState {
 

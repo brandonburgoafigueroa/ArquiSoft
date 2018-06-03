@@ -1,4 +1,4 @@
-package com.arqui.state;
+package com.arqui;
 
 import com.arqui.Interfaces.IConnection;
 import com.arqui.DisplayState.DisplayMailboxMenu;

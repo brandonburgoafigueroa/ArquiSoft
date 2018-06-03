@@ -1,9 +1,9 @@
-package com.arqui.state;
+package com.arqui;
 
 import com.arqui.Interfaces.IConnection;
 import com.arqui.DisplayState.DisplayChangeGreeting;
 import com.arqui.Interfaces.IState;
-import com.arqui.Entities.Mailbox;
+import com.arqui.Models.Mailbox;
 
 public class ChangeGreating implements IState {
     private Mailbox currentMailbox;

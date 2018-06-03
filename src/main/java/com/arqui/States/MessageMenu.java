@@ -1,10 +1,10 @@
-package com.arqui.state;
+package com.arqui;
 
 import com.arqui.Interfaces.IConnection;
 import com.arqui.DisplayState.DisplayMessageMenu;
 import com.arqui.Interfaces.IDisplay;
-import com.arqui.Entities.Mailbox;
-import com.arqui.Entities.Message;
+import com.arqui.Models.Mailbox;
+import com.arqui.Models.Message;
 import com.arqui.Interfaces.IState;
 
 public class MessageMenu implements IState {
