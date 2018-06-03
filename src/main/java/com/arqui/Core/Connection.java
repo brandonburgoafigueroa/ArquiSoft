@@ -10,7 +10,7 @@ import com.arqui.state.*;
 public class Connection implements IConnection
 {
 
-   public Connection(MailSystem s, IPresenters observers)
+   public Connection(IMailSystem s, IPresenters observers)
    {
        system = s;
        this.observers = observers;
@@ -86,7 +86,7 @@ public class Connection implements IConnection
     public Mailbox getCurrentMailbox() {
         return currentMailbox;
     }
-    public MailSystem getMailboxSystem() {
+    public IMailSystem getMailboxSystem() {
         return system;
     }
     public void setMailbox(Mailbox mailbox) {
@@ -96,7 +96,7 @@ public class Connection implements IConnection
     {
         this.status=state;
     }
-    private MailSystem system;
+    private IMailSystem system;
     private IPresenters observers;
     private IPersistence persistence;
     private Mailbox currentMailbox;

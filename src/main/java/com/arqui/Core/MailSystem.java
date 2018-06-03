@@ -6,7 +6,7 @@ import com.arqui.Entities.Mailbox;
 
 import java.util.ArrayList;
 
-public class MailSystem
+public class MailSystem implements IMailSystem
 {
    private ArrayList<Mailbox> mailboxes;
    private int idCurrentMailbox;

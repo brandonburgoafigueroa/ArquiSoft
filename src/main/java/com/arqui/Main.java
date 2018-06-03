@@ -3,6 +3,7 @@ package com.arqui;
 import com.arqui.Api.VoiceMailService;
 import com.arqui.Core.Connection;
 import com.arqui.Core.IConnection;
+import com.arqui.Core.IMailSystem;
 import com.arqui.Core.MailSystem;
 import com.arqui.Presenters.ConsolePresenter;
 import com.arqui.Presenters.PresentersManager;
@@ -24,7 +25,7 @@ public class Main
    {
 
       IPersistence context=new DBContext();
-      MailSystem system = new MailSystem(MAILBOX_COUNT,context);
+      IMailSystem system = new MailSystem(MAILBOX_COUNT,context);
       Scanner consoleInput = new Scanner(System.in);
       IPresenters observers=new PresentersManager();
 

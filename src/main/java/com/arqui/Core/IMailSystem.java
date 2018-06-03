@@ -1,4 +1,8 @@
 package com.arqui.Core;
 
-public interface IMailSysten {
+import com.arqui.Entities.Mailbox;
+
+public interface IMailSystem {
+    void saveChanges(Mailbox mailbox);
+    Mailbox findMailbox(String ext);
 }

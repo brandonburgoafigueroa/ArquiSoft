@@ -1,6 +1,7 @@
 package com.arqui.state;
 
 import com.arqui.Core.Connection;
+import com.arqui.Core.IMailSystem;
 import com.arqui.Core.MailSystem;
 import com.arqui.DisplayState.DisplayConnect;
 import com.arqui.IState;
@@ -8,7 +9,7 @@ import com.arqui.Entities.Mailbox;
 
 public class Connect implements IState {
     private Mailbox currentMailbox;
-    private MailSystem system;
+    private IMailSystem system;
     private String accumulatedKeys="";
     private Connection connection;
     DisplayConnect display;
