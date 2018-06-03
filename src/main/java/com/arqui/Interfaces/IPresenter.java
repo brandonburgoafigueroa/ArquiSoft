@@ -9,5 +9,6 @@ public interface IPresenter {
    void setTextPlain(String text);
    void setupOptions();
    void show();
+   void setTextPersistenceType(String persistenceType);
 
 }

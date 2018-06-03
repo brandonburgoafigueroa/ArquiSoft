@@ -7,7 +7,7 @@ import com.arqui.Interfaces.IMailSystem;
 import com.arqui.Core.MailSystem;
 import com.arqui.Interfaces.IPersistence;
 import com.arqui.Interfaces.IPresenters;
-import com.arqui.Presenters.ConsolePresenter;
+import com.arqui.Presenters.Presenter;
 import com.arqui.Presenters.PresentersManager;
 import com.arqui.Repository.OnDataBase;
 import com.arqui.Repository.OnMemory;
@@ -29,8 +29,7 @@ public class Main
 
       IPersistence context=new OnDataBase();
       IPersistence memory=new OnMemory();
-      //IMailSystem system = new MailSystem(MAILBOX_COUNT,context);
-      IMailSystem system = new MailSystem(MAILBOX_COUNT,memory);
+      IMailSystem system = new MailSystem(MAILBOX_COUNT,context);
       Scanner consoleInput = new Scanner(System.in);
       IPresenters observers=new PresentersManager();
 
@@ -43,7 +42,7 @@ public class Main
 
       UserInterface SecondUI = new UserInterface(c);
 
-      ConsolePresenter cp=new ConsolePresenter();
+      Presenter cp=new Presenter();
       cp.addView(console);
       cp.addView(FirstUI);
       cp.addView(SecondUI);

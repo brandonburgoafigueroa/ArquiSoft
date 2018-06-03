@@ -192,6 +192,12 @@ public class OnDataBase implements IPersistence {
             return null;
         }
     }
+
+    @Override
+    public String getTypeOfPersistence() {
+        return "OnDataBase";
+    }
+
     private int getLastNewMessage(int idMailBox){
         String total = "0";
         try {

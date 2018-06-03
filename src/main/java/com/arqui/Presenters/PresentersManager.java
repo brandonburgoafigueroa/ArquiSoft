@@ -61,4 +61,11 @@ public class PresentersManager implements IPresenters {
             presenter.show();
         }
     }
+
+    @Override
+    public void setPersistenceType(String persistenceType) {
+        for (IPresenter presenter:presenters) {
+            presenter.setTextPersistenceType(persistenceType);
+        }
+    }
 }

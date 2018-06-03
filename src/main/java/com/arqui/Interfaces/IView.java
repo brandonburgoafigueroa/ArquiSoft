@@ -6,5 +6,5 @@ public interface IView {
     void setOption(String option);
     void showView();
     void setDisplay(IDisplay display);
-
+    void setPersistenceText(String persistenceType);
 }

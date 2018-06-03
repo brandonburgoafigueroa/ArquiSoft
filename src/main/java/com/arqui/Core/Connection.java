@@ -1,5 +1,6 @@
 package com.arqui.Core;
 
+import com.arqui.DisplayState.DisplayPersistenceType;
 import com.arqui.Interfaces.IDisplay;
 import com.arqui.Interfaces.IPersistence;
 import com.arqui.Interfaces.IPresenters;
@@ -7,6 +8,8 @@ import com.arqui.Interfaces.IState;
 import com.arqui.Models.Mailbox;
 import com.arqui.Interfaces.IConnection;
 import com.arqui.Interfaces.IMailSystem;
+import com.arqui.Repository.OnDataBase;
+import com.arqui.Repository.OnMemory;
 import com.arqui.States.*;
 
 public class Connection implements IConnection
@@ -16,12 +19,13 @@ public class Connection implements IConnection
    {
        system = s;
        this.observers = observers;
-       this.persistence = persistence;
+
    }
 
    public void resetConnection()
    {
        currentMailbox=null;
+       setPersistenceType();
        status=new Connect(this);
    }
    public void setDisplay(IDisplay display)
@@ -37,6 +41,8 @@ public class Connection implements IConnection
             return hangup();
         else if (isQuitCommand(input))
             return false;
+        else if (input.equals("00000"))
+            return changePeristence();
         else
             return dial(input);
     }
@@ -100,7 +106,6 @@ public class Connection implements IConnection
     }
     private IMailSystem system;
     private IPresenters observers;
-    private IPersistence persistence;
     private Mailbox currentMailbox;
     private IState status;
     private IDisplay display;
@@ -118,11 +123,22 @@ public class Connection implements IConnection
     public void setTextPlain(String text) {
         observers.setTextPlain(text);
     }
-    public void show()
-    {
+    public void show() {
         observers.showView();
     }
-
+    public void setPersistenceType()
+    {
+        String type=system.getTypeOfPersistence();
+        IDisplay backup=this.display;
+        setDisplay(new DisplayPersistenceType());
+        observers.setPersistenceType(type);
+        this.display=backup;
+    }
+   public boolean changePeristence()
+   {
+       system.changePersistence();
+       return true;
+   }
 }
 
 

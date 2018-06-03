@@ -2,7 +2,7 @@ import com.arqui.Core.Connection;
 import com.arqui.Core.MailSystem;
 import com.arqui.Models.Mailbox;
 import com.arqui.Models.MessageQueue;
-import com.arqui.Presenters.ConsolePresenter;
+import com.arqui.Presenters.Presenter;
 import com.arqui.Interfaces.IPresenter;
 import com.arqui.Presenters.PresentersManager;
 import com.arqui.Views.Console;
@@ -19,7 +19,7 @@ public class ConnectionTest {
 	    mockedMailsystem = mock(MailSystem.class);
 	    mockedTelephone = mock(Console.class);
 	    PresentersManager presentersManager =new PresentersManager();
-		IPresenter consolePresenter=new ConsolePresenter();
+		IPresenter consolePresenter=new Presenter();
 		consolePresenter.addView(mockedTelephone);
 		presentersManager.addPresenter(consolePresenter);
 	    connection = new Connection(mockedMailsystem, presentersManager);

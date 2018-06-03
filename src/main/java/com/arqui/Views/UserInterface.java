@@ -29,6 +29,12 @@ private ActionListener listenerOption;
         OptionsButtons=new ArrayList<>();
         Options.setLayout(new GridLayout(10,9));
 
+        Cambiar.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                Run("00000");
+            }
+        });
     }
 
     private ActionListener returnActionOfOption() {
@@ -91,7 +97,11 @@ private ActionListener listenerOption;
         this.display=display;
     }
 
-//sector presenters
+    @Override
+    public void setPersistenceText(String persistenceType) {
+        TypeOfPersistence.setText(persistenceType);
+    }
+
     @Override
     public void setInformation(String information) {
         Informations.add(information);
@@ -218,5 +228,7 @@ private ActionListener listenerOption;
     private JLabel Info;
     private JPanel Options;
     private JButton ShowHidde;
+    private JLabel TypeOfPersistence;
+    private JButton Cambiar;
     private IDisplay display;
 }

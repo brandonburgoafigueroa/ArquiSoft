@@ -7,10 +7,10 @@ import com.arqui.Interfaces.IView;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ConsolePresenter implements IPresenter {
+public class Presenter implements IPresenter {
 private List<IView> Views;
 private IDisplay display;
-public ConsolePresenter()
+public Presenter()
 {
     Views=new ArrayList<>();
 }
@@ -58,6 +58,14 @@ public ConsolePresenter()
     public void show() {
         for (IView view:Views) {
             view.showView();
+        }
+    }
+
+    @Override
+    public void setTextPersistenceType(String persistenceType) {
+        String typeOfPersistence=display.getText(persistenceType);
+        for (IView views:Views) {
+            views.setPersistenceText(typeOfPersistence);
         }
     }
 

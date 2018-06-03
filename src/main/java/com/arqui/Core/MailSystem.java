@@ -4,6 +4,8 @@ package com.arqui.Core;
 import com.arqui.Interfaces.IPersistence;
 import com.arqui.Models.Mailbox;
 import com.arqui.Interfaces.IMailSystem;
+import com.arqui.Repository.OnDataBase;
+import com.arqui.Repository.OnMemory;
 
 import java.util.ArrayList;
 
@@ -62,6 +64,24 @@ public class MailSystem implements IMailSystem
       }
       else return null;
    }
+
+   @Override
+   public String getTypeOfPersistence() {
+      return dbContext.getTypeOfPersistence();
+   }
+
+   @Override
+   public void changePersistence() {
+         if (dbContext instanceof OnDataBase)
+         {
+            dbContext=new OnMemory();
+         }
+         if (dbContext instanceof OnMemory)
+         {
+            dbContext=new OnDataBase();
+         }
+   }
+
    public void saveChanges(Mailbox mailbox){
       dbContext.saveChanges(mailbox, idCurrentMailbox);
    }

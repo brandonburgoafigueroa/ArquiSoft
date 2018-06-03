@@ -25,4 +25,9 @@ public class OnMemory implements IPersistence {
     public ArrayList<Mailbox> getAlMailbox() {
         return mailboxes;
     }
+
+    @Override
+    public String getTypeOfPersistence() {
+        return "OnMemory";
+    }
 }

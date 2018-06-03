@@ -56,6 +56,11 @@ public class Console implements IView
       this.display=display;
    }
 
+   @Override
+   public void setPersistenceText(String persistenceType) {
+      System.out.println(persistenceType);
+   }
+
    public String speakT(String output)
    {
 	   return output;
