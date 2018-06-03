@@ -22,8 +22,4 @@ public class ChangePasscodeModelView implements IModelView {
         return Information;
     }
 
-    public ChangePasscodeModelView(String Information) {
-        this.Information=Information;
-        Options=new ArrayList<>();
-    }
 }

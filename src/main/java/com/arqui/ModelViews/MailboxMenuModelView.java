@@ -26,8 +26,4 @@ public class MailboxMenuModelView implements IModelView {
     }
 
 
-    public MailboxMenuModelView(String Information) {
-        this.Information=Information;
-        Options=new ArrayList<>();
-    }
 }

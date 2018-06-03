@@ -7,11 +7,6 @@ import java.util.ArrayList;
 public class RecordingModelView implements IModelView {
     private ArrayList<String> Options;
     private String Information;
-    public RecordingModelView()
-    {
-        Options=new ArrayList<>();
-        Information ="";
-    }
     @Override
     public ArrayList<String> getOptions() {
         return Options;

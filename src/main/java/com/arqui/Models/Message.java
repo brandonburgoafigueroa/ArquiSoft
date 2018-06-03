@@ -16,10 +16,6 @@ public class Message
       return text;
    }
 
-   public String getFrom() {
-      return from;
-   }
-
    private String from;
    private String text;
 }

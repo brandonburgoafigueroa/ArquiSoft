@@ -37,7 +37,12 @@ public class MailSystemTest {
 		mails.add(new Mailbox("",""));
 		return mails;
 	}
-
+	@Test
+	public void ifIInitMailSystemAndGetQuantityShouldBeShow20()
+	{
+		MailSystem mailSystem = new MailSystem(20, PersistenceMocked);
+		Assert.assertEquals(mailSystem.getMailBoxCount(), 20);
+	}
 	@Test
 	public void setInitialMailSystemIfArrayIfDBProviderIsNotEmpty(){
 		MailSystem mailSystem = new MailSystem(20, PersistenceMocked);
@@ -54,6 +59,5 @@ public class MailSystemTest {
 		verify(PersistenceMocked).saveChanges(mailbox, 1);
 		Mailbox mailbox1=mailSystem.findMailbox("1");
 		Assert.assertEquals(mailbox, mailbox1);
-
 	}
 }

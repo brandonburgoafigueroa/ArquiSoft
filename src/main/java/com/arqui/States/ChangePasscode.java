@@ -3,6 +3,7 @@ package com.arqui.States;
 import com.arqui.Interfaces.IConnection;
 import com.arqui.ModelViews.ChangeGreetingModelView;
 import com.arqui.Interfaces.IState;
+import com.arqui.ModelViews.ChangePasscodeModelView;
 import com.arqui.Models.Mailbox;
 
 public class ChangePasscode implements IState {
@@ -43,7 +44,7 @@ public class ChangePasscode implements IState {
     }
 
     private void showEnterNewPasscodeMessage() {
-        connection.setModelView(new ChangeGreetingModelView());
+        connection.setModelView(new ChangePasscodeModelView());
     }
     public boolean hangup() {
         connection.resetConnection();

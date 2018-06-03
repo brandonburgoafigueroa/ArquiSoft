@@ -24,9 +24,5 @@ public class ConnectModelView implements IModelView {
     }
 
 
-    public ConnectModelView(String Information) {
-        this.Information=Information;
-        Options=new ArrayList<>();
-    }
 
 }

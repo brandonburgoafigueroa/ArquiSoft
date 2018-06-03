@@ -23,9 +23,5 @@ public class ChangeGreetingModelView implements IModelView {
         return Information;
     }
 
-
-    public ChangeGreetingModelView(String Information) {
-        this.Information=Information;
-        Options=new ArrayList<>();
-    }
+    
 }

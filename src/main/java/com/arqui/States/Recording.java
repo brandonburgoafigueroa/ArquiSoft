@@ -21,7 +21,6 @@ public class Recording implements IState {
         if (isAMessage(command))
         {
             addMessage(command);
-            return true;
         }
         if (isNumericalCommand(command))
         {

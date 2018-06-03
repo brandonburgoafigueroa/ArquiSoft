@@ -1,10 +1,15 @@
+import com.arqui.Controller.Controller;
 import com.arqui.Core.Connection;
 import com.arqui.Core.MailSystem;
+import com.arqui.Interfaces.IController;
+import com.arqui.Interfaces.IRequest;
 import com.arqui.Models.Mailbox;
 import com.arqui.Models.MessageQueue;
 import com.arqui.Presenters.Presenter;
 import com.arqui.Interfaces.IPresenter;
 import com.arqui.Presenters.PresentersManagerManager;
+import com.arqui.Repository.Database;
+import com.arqui.Requests.ExecuteCommandRequest;
 import com.arqui.Views.Console;
 import org.junit.Assert;
 import org.junit.Before;
@@ -23,10 +28,13 @@ public class ConnectionTest {
 		consolePresenter.addView(mockedTelephone);
 		presentersManager.addPresenter(consolePresenter);
 	    connection = new Connection(mockedMailsystem, presentersManager);
-	    //connection.addObservable(mockedTelephone);
+		controller=new Controller(connection);
 		connection.resetConnection();
         Mailbox chosenMailbox = new Mailbox(idMailBox, HI_MESSAGE);
         when(mockedMailsystem.findMailbox(idMailBox)).thenReturn(chosenMailbox);
+        when(mockedMailsystem.getPersistence()).thenReturn(new Database());
+        when(mockedMailsystem.getMailBoxCount()).thenReturn(20);
+
 	}
 
 	@Test
@@ -239,6 +247,17 @@ public class ConnectionTest {
 		Assert.assertEquals(true, connection.isConnected());
 	}
 	@Test
+	public void IfIEnterTheChangePersistenceShouldBeShowPersistenceChanged()
+	{
+		controller.executeRequest("00000");
+		verify(mockedTelephone).setPersistenceText("");
+	}
+	@Test
+	public void IfIEnterTheQuitOptionShouldBeExitProgram()
+	{
+		connection.executeCommand("Q");
+	}
+	@Test
 	public void IfIDialToMailbox1SendAMessageAndPressHShouldTheStateGoToConnect()
 	{
 		dialMailBox(idMailBox);
@@ -344,6 +363,7 @@ public class ConnectionTest {
     private String keyMailBox = "1";
     private String HI_MESSAGE="Hola, como estas?";
 	private String EMPTY_MAILBOX_MESSAGE = "No messages.";
+	private IController controller;
 	private static final String MESSAGE_MENU_TEXT =
 			"Enter 1 to listen to the current message\n"
 					+ "Enter 2 to save the current message\n"

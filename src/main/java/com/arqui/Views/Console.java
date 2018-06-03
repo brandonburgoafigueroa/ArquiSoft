@@ -1,6 +1,5 @@
 package com.arqui.Views;
 
-import com.arqui.Interfaces.IConnection;
 import com.arqui.Interfaces.IController;
 import com.arqui.Interfaces.IView;
 
@@ -21,10 +20,6 @@ public class Console implements IView
       Options=new ArrayList<>();
    }
 
-   public void show(String text)
-   {
-      System.out.println(text);
-   }
    @Override
    public void setInformation(String information) {
       Informations.add(information);
@@ -33,8 +28,7 @@ public class Console implements IView
    @Override
    public void setOption(String option) {
       String Option="Enter "+Options.size()+1+" to "+option;
-
-      Options.add(option);
+      Options.add(Option);
    }
 
    @Override
