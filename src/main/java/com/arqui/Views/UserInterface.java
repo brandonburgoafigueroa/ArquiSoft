@@ -5,6 +5,8 @@ import com.arqui.DisplayState.IDisplay;
 import com.arqui.IView;
 
 import javax.swing.*;
+import javax.swing.text.html.Option;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
@@ -12,14 +14,18 @@ import java.util.List;
 
 public class UserInterface extends JFrame implements IView {
 private List<String> Informations;
+private List<JButton> OptionsButtons;
     public UserInterface(Connection connection)
     {
-        Informations=new ArrayList<>();
+
         pack();
         setConnection(connection);
         setAttributesToComponentsOfUI();
         setActionsToButtons();
         setVisible(true);
+        Informations=new ArrayList<>();
+        OptionsButtons=new ArrayList<>();
+        Options.setLayout(new GridLayout(10,9));
     }
 
     @Override
@@ -35,17 +41,26 @@ private List<String> Informations;
 
     @Override
     public void setOption(String option) {
-        //Options.add(option);
+        Options.hide();
+        int size=OptionsButtons.size()+1;
+        OptionsButtons.add(new JButton(size+" - "+option));
     }
 
     @Override
     public void showView() {
         Information.setText("");
+        Options.removeAll();
         for (String information:Informations) {
             String text=Information.getText()+'\n'+information;
             Information.setText(text);
         }
+
+        for (JButton option:OptionsButtons) { ;
+            Options.add(option);
+        }
         Informations.clear();
+        OptionsButtons.clear();
+        Options.show();
     }
 
     //end presenters
@@ -71,7 +86,6 @@ private List<String> Informations;
     private void setAttributesToComponentsOfUI() {
 
         setContentPane(panel);
-        Output.setEditable(false);
         setSize(400,700);
 
         pressed.setEditable(false);
@@ -117,7 +131,6 @@ private List<String> Informations;
     private JPanel panel;
     private JTextArea Input;
     private Connection connection;
-    private JTextArea Output;
     private JButton button1;
     private JButton button8;
     private JButton buttonH;
@@ -133,5 +146,6 @@ private List<String> Informations;
     private JTextArea pressed;
     private JLabel Information;
     private JLabel Info;
+    private JPanel Options;
     private IDisplay display;
 }
