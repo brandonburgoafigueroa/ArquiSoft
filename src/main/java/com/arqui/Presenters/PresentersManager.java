@@ -1,9 +1,6 @@
 package com.arqui.Presenters;
 
-import com.arqui.Interfaces.IDisplay;
-import com.arqui.Interfaces.IModelView;
-import com.arqui.Interfaces.IPresenter;
-import com.arqui.Interfaces.IPresenters;
+import com.arqui.Interfaces.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -74,6 +71,14 @@ public class PresentersManager implements IPresenters {
     public void setModelView(IModelView modelView) {
         for (IPresenter presenter:presenters) {
             presenter.setModelView(modelView);
+            presenter.show();
+        }
+    }
+
+    @Override
+    public void setError(IResponseError error) {
+        for (IPresenter presenter:presenters) {
+            presenter.setError(error);
             presenter.show();
         }
     }

@@ -1,7 +1,7 @@
 package com.arqui.States;
 
 import com.arqui.Interfaces.IConnection;
-import com.arqui.DisplayState.DisplayChangePasscode;
+import com.arqui.ModelViews.DisplayChangePasscode;
 import com.arqui.Interfaces.IState;
 import com.arqui.Models.Mailbox;
 

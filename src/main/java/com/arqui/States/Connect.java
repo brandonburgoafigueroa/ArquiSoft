@@ -1,11 +1,12 @@
 package com.arqui.States;
 
-import com.arqui.DisplayState.ConnectModelView;
+import com.arqui.ModelViews.ConnectModelView;
 import com.arqui.Interfaces.IConnection;
 import com.arqui.Interfaces.IMailSystem;
-import com.arqui.DisplayState.DisplayConnect;
+import com.arqui.ModelViews.DisplayConnect;
 import com.arqui.Interfaces.IState;
 import com.arqui.Models.Mailbox;
+import com.arqui.ResponseRequest.ConnectResponseError;
 
 public class Connect implements IState {
     private Mailbox currentMailbox;
@@ -21,7 +22,6 @@ public class Connect implements IState {
     }
     private void showInitialPromptMessage() {
         this.connection.setModelView(new ConnectModelView());
-        //connection.show();
     }
 
     public boolean dial(String command) {
@@ -62,8 +62,8 @@ public class Connect implements IState {
     }
 
     private void showIncorrectMailboxMessage() {
-        connection.setError("Invalid");
-        connection.show();
+        connection.setError(new ConnectResponseError());
+        //connection.show();
     }
 
     private void showGreetingMessage() {

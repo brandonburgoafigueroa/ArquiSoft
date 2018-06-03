@@ -5,18 +5,48 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="afe49a70-aba2-4027-ab85-62f83f3f2d2b" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/arqui/DisplayState/ConnectModelView.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/arqui/Interfaces/IModelView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/arqui/Interfaces/IResponseError.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/arqui/ResponseRequest/ConnectResponseError.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/arqui/Core/Connection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/arqui/Core/Connection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/arqui/DisplayState/ConnectModelView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/arqui/ModelViews/ConnectModelView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/arqui/DisplayState/DisplayChangeGreeting.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/arqui/ModelViews/DisplayChangeGreeting.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/arqui/DisplayState/DisplayChangePasscode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/arqui/ModelViews/DisplayChangePasscode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/arqui/DisplayState/DisplayConnect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/arqui/ModelViews/DisplayConnect.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/arqui/DisplayState/DisplayLogin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/arqui/ModelViews/DisplayLogin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/arqui/DisplayState/DisplayMailboxMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/arqui/ModelViews/DisplayMailboxMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/arqui/DisplayState/DisplayMessageMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/arqui/ModelViews/DisplayMessageMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/arqui/DisplayState/DisplayPersistenceType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/arqui/ModelViews/DisplayPersistenceType.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/arqui/Interfaces/IConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/arqui/Interfaces/IConnection.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/arqui/Interfaces/IPresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/arqui/Interfaces/IPresenter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/arqui/Interfaces/IPresenters.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/arqui/Interfaces/IPresenters.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/arqui/Interfaces/IView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/arqui/Interfaces/IView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/arqui/Presenters/Presenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/arqui/Presenters/Presenter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/arqui/Presenters/PresentersManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/arqui/Presenters/PresentersManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/arqui/States/ChangeGreating.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/arqui/States/ChangeGreating.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/arqui/States/ChangePasscode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/arqui/States/ChangePasscode.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/arqui/States/Connect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/arqui/States/Connect.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/arqui/Views/Console.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/arqui/Views/Console.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/arqui/Views/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/arqui/Views/UserInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/arqui/States/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/arqui/States/Login.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/arqui/States/MailboxMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/arqui/States/MailboxMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/arqui/States/MessageMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/arqui/States/MessageMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/arqui/Core/Connection.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/arqui/Core/Connection.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/arqui/DisplayState/ConnectModelView.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/arqui/DisplayState/DisplayChangeGreeting.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/arqui/DisplayState/DisplayChangePasscode.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/arqui/DisplayState/DisplayConnect.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/arqui/DisplayState/DisplayLogin.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/arqui/DisplayState/DisplayMailboxMenu.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/arqui/DisplayState/DisplayMessageMenu.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/arqui/DisplayState/DisplayPersistenceType.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/arqui/Interfaces/IPresenter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/arqui/Interfaces/IPresenter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/arqui/Interfaces/IPresenters.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/arqui/Interfaces/IPresenters.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/arqui/Presenters/Presenter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/arqui/Presenters/Presenter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/arqui/Presenters/PresentersManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/arqui/Presenters/PresentersManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/arqui/States/ChangeGreating.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/arqui/States/ChangeGreating.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/arqui/States/ChangePasscode.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/arqui/States/ChangePasscode.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/arqui/States/Connect.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/arqui/States/Connect.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/arqui/States/Login.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/arqui/States/Login.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/arqui/States/MailboxMenu.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/arqui/States/MailboxMenu.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/arqui/States/MessageMenu.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/arqui/States/MessageMenu.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -37,114 +67,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Presenter.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/arqui/Presenters/Presenter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="336">
-              <caret line="75" column="40" selection-start-line="75" selection-start-column="40" selection-end-line="75" selection-end-column="40" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ConnectModelView.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/arqui/DisplayState/ConnectModelView.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" selection-start-line="3" selection-end-line="3" />
-              <folding>
-                <element signature="e#406#407#0" expanded="true" />
-                <element signature="e#436#437#0" expanded="true" />
-                <element signature="e#481#482#0" expanded="true" />
-                <element signature="e#507#508#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Connection.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/arqui/Core/Connection.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="121" selection-start-line="121" selection-end-line="121" selection-end-column="51" />
-              <folding>
-                <element signature="e#3007#3008#0" expanded="true" />
-                <element signature="e#3047#3048#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="IConnection.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/arqui/Interfaces/IConnection.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="20" column="44" selection-start-line="20" selection-start-column="44" selection-end-line="20" selection-end-column="44" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Connect.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Connect.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/arqui/States/Connect.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="262">
-              <caret line="23" column="10" selection-start-line="23" selection-start-column="10" selection-end-line="23" selection-end-column="10" />
+            <state relative-caret-position="143">
+              <caret line="65" column="10" selection-start-line="65" selection-start-column="10" selection-end-line="65" selection-end-column="10" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DisplayConnect.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/arqui/DisplayState/DisplayConnect.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="18" column="68" lean-forward="true" selection-start-line="18" selection-start-column="34" selection-end-line="18" selection-end-column="68" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PresentersManager.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/arqui/Presenters/PresentersManager.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="438">
-              <caret line="76" column="29" selection-start-line="76" selection-start-column="29" selection-end-line="76" selection-end-column="29" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="IModelView.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/arqui/Interfaces/IModelView.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="21" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="21" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="IPresenter.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/arqui/Interfaces/IPresenter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" column="41" selection-start-line="14" selection-start-column="41" selection-end-line="14" selection-end-column="41" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="IPresenters.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/arqui/Interfaces/IPresenters.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" column="42" selection-start-line="14" selection-start-column="42" selection-end-line="14" selection-end-column="42" />
             </state>
           </provider>
         </entry>
@@ -154,8 +84,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -171,8 +101,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/arqui/IPresenters.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/arqui/Connection.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/arqui/Connect.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/arqui/PresentersManager.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/arqui/IView.java" />
@@ -209,19 +137,21 @@
         <option value="$PROJECT_DIR$/src/main/java/com/arqui/Repository/OnMemory.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/arqui/Main.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/arqui/Core/MailSystem.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/arqui/Interfaces/IPresenters.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/arqui/Interfaces/IPresenter.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/arqui/Presenters/Presenter.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/arqui/Interfaces/IView.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/arqui/Views/Console.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/arqui/Views/UserInterface.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/arqui/DisplayState/DisplayConnect.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/arqui/Interfaces/IView.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/arqui/Views/UserInterface.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/arqui/Views/Console.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/arqui/Interfaces/IModelView.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/arqui/DisplayState/ConnectModelView.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/arqui/Interfaces/IResponseError.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/arqui/ResponseRequest/ConnectResponseError.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/arqui/Core/Connection.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/arqui/Interfaces/IPresenters.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/arqui/Presenters/PresentersManager.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/arqui/Interfaces/IPresenter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/arqui/Presenters/Presenter.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/arqui/Interfaces/IConnection.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/arqui/States/Connect.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/arqui/Presenters/PresentersManager.java" />
       </list>
     </option>
   </component>
@@ -312,15 +242,6 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="arqui" type="462c0819:PsiDirectoryNode" />
-              <item name="DisplayState" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ArquiSoft" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ArquiSoft" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="arqui" type="462c0819:PsiDirectoryNode" />
               <item name="Interfaces" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -331,6 +252,15 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="arqui" type="462c0819:PsiDirectoryNode" />
               <item name="Presenters" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ArquiSoft" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ArquiSoft" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="arqui" type="462c0819:PsiDirectoryNode" />
+              <item name="ResponseRequest" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ArquiSoft" type="b2602c69:ProjectViewProjectNode" />
@@ -645,21 +575,22 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="4" />
       <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Messages" order="8" weight="0.32707354" />
       <window_info anchor="right" id="Palette&#9;" order="4" />
       <window_info id="Image Layers" order="3" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="right" id="Maven Projects" order="4" />
       <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32750398" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32707354" />
       <window_info anchor="bottom" id="Terminal" order="8" />
       <window_info id="Capture Tool" order="3" />
       <window_info id="Designer" order="3" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.28330892" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.28330892" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3317684" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="3" />
@@ -667,7 +598,6 @@
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.40375587" />
       <window_info id="simpleUML" order="2" />
-      <window_info anchor="bottom" id="Messages" order="8" weight="0.32750398" />
       <window_info anchor="right" id="UML design tool window" order="3" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="PlantUML" order="3" />
@@ -676,7 +606,6 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.33227345" />
     </layout>
     <layout-to-restore>
       <window_info anchor="right" id="Palette" order="3" />
@@ -730,20 +659,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$MAVEN_REPOSITORY$/com/sparkjava/spark-core/2.2/spark-core-2.2.jar!/spark/webserver/MatcherFilter.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="121" selection-start-line="121" selection-end-line="121" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/sparkjava/spark-core/2.2/spark-core-2.2.jar!/spark/exception/ExceptionMapper.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="16" selection-start-line="16" selection-end-line="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/MailBoxTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -752,7 +667,7 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/arqui/DisplayState/Option.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/arqui/DisplayState/DisplayMailboxMenu.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/arqui/ModelViews/DisplayMailboxMenu.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="7" column="4" selection-start-line="7" selection-start-column="4" selection-end-line="33" selection-end-column="5" />
@@ -888,7 +803,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/arqui/DisplayState/DisplayLogin.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/arqui/ModelViews/DisplayLogin.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
           <caret line="21" column="5" lean-forward="true" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
@@ -903,7 +818,7 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/arqui/Repository/Memory.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/arqui/DisplayState/DisplayChangeGreeting.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/arqui/ModelViews/DisplayChangeGreeting.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="69">
           <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
@@ -913,7 +828,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/arqui/DisplayState/DisplayChangePasscode.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/arqui/ModelViews/DisplayChangePasscode.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
           <caret line="14" column="8" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="29" />
@@ -923,7 +838,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/arqui/DisplayState/DisplayPersistenceType.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/arqui/ModelViews/DisplayPersistenceType.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
           <caret line="18" column="47" selection-start-line="18" selection-start-column="47" selection-end-line="18" selection-end-column="47" />
@@ -940,7 +855,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/arqui/DisplayState/DisplayMessageMenu.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/arqui/ModelViews/DisplayMessageMenu.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="19" column="23" selection-start-line="19" selection-start-column="18" selection-end-line="19" selection-end-column="23" />
@@ -980,35 +895,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/arqui/Interfaces/IView.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/arqui/ModelViews/ConnectModelView.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="42" selection-start-line="9" selection-start-column="42" selection-end-line="9" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/arqui/Views/UserInterface.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="251">
-          <caret line="107" selection-start-line="107" selection-end-line="107" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/arqui/Views/Console.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="353">
-          <caret line="66" lean-forward="true" selection-start-line="66" selection-end-line="66" />
-          <folding>
-            <element signature="e#1325#1326#0" expanded="true" />
-            <element signature="e#1373#1374#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/arqui/DisplayState/DisplayConnect.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="68" lean-forward="true" selection-start-line="18" selection-start-column="34" selection-end-line="18" selection-end-column="68" />
+        <state relative-caret-position="136">
+          <caret line="8" column="30" selection-start-line="8" selection-start-column="30" selection-end-line="8" selection-end-column="30" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1018,19 +908,50 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/com/arqui/Interfaces/IModelView.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
-          <caret line="6" column="21" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="21" />
+          <caret line="6" column="25" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/arqui/DisplayState/ConnectModelView.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/arqui/Interfaces/IView.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        <state relative-caret-position="136">
+          <caret line="8" column="52" selection-start-line="8" selection-start-column="52" selection-end-line="8" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/arqui/Views/UserInterface.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="104" selection-start-line="104" selection-end-line="104" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/arqui/Views/Console.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="98">
+          <caret line="63" selection-start-line="63" selection-end-line="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/arqui/ModelViews/DisplayConnect.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="67" lean-forward="true" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="67" />
           <folding>
-            <element signature="e#406#407#0" expanded="true" />
-            <element signature="e#436#437#0" expanded="true" />
-            <element signature="e#481#482#0" expanded="true" />
-            <element signature="e#507#508#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/arqui/ResponseRequest/ConnectResponseError.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="21" selection-start-line="12" selection-start-column="21" selection-end-line="12" selection-end-column="21" />
+          <folding>
+            <element signature="e#130#131#0" expanded="true" />
+            <element signature="e#153#154#0" expanded="true" />
+            <element signature="e#307#308#0" expanded="true" />
+            <element signature="e#335#336#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1038,10 +959,51 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/com/arqui/Core/Connection.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
-          <caret line="121" selection-start-line="121" selection-end-line="121" selection-end-column="51" />
+          <caret line="126" column="28" lean-forward="true" selection-start-line="126" selection-start-column="28" selection-end-line="126" selection-end-column="28" />
           <folding>
-            <element signature="e#3007#3008#0" expanded="true" />
-            <element signature="e#3047#3048#0" expanded="true" />
+            <element signature="e#2966#2967#0" expanded="true" />
+            <element signature="e#2995#2996#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/arqui/Interfaces/IPresenters.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="246">
+          <caret line="16" column="40" lean-forward="true" selection-start-line="16" selection-start-column="40" selection-end-line="16" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/arqui/Presenters/PresentersManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="263">
+          <caret line="80" column="34" lean-forward="true" selection-start-line="80" selection-start-column="34" selection-end-line="80" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/arqui/Interfaces/IPresenter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="246">
+          <caret line="16" column="4" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/arqui/Interfaces/IResponseError.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="22" selection-start-line="3" selection-start-column="22" selection-end-line="3" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/arqui/Presenters/Presenter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="127">
+          <caret line="82" column="43" selection-start-line="82" selection-start-column="43" selection-end-line="82" selection-end-column="43" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1049,48 +1011,14 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/com/arqui/Interfaces/IConnection.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
-          <caret line="20" column="44" selection-start-line="20" selection-start-column="44" selection-end-line="20" selection-end-column="44" />
+          <caret line="23" column="32" selection-start-line="23" selection-start-column="32" selection-end-line="23" selection-end-column="32" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/arqui/States/Connect.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="262">
-          <caret line="23" column="10" selection-start-line="23" selection-start-column="10" selection-end-line="23" selection-end-column="10" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/arqui/Interfaces/IPresenters.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="42" selection-start-line="14" selection-start-column="42" selection-end-line="14" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/arqui/Interfaces/IPresenter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="41" selection-start-line="14" selection-start-column="41" selection-end-line="14" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/arqui/Presenters/Presenter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="75" column="40" selection-start-line="75" selection-start-column="40" selection-end-line="75" selection-end-column="40" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/arqui/Presenters/PresentersManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="438">
-          <caret line="76" column="29" selection-start-line="76" selection-start-column="29" selection-end-line="76" selection-end-column="29" />
+        <state relative-caret-position="143">
+          <caret line="65" column="10" selection-start-line="65" selection-start-column="10" selection-end-line="65" selection-end-column="10" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

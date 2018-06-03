@@ -1,7 +1,7 @@
 package com.arqui.States;
 
 import com.arqui.Interfaces.IConnection;
-import com.arqui.DisplayState.DisplayMessageMenu;
+import com.arqui.ModelViews.DisplayMessageMenu;
 import com.arqui.Interfaces.IDisplay;
 import com.arqui.Models.Mailbox;
 import com.arqui.Models.Message;

@@ -1,7 +1,7 @@
 package com.arqui.States;
 
 import com.arqui.Interfaces.IConnection;
-import com.arqui.DisplayState.DisplayLogin;
+import com.arqui.ModelViews.DisplayLogin;
 import com.arqui.Models.Mailbox;
 import com.arqui.Interfaces.IState;
 

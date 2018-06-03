@@ -1,9 +1,6 @@
 package com.arqui.Presenters;
 
-import com.arqui.Interfaces.IDisplay;
-import com.arqui.Interfaces.IModelView;
-import com.arqui.Interfaces.IPresenter;
-import com.arqui.Interfaces.IView;
+import com.arqui.Interfaces.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -76,6 +73,14 @@ public Presenter()
         String information=modelView.getInformation();
         for (IView view:Views) {
             setupView(options, information, view);
+        }
+    }
+
+    @Override
+    public void setError(IResponseError error) {
+        String errorText=error.getError();
+        for (IView view:Views) {
+            view.setInformation(errorText);
         }
     }
 

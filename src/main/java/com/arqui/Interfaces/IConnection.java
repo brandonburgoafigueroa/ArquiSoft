@@ -1,6 +1,7 @@
 package com.arqui.Interfaces;
 
 import com.arqui.Models.Mailbox;
+import com.arqui.ResponseRequest.ConnectResponseError;
 
 public interface IConnection {
     boolean executeCommand(String command);
@@ -19,4 +20,6 @@ public interface IConnection {
     void saveChanges();
     IMailSystem getMailboxSystem();
     void setModelView(IModelView modelView);
+
+    void setError(IResponseError connectResponseError);
 }

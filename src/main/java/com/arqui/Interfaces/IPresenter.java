@@ -14,4 +14,5 @@ public interface IPresenter {
    //model view
    void setModelView(IModelView modelView);
 
+    void setError(IResponseError error);
 }

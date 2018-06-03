@@ -1,4 +1,15 @@
-package com.arqui.ModelViews;
+package com.arqui.ResponseRequest;
 
-public class ConnectResponseError {
+import com.arqui.Interfaces.IResponseError;
+
+public class ConnectResponseError implements IResponseError {
+    public String Error;
+    public ConnectResponseError(){
+        Error="Incorrect mailbox number. Try again!";
+    }
+
+    @Override
+    public String getError() {
+        return Error;
+    }
 }

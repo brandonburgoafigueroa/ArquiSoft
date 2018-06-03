@@ -1,4 +1,4 @@
-package com.arqui.DisplayState;
+package com.arqui.ModelViews;
 
 import com.arqui.Interfaces.IDisplay;
 
