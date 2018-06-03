@@ -1,8 +1,9 @@
 package com.arqui.Core;
 
 
-import com.arqui.IPersistence;
+import com.arqui.Interfaces.IPersistence;
 import com.arqui.Entities.Mailbox;
+import com.arqui.Interfaces.IMailSystem;
 
 import java.util.ArrayList;
 

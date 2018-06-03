@@ -5,7 +5,7 @@ import com.arqui.Core.MailSystem;
 import com.arqui.Entities.Mailbox;
 import com.arqui.Entities.MessageQueue;
 import com.arqui.Presenters.ConsolePresenter;
-import com.arqui.Presenters.IPresenter;
+import com.arqui.Interfaces.IPresenter;
 import com.arqui.Presenters.PresentersManager;
 import com.arqui.Views.Console;
 import org.junit.Assert;

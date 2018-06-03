@@ -1,4 +1,4 @@
-package com.arqui;
+package com.arqui.Interfaces;
 
 import com.arqui.Entities.Mailbox;
 

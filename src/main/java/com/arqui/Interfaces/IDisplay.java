@@ -1,4 +1,4 @@
-package com.arqui.DisplayState;
+package com.arqui.Interfaces;
 
 import java.util.ArrayList;
 

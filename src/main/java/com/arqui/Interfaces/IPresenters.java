@@ -1,11 +1,7 @@
-package com.arqui;
-
-import com.arqui.DisplayState.IDisplay;
-import com.arqui.Presenters.IPresenter;
+package com.arqui.Interfaces;
 
 public interface IPresenters {
 
-    //presentadores
     void addPresenter(IPresenter presenter);
     void setDisplay(IDisplay display);
     void setInformation(String textName);

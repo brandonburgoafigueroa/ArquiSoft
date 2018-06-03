@@ -1,6 +1,4 @@
-package com.arqui;
-
-import com.arqui.DisplayState.IDisplay;
+package com.arqui.Interfaces;
 
 public interface IView {
 //nuevos metodos para los presentadores

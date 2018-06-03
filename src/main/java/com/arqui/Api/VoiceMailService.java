@@ -1,8 +1,6 @@
 package com.arqui.Api;
 
-import com.arqui.Core.Connection;
-import com.arqui.Core.IConnection;
-import com.sun.org.apache.bcel.internal.generic.ICONST;
+import com.arqui.Interfaces.IConnection;
 
 import static spark.Spark.get;
 import static spark.SparkBase.port;

@@ -1,8 +1,6 @@
-package com.arqui.Core;
+package com.arqui.Interfaces;
 
-import com.arqui.DisplayState.IDisplay;
 import com.arqui.Entities.Mailbox;
-import com.arqui.IState;
 
 public interface IConnection {
     boolean executeCommand(String command);

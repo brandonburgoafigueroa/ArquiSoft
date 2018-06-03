@@ -1,10 +1,12 @@
 package com.arqui.DisplayState;
 
+import com.arqui.Interfaces.IDisplay;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
-public class DisplayChangeGreeting implements IDisplay{
+public class DisplayChangeGreeting implements IDisplay {
     private ArrayList<String> Options;
     private Map<String, String> Errors;
     private Map<String, String> Text;

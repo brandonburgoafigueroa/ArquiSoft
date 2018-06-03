@@ -2,6 +2,7 @@ package com.arqui;
 
 import com.arqui.Core.MailSystem;
 import com.arqui.Entities.Mailbox;
+import com.arqui.Interfaces.IPersistence;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;

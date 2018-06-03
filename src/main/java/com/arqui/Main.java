@@ -2,9 +2,11 @@ package com.arqui;
 
 import com.arqui.Api.VoiceMailService;
 import com.arqui.Core.Connection;
-import com.arqui.Core.IConnection;
-import com.arqui.Core.IMailSystem;
+import com.arqui.Interfaces.IConnection;
+import com.arqui.Interfaces.IMailSystem;
 import com.arqui.Core.MailSystem;
+import com.arqui.Interfaces.IPersistence;
+import com.arqui.Interfaces.IPresenters;
 import com.arqui.Presenters.ConsolePresenter;
 import com.arqui.Presenters.PresentersManager;
 import com.arqui.Repository.DBContext;

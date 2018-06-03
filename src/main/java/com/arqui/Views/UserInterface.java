@@ -1,12 +1,10 @@
 package com.arqui.Views;
 
-import com.arqui.Core.Connection;
-import com.arqui.Core.IConnection;
-import com.arqui.DisplayState.IDisplay;
-import com.arqui.IView;
+import com.arqui.Interfaces.IConnection;
+import com.arqui.Interfaces.IDisplay;
+import com.arqui.Interfaces.IView;
 
 import javax.swing.*;
-import javax.swing.text.html.Option;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;

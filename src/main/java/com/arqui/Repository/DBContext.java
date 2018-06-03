@@ -1,6 +1,6 @@
 package com.arqui.Repository;
 
-import com.arqui.IPersistence;
+import com.arqui.Interfaces.IPersistence;
 import com.arqui.Entities.Mailbox;
 import com.arqui.Entities.Message;
 import com.arqui.Entities.MessageQueue;

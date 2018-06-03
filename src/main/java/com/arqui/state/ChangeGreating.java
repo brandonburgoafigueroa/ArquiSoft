@@ -1,13 +1,9 @@
 package com.arqui.state;
 
-import com.arqui.Core.Connection;
-import com.arqui.Core.IConnection;
+import com.arqui.Interfaces.IConnection;
 import com.arqui.DisplayState.DisplayChangeGreeting;
-import com.arqui.DisplayState.DisplayMailboxMenu;
-import com.arqui.IPresenters;
-import com.arqui.IState;
+import com.arqui.Interfaces.IState;
 import com.arqui.Entities.Mailbox;
-import com.arqui.Presenters.IPresenter;
 
 public class ChangeGreating implements IState {
     private Mailbox currentMailbox;

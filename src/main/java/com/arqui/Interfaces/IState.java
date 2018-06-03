@@ -1,4 +1,4 @@
-package com.arqui;
+package com.arqui.Interfaces;
 
 public interface IState {
     boolean dial(String command);

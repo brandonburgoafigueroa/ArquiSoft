@@ -1,10 +1,9 @@
 package com.arqui.state;
 
-import com.arqui.Core.Connection;
-import com.arqui.Core.IConnection;
+import com.arqui.Interfaces.IConnection;
 import com.arqui.DisplayState.DisplayLogin;
 import com.arqui.Entities.Mailbox;
-import com.arqui.IState;
+import com.arqui.Interfaces.IState;
 
 public class Login implements IState {
     private Mailbox currentMailbox;
