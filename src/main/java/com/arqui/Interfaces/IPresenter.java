@@ -11,4 +11,7 @@ public interface IPresenter {
    void show();
    void setTextPersistenceType(String persistenceType);
 
+   //model view
+   void setModelView(IModelView modelView);
+
 }

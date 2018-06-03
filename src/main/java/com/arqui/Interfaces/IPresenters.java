@@ -10,4 +10,7 @@ public interface IPresenters {
     void setTextPlain(String text);
     void showView();
     void setPersistenceType(String persistenceType);
+
+    //model views
+    void setModelView(IModelView modelView);
 }

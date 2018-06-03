@@ -1,6 +1,7 @@
 package com.arqui.Presenters;
 
 import com.arqui.Interfaces.IDisplay;
+import com.arqui.Interfaces.IModelView;
 import com.arqui.Interfaces.IPresenter;
 import com.arqui.Interfaces.IPresenters;
 
@@ -66,6 +67,14 @@ public class PresentersManager implements IPresenters {
     public void setPersistenceType(String persistenceType) {
         for (IPresenter presenter:presenters) {
             presenter.setTextPersistenceType(persistenceType);
+        }
+    }
+
+    @Override
+    public void setModelView(IModelView modelView) {
+        for (IPresenter presenter:presenters) {
+            presenter.setModelView(modelView);
+            presenter.show();
         }
     }
 }

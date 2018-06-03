@@ -18,4 +18,5 @@ public interface IConnection {
 
     void saveChanges();
     IMailSystem getMailboxSystem();
+    void setModelView(IModelView modelView);
 }

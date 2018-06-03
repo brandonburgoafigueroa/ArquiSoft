@@ -1,6 +1,7 @@
 package com.arqui.Presenters;
 
 import com.arqui.Interfaces.IDisplay;
+import com.arqui.Interfaces.IModelView;
 import com.arqui.Interfaces.IPresenter;
 import com.arqui.Interfaces.IView;
 
@@ -67,6 +68,22 @@ public Presenter()
         for (IView views:Views) {
             views.setPersistenceText(typeOfPersistence);
         }
+    }
+
+    @Override
+    public void setModelView(IModelView modelView) {
+        ArrayList<String> options=modelView.getOptions();
+        String information=modelView.getInformation();
+        for (IView view:Views) {
+            setupView(options, information, view);
+        }
+    }
+
+    private void setupView(ArrayList<String> options, String information, IView view) {
+        for (String option:options) {
+            view.setOption(option);
+        }
+        view.setInformation(information);
     }
 
     private void setOptions(IView view) {

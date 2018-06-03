@@ -2,6 +2,7 @@ package com.arqui.Views;
 
 import com.arqui.Interfaces.IConnection;
 import com.arqui.Interfaces.IDisplay;
+import com.arqui.Interfaces.IModelView;
 import com.arqui.Interfaces.IView;
 
 import javax.swing.*;
@@ -101,6 +102,7 @@ private ActionListener listenerOption;
     public void setPersistenceText(String persistenceType) {
         TypeOfPersistence.setText(persistenceType);
     }
+
 
     @Override
     public void setInformation(String information) {

@@ -1,5 +1,6 @@
 package com.arqui.States;
 
+import com.arqui.DisplayState.ConnectModelView;
 import com.arqui.Interfaces.IConnection;
 import com.arqui.Interfaces.IMailSystem;
 import com.arqui.DisplayState.DisplayConnect;
@@ -15,12 +16,12 @@ public class Connect implements IState {
     public Connect(IConnection connection) {
         this.connection=connection;
         this.system=connection.getMailboxSystem();
-        this.connection.setDisplay(new DisplayConnect());
+        //this.connection.setDisplay(new DisplayConnect());
         showInitialPromptMessage();
     }
     private void showInitialPromptMessage() {
-        connection.setInformation("InitialPrompt");
-        connection.show();
+        this.connection.setModelView(new ConnectModelView());
+        //connection.show();
     }
 
     public boolean dial(String command) {

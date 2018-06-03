@@ -1,12 +1,8 @@
 package com.arqui.Core;
 
 import com.arqui.DisplayState.DisplayPersistenceType;
-import com.arqui.Interfaces.IDisplay;
-import com.arqui.Interfaces.IPresenters;
-import com.arqui.Interfaces.IState;
+import com.arqui.Interfaces.*;
 import com.arqui.Models.Mailbox;
-import com.arqui.Interfaces.IConnection;
-import com.arqui.Interfaces.IMailSystem;
 import com.arqui.States.*;
 
 public class Connection implements IConnection
@@ -122,6 +118,9 @@ public class Connection implements IConnection
     }
     public void show() {
         observers.showView();
+    }
+    public void setModelView(IModelView modelView){
+     observers.setModelView(modelView);
     }
     public void setPersistenceType()
     {
