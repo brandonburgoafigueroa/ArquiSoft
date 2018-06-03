@@ -1,5 +1,5 @@
 package com.arqui.Interfaces;
 
-public interface IResponseError {
-    String getError();
+public interface IResponse {
+    String getContentResponse();
 }

@@ -1,8 +1,10 @@
 package com.arqui.Core;
 
-import com.arqui.ModelViews.DisplayPersistenceType;
 import com.arqui.Interfaces.*;
 import com.arqui.Models.Mailbox;
+import com.arqui.Repository.Database;
+import com.arqui.Repository.Memory;
+import com.arqui.ResponseRequest.PersistenceResponse;
 import com.arqui.States.*;
 
 public class Connection implements IConnection
@@ -122,23 +124,45 @@ public class Connection implements IConnection
     public void setModelView(IModelView modelView){
      observers.setModelView(modelView);
     }
-    public void setError(IResponseError error)
+    public void setError(IResponse error)
     {
         observers.setError(error);
     }
-    public void setPersistenceType()
-    {
-        String type=system.getTypeOfPersistence();
-        IDisplay backup=this.display;
-        setDisplay(new DisplayPersistenceType());
-        observers.setPersistenceType(type);
-        this.display=backup;
+    public void setPersistenceType(){
+        IPersistence persistence=system.getPersistence();
+        IResponse response=new PersistenceResponse(persistence);
+        observers.setPersistenceType(response);
     }
+
    public boolean changePeristence()
    {
-       system.changePersistence();
+       setNewPersistence();
+       setPersistenceType();
        return true;
    }
+
+    private void setNewPersistence() {
+        IPersistence actualPersistence=system.getPersistence();
+        int MAILBOX_COUNT=system.getMailBoxCount();
+        IPersistence newPersistence=null;
+        if (isADatabase(actualPersistence))
+        {
+         newPersistence=new Memory();
+        }
+        if (isAMemory(actualPersistence))
+        {
+            newPersistence=new Database();
+        }
+        system = new MailSystem(MAILBOX_COUNT,newPersistence);
+    }
+
+    private boolean isAMemory(IPersistence actualPersistence) {
+        return actualPersistence instanceof Memory;
+    }
+
+    private boolean isADatabase(IPersistence actualPersistence) {
+        return actualPersistence instanceof Database;
+    }
 }
 
 

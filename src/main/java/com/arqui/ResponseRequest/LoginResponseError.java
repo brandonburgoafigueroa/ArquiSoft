@@ -1,15 +1,15 @@
 package com.arqui.ResponseRequest;
 
-import com.arqui.Interfaces.IResponseError;
+import com.arqui.Interfaces.IResponse;
 
-public class LoginResponseError implements IResponseError {
+public class LoginResponseError implements IResponse {
     public String Error;
     public LoginResponseError(){
         Error="Incorrect passcode. Try again!";
     }
 
     @Override
-    public String getError() {
+    public String getContentResponse() {
         return Error;
     }
 }

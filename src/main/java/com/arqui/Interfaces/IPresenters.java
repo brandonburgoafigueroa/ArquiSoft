@@ -9,10 +9,10 @@ public interface IPresenters {
     void setError(String errorName);
     void setTextPlain(String text);
     void showView();
-    void setPersistenceType(String persistenceType);
+
 
     //model views
     void setModelView(IModelView modelView);
-
-    void setError(IResponseError error);
+    void setPersistenceType(IResponse response);
+    void setError(IResponse error);
 }

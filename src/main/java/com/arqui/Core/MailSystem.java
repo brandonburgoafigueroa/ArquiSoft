@@ -66,21 +66,20 @@ public class MailSystem implements IMailSystem
    }
 
    @Override
-   public String getTypeOfPersistence() {
-      return persistence.getTypeOfPersistence();
+   public IPersistence getPersistence() {
+      return persistence;
    }
 
    @Override
-   public void changePersistence() {
-         if (persistence instanceof Database)
-         {
-            persistence =new Memory();
-         }
-         if (persistence instanceof Memory)
-         {
-            persistence =new Database();
-         }
+   public int getMailBoxCount() {
+      return mailboxes.size();
    }
+
+   @Override
+   public String getCurrentIdMailbox() {
+      return Integer.toString(idCurrentMailbox);
+   }
+
 
    public void saveChanges(Mailbox mailbox){
       persistence.saveChanges(mailbox, idCurrentMailbox);

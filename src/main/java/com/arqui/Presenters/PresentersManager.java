@@ -60,12 +60,6 @@ public class PresentersManager implements IPresenters {
         }
     }
 
-    @Override
-    public void setPersistenceType(String persistenceType) {
-        for (IPresenter presenter:presenters) {
-            presenter.setTextPersistenceType(persistenceType);
-        }
-    }
 
     @Override
     public void setModelView(IModelView modelView) {
@@ -76,7 +70,14 @@ public class PresentersManager implements IPresenters {
     }
 
     @Override
-    public void setError(IResponseError error) {
+    public void setPersistenceType(IResponse response) {
+        for (IPresenter presenter:presenters) {
+            presenter.setPersistenceType(response);
+        }
+    }
+
+    @Override
+    public void setError(IResponse error) {
         for (IPresenter presenter:presenters) {
             presenter.setError(error);
             presenter.show();

@@ -77,10 +77,18 @@ public Presenter()
     }
 
     @Override
-    public void setError(IResponseError error) {
-        String errorText=error.getError();
+    public void setError(IResponse error) {
+        String errorText=error.getContentResponse();
         for (IView view:Views) {
             view.setInformation(errorText);
+        }
+    }
+
+    @Override
+    public void setPersistenceType(IResponse response) {
+    String Type=response.getContentResponse();
+        for (IView view:Views) {
+            view.setPersistenceText(Type);
         }
     }
 
