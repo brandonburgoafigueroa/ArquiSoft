@@ -7,7 +7,7 @@ import com.arqui.IState;
 import com.arqui.Entities.Mailbox;
 import com.arqui.state.*;
 
-public class Connection
+public class Connection implements IConnection
 {
 
    public Connection(MailSystem s, IPresenters observers)

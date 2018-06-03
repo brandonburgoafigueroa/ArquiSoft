@@ -2,6 +2,7 @@ package com.arqui;
 
 import com.arqui.Api.VoiceMailService;
 import com.arqui.Core.Connection;
+import com.arqui.Core.IConnection;
 import com.arqui.Core.MailSystem;
 import com.arqui.Presenters.ConsolePresenter;
 import com.arqui.Presenters.PresentersManager;
@@ -27,7 +28,7 @@ public class Main
       Scanner consoleInput = new Scanner(System.in);
       IPresenters observers=new PresentersManager();
 
-      Connection c = new Connection(system, observers);
+      IConnection c = new Connection(system, observers);
       VoiceMailService vc = new VoiceMailService(c);
       Console console = new Console(consoleInput, c);
 //presenters

@@ -1,6 +1,7 @@
 package com.arqui.Views;
 
 import com.arqui.Core.Connection;
+import com.arqui.Core.IConnection;
 import com.arqui.DisplayState.IDisplay;
 import com.arqui.IView;
 
@@ -12,7 +13,7 @@ public class Console implements IView
 {
    private List<String> Informations;
    private List<String> Options;
-   public Console(Scanner aScanner, Connection connection)
+   public Console(Scanner aScanner, IConnection connection)
    {
       scanner = aScanner;
       this.connection=connection;
@@ -70,6 +71,6 @@ public class Console implements IView
    }
 
    private Scanner scanner;
-   private Connection connection;
+   private IConnection connection;
    private IDisplay display;
 }

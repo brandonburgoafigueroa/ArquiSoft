@@ -1,6 +1,7 @@
 package com.arqui.Views;
 
 import com.arqui.Core.Connection;
+import com.arqui.Core.IConnection;
 import com.arqui.DisplayState.IDisplay;
 import com.arqui.IView;
 
@@ -16,7 +17,7 @@ public class UserInterface extends JFrame implements IView {
 private List<String> Informations;
 private List<JButton> OptionsButtons;
 private ActionListener listenerOption;
-    public UserInterface(Connection connection)
+    public UserInterface(IConnection connection)
     {
        listenerOption = returnActionOfOption();
        hiddenButtons=false;
@@ -139,8 +140,7 @@ private ActionListener listenerOption;
             connection.executeCommand(input);
         }
     }
-    private void setConnection(Connection connection) {
-        //connection.addObservable(this);
+    private void setConnection(IConnection connection) {
         this.connection=connection;
     }
 
@@ -202,7 +202,7 @@ private ActionListener listenerOption;
     private Boolean hiddenButtons;
     private JPanel panel;
     private JTextArea Input;
-    private Connection connection;
+    private IConnection connection;
     private JButton button1;
     private JButton button8;
     private JButton buttonH;

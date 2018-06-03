@@ -1,13 +1,15 @@
 package com.arqui.Api;
 
 import com.arqui.Core.Connection;
+import com.arqui.Core.IConnection;
+import com.sun.org.apache.bcel.internal.generic.ICONST;
 
 import static spark.Spark.get;
 import static spark.SparkBase.port;
 
 public class VoiceMailService {
-    private Connection connection;
-    public VoiceMailService(Connection connection){
+    private IConnection connection;
+    public VoiceMailService(IConnection connection){
         this.connection = connection;
         port(getHerokuAssignedPort());
     }
