@@ -7,7 +7,7 @@ import com.arqui.Interfaces.IMailSystem;
 import com.arqui.Interfaces.IState;
 import com.arqui.ModelViews.RecordingModelView;
 import com.arqui.Models.Mailbox;
-import com.arqui.ResponseRequest.ConnectResponseError;
+import com.arqui.Responses.ConnectResponseError;
 
 public class Connect implements IState {
     private Mailbox currentMailbox;

@@ -1,6 +1,7 @@
 package com.arqui.Views;
 
 import com.arqui.Interfaces.IConnection;
+import com.arqui.Interfaces.IController;
 import com.arqui.Interfaces.IView;
 
 import javax.swing.*;
@@ -11,23 +12,33 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class UserInterface extends JFrame implements IView {
-private List<String> Informations;
+    private IController controller;
+    private List<String> Informations;
 private List<JButton> OptionsButtons;
 private ActionListener listenerOption;
-    public UserInterface(IConnection connection)
+    public UserInterface(IController controller)
     {
-       listenerOption = returnActionOfOption();
-       hiddenButtons=false;
-       changeHideShow();
+
         pack();
-        setConnection(connection);
+        InitializeVariables(controller);
+        initializeOptions();
         setAttributesToComponentsOfUI();
         setActionsToButtons();
+        changeHideShow();
         setVisible(true);
+
+    }
+
+    private void InitializeVariables(IController controller) {
+        this.controller=controller;
         Informations=new ArrayList<>();
         OptionsButtons=new ArrayList<>();
-        Options.setLayout(new GridLayout(10,9));
+        hiddenButtons=false;
+        listenerOption = returnActionOfOption();
+    }
 
+    private void initializeOptions() {
+        Options.setLayout(new GridLayout(10,9));
         Cambiar.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -36,31 +47,42 @@ private ActionListener listenerOption;
         });
     }
 
-    private ActionListener returnActionOfOption() {
-        ActionListener listener = new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                JButton buttonClicked=(JButton) e.getSource();
-                String command=buttonClicked.getText();
-                String[] parts = command.split(".-");
-                command = parts[0];
-                Run(command);
-            }
-        };
-        return listener;
+    private void setAttributesToComponentsOfUI() {
+
+        setContentPane(panel);
+        setSize(400,700);
+
+        pressed.setEditable(false);
+        pressed.setSize(10,10);
     }
+
+    private void Run(String input)
+    {
+        boolean connectionContinue;
+        String textarea=Input.getText();
+        if (textarea=="")
+        {
+            controller.executeRequest(input);
+        }
+        else
+        {
+            controller.executeRequest(textarea);
+            controller.executeRequest(input);
+        }
+    }
+
+
     private void changeHideShow()
     {
         if (hiddenButtons)
         {
             showButtons();
-            ShowHidde.setText("Ocultar teclado");
-            hiddenButtons=false;
+
         }
         else
         {
             hideButtons();
-            ShowHidde.setText("Mostrar teclado");
-            hiddenButtons=true;
+
         }
     }
     private void hideButtons()
@@ -76,6 +98,8 @@ private ActionListener listenerOption;
         button7.hide();
         button0.hide();
         buttonB.hide();
+        ShowHidde.setText("Mostrar teclado");
+        hiddenButtons=true;
     }
     private void showButtons()
     {
@@ -90,6 +114,8 @@ private ActionListener listenerOption;
         button7.show();
         button0.show();
         buttonB.show();
+        ShowHidde.setText("Ocultar teclado");
+        hiddenButtons=false;
     }
 
     @Override
@@ -129,33 +155,7 @@ private ActionListener listenerOption;
         Options.show();
     }
 
-    //end presenters
-    private void Run(String input)
-    {
-        boolean connectionContinue;
-        String textarea=Input.getText();
-        if (textarea=="")
-        {
-            connection.executeCommand(input);
-        }
-        else
-        {
-            connection.executeCommand(textarea);
-            connection.executeCommand(input);
-        }
-    }
-    private void setConnection(IConnection connection) {
-        this.connection=connection;
-    }
 
-    private void setAttributesToComponentsOfUI() {
-
-        setContentPane(panel);
-        setSize(400,700);
-
-        pressed.setEditable(false);
-        pressed.setSize(10,10);
-    }
 
     private void setActionsToButtons() {
         ActionListener listener = returnActionOfButton();
@@ -173,7 +173,18 @@ private ActionListener listenerOption;
         buttonB.addActionListener(listener);
         ShowHidde.addActionListener(listenerHide);
     }
-
+    private ActionListener returnActionOfOption() {
+        ActionListener listener = new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                JButton buttonClicked=(JButton) e.getSource();
+                String command=buttonClicked.getText();
+                String[] parts = command.split(".-");
+                command = parts[0];
+                Run(command);
+            }
+        };
+        return listener;
+    }
     private ActionListener showHideButtons() {
         ActionListener listener = new ActionListener() {
             public void actionPerformed(ActionEvent e) {
@@ -206,7 +217,6 @@ private ActionListener listenerOption;
     private Boolean hiddenButtons;
     private JPanel panel;
     private JTextArea Input;
-    private IConnection connection;
     private JButton button1;
     private JButton button8;
     private JButton buttonH;

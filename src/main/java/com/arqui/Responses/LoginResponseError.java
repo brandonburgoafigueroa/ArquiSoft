@@ -1,4 +1,4 @@
-package com.arqui.ResponseRequest;
+package com.arqui.Responses;
 
 import com.arqui.Interfaces.IResponse;
 

@@ -5,11 +5,11 @@ import com.arqui.Interfaces.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class PresentersManager implements IPresenters {
+public class PresentersManagerManager implements IPresentersManager {
 
     private List<IPresenter> presenters;
 
-    public PresentersManager() {
+    public PresentersManagerManager() {
         presenters=new ArrayList<>();
     }
 

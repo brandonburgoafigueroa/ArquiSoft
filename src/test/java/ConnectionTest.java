@@ -4,7 +4,7 @@ import com.arqui.Models.Mailbox;
 import com.arqui.Models.MessageQueue;
 import com.arqui.Presenters.Presenter;
 import com.arqui.Interfaces.IPresenter;
-import com.arqui.Presenters.PresentersManager;
+import com.arqui.Presenters.PresentersManagerManager;
 import com.arqui.Views.Console;
 import org.junit.Assert;
 import org.junit.Before;
@@ -18,7 +18,7 @@ public class ConnectionTest {
 	public void init() {
 	    mockedMailsystem = mock(MailSystem.class);
 	    mockedTelephone = mock(Console.class);
-	    PresentersManager presentersManager =new PresentersManager();
+	    PresentersManagerManager presentersManager =new PresentersManagerManager();
 		IPresenter consolePresenter=new Presenter();
 		consolePresenter.addView(mockedTelephone);
 		presentersManager.addPresenter(consolePresenter);

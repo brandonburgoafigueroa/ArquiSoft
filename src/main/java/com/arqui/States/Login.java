@@ -3,7 +3,7 @@ package com.arqui.States;
 import com.arqui.Interfaces.IConnection;
 import com.arqui.Models.Mailbox;
 import com.arqui.Interfaces.IState;
-import com.arqui.ResponseRequest.LoginResponseError;
+import com.arqui.Responses.LoginResponseError;
 
 public class Login implements IState {
     private Mailbox currentMailbox;

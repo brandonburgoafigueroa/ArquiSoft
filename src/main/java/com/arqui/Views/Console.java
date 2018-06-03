@@ -1,6 +1,7 @@
 package com.arqui.Views;
 
 import com.arqui.Interfaces.IConnection;
+import com.arqui.Interfaces.IController;
 import com.arqui.Interfaces.IView;
 
 import java.util.ArrayList;
@@ -9,12 +10,13 @@ import java.util.Scanner;
 
 public class Console implements IView
 {
+   private final IController controller;
    private List<String> Informations;
    private List<String> Options;
-   public Console(Scanner aScanner, IConnection connection)
+   public Console(Scanner aScanner, IController controller)
    {
+      this.controller=controller;
       scanner = aScanner;
-      this.connection=connection;
       Informations=new ArrayList<>();
       Options=new ArrayList<>();
    }
@@ -63,10 +65,9 @@ public class Console implements IView
       boolean more = true;
       while (more) {
          String input = scanner.nextLine();
-         connection.executeCommand(input);
+         controller.executeRequest(input);
       }
    }
 
    private Scanner scanner;
-   private IConnection connection;
 }

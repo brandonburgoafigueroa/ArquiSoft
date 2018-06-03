@@ -1,6 +1,6 @@
 package com.arqui.Interfaces;
 
-public interface IPresenters {
+public interface IPresentersManager {
 
     void addPresenter(IPresenter presenter);
     void setModelView(IModelView modelView);

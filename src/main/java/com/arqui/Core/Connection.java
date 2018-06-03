@@ -4,16 +4,16 @@ import com.arqui.Interfaces.*;
 import com.arqui.Models.Mailbox;
 import com.arqui.Repository.Database;
 import com.arqui.Repository.Memory;
-import com.arqui.ResponseRequest.PersistenceResponse;
+import com.arqui.Responses.PersistenceResponse;
 import com.arqui.States.*;
 
 public class Connection implements IConnection
 {
 
-   public Connection(IMailSystem s, IPresenters observers)
+   public Connection(IMailSystem s, IPresentersManager presentersManager)
    {
        system = s;
-       this.observers = observers;
+       this.presentersManager = presentersManager;
 
    }
 
@@ -94,21 +94,28 @@ public class Connection implements IConnection
         this.status=state;
     }
     private IMailSystem system;
-    private IPresenters observers;
+    private IPresentersManager presentersManager;
     private Mailbox currentMailbox;
     private IState status;
 
     public void setModelView(IModelView modelView){
-     observers.setModelView(modelView);
+     presentersManager.setModelView(modelView);
     }
     public void setError(IResponse error)
     {
-        observers.setError(error);
+        presentersManager.setError(error);
     }
+
+    @Override
+    public boolean executeCommand(IRequest request) {
+        String command=request.getContent();
+        return executeCommand(command);
+    }
+
     public void setPersistenceType(){
         IPersistence persistence=system.getPersistence();
         IResponse response=new PersistenceResponse(persistence);
-        observers.setPersistenceType(response);
+        presentersManager.setPersistenceType(response);
     }
 
    public boolean changePeristence()

@@ -3,7 +3,7 @@ package com.arqui.Interfaces;
 import com.arqui.Models.Mailbox;
 
 public interface IConnection {
-    boolean executeCommand(String command);
+
     Mailbox getCurrentMailbox();
     void resetConnection();
     void setMailbox(Mailbox mailbox);
@@ -12,4 +12,6 @@ public interface IConnection {
     IMailSystem getMailboxSystem();
     void setModelView(IModelView modelView);
     void setError(IResponse connectResponseError);
+
+    boolean executeCommand(IRequest request);
 }
