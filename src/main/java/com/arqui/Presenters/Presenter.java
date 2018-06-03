@@ -7,7 +7,6 @@ import java.util.List;
 
 public class Presenter implements IPresenter {
 private List<IView> Views;
-private IDisplay display;
 public Presenter()
 {
     Views=new ArrayList<>();
@@ -18,52 +17,9 @@ public Presenter()
     }
 
     @Override
-    public void setDisplay(IDisplay display) {
-        this.display=display;
-    }
-
-    @Override
-    public void setText(String textName) {
-        String text=display.getText(textName);
-    for (IView view:Views) {
-            view.setInformation(text);
-        }
-    }
-
-    @Override
-    public void setError(String errorName) {
-        String error=display.getError(errorName);
-        for (IView view:Views) {
-            view.setInformation(error);
-        }
-    }
-
-    @Override
-    public void setTextPlain(String text) {
-        for (IView view:Views) {
-            view.setInformation(text);
-        }
-    }
-
-    @Override
-    public void setupOptions() {
-        for (IView view:Views) {
-            setOptions(view);
-        }
-    }
-
-    @Override
     public void show() {
         for (IView view:Views) {
             view.showView();
-        }
-    }
-
-    @Override
-    public void setTextPersistenceType(String persistenceType) {
-        String typeOfPersistence=display.getText(persistenceType);
-        for (IView views:Views) {
-            views.setPersistenceText(typeOfPersistence);
         }
     }
 
@@ -99,10 +55,4 @@ public Presenter()
         view.setInformation(information);
     }
 
-    private void setOptions(IView view) {
-        ArrayList<String> options=display.getOptions();
-        for (String option:options) {
-            view.setOption(option);
-        }
-    }
 }

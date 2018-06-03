@@ -26,8 +26,4 @@ public class Memory implements IPersistence {
         return mailboxes;
     }
 
-    @Override
-    public String getTypeOfPersistence() {
-        return "Memory";
-    }
 }

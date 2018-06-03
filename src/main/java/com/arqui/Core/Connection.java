@@ -23,12 +23,6 @@ public class Connection implements IConnection
        setPersistenceType();
        status=new Connect(this);
    }
-   public void setDisplay(IDisplay display)
-   {
-        this.display=display;
-        observers.setDisplay(this.display);
-        observers.setDisplay(this.display);
-   }
 
     public boolean executeCommand(String input)
     {
@@ -103,24 +97,7 @@ public class Connection implements IConnection
     private IPresenters observers;
     private Mailbox currentMailbox;
     private IState status;
-    private IDisplay display;
-    public void setOptions() {
-        observers.setOptions();
-    }
-    public void setError(String errorName)
-    {
-        observers.setError(errorName);
-    }
-    public void setInformation(String text)
-    {
-        observers.setInformation(text);
-    }
-    public void setTextPlain(String text) {
-        observers.setTextPlain(text);
-    }
-    public void show() {
-        observers.showView();
-    }
+
     public void setModelView(IModelView modelView){
      observers.setModelView(modelView);
     }

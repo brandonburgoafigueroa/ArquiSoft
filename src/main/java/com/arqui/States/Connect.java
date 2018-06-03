@@ -62,7 +62,6 @@ public class Connect implements IState {
 
     private void showIncorrectMailboxMessage() {
         connection.setError(new ConnectResponseError());
-        //connection.show();
     }
 
     private void showGreetingMessage() {

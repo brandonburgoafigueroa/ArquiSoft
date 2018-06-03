@@ -1,8 +1,6 @@
 package com.arqui.Views;
 
 import com.arqui.Interfaces.IConnection;
-import com.arqui.Interfaces.IDisplay;
-import com.arqui.Interfaces.IModelView;
 import com.arqui.Interfaces.IView;
 
 import java.util.ArrayList;
@@ -25,7 +23,6 @@ public class Console implements IView
    {
       System.out.println(text);
    }
-//presenters
    @Override
    public void setInformation(String information) {
       Informations.add(information);
@@ -50,12 +47,6 @@ public class Console implements IView
       Options.clear();
    }
 
-   //end presenteres
-
-   @Override
-   public void setDisplay(IDisplay display) {
-      this.display=display;
-   }
 
    @Override
    public void setPersistenceText(String persistenceType) {
@@ -78,5 +69,4 @@ public class Console implements IView
 
    private Scanner scanner;
    private IConnection connection;
-   private IDisplay display;
 }

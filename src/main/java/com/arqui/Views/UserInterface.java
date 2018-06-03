@@ -1,8 +1,6 @@
 package com.arqui.Views;
 
 import com.arqui.Interfaces.IConnection;
-import com.arqui.Interfaces.IDisplay;
-import com.arqui.Interfaces.IModelView;
 import com.arqui.Interfaces.IView;
 
 import javax.swing.*;
@@ -92,10 +90,6 @@ private ActionListener listenerOption;
         button7.show();
         button0.show();
         buttonB.show();
-    }
-    @Override
-    public void setDisplay(IDisplay display) {
-        this.display=display;
     }
 
     @Override
@@ -232,5 +226,4 @@ private ActionListener listenerOption;
     private JButton ShowHidde;
     private JLabel TypeOfPersistence;
     private JButton Cambiar;
-    private IDisplay display;
 }

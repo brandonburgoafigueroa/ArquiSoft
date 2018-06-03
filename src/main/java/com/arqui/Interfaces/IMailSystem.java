@@ -8,5 +8,4 @@ public interface IMailSystem {
     IPersistence getPersistence();
     int getMailBoxCount();
 
-    String getCurrentIdMailbox();
 }

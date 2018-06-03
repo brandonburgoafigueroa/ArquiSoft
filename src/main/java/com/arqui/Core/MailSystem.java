@@ -75,10 +75,6 @@ public class MailSystem implements IMailSystem
       return mailboxes.size();
    }
 
-   @Override
-   public String getCurrentIdMailbox() {
-      return Integer.toString(idCurrentMailbox);
-   }
 
 
    public void saveChanges(Mailbox mailbox){

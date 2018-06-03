@@ -193,10 +193,6 @@ public class Database implements IPersistence {
         }
     }
 
-    @Override
-    public String getTypeOfPersistence() {
-        return "Database";
-    }
 
     private int getLastNewMessage(int idMailBox){
         String total = "0";

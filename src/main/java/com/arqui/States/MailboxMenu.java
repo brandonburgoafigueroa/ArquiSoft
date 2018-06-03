@@ -1,7 +1,6 @@
 package com.arqui.States;
 
 import com.arqui.Interfaces.IConnection;
-import com.arqui.Interfaces.IDisplay;
 import com.arqui.Interfaces.IState;
 import com.arqui.ModelViews.MailboxMenuModelView;
 
@@ -9,7 +8,6 @@ public class MailboxMenu implements IState {
 
 
     private IConnection connection;
-    private IDisplay display;
     public MailboxMenu(IConnection connection){
         this.connection=connection;
         showMailboxMenuOptions();
