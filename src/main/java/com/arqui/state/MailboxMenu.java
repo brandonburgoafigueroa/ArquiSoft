@@ -1,6 +1,7 @@
 package com.arqui.state;
 
 import com.arqui.Core.Connection;
+import com.arqui.Core.IConnection;
 import com.arqui.DisplayState.DisplayMailboxMenu;
 import com.arqui.DisplayState.IDisplay;
 import com.arqui.IState;
@@ -8,9 +9,9 @@ import com.arqui.IState;
 public class MailboxMenu implements IState {
 
 
-    private Connection connection;
+    private IConnection connection;
     private IDisplay display;
-    public MailboxMenu(Connection connection){
+    public MailboxMenu(IConnection connection){
         this.connection=connection;
         this.connection.setDisplay(new DisplayMailboxMenu());
         showMailboxMenuOptions();

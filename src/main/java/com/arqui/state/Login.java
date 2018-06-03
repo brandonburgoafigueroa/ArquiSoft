@@ -1,6 +1,7 @@
 package com.arqui.state;
 
 import com.arqui.Core.Connection;
+import com.arqui.Core.IConnection;
 import com.arqui.DisplayState.DisplayLogin;
 import com.arqui.Entities.Mailbox;
 import com.arqui.IState;
@@ -8,8 +9,8 @@ import com.arqui.IState;
 public class Login implements IState {
     private Mailbox currentMailbox;
     private String accumulatedKeys="";
-    Connection connection;
-    Login(Connection connection){
+    IConnection connection;
+    Login(IConnection connection){
         this.connection=connection;
         this.currentMailbox=connection.getCurrentMailbox();
         this.connection.setDisplay(new DisplayLogin());

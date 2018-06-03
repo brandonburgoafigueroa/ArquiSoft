@@ -1,15 +1,16 @@
 package com.arqui.state;
 
 import com.arqui.Core.Connection;
+import com.arqui.Core.IConnection;
 import com.arqui.Entities.Mailbox;
 import com.arqui.Entities.Message;
 import com.arqui.IState;
 
 public class Recording implements IState {
     String message;
-    private Connection connection;
+    private IConnection connection;
     private Mailbox currentMailbox;
-    public Recording(Connection connection)
+    public Recording(IConnection connection)
     {
         this.connection=connection;
         this.currentMailbox=connection.getCurrentMailbox();

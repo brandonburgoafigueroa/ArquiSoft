@@ -2,7 +2,6 @@ package com.arqui.Presenters;
 
 import com.arqui.DisplayState.IDisplay;
 import com.arqui.IPresenters;
-import com.arqui.Presenters.IPresenter;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -15,8 +14,6 @@ public class PresentersManager implements IPresenters {
         presenters=new ArrayList<>();
     }
 
-
-//presenters
     @Override
     public void addPresenter(IPresenter presenter) {
         presenters.add(presenter);
@@ -63,5 +60,4 @@ public class PresentersManager implements IPresenters {
             presenter.show();
         }
     }
-    //presenter
 }

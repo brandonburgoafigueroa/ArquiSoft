@@ -2,6 +2,7 @@ package com.arqui.state;
 
 import com.arqui.*;
 import com.arqui.Core.Connection;
+import com.arqui.Core.IConnection;
 import com.arqui.DisplayState.DisplayMessageMenu;
 import com.arqui.DisplayState.IDisplay;
 import com.arqui.Entities.Mailbox;
@@ -9,9 +10,9 @@ import com.arqui.Entities.Message;
 
 public class MessageMenu implements IState {
     private Mailbox currentMailbox;
-    private Connection connection;
+    private IConnection connection;
     private IDisplay display;
-    public MessageMenu(Connection connection){
+    public MessageMenu(IConnection connection){
         this.connection=connection;
         this.currentMailbox=connection.getCurrentMailbox();
         this.connection.setDisplay(new DisplayMessageMenu());

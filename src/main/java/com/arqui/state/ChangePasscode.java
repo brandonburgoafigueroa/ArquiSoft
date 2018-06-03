@@ -1,6 +1,7 @@
 package com.arqui.state;
 
 import com.arqui.Core.Connection;
+import com.arqui.Core.IConnection;
 import com.arqui.DisplayState.DisplayChangePasscode;
 import com.arqui.IState;
 import com.arqui.Entities.Mailbox;
@@ -9,8 +10,8 @@ public class ChangePasscode implements IState {
 
     private Mailbox currentMailbox;
     private String accumulatedKeys="";
-    private Connection connection;
-    public ChangePasscode(Connection connection)
+    private IConnection connection;
+    public ChangePasscode(IConnection connection)
     {
         this.connection=connection;
         this.currentMailbox=connection.getCurrentMailbox();
