@@ -39,7 +39,7 @@ public class VoiceMailService implements IApi {
             String id = req.params(":id");
             request=new ExecuteCommandRequest(id);
             connection.executeCommand(request);
-            request=new ExecuteCommandRequest(id);
+            request=new ExecuteCommandRequest("#");
             Boolean state =connection.executeCommand(request);
             return state;
         });
@@ -63,7 +63,8 @@ public class VoiceMailService implements IApi {
         });
     }
     public void currentGreeting(){
-        get("/currentGreeting", (req, res) -> connection.getCurrentMailbox().getGreeting());
+        get("/currentGreeting", (req, res) ->
+                connection.getCurrentMailbox().getGreeting());
     }
     public void ping(){
         get("/ping", (req, res) -> true);
