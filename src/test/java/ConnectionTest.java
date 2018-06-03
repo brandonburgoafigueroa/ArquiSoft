@@ -1,9 +1,7 @@
-package com.arqui;
-
 import com.arqui.Core.Connection;
 import com.arqui.Core.MailSystem;
-import com.arqui.Entities.Mailbox;
-import com.arqui.Entities.MessageQueue;
+import com.arqui.Models.Mailbox;
+import com.arqui.Models.MessageQueue;
 import com.arqui.Presenters.ConsolePresenter;
 import com.arqui.Interfaces.IPresenter;
 import com.arqui.Presenters.PresentersManager;

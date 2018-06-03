@@ -1,4 +1,4 @@
-package com.arqui.Entities;
+package com.arqui.Models;
 
 public class Mailbox
 {

@@ -1,6 +1,4 @@
-package com.arqui;
-
-import com.arqui.Entities.Message;
+import com.arqui.Models.Message;
 import org.junit.Before;
 import org.junit.Test;
 

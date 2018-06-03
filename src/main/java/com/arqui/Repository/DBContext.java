@@ -1,9 +1,9 @@
 package com.arqui.Repository;
 
 import com.arqui.Interfaces.IPersistence;
-import com.arqui.Entities.Mailbox;
-import com.arqui.Entities.Message;
-import com.arqui.Entities.MessageQueue;
+import com.arqui.Models.Mailbox;
+import com.arqui.Models.Message;
+import com.arqui.Models.MessageQueue;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;

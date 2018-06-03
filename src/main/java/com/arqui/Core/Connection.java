@@ -4,10 +4,10 @@ import com.arqui.Interfaces.IDisplay;
 import com.arqui.Interfaces.IPersistence;
 import com.arqui.Interfaces.IPresenters;
 import com.arqui.Interfaces.IState;
-import com.arqui.Entities.Mailbox;
+import com.arqui.Models.Mailbox;
 import com.arqui.Interfaces.IConnection;
 import com.arqui.Interfaces.IMailSystem;
-import com.arqui.state.*;
+import com.arqui.States.*;
 
 public class Connection implements IConnection
 {

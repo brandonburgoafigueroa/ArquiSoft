@@ -1,6 +1,6 @@
 package com.arqui.Interfaces;
 
-import com.arqui.Entities.Mailbox;
+import com.arqui.Models.Mailbox;
 
 import java.util.ArrayList;
 
