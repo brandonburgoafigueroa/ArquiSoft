@@ -1,9 +1,7 @@
 package com.arqui.Presenters;
 
 import com.arqui.DisplayState.IDisplay;
-import com.arqui.IView;
-
-import java.util.List;
+import com.arqui.Interfaces.IView;
 
 public interface IPresenter {
    void addView(IView view);
