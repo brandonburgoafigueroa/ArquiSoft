@@ -15,9 +15,12 @@ import java.util.List;
 public class UserInterface extends JFrame implements IView {
 private List<String> Informations;
 private List<JButton> OptionsButtons;
+private ActionListener listenerOption;
     public UserInterface(Connection connection)
     {
-
+       listenerOption = returnActionOfOption();
+       hiddenButtons=false;
+       changeHideShow();
         pack();
         setConnection(connection);
         setAttributesToComponentsOfUI();
@@ -26,8 +29,64 @@ private List<JButton> OptionsButtons;
         Informations=new ArrayList<>();
         OptionsButtons=new ArrayList<>();
         Options.setLayout(new GridLayout(10,9));
+
     }
 
+    private ActionListener returnActionOfOption() {
+        ActionListener listener = new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                JButton buttonClicked=(JButton) e.getSource();
+                String command=buttonClicked.getText();
+                String[] parts = command.split(".-");
+                command = parts[0];
+                Run(command);
+            }
+        };
+        return listener;
+    }
+    private void changeHideShow()
+    {
+        if (hiddenButtons)
+        {
+            showButtons();
+            ShowHidde.setText("Ocultar teclado");
+            hiddenButtons=false;
+        }
+        else
+        {
+            hideButtons();
+            ShowHidde.setText("Mostrar teclado");
+            hiddenButtons=true;
+        }
+    }
+    private void hideButtons()
+    {
+        button1.hide();
+        button8.hide();
+        button3.hide();
+        button2.hide();
+        button4.hide();
+        button5.hide();
+        button6.hide();
+        button9.hide();
+        button7.hide();
+        button0.hide();
+        buttonB.hide();
+    }
+    private void showButtons()
+    {
+        button1.show();
+        button8.show();
+        button3.show();
+        button2.show();
+        button4.show();
+        button5.show();
+        button6.show();
+        button9.show();
+        button7.show();
+        button0.show();
+        buttonB.show();
+    }
     @Override
     public void setDisplay(IDisplay display) {
         this.display=display;
@@ -43,7 +102,9 @@ private List<JButton> OptionsButtons;
     public void setOption(String option) {
         Options.hide();
         int size=OptionsButtons.size()+1;
-        OptionsButtons.add(new JButton(size+" - "+option));
+        JButton button=new JButton(size+".- "+option);
+        button.addActionListener(listenerOption);
+        OptionsButtons.add(button);
     }
 
     @Override
@@ -55,7 +116,7 @@ private List<JButton> OptionsButtons;
             Information.setText(text);
         }
 
-        for (JButton option:OptionsButtons) { ;
+        for (JButton option:OptionsButtons) {
             Options.add(option);
         }
         Informations.clear();
@@ -94,6 +155,7 @@ private List<JButton> OptionsButtons;
 
     private void setActionsToButtons() {
         ActionListener listener = returnActionOfButton();
+        ActionListener listenerHide = showHideButtons();
         button1.addActionListener(listener);
         button3.addActionListener(listener);
         button2.addActionListener(listener);
@@ -105,6 +167,17 @@ private List<JButton> OptionsButtons;
         button9.addActionListener(listener);
         button0.addActionListener(listener);
         buttonB.addActionListener(listener);
+        ShowHidde.addActionListener(listenerHide);
+    }
+
+    private ActionListener showHideButtons() {
+        ActionListener listener = new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+              changeHideShow();
+            }
+        };
+        return listener;
+
     }
 
     private ActionListener returnActionOfButton() {
@@ -115,7 +188,6 @@ private List<JButton> OptionsButtons;
                 pressed.setText(pressed.getText()+" "+buttonClicked.getText());
             }
         };
-
         buttonH.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 String text=Input.getText();
@@ -127,7 +199,7 @@ private List<JButton> OptionsButtons;
         });
         return listener;
     }
-
+    private Boolean hiddenButtons;
     private JPanel panel;
     private JTextArea Input;
     private Connection connection;
@@ -147,5 +219,6 @@ private List<JButton> OptionsButtons;
     private JLabel Information;
     private JLabel Info;
     private JPanel Options;
+    private JButton ShowHidde;
     private IDisplay display;
 }

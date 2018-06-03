@@ -53,8 +53,6 @@ public class ChangeGreating implements IState {
 
     private void changeToMailboxMenuState() {
         connection.setStatus(new MailboxMenu(connection));
-        connection.setDisplay(new DisplayMailboxMenu());
-        connection.show();
     }
 
     public boolean hangup() {
