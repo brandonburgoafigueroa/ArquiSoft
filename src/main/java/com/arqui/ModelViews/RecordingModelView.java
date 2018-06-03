@@ -4,10 +4,10 @@ import com.arqui.Interfaces.IModelView;
 
 import java.util.ArrayList;
 
-public class LoginModelView implements IModelView {
+public class RecordingModelView implements IModelView {
     private ArrayList<String> Options;
     private String Information;
-    public LoginModelView ()
+    public RecordingModelView()
     {
         Options=new ArrayList<>();
         Information ="";

@@ -4,6 +4,7 @@ import com.arqui.Interfaces.IConnection;
 import com.arqui.ModelViews.DisplayLogin;
 import com.arqui.Models.Mailbox;
 import com.arqui.Interfaces.IState;
+import com.arqui.ResponseRequest.LoginResponseError;
 
 public class Login implements IState {
     private Mailbox currentMailbox;
@@ -48,8 +49,7 @@ public class Login implements IState {
     }
 
     private void showIncorrectPasscodeMessage() {
-        connection.setError("Invalid_Passcode");
-        connection.show();
+        connection.setError(new LoginResponseError());
     }
 
 

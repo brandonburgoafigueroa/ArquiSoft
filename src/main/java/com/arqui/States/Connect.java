@@ -4,9 +4,8 @@ import com.arqui.Interfaces.IModelView;
 import com.arqui.ModelViews.ConnectModelView;
 import com.arqui.Interfaces.IConnection;
 import com.arqui.Interfaces.IMailSystem;
-import com.arqui.ModelViews.DisplayConnect;
 import com.arqui.Interfaces.IState;
-import com.arqui.ModelViews.LoginModelView;
+import com.arqui.ModelViews.RecordingModelView;
 import com.arqui.Models.Mailbox;
 import com.arqui.ResponseRequest.ConnectResponseError;
 
@@ -15,11 +14,9 @@ public class Connect implements IState {
     private IMailSystem system;
     private String accumulatedKeys="";
     private IConnection connection;
-    DisplayConnect display;
     public Connect(IConnection connection) {
         this.connection=connection;
         this.system=connection.getMailboxSystem();
-        //this.connection.setDisplay(new DisplayConnect());
         showInitialPromptMessage();
     }
     private void showInitialPromptMessage() {
@@ -69,7 +66,7 @@ public class Connect implements IState {
     }
 
     private void showGreetingMessage() {
-        IModelView modelView=new LoginModelView();
+        IModelView modelView=new RecordingModelView();
         modelView.setInformation(currentMailbox.getGreeting());
        connection.setModelView(modelView);
     }
