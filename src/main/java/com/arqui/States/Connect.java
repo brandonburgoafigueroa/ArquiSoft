@@ -1,10 +1,12 @@
 package com.arqui.States;
 
+import com.arqui.Interfaces.IModelView;
 import com.arqui.ModelViews.ConnectModelView;
 import com.arqui.Interfaces.IConnection;
 import com.arqui.Interfaces.IMailSystem;
 import com.arqui.ModelViews.DisplayConnect;
 import com.arqui.Interfaces.IState;
+import com.arqui.ModelViews.LoginModelView;
 import com.arqui.Models.Mailbox;
 import com.arqui.ResponseRequest.ConnectResponseError;
 
@@ -67,8 +69,9 @@ public class Connect implements IState {
     }
 
     private void showGreetingMessage() {
-        connection.setTextPlain(currentMailbox.getGreeting());
-        connection.show();
+        IModelView modelView=new LoginModelView();
+        modelView.setInformation(currentMailbox.getGreeting());
+       connection.setModelView(modelView);
     }
 
     private void setCurrentMailboxToConnection() {

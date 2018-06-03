@@ -7,4 +7,5 @@ public interface IView {
     void showView();
     void setDisplay(IDisplay display);
     void setPersistenceText(String persistenceType);
+
 }
