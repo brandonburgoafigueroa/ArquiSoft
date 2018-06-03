@@ -22,8 +22,8 @@ public class ChangePasscodeModelView implements IModelView {
         return Information;
     }
 
-    @Override
-    public void setInformation(String Information) {
+    public ChangePasscodeModelView(String Information) {
         this.Information=Information;
+        Options=new ArrayList<>();
     }
 }

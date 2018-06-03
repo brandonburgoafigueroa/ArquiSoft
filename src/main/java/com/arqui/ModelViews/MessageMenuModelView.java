@@ -25,9 +25,8 @@ public class MessageMenuModelView implements IModelView {
     public String getInformation() {
         return Information;
     }
-
-    @Override
-    public void setInformation(String Information) {
+    public MessageMenuModelView(String Information) {
         this.Information=Information;
+        Options=new ArrayList<>();
     }
 }

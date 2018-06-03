@@ -22,8 +22,8 @@ public class RecordingModelView implements IModelView {
         return Information;
     }
 
-    @Override
-    public void setInformation(String Information) {
+    public RecordingModelView(String Information) {
      this.Information=Information;
+        Options=new ArrayList<>();
     }
 }

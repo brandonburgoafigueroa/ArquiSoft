@@ -13,7 +13,6 @@ public class VoiceMailService implements IApi {
     private IRequest request;
     public VoiceMailService(IConnection connection){
         this.connection = connection;
-        request=new ExecuteCommandRequest();
         port(getHerokuAssignedPort());
         startAPIService();
     }
@@ -38,9 +37,9 @@ public class VoiceMailService implements IApi {
     public void executeCommandWithNumeral(){
         get("/executeCommand/:id", (req, res) ->{
             String id = req.params(":id");
-            request.setContent(id);
+            request=new ExecuteCommandRequest(id);
             connection.executeCommand(request);
-            request.setContent("#");
+            request=new ExecuteCommandRequest(id);
             Boolean state =connection.executeCommand(request);
             return state;
         });
@@ -48,7 +47,7 @@ public class VoiceMailService implements IApi {
     public void executeOption(){
         get("/executeOption/:id", (req, res) ->{
             String id = req.params(":id");
-            request.setContent(id);
+            request=new ExecuteCommandRequest(id);
             Boolean state = connection.executeCommand(request);
             return state;
         });
@@ -56,9 +55,9 @@ public class VoiceMailService implements IApi {
     public void saveMessage(){
         get("/saveMessage/:message", (req, res) ->{
             String message = req.params(":message");
-            request.setContent(message);
+            request=new ExecuteCommandRequest(message);
             connection.executeCommand(request);
-            request.setContent("#");
+            request=new ExecuteCommandRequest("H");
             Boolean state=connection.executeCommand(request);
             return state;
         });

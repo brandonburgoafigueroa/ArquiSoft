@@ -23,9 +23,10 @@ public class ConnectModelView implements IModelView {
         return Information;
     }
 
-    @Override
-    public void setInformation(String Information) {
+
+    public ConnectModelView(String Information) {
         this.Information=Information;
+        Options=new ArrayList<>();
     }
 
 }

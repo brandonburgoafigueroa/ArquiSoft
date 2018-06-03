@@ -23,8 +23,9 @@ public class ChangeGreetingModelView implements IModelView {
         return Information;
     }
 
-    @Override
-    public void setInformation(String Information) {
+
+    public ChangeGreetingModelView(String Information) {
         this.Information=Information;
+        Options=new ArrayList<>();
     }
 }

@@ -4,8 +4,8 @@ import com.arqui.Interfaces.IRequest;
 
 public class ExecuteCommandRequest implements IRequest {
     private String Content;
-    @Override
-    public void setContent(String Content) {
+
+    public ExecuteCommandRequest(String Content) {
         this.Content=Content;
     }
 

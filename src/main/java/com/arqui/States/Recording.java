@@ -32,8 +32,7 @@ return true;
     }
 
     private boolean executeCommand(String command) {
-        IRequest request=new ExecuteCommandRequest();
-        request.setContent(command);
+        IRequest request=new ExecuteCommandRequest(command);
         return connection.executeCommand(request);
     }
 

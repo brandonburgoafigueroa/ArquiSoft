@@ -65,8 +65,7 @@ public class Connect implements IState {
     }
 
     private void showGreetingMessage() {
-        IModelView modelView=new RecordingModelView();
-        modelView.setInformation(currentMailbox.getGreeting());
+        IModelView modelView=new RecordingModelView(currentMailbox.getGreeting());
        connection.setModelView(modelView);
     }
 

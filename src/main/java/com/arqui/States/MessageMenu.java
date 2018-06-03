@@ -48,8 +48,7 @@ public class MessageMenu implements IState {
 
     private void showMessageText() {
         String text=getTextOfLastMessage();
-        IModelView modelView=new MessageMenuModelView();
-        modelView.setInformation(text);
+        IModelView modelView=new MessageMenuModelView(text);
         connection.setModelView(modelView);
     }
 

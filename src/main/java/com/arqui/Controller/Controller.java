@@ -15,8 +15,7 @@ public class Controller implements IController {
 
     @Override
     public boolean executeRequest(String command) {
-        IRequest request=new ExecuteCommandRequest();
-        request.setContent(command);
+        IRequest request=new ExecuteCommandRequest(command);
         return connection.executeCommand(request);
     }
 
