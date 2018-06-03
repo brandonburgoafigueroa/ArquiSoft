@@ -1,8 +1,9 @@
 package com.arqui.States;
 
 import com.arqui.Interfaces.IConnection;
-import com.arqui.ModelViews.DisplayMessageMenu;
+import com.arqui.Interfaces.IModelView;
 import com.arqui.Interfaces.IDisplay;
+import com.arqui.ModelViews.MessageMenuModelView;
 import com.arqui.Models.Mailbox;
 import com.arqui.Models.Message;
 import com.arqui.Interfaces.IState;
@@ -14,22 +15,18 @@ public class MessageMenu implements IState {
     public MessageMenu(IConnection connection){
         this.connection=connection;
         this.currentMailbox=connection.getCurrentMailbox();
-        this.connection.setDisplay(new DisplayMessageMenu());
         showMessageMenuOptions();
     }
     public boolean dial(String command) {
 
         if ("1".equals(command)) {
             showMessageText();
-            showMessageMenuOptions();
         } else if ("2".equals(command)) {
             saveCurrentMessage();
             showMessageMenuOptions();
-
         } else if ("3".equals(command)) {
             removeCurrentMessage();
             showMessageMenuOptions();
-
         } else if ("4".equals(command)) {
             changeToMailboxMenuState();
 
@@ -52,18 +49,23 @@ public class MessageMenu implements IState {
     }
 
     private void showMessageText() {
-
-        connection.setTextPlain(getTextOfLastMessage());
+        String text=getTextOfLastMessage();
+        IModelView modelView=new MessageMenuModelView();
+        modelView.setInformation(text);
+        connection.setModelView(modelView);
     }
 
     private String getTextOfLastMessage() {
         String output="";
         Message m = currentMailbox.getCurrentMessage();
         if (m == null) {
-            connection.setInformation("Empty");
+
+            output="No messages.";
+
         }
         else {
             output = m.getText();
+
         }
         return output;
     }
@@ -72,8 +74,7 @@ public class MessageMenu implements IState {
         return true;
     }
     private void showMessageMenuOptions() {
-        connection.setOptions();
-        connection.show();
+        connection.setModelView(new MessageMenuModelView());
     }
 
 }

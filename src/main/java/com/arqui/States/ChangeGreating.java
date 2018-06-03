@@ -1,7 +1,7 @@
 package com.arqui.States;
 
 import com.arqui.Interfaces.IConnection;
-import com.arqui.ModelViews.DisplayChangeGreeting;
+import com.arqui.ModelViews.ChangeGreetingModelView;
 import com.arqui.Interfaces.IState;
 import com.arqui.Models.Mailbox;
 
@@ -13,14 +13,12 @@ public class ChangeGreating implements IState {
     {
         this.connection=connection;
         this.currentMailbox=connection.getCurrentMailbox();
-        this.connection.setDisplay(new DisplayChangeGreeting());
         showNewGreetingMessage();
 
     }
 
     private void showNewGreetingMessage() {
-        connection.setInformation("ChangeGreeting");
-        connection.show();
+        connection.setModelView(new ChangeGreetingModelView());
     }
 
     public boolean dial(String command) {

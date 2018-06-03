@@ -1,7 +1,7 @@
 package com.arqui.States;
 
 import com.arqui.Interfaces.IConnection;
-import com.arqui.ModelViews.DisplayChangePasscode;
+import com.arqui.ModelViews.ChangeGreetingModelView;
 import com.arqui.Interfaces.IState;
 import com.arqui.Models.Mailbox;
 
@@ -14,7 +14,6 @@ public class ChangePasscode implements IState {
     {
         this.connection=connection;
         this.currentMailbox=connection.getCurrentMailbox();
-        this.connection.setDisplay(new DisplayChangePasscode());
         showEnterNewPasscodeMessage();
 
     }
@@ -44,8 +43,7 @@ public class ChangePasscode implements IState {
     }
 
     private void showEnterNewPasscodeMessage() {
-        connection.setInformation("ChangePasscode");
-        connection.show();
+        connection.setModelView(new ChangeGreetingModelView());
     }
     public boolean hangup() {
         connection.resetConnection();
