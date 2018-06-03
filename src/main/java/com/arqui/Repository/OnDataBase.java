@@ -9,13 +9,13 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
-public class DBContext implements IPersistence {
-    private DBConfiguration currentDBConfiguration;
+public class OnDataBase implements IPersistence {
+    private OnDataBaseConfiguration currentOnDataBaseConfiguration;
     private String query;
 
-    public DBContext(){
-        currentDBConfiguration = new DBConfiguration();
-        currentDBConfiguration.connect();
+    public OnDataBase(){
+        currentOnDataBaseConfiguration = new OnDataBaseConfiguration();
+        currentOnDataBaseConfiguration.connect();
         createTables();
     }
 
@@ -30,7 +30,7 @@ public class DBContext implements IPersistence {
                 "\t`passcode`\tTEXT,\n" +
                 "\t`greeting`\tTEXT\n" +
                 ");";
-        currentDBConfiguration.create(query);
+        currentOnDataBaseConfiguration.create(query);
     }
     private void createMessageTableIfNotExist(){
         query = "CREATE TABLE IF NOT EXISTS `Message` (\n" +
@@ -40,7 +40,7 @@ public class DBContext implements IPersistence {
                 "\t`state`\tINTEGER,\n" +
                 "\tFOREIGN KEY(`idMailBox`) REFERENCES `MailBox`(`id`)\n" +
                 ");";
-        currentDBConfiguration.create(query);
+        currentOnDataBaseConfiguration.create(query);
     }
 
     public void saveChanges(Mailbox mailbox, int idCurrentMailbox) {
@@ -105,7 +105,7 @@ public class DBContext implements IPersistence {
 
     private void insertMessageToMailBox(int idCurrentMailbox, Message message,String type) {
         query = "INSERT INTO Message(idMailBox,message,state) VALUES(" + idCurrentMailbox + ",'" + message.getText() + "','" + type + "')";
-        currentDBConfiguration.insert(query);
+        currentOnDataBaseConfiguration.insert(query);
     }
 
 
@@ -126,11 +126,11 @@ public class DBContext implements IPersistence {
         String total = "0";
         try {
             query = "SELECT COUNT(ME.state) FROM Message ME, MailBox MA  WHERE ME.idMailBox=MA.id AND MA.id=" + idMailbox + " AND ME.state='" + state + "';";
-            ResultSet rs = currentDBConfiguration.select(query);
+            ResultSet rs = currentOnDataBaseConfiguration.select(query);
             while (rs.next()) {
                 total = rs.getString("COUNT(ME.state)");
             }
-            currentDBConfiguration.closeSelect(rs);
+            currentOnDataBaseConfiguration.closeSelect(rs);
             return Integer.parseInt(total);
         } catch (SQLException ex) {
             ex.printStackTrace();
@@ -141,7 +141,7 @@ public class DBContext implements IPersistence {
     private void saveChangesMailbox(int idMailbox, String passcode, String greeting)
     {
         query="UPDATE MailBox SET passcode='"+passcode+"', greeting = '"+greeting+"' WHERE id="+idMailbox+";";
-        currentDBConfiguration.update(query);
+        currentOnDataBaseConfiguration.update(query);
     }
 
 
@@ -149,7 +149,7 @@ public class DBContext implements IPersistence {
     public void addMailbox(Mailbox mailbox) {
 
         query="INSERT INTO MailBox(passcode,greeting) VALUES('"+mailbox.getPasscode()+"','"+mailbox.getGreeting()+"');";
-        currentDBConfiguration.insert(query);
+        currentOnDataBaseConfiguration.insert(query);
     }
 
     public ArrayList<Mailbox> getAlMailbox()
@@ -158,7 +158,7 @@ public class DBContext implements IPersistence {
        ArrayList<Mailbox> mailboxes = new ArrayList<Mailbox>();
         try {
             query="SELECT * FROM MailBox;";
-            ResultSet rs = currentDBConfiguration.select(query);
+            ResultSet rs = currentOnDataBaseConfiguration.select(query);
             while (rs.next()) {
                 Mailbox mailbox = null;
                 int ID = Integer.parseInt(rs.getString("id"));
@@ -166,7 +166,7 @@ public class DBContext implements IPersistence {
                 String greeting = rs.getString("greeting");
                 mailbox = new Mailbox(passcode,greeting);
                 query="SELECT message, state FROM Message WHERE idMailBox="+ID;
-                ResultSet rs2 = currentDBConfiguration.select(query);
+                ResultSet rs2 = currentOnDataBaseConfiguration.select(query);
                 {
                     while (rs2.next()) {
                         Message m = null;
@@ -185,7 +185,7 @@ public class DBContext implements IPersistence {
                 }
                 mailboxes.add(mailbox);
             }
-            currentDBConfiguration.closeSelect(rs);
+            currentOnDataBaseConfiguration.closeSelect(rs);
             return mailboxes;
         } catch (SQLException ex) {
             ex.printStackTrace();
@@ -196,11 +196,11 @@ public class DBContext implements IPersistence {
         String total = "0";
         try {
             query = "SELECT ME.id FROM Message ME, MailBox MA WHERE MA.id=ME.idMailBox AND ME.state='New' AND ME.idMailBox = "+idMailBox;
-            ResultSet rs = currentDBConfiguration.select(query);
+            ResultSet rs = currentOnDataBaseConfiguration.select(query);
             while (rs.next()) {
                 total = rs.getString("id");
             }
-            currentDBConfiguration.closeSelect(rs);
+            currentOnDataBaseConfiguration.closeSelect(rs);
             return Integer.parseInt(total);
         } catch (SQLException ex) {
             ex.printStackTrace();
@@ -212,6 +212,6 @@ public class DBContext implements IPersistence {
 
         int id = getLastNewMessage(idMailbox);
         String query = "DELETE FROM Message WHERE id="+id;
-        currentDBConfiguration.delete(query);
+        currentOnDataBaseConfiguration.delete(query);
     }
 }
