@@ -10,7 +10,7 @@ import com.arqui.Interfaces.IPresenters;
 import com.arqui.Presenters.Presenter;
 import com.arqui.Presenters.PresentersManager;
 import com.arqui.Repository.Database;
-import com.arqui.Repository.OnMemory;
+import com.arqui.Repository.Memory;
 import com.arqui.Views.Console;
 import com.arqui.Views.UserInterface;
 
@@ -28,12 +28,12 @@ public class Main
    {
 
       IPersistence context=new Database();
-      IPersistence memory=new OnMemory();
+      IPersistence memory=new Memory();
       IMailSystem system = new MailSystem(MAILBOX_COUNT,context);
       Scanner consoleInput = new Scanner(System.in);
-      IPresenters observers=new PresentersManager();
+      IPresenters presenters=new PresentersManager();
 
-      IConnection c = new Connection(system, observers);
+      IConnection c = new Connection(system, presenters);
       VoiceMailService vc = new VoiceMailService(c);
       Console console = new Console(consoleInput, c);
 //presenters
@@ -46,7 +46,7 @@ public class Main
       cp.addView(console);
       cp.addView(FirstUI);
       cp.addView(SecondUI);
-      observers.addPresenter(cp);
+      presenters.addPresenter(cp);
       c.resetConnection();
       vc.startAPIService();
 

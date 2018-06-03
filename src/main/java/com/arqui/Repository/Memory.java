@@ -5,9 +5,9 @@ import com.arqui.Models.Mailbox;
 
 import java.util.ArrayList;
 
-public class OnMemory implements IPersistence {
+public class Memory implements IPersistence {
     private ArrayList<Mailbox> mailboxes;
-    public OnMemory()
+    public Memory()
     {
         mailboxes=new ArrayList<>();
     }
@@ -28,6 +28,6 @@ public class OnMemory implements IPersistence {
 
     @Override
     public String getTypeOfPersistence() {
-        return "OnMemory";
+        return "Memory";
     }
 }
