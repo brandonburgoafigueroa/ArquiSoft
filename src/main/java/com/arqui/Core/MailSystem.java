@@ -13,17 +13,17 @@ public class MailSystem implements IMailSystem
 {
    private ArrayList<Mailbox> mailboxes;
    private int idCurrentMailbox;
-   private IPersistence dbContext;
+   private IPersistence persistence;
 
-   public MailSystem(int mailboxCount, IPersistence dbContext)
+   public MailSystem(int mailboxCount, IPersistence persistence)
    {
-      this.dbContext = dbContext;
+      this.persistence = persistence;
       mailboxes = new ArrayList();
       setupMailSystem(mailboxCount);
    }
 
    private void setupMailSystem(int mailboxCount) {
-      ArrayList<Mailbox> mailboxOfDB=dbContext.getAlMailbox();
+      ArrayList<Mailbox> mailboxOfDB= persistence.getAlMailbox();
       int Quantity=mailboxOfDB.size();
       if (Quantity==0)
       {
@@ -50,7 +50,7 @@ public class MailSystem implements IMailSystem
          mailboxes.add(new Mailbox(passcode, greeting));
       }
       for (Mailbox mailbox:mailboxes) {
-         dbContext.addMailbox(mailbox);
+         persistence.addMailbox(mailbox);
       }
    }
 
@@ -67,23 +67,23 @@ public class MailSystem implements IMailSystem
 
    @Override
    public String getTypeOfPersistence() {
-      return dbContext.getTypeOfPersistence();
+      return persistence.getTypeOfPersistence();
    }
 
    @Override
    public void changePersistence() {
-         if (dbContext instanceof Database)
+         if (persistence instanceof Database)
          {
-            dbContext=new Memory();
+            persistence =new Memory();
          }
-         if (dbContext instanceof Memory)
+         if (persistence instanceof Memory)
          {
-            dbContext=new Database();
+            persistence =new Database();
          }
    }
 
    public void saveChanges(Mailbox mailbox){
-      dbContext.saveChanges(mailbox, idCurrentMailbox);
+      persistence.saveChanges(mailbox, idCurrentMailbox);
    }
 
 }
