@@ -21,6 +21,7 @@ public class Memory implements IPersistence {
         mailboxes.add(mailbox);
     }
 
+
     @Override
     public ArrayList<Mailbox> getAlMailbox() {
         return mailboxes;
