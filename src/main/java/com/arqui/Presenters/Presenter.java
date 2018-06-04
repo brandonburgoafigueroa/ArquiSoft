@@ -7,6 +7,8 @@ import java.util.List;
 
 public class Presenter implements IPresenter {
 private List<IView> Views;
+private IModelView modelView;
+private IResponse Response;
 public Presenter()
 {
     Views=new ArrayList<IView>();
@@ -25,6 +27,7 @@ public Presenter()
 
 
     public void setModelView(IModelView modelView) {
+    this.modelView=modelView;
         ArrayList<String> options=modelView.getOptions();
         String information=modelView.getInformation();
         for (IView view:Views) {
@@ -34,6 +37,7 @@ public Presenter()
 
     @Override
     public void setError(IResponse error) {
+    this.Response=error;
         String errorText=error.getContentResponse();
         for (IView view:Views) {
             view.setInformation(errorText);

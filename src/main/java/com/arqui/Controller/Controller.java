@@ -6,7 +6,7 @@ import com.arqui.Interfaces.IRequest;
 import com.arqui.Requests.ExecuteCommandRequest;
 
 public class Controller implements IController {
-
+    private IRequest request;
     private IConnection connection;
     public Controller(IConnection connection)
     {
@@ -15,7 +15,7 @@ public class Controller implements IController {
 
     @Override
     public boolean executeRequest(String command) {
-        IRequest request=new ExecuteCommandRequest(command);
+        request=new ExecuteCommandRequest(command);
         return connection.executeCommand(request);
     }
 
