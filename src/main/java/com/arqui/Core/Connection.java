@@ -9,7 +9,23 @@ import com.arqui.States.*;
 
 public class Connection implements IConnection
 {
-
+    public Mailbox getCurrentMailbox() {
+        return currentMailbox;
+    }
+    public IMailSystem getMailboxSystem() {
+        return system;
+    }
+    public void setMailbox(Mailbox mailbox) {
+        this.currentMailbox = mailbox;
+    }
+    public void setStatus(IState state)
+    {
+        this.status=state;
+    }
+    private IMailSystem system;
+    private IPresentersManager presentersManager;
+    private Mailbox currentMailbox;
+    private IState status;
    public Connection(IMailSystem s, IPresentersManager presentersManager)
    {
        system = s;
@@ -80,23 +96,7 @@ public class Connection implements IConnection
     private boolean isInputHangUpCommand(String input) {
         return input.equalsIgnoreCase("H");
     }
-    public Mailbox getCurrentMailbox() {
-        return currentMailbox;
-    }
-    public IMailSystem getMailboxSystem() {
-        return system;
-    }
-    public void setMailbox(Mailbox mailbox) {
-        this.currentMailbox = mailbox;
-    }
-    public void setStatus(IState state)
-    {
-        this.status=state;
-    }
-    private IMailSystem system;
-    private IPresentersManager presentersManager;
-    private Mailbox currentMailbox;
-    private IState status;
+
 
     public void setModelView(IModelView modelView){
      presentersManager.setModelView(modelView);
