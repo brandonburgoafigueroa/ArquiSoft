@@ -55,8 +55,15 @@ public class MailBoxTest {
 		Assert.assertEquals(messageQueue,mailBox.getKeptMessages());
 	}
 	@Test
-	public void verifyIfTheMailBoxHasTheCorrectNewMessageAfterAddKeptMessage() {
+	public void verifyIfTheMessageGetTheCorrectMessage() {
 		Message message = new Message(HI_MESSAGE_LONG);
+		MessageQueue messageQueue = new MessageQueue();
+		messageQueue.add(message);
+		Assert.assertEquals(message,messageQueue.getMessageOf(0));
+	}
+	@Test
+	public void verifyIfTheMailBoxHasTheCorrectNewMessageAfterAddKeptMessage() {
+		Message message = new Message("PEPE",HI_MESSAGE_LONG);
 		MessageQueue messageQueue = new MessageQueue();
 		messageQueue.add(message);
 		mailBox.addKeptMessage(message);
