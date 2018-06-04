@@ -66,7 +66,8 @@ public class MailBoxTest {
 	public void createTypeMessageAndVerify() {
 		Message message = new Message(HI_MESSAGE_LONG);
 		TypeOfMessage m = TypeOfMessage.Kept;
-		
+		MessageQueue messageQueue = new MessageQueue();
+		messageQueue.add(message);
 		Assert.assertEquals(message,messageQueue.getMessageOf(0));
 	}
 	@Test
