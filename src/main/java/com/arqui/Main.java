@@ -51,7 +51,7 @@ public class Main
 
       presenter.addView(FirstUI);
 
-      presenter.addView(SecondUI);*/
+      presenter.addView(SecondUI);
 
       presentersManager.addPresenter(presenter);
 
