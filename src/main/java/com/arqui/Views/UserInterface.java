@@ -18,9 +18,8 @@ private List<JButton> OptionsButtons;
 private ActionListener listenerOption;
     public UserInterface(IController controller)
     {
-
-        pack();
         InitializeVariables(controller);
+        pack();
         initializeOptions();
         setAttributesToComponentsOfUI();
         setActionsToButtons();
