@@ -2,7 +2,10 @@ package com.arqui.Models;
 
 public class Mailbox
 {
-
+    private MessageQueue newMessages;
+    private MessageQueue keptMessages;
+    private String greeting;
+    private String passcode;
    public Mailbox(String aPasscode, String aGreeting)
    {
       passcode = aPasscode;
@@ -71,9 +74,6 @@ public class Mailbox
       return keptMessages;
    }
    public MessageQueue getNewMessages(){return newMessages;}
-   private MessageQueue newMessages;
-   private MessageQueue keptMessages;
-   private String greeting;
-   private String passcode;
+
 
 }
