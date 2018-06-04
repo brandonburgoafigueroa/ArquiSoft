@@ -38,6 +38,13 @@ public class MailBoxTest {
 		Assert.assertEquals(message,mailBox.getCurrentMessage());
 	}
 	@Test
+	public void verifyIfTheMailBoxHasTheCorrectPasscode() {
+		Message message = new Message(HI_MESSAGE_LONG);
+		mailBox.addMessage(message);
+		mailBox.setPasscode("Hello");
+		Assert.assertEquals("Hello",mailBox.getPasscode());
+	}
+	@Test
 	public void verifyIfTheMailBoxHasTheCurrentKeptMessage() {
 		Message message = new Message(HI_MESSAGE_LONG);
 		mailBox.addMessage(message);
