@@ -1,14 +1,10 @@
 <component name="libraryTable">
   <library name="ArquiSoft">
     <CLASSES>
-      <root url="file://$PROJECT_DIR$" />
+      <root url="jar://$PROJECT_DIR$/mockito-all-1.10.19.jar!/" />
+      <root url="jar://$PROJECT_DIR$/sqlite-jdbc-3.7.22.jar!/" />
     </CLASSES>
     <JAVADOC />
-    <SOURCES>
-      <root url="file://$PROJECT_DIR$/src" />
-      <root url="file://$PROJECT_DIR$" />
-    </SOURCES>
-    <jarDirectory url="file://$PROJECT_DIR$" recursive="false" />
-    <jarDirectory url="file://$PROJECT_DIR$" recursive="false" type="SOURCES" />
+    <SOURCES />
   </library>
 </component>

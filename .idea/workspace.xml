@@ -1,18 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="ArtifactsWorkspaceSettings">
-    <artifacts-to-build>
-      <artifact name="VoiceMail:jar" />
-    </artifacts-to-build>
-  </component>
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/src/controller/Connection.java" />
+    <bookmark url="file://$PROJECT_DIR$/src/main/java/com/arqui/Api/VoiceMailService.java" line="28" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7692b031-0669-4e25-83c0-2768805490be" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/src/persistence/DBConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/persistence/DBConfiguration.java" afterDir="false" />
+    <list default="true" id="afe49a70-aba2-4027-ab85-62f83f3f2d2b" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/src/test/java/MailBoxTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/MailBoxTest.java" afterDir="false" />
     </list>
-    <ignored path="$PROJECT_DIR$/bin/" />
+    <ignored path="$PROJECT_DIR$/out/" />
+    <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -20,114 +16,41 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="CodeInsightWorkspaceSettings">
-    <option name="optimizeImportsOnTheFly" value="true" />
-  </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/VoiceMail$Main.coverage" NAME="Main Coverage Results" MODIFIED="1524782284866" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
-    <SUITE FILE_PATH="coverage/VoiceMail$All_in_VoiceMail__4_.ic" NAME="All in VoiceMail (4) Coverage Results" MODIFIED="1526269809031" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
-    <SUITE FILE_PATH="coverage/VoiceMail$All_in_VoiceMail.coverage" NAME="All in VoiceMail Coverage Results" MODIFIED="1523415003664" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
-    <SUITE FILE_PATH="coverage/VoiceMail$ConnectionTest_shouldChangeGreetingFromStockOneToNewOne.ic" NAME="ConnectionTest.shouldChangeGreetingFromStockOneToNewOne Coverage Results" MODIFIED="1526267874015" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>test.*</FILTER>
+    <SUITE FILE_PATH="coverage/ArquiSoft$ConnectionTest.ic" NAME="ConnectionTest Coverage Results" MODIFIED="1528067834568" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/ArquiSoft$All_in_ArquiSoft.ic" NAME="All in ArquiSoft Coverage Results" MODIFIED="1528091905264" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/ArquiSoft$ConnectionTest_IfIEnterTheMessageMenuOf1AndPressShowMessageShouldBeShowEmptyMessages.ic" NAME="ConnectionTest.IfIEnterTheMessageMenuOf1AndPressShowMessageShouldBeShowEmptyMessages Coverage Results" MODIFIED="1527974006196" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.arqui.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/VoiceMail$MailSystemTest_verifyIfTheMailSystemIsEmpty.ic" NAME="MailSystemTest.verifyIfTheMailSystemIsEmpty Coverage Results" MODIFIED="1526263888852" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>test.*</FILTER>
+    <SUITE FILE_PATH="coverage/ArquiSoft$com_arqui_in_ArquiSoft.ic" NAME="com.arqui in ArquiSoft Coverage Results" MODIFIED="1527974495613" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.arqui.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/VoiceMail$controller_in_VoiceMail.ic" NAME="controller in VoiceMail Coverage Results" MODIFIED="1526263973813" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>controller.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/VoiceMail$All_in_VoiceMail__3_.ic" NAME="All in VoiceMail (3) Coverage Results" MODIFIED="1526271875282" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
-    <SUITE FILE_PATH="coverage/VoiceMail$All_in_VoiceMail__1_.ic" NAME="All in VoiceMail (1) Coverage Results" MODIFIED="1526271447529" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
-    <SUITE FILE_PATH="coverage/VoiceMail$All_in_VoiceMail__3_.coverage" NAME="All in VoiceMail (3) Coverage Results" MODIFIED="1523417166358" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
-    <SUITE FILE_PATH="coverage/VoiceMail$TelephoneTest_IncomeLetterHAndICheckThattheConnectionIsEstablishedShouldReturnTrue.coverage" NAME="TelephoneTest.IncomeLetterHAndICheckThattheConnectionIsEstablishedShouldReturnTrue Coverage Results" MODIFIED="1523327260220" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
-    <SUITE FILE_PATH="coverage/VoiceMail$All_in_VoiceMail__5_.ic" NAME="All in VoiceMail (5) Coverage Results" MODIFIED="1526270037420" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
-    <SUITE FILE_PATH="coverage/VoiceMail$All_in_VoiceMail__4_.coverage" NAME="All in VoiceMail (4) Coverage Results" MODIFIED="1524782294002" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
-    <SUITE FILE_PATH="coverage/VoiceMail$ConnectionTest_testeandoStartConnection.coverage" NAME="ConnectionTest.testeandoStartConnection Coverage Results" MODIFIED="1523319569027" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
-    <SUITE FILE_PATH="coverage/VoiceMail$All_in_VoiceMail__2_.ic" NAME="All in VoiceMail (2) Coverage Results" MODIFIED="1526271812766" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
-    <SUITE FILE_PATH="coverage/VoiceMail$All_in_VoiceMail__1_.coverage" NAME="All in VoiceMail (1) Coverage Results" MODIFIED="1523327276889" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
-    <SUITE FILE_PATH="coverage/VoiceMail$ConnectionTest_IfIEnterTheMessageMenuOf1AndPressSaveMessageTheSizeOfKeptMessagesShouldBeIncreasedByOne.ic" NAME="ConnectionTest.IfIEnterTheMessageMenuOf1AndPressSaveMessageTheSizeOfKeptMessagesShouldBeIncreasedByOne Coverage Results" MODIFIED="1526270610986" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>test.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/VoiceMail$All_in_VoiceMail.ic" NAME="All in VoiceMail Coverage Results" MODIFIED="1526272021891" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
-    <SUITE FILE_PATH="coverage/VoiceMail$ConnectionTest_shouldChangePassCodeFrom1To2AfterSelectTheMailBox.ic" NAME="ConnectionTest.shouldChangePassCodeFrom1To2AfterSelectTheMailBox Coverage Results" MODIFIED="1526268119463" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>test.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/VoiceMail$ConnectionTest_IfIEnterTheChangeGreetingOptionOf1AndPressHShouldTheStateGoToConnect.ic" NAME="ConnectionTest.IfIEnterTheChangeGreetingOptionOf1AndPressHShouldTheStateGoToConnect Coverage Results" MODIFIED="1526269686897" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>test.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/VoiceMail$test_in_VoiceMail.ic" NAME="test in VoiceMail Coverage Results" MODIFIED="1526263964182" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>test.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/VoiceMail$ConnectionTest_IfIEnterTheMessageMenuOf1AndPressShowMessageShouldBeShowEmptyMessages.ic" NAME="ConnectionTest.IfIEnterTheMessageMenuOf1AndPressShowMessageShouldBeShowEmptyMessages Coverage Results" MODIFIED="1526271077573" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>test.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/VoiceMail$MailSystemTester.coverage" NAME="MailSystemTester Coverage Results" MODIFIED="1523306922284" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
-    <SUITE FILE_PATH="coverage/VoiceMail$All_in_VoiceMail__2_.coverage" NAME="All in VoiceMail (2) Coverage Results" MODIFIED="1523416499545" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
-  </component>
-  <component name="CoverageOptionsProvider">
-    <option name="myAddOrReplace" value="0" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ConnectionTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/ConnectionTest.java">
+      <file leaf-file-name="Message.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/arqui/Models/Message.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2567">
-              <caret line="158" column="30" selection-start-line="158" selection-start-column="30" selection-end-line="158" selection-end-column="30" />
+            <state relative-caret-position="87">
+              <caret line="6" selection-start-line="6" selection-end-line="6" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Recording.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/controller/Recording.java">
+      <file leaf-file-name="MessageQueue.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/arqui/Models/MessageQueue.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="527">
-              <caret line="39" selection-start-line="39" selection-end-line="39" />
+            <state relative-caret-position="206">
+              <caret line="32" column="4" selection-start-line="32" selection-start-column="4" selection-end-line="32" selection-end-column="4" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ConsoleTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/ConsoleTest.java">
+      <file leaf-file-name="MailBoxTest.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/MailBoxTest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="153">
-              <caret line="25" column="8" selection-start-line="25" selection-start-column="8" selection-end-line="25" selection-end-column="8" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserInterface.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/view/UserInterface.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="561">
-              <caret line="39" column="16" selection-start-line="39" selection-start-column="16" selection-end-line="39" selection-end-column="16" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" selection-start-line="2" selection-end-line="2" selection-end-column="8" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DBConfiguration.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/persistence/DBConfiguration.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" column="78" selection-start-line="16" selection-start-column="78" selection-end-line="16" selection-end-column="78" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DBContext.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/persistence/DBContext.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3417">
-              <caret line="204" column="33" selection-start-line="204" selection-start-column="33" selection-end-line="204" selection-end-column="33" />
+              <caret line="69" column="27" selection-start-line="69" selection-start-column="27" selection-end-line="69" selection-end-column="27" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -135,29 +58,77 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Console.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/view/Console.java">
+      <file leaf-file-name="Database.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/arqui/Repository/Database.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="16" column="4" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="4" />
+            <state relative-caret-position="2932">
+              <caret line="186" column="13" lean-forward="true" selection-start-line="186" selection-start-column="13" selection-end-line="186" selection-end-column="13" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="View.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/view/View.java">
+      <file leaf-file-name="DatabaseConfiguration.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/arqui/Repository/DatabaseConfiguration.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+            <state relative-caret-position="940">
+              <caret line="98" selection-start-line="98" selection-end-line="98" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Memory.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/arqui/Repository/Memory.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="14" column="23" lean-forward="true" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="23" />
+              <folding>
+                <element signature="e#491#492#0" expanded="true" />
+                <element signature="e#529#530#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TypeOfMessage.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/arqui/Repository/TypeOfMessage.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="51">
+              <caret line="3" column="1" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MailSystem.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/arqui/Core/MailSystem.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1133">
+              <caret line="80" column="18" selection-start-line="80" selection-start-column="18" selection-end-line="80" selection-end-column="18" />
+              <folding>
+                <element signature="e#1799#1800#0" expanded="true" />
+                <element signature="e#1830#1831#0" expanded="true" />
+                <element signature="e#1878#1879#0" expanded="true" />
+                <element signature="e#1914#1915#0" expanded="true" />
+                <element signature="e#1962#1963#0" expanded="true" />
+                <element signature="e#2025#2026#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="MailSystemTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/MailSystemTest.java">
+        <entry file="file://$PROJECT_DIR$/src/test/java/MailSystemTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="527">
-              <caret line="40" column="5" selection-start-line="34" selection-start-column="4" selection-end-line="40" selection-end-column="5" />
+            <state relative-caret-position="263">
+              <caret line="60" column="38" selection-start-line="60" selection-start-column="38" selection-end-line="60" selection-end-column="38" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ConsoleTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/ConsoleTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-964">
+              <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -167,48 +138,17 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>mailboxMe</find>
-      <find>connect</find>
-      <find>MAILBOX_MENU_TEXT</find>
-      <find>.speak</find>
-      <find>.uPDATE</find>
-      <find>phone</find>
-      <find />
-      <find>_</find>
-      <find>&quot;hello!&quot;</find>
-      <find>status=</find>
-      <find>observers</find>
-      <find>where</find>
-      <find>public</find>
-      <find>change</find>
-      <find>if I get a mailbox and save changes the value of the database should be modified</find>
-      <find>dial</find>
-      <find>.dial</find>
-      <find />
-      <find>new DBContextTests(20)</find>
-      <find>MessageMenu</find>
+      <find>InitialPrompt</find>
+      <find>Invalid_Passcode</find>
+      <find>getMail</find>
     </findStrings>
-    <replaceStrings>
-      <replace>HELLO_MESSAGE</replace>
-      <replace>HI_MESSAGE_SHORT</replace>
-      <replace>ENTER_MAILBOX_MESSAGE</replace>
-      <replace>setStatus(</replace>
-      <replace />
-      <replace>.ExecuteCommand</replace>
-      <replace>.executeCommand</replace>
-      <replace>persistenceMocked</replace>
-    </replaceStrings>
-    <dirStrings>
-      <dir>C:\Users\brand\IdeaProjects\ArquiSoft\Tests</dir>
-      <dir>C:\Users\brand\arquisoft\arquisoft\src\controller</dir>
-    </dirStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -216,71 +156,85 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/MailSystemTester.java" />
-        <option value="$PROJECT_DIR$/src/MessageTest.java" />
-        <option value="$PROJECT_DIR$/src/UIObserver.form" />
-        <option value="$PROJECT_DIR$/src/Mailbox.java" />
-        <option value="$PROJECT_DIR$/src/Telephone.java" />
-        <option value="$PROJECT_DIR$/src/UIObserver.java" />
-        <option value="$PROJECT_DIR$/src/TelephoneTest.java" />
-        <option value="$PROJECT_DIR$/src/MessageQueue.java" />
-        <option value="$PROJECT_DIR$/src/MessageQuequeTest.java" />
-        <option value="$PROJECT_DIR$/src/MessageQueueTest.java" />
-        <option value="$PROJECT_DIR$/src/Message.java" />
-        <option value="$PROJECT_DIR$/src/MailSystem.java" />
-        <option value="$PROJECT_DIR$/src/Connection.java" />
-        <option value="$PROJECT_DIR$/src/MailBoxTest.java" />
-        <option value="$PROJECT_DIR$/src/MailSystemTest.java" />
-        <option value="$PROJECT_DIR$/src/IObservable.java" />
-        <option value="$PROJECT_DIR$/src/ConnectionTest.java" />
-        <option value="$PROJECT_DIR$/src/Console.java" />
-        <option value="$PROJECT_DIR$/src/test/MessageTest.java" />
-        <option value="$PROJECT_DIR$/src/view/View.java" />
-        <option value="$PROJECT_DIR$/src/ChangePasscode.java" />
-        <option value="$PROJECT_DIR$/src/test/MailBoxTest.java" />
-        <option value="$PROJECT_DIR$/src/test/MessageQueueTest.java" />
-        <option value="$PROJECT_DIR$/src/view/Console.java" />
-        <option value="$PROJECT_DIR$/src/view/UserInterface.java" />
-        <option value="$PROJECT_DIR$/src/controller/IObservers.java" />
-        <option value="$PROJECT_DIR$/src/controller/Observers.java" />
-        <option value="$PROJECT_DIR$/src/controller/Login.java" />
-        <option value="$PROJECT_DIR$/src/controller/MailboxMenu.java" />
-        <option value="$PROJECT_DIR$/src/controller/IState.java" />
-        <option value="$PROJECT_DIR$/src/controller/Message.java" />
-        <option value="$PROJECT_DIR$/src/controller/MessageQueue.java" />
-        <option value="$PROJECT_DIR$/src/controller/Connect.java" />
-        <option value="$PROJECT_DIR$/src/controller/Connection.java" />
-        <option value="$PROJECT_DIR$/src/controller/Mailbox.java" />
-        <option value="$PROJECT_DIR$/src/controller/MessageMenu.java" />
-        <option value="$PROJECT_DIR$/src/controller/ChangeGreating.java" />
-        <option value="$PROJECT_DIR$/src/controller/ChangePasscode.java" />
-        <option value="$PROJECT_DIR$/src/persistence/IPersistence.java" />
-        <option value="$PROJECT_DIR$/src/Main.java" />
-        <option value="$PROJECT_DIR$/src/test/DBContextTests.java" />
-        <option value="$PROJECT_DIR$/src/controller/MailSystem.java" />
-        <option value="$PROJECT_DIR$/src/test/MailSystemTestWithDB.java" />
-        <option value="$PROJECT_DIR$/src/test/MailSystemTest.java" />
-        <option value="$PROJECT_DIR$/src/test/ConnectionTest.java" />
-        <option value="$PROJECT_DIR$/src/controller/Recording.java" />
-        <option value="$PROJECT_DIR$/src/test/ConsoleTest.java" />
-        <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/src/persistence/DBContext.java" />
-        <option value="$PROJECT_DIR$/src/persistence/DBConfiguration.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/arqui/Interfaces/IResponseError.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/arqui/ModelViews/LoginModelView.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/arqui/States/Login.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/arqui/States/ChangeGreating.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/arqui/Interfaces/IResponse.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/arqui/ResponseRequest/ConnectResponseError.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/arqui/ResponseRequest/LoginResponseError.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/arqui/ResponseRequest/PersistenceResponse.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/arqui/States/MailboxMenu.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/arqui/Interfaces/IPresenters.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/arqui/Interfaces/IView.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/arqui/Presenters/PresentersManager.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/arqui/Presenters/Presenter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/arqui/Interfaces/IMailSystem.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/arqui/Core/MailSystem.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/arqui/Interfaces/IPersistence.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/arqui/Repository/Database.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/arqui/Interfaces/IPresenter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/arqui/Interfaces/IController.java" />
+        <option value="$PROJECT_DIR$/src/test/java/ConsoleTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/arqui/Interfaces/IApi.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/arqui/Views/UserInterface.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/arqui/Interfaces/IConnection.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/arqui/Main.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/arqui/Interfaces/IPresentersManager.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/arqui/Interfaces/IRequest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/arqui/Interfaces/IModelView.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/arqui/States/MessageMenu.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/arqui/Controller/Controller.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/arqui/Requests/ExecuteCommandRequest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/arqui/States/Connect.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/arqui/ModelViews/MessageMenuModelView.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/arqui/States/ChangePasscode.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/arqui/States/Recording.java" />
+        <option value="$PROJECT_DIR$/src/test/java/MailSystemTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/arqui/ModelViews/RecordingModelView.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/arqui/ModelViews/MailboxMenuModelView.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/arqui/ModelViews/ConnectModelView.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/arqui/ModelViews/ChangePasscodeModelView.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/arqui/ModelViews/ChangeGreetingModelView.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/arqui/Views/Console.java" />
+        <option value="$PROJECT_DIR$/src/test/java/ConnectionTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/arqui/Api/VoiceMailService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/arqui/Core/Connection.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/arqui/Models/Mailbox.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/arqui/Models/Message.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/arqui/Models/MessageQueue.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/arqui/Repository/DatabaseConfiguration.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/arqui/Repository/TypeOfMessage.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/arqui/Repository/Memory.java" />
+        <option value="$PROJECT_DIR$/src/test/java/MailBoxTest.java" />
       </list>
     </option>
   </component>
-  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsGulpfileManager">
-    <detection-done>true</detection-done>
-    <sorting>DEFINITION_ORDER</sorting>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
   </component>
-  <component name="NodePackageJsonFileManager">
-    <packageJsonPaths />
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="ArquiSoft" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="ArquiSoft" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Lifecycle" type="58874e2:MavenProjectsStructure$LifecycleNode" />
+        </path>
+      </expand>
+      <select />
+    </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
+    <option name="x" value="-7" />
     <option name="width" value="697" />
     <option name="height" value="745" />
   </component>
@@ -292,51 +246,151 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="AndroidView" />
+      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="VoiceMail" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ArquiSoft" type="b2602c69:ProjectViewProjectNode" />
               <item name="ArquiSoft" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="VoiceMail" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ArquiSoft" type="b2602c69:ProjectViewProjectNode" />
               <item name="ArquiSoft" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="VoiceMail" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ArquiSoft" type="b2602c69:ProjectViewProjectNode" />
               <item name="ArquiSoft" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="persistence" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ArquiSoft" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ArquiSoft" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ArquiSoft" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ArquiSoft" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="arqui" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ArquiSoft" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ArquiSoft" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="arqui" type="462c0819:PsiDirectoryNode" />
+              <item name="Api" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ArquiSoft" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ArquiSoft" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="arqui" type="462c0819:PsiDirectoryNode" />
+              <item name="Controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ArquiSoft" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ArquiSoft" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="arqui" type="462c0819:PsiDirectoryNode" />
+              <item name="Core" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ArquiSoft" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ArquiSoft" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="arqui" type="462c0819:PsiDirectoryNode" />
+              <item name="Models" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ArquiSoft" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ArquiSoft" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="arqui" type="462c0819:PsiDirectoryNode" />
+              <item name="Presenters" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ArquiSoft" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ArquiSoft" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="arqui" type="462c0819:PsiDirectoryNode" />
+              <item name="Repository" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ArquiSoft" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ArquiSoft" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="arqui" type="462c0819:PsiDirectoryNode" />
+              <item name="Responses" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ArquiSoft" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ArquiSoft" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="arqui" type="462c0819:PsiDirectoryNode" />
+              <item name="States" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ArquiSoft" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ArquiSoft" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ArquiSoft" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ArquiSoft" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="UI_DESIGNER_EDITOR_MODE.PaletteManager.WIDTH" value="223" />
-    <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH" value="327" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="aspect.path.notification.shown" value="true" />
     <property name="extract.method.default.visibility" value="private" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
-    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.2" />
-    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.General" />
+    <property name="project.structure.side.proportion" value="0.0" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Christian\Desktop\ArquiSoft\ArquiSoft\src\view" />
-      <recent name="C:\Users\brand\IdeaProjects\ArquiSoft\Tests" />
+      <recent name="C:\Users\brand\Documents\nuevo arqui\ArquiSoft\src\test\java" />
+      <recent name="C:\Users\brand\Documents\nuevo arqui\ArquiSoft\src\test" />
+      <recent name="C:\Users\brand\Documents\nuevo arqui\ArquiSoft\src\main\java\com\arqui\Views" />
+      <recent name="C:\Users\brand\Documents\nuevo arqui\ArquiSoft\target" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.arqui" />
+    </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.arqui.DisplayState" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -351,17 +405,23 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.All in VoiceMail (2)">
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <option name="HEIGHT" value="0" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="WIDTH" value="0" />
+  <component name="RunManager" selected="JUnit.All in ArquiSoft">
+    <configuration name="Main" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.arqui.Main" />
+      <module name="ArquiSoft" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.arqui.Presenters.PresentersManagerManager" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
     </configuration>
-    <configuration name="All in VoiceMail (2)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="VoiceMail" />
+    <configuration name="All in ArquiSoft" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ArquiSoft" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="" />
@@ -377,14 +437,14 @@
       </option>
       <patterns />
     </configuration>
-    <configuration name="All in VoiceMail (3)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="VoiceMail" />
+    <configuration name="ConnectionTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ArquiSoft" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" />
+      <option name="MAIN_CLASS_NAME" value="ConnectionTest" />
       <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="package" />
+      <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
@@ -394,14 +454,14 @@
       </option>
       <patterns />
     </configuration>
-    <configuration name="All in VoiceMail" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="VoiceMail" />
+    <configuration name="ConnectionTest.IfIEnterTheChangePersistenceShouldBeShowPersistenceChanged" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ArquiSoft" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="package" />
+      <option name="MAIN_CLASS_NAME" value="ConnectionTest" />
+      <option name="METHOD_NAME" value="IfIEnterTheChangePersistenceShouldBeShowPersistenceChanged" />
+      <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
@@ -411,19 +471,30 @@
       </option>
       <patterns />
     </configuration>
-    <configuration name="ConsoleTest.EnterAChainInPhoneAndPrintTheChainShouldReturnMeSame" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="VoiceMail" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="test.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
+    <configuration name="ConnectionTest.IfIEnterTheQuitOptionShouldBeExitProgram" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ArquiSoft" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="test" />
-      <option name="MAIN_CLASS_NAME" value="test.ConsoleTest" />
-      <option name="METHOD_NAME" value="EnterAChainInPhoneAndPrintTheChainShouldReturnMeSame" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="ConnectionTest" />
+      <option name="METHOD_NAME" value="IfIEnterTheQuitOptionShouldBeExitProgram" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration name="MailSystemTest.ifIInitMailSystemAndGetQuantityShouldBeShow20" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ArquiSoft" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="MailSystemTest" />
+      <option name="METHOD_NAME" value="ifIInitMailSystemAndGetQuantityShouldBeShow20" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -450,17 +521,17 @@
       </option>
       <patterns />
     </configuration>
-    <configuration name="persistence in VoiceMail" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="VoiceMail" />
+    <configuration name="com.arqui in ArquiSoft" type="JUnit" factoryName="JUnit" nameIsGenerated="true">
+      <module name="ArquiSoft" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="persistence.*" />
+          <option name="PATTERN" value="com.arqui.Presenters.PresentersManagerManager" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="persistence" />
+      <option name="PACKAGE_NAME" value="com.arqui" />
       <option name="MAIN_CLASS_NAME" />
       <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="package" />
@@ -495,33 +566,22 @@
       <properties />
       <listeners />
     </configuration>
-    <configuration default="true" type="Remote" factoryName="Remote">
-      <option name="USE_SOCKET_TRANSPORT" value="true" />
-      <option name="SERVER_MODE" value="false" />
-      <option name="SHMEM_ADDRESS" value="javadebug" />
-      <option name="HOST" value="localhost" />
-      <option name="PORT" value="5005" />
-    </configuration>
-    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
-      <module name="" />
-      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
-      <option name="PROGRAM_PARAMETERS" />
-      <predefined_log_file id="idea.log" enabled="true" />
-    </configuration>
     <list>
-      <item itemvalue="JUnit.ConsoleTest.EnterAChainInPhoneAndPrintTheChainShouldReturnMeSame" />
-      <item itemvalue="JUnit.All in VoiceMail (2)" />
-      <item itemvalue="JUnit.All in VoiceMail (3)" />
-      <item itemvalue="JUnit.All in VoiceMail" />
-      <item itemvalue="JUnit.persistence in VoiceMail" />
+      <item itemvalue="Application.Main" />
+      <item itemvalue="JUnit.com.arqui in ArquiSoft" />
+      <item itemvalue="JUnit.All in ArquiSoft" />
+      <item itemvalue="JUnit.ConnectionTest" />
+      <item itemvalue="JUnit.ConnectionTest.IfIEnterTheChangePersistenceShouldBeShowPersistenceChanged" />
+      <item itemvalue="JUnit.ConnectionTest.IfIEnterTheQuitOptionShouldBeExitProgram" />
+      <item itemvalue="JUnit.MailSystemTest.ifIInitMailSystemAndGetQuantityShouldBeShow20" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.All in VoiceMail (2)" />
-        <item itemvalue="JUnit.persistence in VoiceMail" />
-        <item itemvalue="JUnit.All in VoiceMail" />
-        <item itemvalue="JUnit.All in VoiceMail (3)" />
-        <item itemvalue="JUnit.ConsoleTest.EnterAChainInPhoneAndPrintTheChainShouldReturnMeSame" />
+        <item itemvalue="JUnit.All in ArquiSoft" />
+        <item itemvalue="JUnit.MailSystemTest.ifIInitMailSystemAndGetQuantityShouldBeShow20" />
+        <item itemvalue="JUnit.ConnectionTest.IfIEnterTheQuitOptionShouldBeExitProgram" />
+        <item itemvalue="JUnit.ConnectionTest.IfIEnterTheChangePersistenceShouldBeShowPersistenceChanged" />
+        <item itemvalue="JUnit.ConnectionTest" />
       </list>
     </recent_temporary>
   </component>
@@ -530,629 +590,539 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="7692b031-0669-4e25-83c0-2768805490be" name="Default" comment="" />
-      <created>1522770118420</created>
+      <changelist id="afe49a70-aba2-4027-ab85-62f83f3f2d2b" name="Default" comment="" />
+      <created>1527475239650</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1522770118420</updated>
-      <workItem from="1522770124707" duration="6059000" />
-      <workItem from="1523159869607" duration="681000" />
-      <workItem from="1523212929508" duration="6631000" />
-      <workItem from="1523236153767" duration="6136000" />
-      <workItem from="1523296394386" duration="212000" />
-      <workItem from="1523296799445" duration="7000" />
-      <workItem from="1523303259363" duration="11506000" />
-      <workItem from="1523358507685" duration="49000" />
-      <workItem from="1523380582720" duration="14066000" />
-      <workItem from="1523422006825" duration="2663000" />
-      <workItem from="1523473161589" duration="1582000" />
-      <workItem from="1523474457523" duration="8000" />
-      <workItem from="1523479774512" duration="931000" />
-      <workItem from="1524420941412" duration="9413000" />
-      <workItem from="1524432169775" duration="6058000" />
-      <workItem from="1524581290355" duration="252000" />
-      <workItem from="1524582748116" duration="1737000" />
-      <workItem from="1524762995362" duration="2247000" />
-      <workItem from="1524773114224" duration="281000" />
-      <workItem from="1524780996570" duration="7062000" />
-      <workItem from="1525722685237" duration="1286000" />
+      <updated>1527475239650</updated>
     </task>
-    <task id="LOCAL-00001" summary="Modificando speak por update en telephone">
-      <created>1523213745161</created>
+    <task id="LOCAL-00001" summary="Voice mail service comments">
+      <created>1528088717304</created>
       <option name="number" value="00001" />
       <option name="presentableId" value="LOCAL-00001" />
       <option name="project" value="LOCAL" />
-      <updated>1523213745161</updated>
+      <updated>1528088717304</updated>
     </task>
-    <task id="LOCAL-00002" summary="Modificando speak por update en telephone">
-      <created>1523213822469</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1523213822469</updated>
-    </task>
-    <task id="LOCAL-00003" summary="Modificando speak por update en telephone">
-      <created>1523213862542</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1523213862542</updated>
-    </task>
-    <task id="LOCAL-00004" summary="Modificando speak por update en telephone">
-      <created>1523213871810</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1523213871810</updated>
-    </task>
-    <task id="LOCAL-00005" summary="Imprimiendo mensajes de consola en la interfaz">
-      <created>1523214487686</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1523214487686</updated>
-    </task>
-    <task id="LOCAL-00006" summary="Text area en uiobserver">
-      <created>1523215575842</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1523215575842</updated>
-    </task>
-    <task id="LOCAL-00007" summary="Saludo a todos los agregados funcionando">
-      <created>1523227904473</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1523227904473</updated>
-    </task>
-    <task id="LOCAL-00008" summary="Saludo a todos los agregados">
-      <created>1523228723361</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1523228723361</updated>
-    </task>
-    <task id="LOCAL-00009" summary="Inputs en los ui">
-      <created>1523242214680</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1523242214681</updated>
-    </task>
-    <task id="LOCAL-00010" summary="Pruebas pasando">
-      <created>1523318280060</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1523318280060</updated>
-    </task>
-    <task id="LOCAL-00011" summary="Pruebas pasando">
-      <created>1523318295424</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1523318295424</updated>
-    </task>
-    <task id="LOCAL-00012" summary="Exit y execute command">
-      <created>1523329724370</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1523329724370</updated>
-    </task>
-    <task id="LOCAL-00013" summary="refactor">
-      <created>1523415557519</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1523415557519</updated>
-    </task>
-    <option name="localTasksCounter" value="14" />
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="All_in_VoiceMail - 2018.05.14 at 00h 15m 52s.xml">
-      <configuration name="All in VoiceMail" configurationId="JUnit" />
+    <history-entry file="All_in_ArquiSoft - 2018.06.04 at 01h 36m 32s.xml">
+      <configuration name="All in ArquiSoft" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="All_in_VoiceMail_(1) - 2018.05.14 at 00h 16m 01s.xml">
-      <configuration name="All in VoiceMail (1)" configurationId="JUnit" />
+    <history-entry file="All_in_ArquiSoft - 2018.06.04 at 01h 37m 27s.xml">
+      <configuration name="All in ArquiSoft" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="All_in_VoiceMail_(1) - 2018.05.14 at 00h 16m 58s.xml">
-      <configuration name="All in VoiceMail (1)" configurationId="JUnit" />
+    <history-entry file="All_in_ArquiSoft - 2018.06.04 at 01h 39m 21s.xml">
+      <configuration name="All in ArquiSoft" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="All_in_VoiceMail_(1) - 2018.05.14 at 00h 17m 31s.xml">
-      <configuration name="All in VoiceMail (1)" configurationId="JUnit" />
+    <history-entry file="All_in_ArquiSoft - 2018.06.04 at 01h 40m 20s.xml">
+      <configuration name="All in ArquiSoft" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ConsoleTest_EnterAChainInPhoneAndPrintTheChainShouldReturnMeSame - 2018.05.14 at 00h 23m 10s.xml">
-      <configuration name="ConsoleTest.EnterAChainInPhoneAndPrintTheChainShouldReturnMeSame" configurationId="JUnit" />
+    <history-entry file="All_in_ArquiSoft - 2018.06.04 at 01h 42m 39s.xml">
+      <configuration name="All in ArquiSoft" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="All_in_VoiceMail_(2) - 2018.05.14 at 00h 23m 36s.xml">
-      <configuration name="All in VoiceMail (2)" configurationId="JUnit" />
+    <history-entry file="All_in_ArquiSoft - 2018.06.04 at 01h 42m 58s.xml">
+      <configuration name="All in ArquiSoft" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="All_in_VoiceMail_(3) - 2018.05.14 at 00h 24m 38s.xml">
-      <configuration name="All in VoiceMail (3)" configurationId="JUnit" />
+    <history-entry file="All_in_ArquiSoft - 2018.06.04 at 01h 44m 52s.xml">
+      <configuration name="All in ArquiSoft" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="All_in_VoiceMail_(2) - 2018.05.16 at 14h 56m 31s.xml">
-      <configuration name="All in VoiceMail (2)" configurationId="JUnit" />
+    <history-entry file="All_in_ArquiSoft - 2018.06.04 at 01h 45m 19s.xml">
+      <configuration name="All in ArquiSoft" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="persistence_in_VoiceMail - 2018.05.16 at 14h 58m 11s.xml">
-      <configuration name="persistence in VoiceMail" configurationId="JUnit" />
+    <history-entry file="All_in_ArquiSoft - 2018.06.04 at 01h 48m 03s.xml">
+      <configuration name="All in ArquiSoft" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="All_in_VoiceMail_(2) - 2018.05.16 at 15h 00m 26s.xml">
-      <configuration name="All in VoiceMail (2)" configurationId="JUnit" />
+    <history-entry file="All_in_ArquiSoft - 2018.06.04 at 01h 48m 19s.xml">
+      <configuration name="All in ArquiSoft" configurationId="JUnit" />
     </history-entry>
-  </component>
-  <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="76571000" />
-  </component>
-  <component name="TodoView">
-    <todo-panel id="selected-file">
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
-    <todo-panel id="all">
-      <are-packages-shown value="true" />
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
+      <window_info anchor="right" id="PlantUML" order="3" />
       <window_info anchor="right" id="Palette" order="4" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.32200646" />
-      <window_info anchor="bottom" id="Messages" order="9" weight="0.31796503" />
-      <window_info anchor="right" id="Palette&#9;" order="7" />
-      <window_info id="Image Layers" order="5" />
-      <window_info anchor="right" id="Capture Analysis" order="8" />
-      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50292826" side_tool="true" weight="0.32761312" />
-      <window_info anchor="right" id="Maven Projects" order="5" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49707174" visible="true" weight="0.290938" />
-      <window_info anchor="bottom" id="Version Control" order="10" weight="0.32847896" />
-      <window_info anchor="bottom" id="Terminal" order="11" weight="0.32847896" />
-      <window_info id="Capture Tool" order="2" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info id="simpleUML" order="2" />
+      <window_info anchor="bottom" id="Messages" order="8" weight="0.32591414" />
+      <window_info anchor="right" id="Palette&#9;" order="4" />
+      <window_info id="Image Layers" order="3" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
+      <window_info anchor="right" id="Maven Projects" order="4" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32591414" />
+      <window_info anchor="right" id="Coverage" order="5" side_tool="true" visible="true" weight="0.329429" />
+      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info id="Capture Tool" order="3" />
       <window_info id="Designer" order="3" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19692533" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.28330892" />
+      <window_info anchor="right" id="UML design tool window" order="3" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
-      <window_info id="UI Designer" order="4" />
-      <window_info anchor="right" id="Theme Preview" order="9" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.342723" />
-      <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="3" weight="0.25" />
-      <window_info anchor="right" id="Coverage" order="0" side_tool="true" visible="true" weight="0.329429" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="right" id="Commander" order="1" weight="0.4" />
-      <window_info anchor="right" id="Database" order="6" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info id="UI Designer" order="3" />
+      <window_info anchor="right" id="Theme Preview" order="4" />
+      <window_info id="Favorites" order="3" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.40375587" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32707354" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3317684" />
     </layout>
-  </component>
-  <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <layout-to-restore>
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="right" id="Theme Preview" order="5" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24963397" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3286385" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3286385" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39906102" />
+      <window_info anchor="right" id="Palette&#9;" order="6" />
+      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.3286385" />
+      <window_info anchor="right" id="Maven Projects" order="7" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+    </layout-to-restore>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Modificando speak por update en telephone" />
-    <MESSAGE value="Imprimiendo mensajes de consola en la interfaz" />
-    <MESSAGE value="Text area en uiobserver" />
-    <MESSAGE value="Saludo a todos los agregados funcionando" />
-    <MESSAGE value="Saludo a todos los agregados" />
-    <MESSAGE value="Inputs en los ui" />
-    <MESSAGE value="Pruebas pasando" />
-    <MESSAGE value="Exit y execute command" />
-    <MESSAGE value="refactor" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor" />
+    <MESSAGE value="Voice mail service comments" />
+    <option name="LAST_COMMIT_MESSAGE" value="Voice mail service comments" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/ConsoleTest.java</url>
-          <line>78</line>
+          <url />
+          <line>12</line>
           <properties />
-          <option name="timeStamp" value="45" />
+          <option name="timeStamp" value="23" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/controller/ChangePasscode.java</url>
-          <line>40</line>
+          <url />
+          <line>39</line>
           <properties />
-          <option name="timeStamp" value="48" />
+          <option name="timeStamp" value="40" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/persistence/DBConfiguration.java</url>
-          <line>38</line>
+          <url />
+          <line>122</line>
           <properties />
-          <option name="timeStamp" value="55" />
+          <option name="timeStamp" value="47" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/controller/MailSystem.java</url>
-          <line>21</line>
+          <url />
+          <line>17</line>
           <properties />
-          <option name="timeStamp" value="76" />
+          <option name="timeStamp" value="54" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/ConnectionTest.java</url>
-          <line>77</line>
+          <url />
+          <line>66</line>
           <properties />
-          <option name="timeStamp" value="79" />
+          <option name="timeStamp" value="57" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/ConnectionTest.java</url>
-          <line>91</line>
+          <url />
+          <line>50</line>
           <properties />
-          <option name="timeStamp" value="80" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/ConnectionTest.java</url>
-          <line>130</line>
-          <properties />
-          <option name="timeStamp" value="82" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/ConnectionTest.java</url>
-          <line>158</line>
-          <properties />
-          <option name="timeStamp" value="87" />
+          <option name="timeStamp" value="58" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="88" />
+      <option name="time" value="60" />
     </breakpoint-manager>
-    <watches-manager>
-      <configuration name="Application">
-        <watch expression="((Connection)this).system" custom="controller.Connection" />
-      </configuration>
-    </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$PROJECT_DIR$/mockito-all-1.10.19.jar!/org/mockito/internal/progress/ThreadSafeMockingProgress.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/com/sparkjava/spark-core/2.2/spark-core-2.2.jar!/spark/webserver/MatcherFilter.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="107">
-          <caret line="35" selection-start-line="35" selection-end-line="35" />
+        <state relative-caret-position="118">
+          <caret line="164" selection-start-line="164" selection-end-line="164" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$PROJECT_DIR$/mockito-all-1.10.19.jar!/org/mockito/internal/MockitoCore.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12-sources.jar!/org/junit/internal/runners/model/ReflectiveCallable.java" />
+    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12-sources.jar!/org/junit/runners/ParentRunner.java" />
+    <entry file="jar://$MAVEN_REPOSITORY$/org/mockito/mockito-core/2.18.0/mockito-core-2.18.0-sources.jar!/org/mockito/internal/creation/bytebuddy/MockMethodInterceptor.java" />
+    <entry file="file://$PROJECT_DIR$/src/test/java/ConnectionTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="88" selection-start-line="88" selection-end-line="88" />
+        <state relative-caret-position="306">
+          <caret line="38" selection-start-line="38" selection-end-line="38" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bin/Connection.class" />
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_151/src.zip!/java/awt/event/ActionListener.java" />
-    <entry file="file://$PROJECT_DIR$/src/view/UserInterface.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/arqui/Controller/Controller.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="90" column="33" selection-start-line="90" selection-start-column="33" selection-end-line="90" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller/IMailSystem.java" />
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_151/src.zip!/java/util/ArrayList.java" />
-    <entry file="jar://$PROJECT_DIR$/sqlite-jdbc-3.7.22.jar!/org/sqlite/Conn.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="141">
-          <caret line="333" selection-start-line="333" selection-end-line="333" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller/Message.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="13" column="24" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller/IState.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/persistence/IPersistence.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="38" selection-start-line="9" selection-start-column="38" selection-end-line="9" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/MessageTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="14" column="16" selection-start-line="14" selection-start-column="16" selection-end-line="14" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller/IObservers.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="41" selection-start-line="6" selection-start-column="41" selection-end-line="6" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="18" selection-start-line="19" selection-start-column="18" selection-end-line="19" selection-end-column="18" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/persistence/TypeOfMessage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="5" selection-start-line="2" selection-start-column="5" selection-end-line="2" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller/MessageQueue.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/MailBoxTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-510">
+        <state relative-caret-position="68">
           <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/MessageQueueTest.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/arqui/Api/VoiceMailService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="30" column="64" selection-start-line="30" selection-start-column="64" selection-end-line="30" selection-end-column="64" />
+        <state relative-caret-position="255">
+          <caret line="21" column="63" lean-forward="true" selection-start-line="21" selection-start-column="63" selection-end-line="21" selection-end-column="63" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/lib/junit-4.12.jar!/org/junit/Assert.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="25" selection-start-line="25" selection-end-line="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller/MailSystem.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="65" column="1" selection-start-line="65" selection-start-column="1" selection-end-line="65" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller/Mailbox.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="54" selection-start-line="54" selection-end-line="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/mockito-all-1.10.19.jar!/org/mockito/Mockito.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="131">
-          <caret line="1553" selection-start-line="1553" selection-end-line="1553" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/lib/junit-4.12.jar!/org/junit/runners/model/FrameworkMethod.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="98">
-          <caret line="29" selection-start-line="29" selection-end-line="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/lib/junit-4.12.jar!/org/junit/internal/runners/statements/InvokeMethod.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="21" selection-start-line="21" selection-end-line="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/lib/junit-4.12.jar!/org/junit/internal/runners/statements/RunBefores.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="259">
-          <caret line="32" selection-start-line="32" selection-end-line="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/lib/junit-4.12.jar!/org/junit/runners/BlockJUnit4ClassRunner.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="49" selection-start-line="49" selection-end-line="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/lib/junit-4.12.jar!/org/junit/runner/JUnitCore.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="309">
-          <caret line="76" selection-start-line="76" selection-end-line="76" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller/MailboxMenu.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-190">
-          <caret line="24" selection-start-line="24" selection-end-line="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller/ChangeGreating.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="33" selection-start-line="33" selection-end-line="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller/ChangePasscode.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-182">
-          <caret line="13" selection-start-line="13" selection-end-line="13" />
-          <folding>
-            <element signature="e#1034#1035#0" expanded="true" />
-            <element signature="e#1104#1105#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller/Connect.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-374">
-          <caret line="23" selection-start-line="23" selection-end-line="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/mockito-all-1.10.19.jar!/org/mockito/internal/util/ObjectMethodsGuru.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="27" selection-start-line="27" selection-end-line="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/lib/junit-4.12.jar!/org/junit/runners/ParentRunner.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="202" selection-start-line="202" selection-end-line="202" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/mockito-all-1.10.19.jar!/org/mockito/internal/creation/cglib/MethodInterceptorFilter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="58" selection-start-line="58" selection-end-line="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller/Observers.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="236">
-          <caret line="26" selection-start-line="26" selection-end-line="26" />
-          <folding>
-            <element signature="e#200#201#0" expanded="true" />
-            <element signature="e#249#250#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/lib/junit-4.12.jar!/org/junit/internal/runners/model/ReflectiveCallable.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller/Connection.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="328">
-          <caret line="41" selection-start-line="41" selection-end-line="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller/MessageMenu.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="677">
-          <caret line="75" column="59" lean-forward="true" selection-start-line="70" selection-start-column="3" selection-end-line="75" selection-end-column="59" />
-          <folding>
-            <element signature="e#1325#1326#0" expanded="true" />
-            <element signature="e#1380#1381#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller/Login.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="833">
-          <caret line="63" column="4" selection-start-line="63" selection-start-column="4" selection-end-line="63" selection-end-column="81" />
-          <folding>
-            <element signature="e#1248#1249#0" expanded="true" />
-            <element signature="e#1316#1317#0" expanded="true" />
-            <element signature="e#1459#1460#0" expanded="true" />
-            <element signature="e#1497#1498#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/ConnectionTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2567">
-          <caret line="158" column="30" selection-start-line="158" selection-start-column="30" selection-end-line="158" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller/Recording.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="39" selection-start-line="39" selection-end-line="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/MailSystemTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="40" column="5" selection-start-line="34" selection-start-column="4" selection-end-line="40" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/DBContextTests.java" />
-    <entry file="file://$PROJECT_DIR$/src/test/MailSystemTestWithDB.java" />
-    <entry file="file://$PROJECT_DIR$/src/test/ConsoleTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="25" column="8" selection-start-line="25" selection-start-column="8" selection-end-line="25" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/view/View.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/arqui/Interfaces/IApi.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/view/Console.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/arqui/Interfaces/IConnection.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="16" column="4" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="4" />
+        <state relative-caret-position="223">
+          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/view/UserInterface.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="39" column="16" selection-start-line="39" selection-start-column="16" selection-end-line="39" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/arqui/Interfaces/IController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
-          <caret line="2" selection-start-line="2" selection-end-line="2" selection-end-column="8" />
+          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/persistence/DBContext.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/arqui/Interfaces/IMailSystem.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3417">
-          <caret line="204" column="33" selection-start-line="204" selection-start-column="33" selection-end-line="204" selection-end-column="33" />
+        <state relative-caret-position="153">
+          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/arqui/Interfaces/IModelView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/arqui/Interfaces/IPersistence.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="9" column="38" selection-start-line="9" selection-start-column="38" selection-end-line="9" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/arqui/Interfaces/IPresenter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="28" selection-start-line="4" selection-start-column="28" selection-end-line="4" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/arqui/Interfaces/IPresentersManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/arqui/Interfaces/IRequest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/arqui/Interfaces/IResponse.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/arqui/Interfaces/IState.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/arqui/Interfaces/IView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="52" lean-forward="true" selection-start-line="6" selection-start-column="52" selection-end-line="6" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/arqui/ModelViews/RecordingModelView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/arqui/ModelViews/ChangeGreetingModelView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/arqui/ModelViews/ChangePasscodeModelView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/arqui/ModelViews/ConnectModelView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/arqui/ModelViews/MailboxMenuModelView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-49">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/arqui/ModelViews/MessageMenuModelView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/arqui/Presenters/PresentersManagerManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-270">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/arqui/Requests/ExecuteCommandRequest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/arqui/Responses/ConnectResponseError.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/arqui/Responses/LoginResponseError.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/arqui/Responses/PersistenceResponse.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/arqui/States/ChangeGreating.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-576">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/arqui/States/ChangePasscode.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="104">
+          <caret line="46" column="59" selection-start-line="46" selection-start-column="59" selection-end-line="46" selection-end-column="59" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/persistence/DBConfiguration.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/arqui/States/Connect.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="78" selection-start-line="16" selection-start-column="78" selection-end-line="16" selection-end-column="78" />
+        <state relative-caret-position="867">
+          <caret line="68" selection-start-line="68" selection-end-line="68" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1479#1480#0" expanded="true" />
+            <element signature="e#1521#1522#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/arqui/States/Login.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-270">
+          <caret line="28" selection-start-line="28" selection-end-line="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/arqui/States/MessageMenu.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="816">
+          <caret line="50" column="60" selection-start-line="50" selection-start-column="60" selection-end-line="50" selection-end-column="60" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/arqui/States/MailboxMenu.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/arqui/States/Recording.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="22" column="32" selection-start-line="22" selection-start-column="32" selection-end-line="22" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/arqui/Views/Console.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-340">
+          <caret line="13" column="32" lean-forward="true" selection-start-line="13" selection-start-column="32" selection-end-line="13" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1219#1220#0" expanded="true" />
+            <element signature="e#1243#1244#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/arqui/Core/Connection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="66" column="29" selection-start-line="66" selection-start-column="18" selection-end-line="66" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/arqui/Presenters/Presenter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-323">
+          <caret line="8" column="26" lean-forward="true" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/ConsoleTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-964">
+          <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/arqui/Models/Mailbox.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-474">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/arqui/Models/Message.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="87">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/arqui/Models/MessageQueue.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="206">
+          <caret line="32" column="4" selection-start-line="32" selection-start-column="4" selection-end-line="32" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/arqui/Repository/Database.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2932">
+          <caret line="186" column="13" lean-forward="true" selection-start-line="186" selection-start-column="13" selection-end-line="186" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/MailSystemTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="263">
+          <caret line="60" column="38" selection-start-line="60" selection-start-column="38" selection-end-line="60" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/arqui/Repository/DatabaseConfiguration.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="940">
+          <caret line="98" selection-start-line="98" selection-end-line="98" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/arqui/Core/MailSystem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1133">
+          <caret line="80" column="18" selection-start-line="80" selection-start-column="18" selection-end-line="80" selection-end-column="18" />
+          <folding>
+            <element signature="e#1799#1800#0" expanded="true" />
+            <element signature="e#1830#1831#0" expanded="true" />
+            <element signature="e#1878#1879#0" expanded="true" />
+            <element signature="e#1914#1915#0" expanded="true" />
+            <element signature="e#1962#1963#0" expanded="true" />
+            <element signature="e#2025#2026#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/arqui/Repository/Memory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="14" column="23" lean-forward="true" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="23" />
+          <folding>
+            <element signature="e#491#492#0" expanded="true" />
+            <element signature="e#529#530#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/arqui/Repository/TypeOfMessage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="1" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/MailBoxTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="69" column="27" selection-start-line="69" selection-start-column="27" selection-end-line="69" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1162,12 +1132,10 @@
       <state key="ArtifactsStructureConfigurable.UI">
         <settings>
           <artifact-editor />
-          <last-edited>VoiceMail:jar</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
                 <option value="0.2" />
-                <option value="0.5" />
               </list>
             </option>
           </splitter-proportions>
@@ -1210,11 +1178,11 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>VoiceMail</last-edited>
+          <last-edited>ArquiSoft</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.2" />
+                <option value="0.39814815" />
               </list>
             </option>
           </splitter-proportions>
@@ -1245,5 +1213,55 @@
         </settings>
       </state>
     </states>
+  </component>
+  <component name="simpleUML.UMLToolWindowPlugin">
+    <General>
+      <option name="birdViewUpdateDelay" value="2000" />
+      <option name="defaultFileLocation" value="file://$PROJECT_DIR$/.." />
+    </General>
+    <Classdiagram>
+      <option name="diagramTitleFont" value="SansSerif,1,12" />
+      <option name="diagramFont" value="SansSerif,0,10" />
+      <option name="defaultFieldsExpanded" value="false" />
+      <option name="defaultContructorsExpanded" value="false" />
+      <option name="defaultMethodsExpanded" value="false" />
+      <option name="showParameters" value="true" />
+      <option name="showTooltip" value="true" />
+      <option name="showReturnValues" value="true" />
+      <option name="longModifier" value="true" />
+      <option name="implementsBehaviour" value="1" />
+      <option name="extendsBehaviour" value="1" />
+      <option name="compartmentBehaviour" value="1" />
+      <option name="interfaceBackgroundColor" value="-6494306" />
+      <option name="abstractClassBackgroundColor" value="-1580132" />
+      <option name="classBackgroundColor" value="-6508057" />
+      <option name="diagramBackgroundColor" value="-1" />
+      <option name="useAntialiasedConnectors" value="true" />
+      <option name="quickSourceLinkColor" value="-16776961" />
+      <option name="quickDiagramLinkColor" value="-8454144" />
+      <option name="drawDecorations" value="false" />
+      <option name="hideFieldList" value="" />
+      <option name="showFieldList" value="" />
+      <option name="hideConstructorList" value="" />
+      <option name="showConstructorList" value="" />
+      <option name="hideMethodList" value="" />
+      <option name="showMethodList" value="" />
+      <option name="minimumFigureSize" value="0,0" />
+    </Classdiagram>
+    <Dependencydiagram>
+      <option name="diagramTitleFont" value="SansSerif,1,12" />
+      <option name="diagramFont" value="SansSerif,0,10" />
+      <option name="diagramBackgroundColor" value="-1" />
+      <option name="useAntialiasedConnectors" value="true" />
+      <option name="packageNameCompressionLevel" value="0" />
+    </Dependencydiagram>
+    <Packagediagram>
+      <option name="diagramTitleFont" value="SansSerif,0,12" />
+      <option name="diagramFont" value="SansSerif,0,10" />
+      <option name="packageBackgroundColor" value="-4144960" />
+      <option name="diagramBackgroundColor" value="-1" />
+      <option name="useAntialiasedConnectors" value="true" />
+      <option name="packageNameCompressionLevel" value="2" />
+    </Packagediagram>
   </component>
 </project>
