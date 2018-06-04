@@ -18,7 +18,7 @@
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/ArquiSoft$ConnectionTest.ic" NAME="ConnectionTest Coverage Results" MODIFIED="1528067834568" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
-    <SUITE FILE_PATH="coverage/ArquiSoft$All_in_ArquiSoft.ic" NAME="All in ArquiSoft Coverage Results" MODIFIED="1528090280773" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/ArquiSoft$All_in_ArquiSoft.ic" NAME="All in ArquiSoft Coverage Results" MODIFIED="1528090970462" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/ArquiSoft$ConnectionTest_IfIEnterTheMessageMenuOf1AndPressShowMessageShouldBeShowEmptyMessages.ic" NAME="ConnectionTest.IfIEnterTheMessageMenuOf1AndPressShowMessageShouldBeShowEmptyMessages Coverage Results" MODIFIED="1527974006196" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.arqui.*</FILTER>
     </SUITE>
