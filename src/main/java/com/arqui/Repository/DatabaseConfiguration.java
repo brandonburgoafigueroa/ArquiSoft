@@ -26,7 +26,7 @@ public class DatabaseConfiguration {
             statement = dbConnection.createStatement();
             statement.executeUpdate(query);
             statement.close();
-            //close();
+
         }
         catch(SQLException ex)
         {
@@ -41,8 +41,7 @@ public class DatabaseConfiguration {
             statement = dbConnection.createStatement();
             statement.execute(query);
             statement.close();
-            //dbConnection.commit();
-            //dbConnection.close();
+
         }
         catch(SQLException ex)
         {
@@ -56,8 +55,7 @@ public class DatabaseConfiguration {
             statement = dbConnection.createStatement();
             statement.executeUpdate(query);
             statement.close();
-            //dbConnection.commit();
-            //dbConnection.close();
+
         }
         catch(SQLException ex)
         {
@@ -96,7 +94,7 @@ public class DatabaseConfiguration {
     public void closeSelect(ResultSet rs) throws SQLException {
         rs.close();
         statement.close();
-        //dbConnection.close();
+
     }
     public void close(){
         try{
