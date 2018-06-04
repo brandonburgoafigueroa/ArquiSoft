@@ -96,12 +96,5 @@ public class DatabaseConfiguration {
         statement.close();
 
     }
-    public void close(){
-        try{
-            dbConnection.close();
-        }
-        catch(SQLException ex){
-            ex.printStackTrace();
-        }
-    }
+    
 }
