@@ -49,8 +49,8 @@
       <file leaf-file-name="MailBoxTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/MailBoxTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="54" column="40" selection-start-line="54" selection-start-column="40" selection-end-line="54" selection-end-column="40" />
+            <state relative-caret-position="218">
+              <caret line="53" column="49" selection-start-line="53" selection-start-column="49" selection-end-line="53" selection-end-column="49" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -541,15 +541,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="All_in_ArquiSoft - 2018.06.03 at 19h 28m 28s.xml">
-      <configuration name="All in ArquiSoft" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="All_in_ArquiSoft - 2018.06.04 at 01h 04m 52s.xml">
-      <configuration name="All in ArquiSoft" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="All_in_ArquiSoft - 2018.06.04 at 01h 17m 26s.xml">
-      <configuration name="All in ArquiSoft" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="All_in_ArquiSoft - 2018.06.04 at 01h 18m 43s.xml">
       <configuration name="All in ArquiSoft" configurationId="JUnit" />
     </history-entry>
@@ -569,6 +560,15 @@
       <configuration name="All in ArquiSoft" configurationId="JUnit" />
     </history-entry>
     <history-entry file="All_in_ArquiSoft - 2018.06.04 at 01h 33m 49s.xml">
+      <configuration name="All in ArquiSoft" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_ArquiSoft - 2018.06.04 at 01h 36m 32s.xml">
+      <configuration name="All in ArquiSoft" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_ArquiSoft - 2018.06.04 at 01h 37m 27s.xml">
+      <configuration name="All in ArquiSoft" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_ArquiSoft - 2018.06.04 at 01h 39m 21s.xml">
       <configuration name="All in ArquiSoft" configurationId="JUnit" />
     </history-entry>
   </component>
@@ -1050,8 +1050,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/MailBoxTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="54" column="40" selection-start-line="54" selection-start-column="40" selection-end-line="54" selection-end-column="40" />
+        <state relative-caret-position="218">
+          <caret line="53" column="49" selection-start-line="53" selection-start-column="49" selection-end-line="53" selection-end-column="49" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

@@ -50,8 +50,9 @@ public class MailBoxTest {
 		Message message = new Message(HI_MESSAGE_LONG);
 		MessageQueue messageQueue = new MessageQueue();
 		messageQueue.add(message);
-		mailBox.addKeptMessage(null);
-		Assert.assertEquals(mailBox.getKeptMessages(),mailBox.getKeptMessages());
+		mailBox.addKeptMessage(message);
+		messageQueue = mailBox.getKeptMessages();
+		Assert.assertEquals(messageQueue,mailBox.getKeptMessages());
 	}
 	@Test
 	public void verifyIfTheMailBoxHasTheCurrentKeptMessage() {
