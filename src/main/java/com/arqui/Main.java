@@ -40,6 +40,7 @@ public class Main
 
       Console console = new Console(consoleInput, controller);
 
+
       UserInterface FirstUI = new UserInterface(controller);
 
       UserInterface SecondUI = new UserInterface(controller);
@@ -50,7 +51,7 @@ public class Main
 
       presenter.addView(FirstUI);
 
-      presenter.addView(SecondUI);
+      presenter.addView(SecondUI);*/
 
       presentersManager.addPresenter(presenter);
 
