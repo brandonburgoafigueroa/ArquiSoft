@@ -2,6 +2,9 @@ package com.arqui.Models;
 
 public class Message
 {
+   private String from;
+   private String text;
+   
    public Message(String messageText)
    {
       text = messageText;
@@ -16,6 +19,5 @@ public class Message
       return text;
    }
 
-   private String from;
-   private String text;
+
 }
