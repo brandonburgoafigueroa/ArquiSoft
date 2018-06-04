@@ -1,5 +1,6 @@
 import com.arqui.Models.Mailbox;
 import com.arqui.Models.Message;
+import com.arqui.Models.MessageQueue;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -43,6 +44,14 @@ public class MailBoxTest {
 		mailBox.addMessage(message);
 		mailBox.setPasscode("Hello");
 		Assert.assertEquals("Hello",mailBox.getPasscode());
+	}
+	@Test
+	public void verifyIfTheMailBoxHasTheCorrectKeptMessageAfterAddKeptMessage() {
+		Message message = new Message(HI_MESSAGE_LONG);
+		MessageQueue messageQueue = new MessageQueue();
+		messageQueue.add(message);
+		mailBox.addKeptMessage(null);
+		Assert.assertEquals(mailBox.getKeptMessages(),mailBox.getKeptMessages());
 	}
 	@Test
 	public void verifyIfTheMailBoxHasTheCurrentKeptMessage() {
