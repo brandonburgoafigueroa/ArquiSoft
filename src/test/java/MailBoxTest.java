@@ -1,6 +1,7 @@
 import com.arqui.Models.Mailbox;
 import com.arqui.Models.Message;
 import com.arqui.Models.MessageQueue;
+import com.arqui.Repository.TypeOfMessage;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -59,6 +60,13 @@ public class MailBoxTest {
 		Message message = new Message(HI_MESSAGE_LONG);
 		MessageQueue messageQueue = new MessageQueue();
 		messageQueue.add(message);
+		Assert.assertEquals(message,messageQueue.getMessageOf(0));
+	}
+	@Test
+	public void createTypeMessageAndVerify() {
+		Message message = new Message(HI_MESSAGE_LONG);
+		TypeOfMessage m = TypeOfMessage.Kept;
+		
 		Assert.assertEquals(message,messageQueue.getMessageOf(0));
 	}
 	@Test
