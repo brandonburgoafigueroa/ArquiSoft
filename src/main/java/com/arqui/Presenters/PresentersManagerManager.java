@@ -10,15 +10,15 @@ public class PresentersManagerManager implements IPresentersManager {
     private List<IPresenter> presenters;
 
     public PresentersManagerManager() {
-        presenters=new ArrayList<>();
+        presenters=new ArrayList<IPresenter>();
     }
 
-    @Override
+
     public void addPresenter(IPresenter presenter) {
         presenters.add(presenter);
     }
 
-    @Override
+
     public void setModelView(IModelView modelView) {
         for (IPresenter presenter:presenters) {
             presenter.setModelView(modelView);

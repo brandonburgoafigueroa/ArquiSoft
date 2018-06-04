@@ -31,8 +31,8 @@ private ActionListener listenerOption;
 
     private void InitializeVariables(IController controller) {
         this.controller=controller;
-        Informations=new ArrayList<>();
-        OptionsButtons=new ArrayList<>();
+        Informations=new ArrayList<String>();
+        OptionsButtons=new ArrayList<JButton>();
         hiddenButtons=false;
         listenerOption = returnActionOfOption();
     }

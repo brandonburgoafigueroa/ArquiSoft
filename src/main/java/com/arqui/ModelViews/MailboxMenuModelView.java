@@ -9,7 +9,7 @@ public class MailboxMenuModelView implements IModelView {
     private String Information;
     public MailboxMenuModelView ()
     {
-        Options=new ArrayList<>();
+        Options=new ArrayList<String>();
         Options.add("listen to your messages");
         Options.add("change your passcode");
         Options.add("change your greeting");

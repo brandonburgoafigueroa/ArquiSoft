@@ -9,21 +9,21 @@ public class Presenter implements IPresenter {
 private List<IView> Views;
 public Presenter()
 {
-    Views=new ArrayList<>();
+    Views=new ArrayList<IView>();
 }
-    @Override
+
     public void addView(IView view) {
         Views.add(view);
     }
 
-    @Override
+
     public void show() {
         for (IView view:Views) {
             view.showView();
         }
     }
 
-    @Override
+
     public void setModelView(IModelView modelView) {
         ArrayList<String> options=modelView.getOptions();
         String information=modelView.getInformation();

@@ -19,6 +19,6 @@ public class RecordingModelView implements IModelView {
 
     public RecordingModelView(String Information) {
      this.Information=Information;
-        Options=new ArrayList<>();
+        Options=new ArrayList<String>();
     }
 }

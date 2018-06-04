@@ -1,0 +1,6 @@
+MailSystemTest.class
+ConsoleTest.class
+ConnectionTest.class
+MessageTest.class
+MailBoxTest.class
+MessageQueueTest.class

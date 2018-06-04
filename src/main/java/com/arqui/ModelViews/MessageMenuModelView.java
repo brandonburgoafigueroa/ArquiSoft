@@ -9,7 +9,7 @@ public class MessageMenuModelView implements IModelView {
     private String Information;
     public MessageMenuModelView ()
     {
-        Options=new ArrayList<>();
+        Options=new ArrayList<String>();
         setOptions();
         Information ="";
     }
@@ -32,7 +32,7 @@ public class MessageMenuModelView implements IModelView {
     }
     public MessageMenuModelView(String Information) {
         this.Information=Information;
-        Options=new ArrayList<>();
+        Options=new ArrayList<String>();
         setOptions();
     }
 }

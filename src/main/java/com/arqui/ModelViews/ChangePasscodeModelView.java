@@ -9,15 +9,13 @@ public class ChangePasscodeModelView implements IModelView {
     private String Information;
     public ChangePasscodeModelView()
     {
-        Options=new ArrayList<>();
+        Options=new ArrayList<String>();
         Information ="Enter new passcode followed by the # key";
     }
-    @Override
     public ArrayList<String> getOptions() {
         return Options;
     }
 
-    @Override
     public String getInformation() {
         return Information;
     }

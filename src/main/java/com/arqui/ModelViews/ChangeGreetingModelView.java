@@ -10,15 +10,15 @@ public class ChangeGreetingModelView implements IModelView {
     private String Information;
     public ChangeGreetingModelView ()
     {
-        Options=new ArrayList<>();
+        Options=new ArrayList<String>();
         Information ="Record your greeting, then press the # key";
     }
-    @Override
+
     public ArrayList<String> getOptions() {
         return Options;
     }
 
-    @Override
+
     public String getInformation() {
         return Information;
     }

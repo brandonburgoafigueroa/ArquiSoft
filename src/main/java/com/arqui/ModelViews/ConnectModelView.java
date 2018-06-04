@@ -9,16 +9,13 @@ public class ConnectModelView implements IModelView {
     private String Information;
     public ConnectModelView ()
     {
-        Options=new ArrayList<>();
+        Options=new ArrayList<String>();
         Information ="Enter mailbox number followed by #";
     }
 
-    @Override
     public ArrayList<String> getOptions() {
         return Options;
     }
-
-    @Override
     public String getInformation() {
         return Information;
     }

@@ -16,8 +16,8 @@ public class Console implements IView
    {
       this.controller=controller;
       scanner = aScanner;
-      Informations=new ArrayList<>();
-      Options=new ArrayList<>();
+      Informations=new ArrayList<String>();
+      Options=new ArrayList<String>();
    }
 
    @Override

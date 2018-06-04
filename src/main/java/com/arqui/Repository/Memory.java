@@ -9,7 +9,7 @@ public class Memory implements IPersistence {
     private ArrayList<Mailbox> mailboxes;
     public Memory()
     {
-        mailboxes=new ArrayList<>();
+        mailboxes=new ArrayList<Mailbox>();
     }
     @Override
     public void saveChanges(Mailbox mailbox, int idCurrentMailbox) {
