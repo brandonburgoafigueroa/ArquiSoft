@@ -4,6 +4,14 @@ import java.util.ArrayList;
 
 public class MessageQueue
 {
+   private ArrayList<Message>queue;
+
+
+   public Message peek()
+   {
+      if (queue.size() == 0) return null;
+      else return queue.get(queue.size()-1);
+   }
    public MessageQueue()
    {
       queue = new ArrayList();
@@ -23,11 +31,6 @@ public class MessageQueue
    {
       return queue.size();
    }
-   public Message peek()
-   {
-      if (queue.size() == 0) return null;
-      else return queue.get(queue.size()-1);
-   }
 
-   private ArrayList<Message>queue;
+
 }

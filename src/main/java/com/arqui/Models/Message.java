@@ -4,7 +4,7 @@ public class Message
 {
    private String from;
    private String text;
-   
+
    public Message(String messageText)
    {
       text = messageText;
